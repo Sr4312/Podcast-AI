@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": 1,
-    "nodeCount": 161,
-    "edgeCount": 343,
+    "nodeCount": 169,
+    "edgeCount": 357,
     "languages": [
       "javascript",
       "tsx",
@@ -24,12 +24,12 @@
       "name": "astro.config.mjs",
       "kind": "file",
       "path": "astro.config.mjs",
-      "span": "L1-L46",
+      "span": "L1-L50",
       "signature": null,
       "exported": true,
       "origin": "ast",
-      "body_hash": "ee20a976cb9b36e3e2072d7727e2e5200362a9fbb44cfbeeb241abc93fd2baa2",
-      "chars": 1236,
+      "body_hash": "f0324344c380bb37b0b2e5b6273c39664a1bd0bec0ebef046b7dccb0604a77bd",
+      "chars": 1386,
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -54,12 +54,12 @@
       "name": "check-contenido.mjs",
       "kind": "file",
       "path": "scripts/check-contenido.mjs",
-      "span": "L1-L171",
+      "span": "L1-L173",
       "signature": null,
       "exported": true,
       "origin": "ast",
-      "body_hash": "acfc7351dc915ab488ea0102971246d3692fb44f42153a4aa31346c117cf4f09",
-      "chars": 6710,
+      "body_hash": "5047934f82770262fcde1625c2cbea0aee2f4b696c4710bb5887bb96bdcb8272",
+      "chars": 6969,
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -144,6 +144,49 @@
       "exported": false,
       "origin": "ast",
       "body_hash": "1eab793070f1daa204cea478ba4cb25e7b2c1f59e247b2659abc7538b29589c8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-links.mjs",
+      "name": "check-links.mjs",
+      "kind": "file",
+      "path": "scripts/check-links.mjs",
+      "span": "L1-L87",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "fd4704f418328e0aafe66c8ced77e1cc023eae8917dc39e8ef6f6f0c1d86efd5",
+      "chars": 2727,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-links.mjs#archivos",
+      "name": "archivos",
+      "kind": "function",
+      "path": "scripts/check-links.mjs",
+      "span": "L13-L19",
+      "signature": "function* archivos(dir)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "04d60f01e63e0c2d7ef427486f5ad37cbb93288b18613ee2791af6169f464817",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-links.mjs#existe",
+      "name": "existe",
+      "kind": "function",
+      "path": "scripts/check-links.mjs",
+      "span": "L22-L30",
+      "signature": "function existe(ruta)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "3f3c1f3c88f929a57efd4584fe6b59c0a4ee8ed6d02a8b102cece4a6a32652e9",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -1807,6 +1850,77 @@
       "crux": null
     },
     {
+      "id": "src/scripts/animacion.ts",
+      "name": "animacion.ts",
+      "kind": "file",
+      "path": "src/scripts/animacion.ts",
+      "span": "L1-L53",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "cff601ecdbb412b10ec9306fc5b351afe452f3786c1b8cf1c53f647d0e185ae6",
+      "chars": 2223,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/animacion.ts#dibujarOnda",
+      "name": "dibujarOnda",
+      "kind": "function",
+      "path": "src/scripts/animacion.ts",
+      "span": "L11-L16",
+      "signature": "function dibujarOnda(svg: Element)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "f05c55360337263ef2420c06b71ce89971430242a23f4cfb0f3a4e9d6643293a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/animacion.ts#dibujarOnda.fin",
+      "name": "fin",
+      "kind": "function",
+      "path": "src/scripts/animacion.ts",
+      "span": "L13-L13",
+      "signature": "fin = ()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "3b9da36e5e18c4196a153d9c186a13a6b8ad787c196dcee8c199bb3c71876670",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/animacion.ts#initAnimacion",
+      "name": "initAnimacion",
+      "kind": "function",
+      "path": "src/scripts/animacion.ts",
+      "span": "L18-L49",
+      "signature": "function initAnimacion()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "6f3b32c7f8eb4eeeae835e9b8250c2f9c279df19b756a33165431daf501f5def",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/animacion.ts#reducido",
+      "name": "reducido",
+      "kind": "function",
+      "path": "src/scripts/animacion.ts",
+      "span": "L9-L9",
+      "signature": "reducido = ()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "b5fa32e8f408d11d4db8d35c54c64ddc85b9e1e7adba6563d46c11259a038fd5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
       "id": "src/scripts/buscador.ts",
       "name": "buscador.ts",
       "kind": "file",
@@ -2479,6 +2593,48 @@
     {
       "source": "scripts/check-contenido.mjs#leerColeccion",
       "target": "scripts/check-contenido.mjs#error",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-links.mjs",
+      "target": "scripts/check-links.mjs#archivos",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-links.mjs",
+      "target": "scripts/check-links.mjs#existe",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-links.mjs",
+      "target": "scripts/check-links.mjs#archivos",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-links.mjs",
+      "target": "scripts/check-links.mjs#existe",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-links.mjs",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-links.mjs",
+      "target": "node:path",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-links.mjs#archivos",
+      "target": "scripts/check-links.mjs#archivos",
       "relation": "calls",
       "confidence": "extracted"
     },
@@ -4005,6 +4161,48 @@
       "target": "src/lib/contenido.ts#getEpisodios",
       "relation": "calls",
       "confidence": "inferred"
+    },
+    {
+      "source": "src/scripts/animacion.ts",
+      "target": "src/scripts/animacion.ts#initAnimacion",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/animacion.ts",
+      "target": "src/scripts/animacion.ts#dibujarOnda",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/animacion.ts",
+      "target": "src/scripts/animacion.ts#initAnimacion",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/animacion.ts",
+      "target": "src/scripts/animacion.ts#reducido",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/animacion.ts#dibujarOnda",
+      "target": "src/scripts/animacion.ts#reducido",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/animacion.ts#dibujarOnda",
+      "target": "src/scripts/animacion.ts#dibujarOnda.fin",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/animacion.ts#initAnimacion",
+      "target": "src/scripts/animacion.ts#dibujarOnda",
+      "relation": "calls",
+      "confidence": "extracted"
     },
     {
       "source": "src/scripts/buscador.ts",

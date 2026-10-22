@@ -16,6 +16,10 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
   compressHTML: true,
+  build: {
+    // El CSS del sitio pesa ~8 KB gzip: inline evita un pedido bloqueante antes del primer pintado.
+    inlineStylesheets: 'always',
+  },
 
   integrations: [
     react(),

@@ -7,6 +7,9 @@ import Reproductor from '@/components/reproductor/Reproductor.tsx';
 import '@/styles/global.css';
 
 import JsonLd from '@/components/JsonLd.astro';
+// Precarga de las tres fuentes del primer pintado (mismo asset que usa fuentes.css).
+import urlNewsreader from '@fontsource/newsreader/files/newsreader-latin-500-normal.woff2?url';
+import urlPublicSans from '@fontsource-variable/public-sans/files/public-sans-latin-wght-normal.woff2?url';
 
 interface Miga {
   nombre: string;
@@ -69,6 +72,8 @@ const breadcrumb =
     <link rel="alternate" type="application/rss+xml" title={`${SITIO.nombre} (podcast)`} href={SITIO.hosting.rss} />
     <link rel="alternate" type="application/rss+xml" title={`${SITIO.nombre} (novedades de la web)`} href="/rss.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href={urlNewsreader} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={urlPublicSans} as="font" type="font/woff2" crossorigin />
     <script is:inline>
       // Marca que hay JS (las animaciones de entrada solo ocultan algo si después lo van a mostrar).
       document.documentElement.classList.add('js');

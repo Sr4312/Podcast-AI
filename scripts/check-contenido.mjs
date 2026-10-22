@@ -147,11 +147,13 @@ for (const [, { fm, archivo }] of glosario) {
 if (CON_LINKS) {
   console.log(`Comprobando ${urls.size} links…`);
   const ctrl = (ms) => AbortSignal.timeout(ms);
+  // Varios organismos (UNESCO, OGP) devuelven 403 a clientes sin user agent de navegador.
+  const headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36', Accept: 'text/html,*/*' };
   for (const u of urls) {
     try {
-      let r = await fetch(u, { method: 'HEAD', redirect: 'follow', signal: ctrl(10000) });
+      let r = await fetch(u, { method: 'HEAD', redirect: 'follow', signal: ctrl(10000), headers });
       if (r.status === 405 || r.status === 403 || r.status === 404) {
-        r = await fetch(u, { method: 'GET', redirect: 'follow', signal: ctrl(15000) });
+        r = await fetch(u, { method: 'GET', redirect: 'follow', signal: ctrl(15000), headers });
       }
       if (!r.ok) error(`link ${u} → HTTP ${r.status}`);
     } catch (e) {

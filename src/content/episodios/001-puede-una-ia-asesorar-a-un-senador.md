@@ -69,11 +69,11 @@ fuentes:
     verificada: true
     nota: "Marco de referencia sobre supervisión humana que citamos al discutir si un dictamen puede apoyarse en un modelo."
   - titulo: "Reglamento de la Cámara de Senadores de la Nación"
-    url: "https://www.senado.gob.ar/parlamentario/reglamento"
+    url: "https://www.senado.gob.ar/"
     tipo: documento-oficial
     organismo: "Honorable Senado de la Nación"
     verificada: false
-    nota: "Circuito de un proyecto desde la mesa de entradas hasta el dictamen de comisión. Falta confirmar la URL del texto completo actualizado."
+    nota: "Circuito de un proyecto desde la mesa de entradas hasta el dictamen de comisión. Falta localizar la URL del texto completo actualizado; por ahora enlaza al sitio del Senado."
 ia:
   usada_para: ["transcripción automática del audio", "borrador del resumen y de los capítulos", "análisis del proyecto de ley que se discute en el episodio (es el objeto de la prueba)"]
   no_usada_para: ["selección de fuentes", "verificación de las citas legales", "conclusiones del episodio"]

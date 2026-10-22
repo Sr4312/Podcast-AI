@@ -1,0 +1,1204 @@
+- generic [active] [ref=f34e1]:
+  - link "Saltar al contenido" [ref=f34e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f34e3]:
+    - generic [ref=f34e4]:
+      - link "Señal Pública, inicio" [ref=f34e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f34e15]: Señal Pública
+      - navigation "Principal" [ref=f34e16]:
+        - list [ref=f34e17]:
+          - listitem [ref=f34e18]:
+            - link "Episodios" [ref=f34e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f34e20]:
+            - link "Temas" [ref=f34e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f34e22]:
+            - link "Fuentes" [ref=f34e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f34e24]:
+            - link "Acerca" [ref=f34e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f34e26]:
+            - link "Suscribite" [ref=f34e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f34e28]:
+            - button "Cambiar a modo oscuro" [ref=f34e29] [cursor=pointer]
+  - main [ref=f34e32]:
+    - generic [ref=f34e33]:
+      - generic [ref=f34e34]:
+        - paragraph [ref=f34e35]: "Contenido de ejemplo: episodio, invitados y cifras ficticios para la demo del sitio."
+        - navigation "Migas" [ref=f34e36]:
+          - link "Episodios" [ref=f34e37] [cursor=pointer]:
+            - /url: /episodios
+          - text: / N.º 3
+        - generic [ref=f34e38]:
+          - generic [ref=f34e39]:
+            - term [ref=f34e40]: Publicado
+            - definition [ref=f34e41]:
+              - time [ref=f34e42]: 1 de octubre de 2026
+          - generic [ref=f34e43]:
+            - term [ref=f34e44]: Duración
+            - definition [ref=f34e45]: 47 min
+          - generic [ref=f34e46]:
+            - term [ref=f34e47]: Formato
+            - definition [ref=f34e48]: Investigación
+          - generic [ref=f34e49]:
+            - term [ref=f34e50]: Ejes
+            - definition [ref=f34e51]:
+              - link "Sociedad" [ref=f34e52] [cursor=pointer]:
+                - /url: /temas#sociedad
+              - text: ","
+              - link "Política pública" [ref=f34e53] [cursor=pointer]:
+                - /url: /temas#politica-publica
+          - generic [ref=f34e54]:
+            - term [ref=f34e55]: Temas
+            - definition [ref=f34e56]:
+              - link "Chatbots" [ref=f34e57] [cursor=pointer]:
+                - /url: /temas/chatbots
+              - text: ","
+              - link "Información pública" [ref=f34e58] [cursor=pointer]:
+                - /url: /temas/informacion-publica
+              - text: ","
+              - link "Legislación" [ref=f34e59] [cursor=pointer]:
+                - /url: /temas/legislacion
+          - generic [ref=f34e60]:
+            - term [ref=f34e61]: Invitados
+            - definition [ref=f34e62]:
+              - link "Ana Paula Sosa" [ref=f34e63] [cursor=pointer]:
+                - /url: /invitados/ana-paula-sosa
+              - text: ","
+              - link "Julián Ortiz" [ref=f34e64] [cursor=pointer]:
+                - /url: /invitados/julian-ortiz
+      - article [ref=f34e65]:
+        - generic [ref=f34e66]:
+          - paragraph [ref=f34e67]: Temporada 1 · Episodio 3
+          - heading "Chatbots contra el Boletín Oficial" [level=1] [ref=f34e68]
+          - paragraph [ref=f34e69]: Le hicimos sesenta preguntas sobre normativa argentina a cuatro chatbots y contrastamos cada respuesta con la fuente oficial. Acertaron mucho, inventaron en lo que más importa.
+          - generic [ref=f34e131]:
+            - button "Reproducir" [ref=f34e132] [cursor=pointer]
+            - button "Ver en video" [ref=f34e136] [cursor=pointer]
+          - generic [ref=f34e140]:
+            - paragraph [ref=f34e141]: Escuchalo en
+            - generic [ref=f34e142]:
+              - link "Escuchar en YouTube" [ref=f34e143] [cursor=pointer]:
+                - /url: https://www.youtube.com/@senalpublica
+                - generic [ref=f34e148]: YouTube
+              - link "Escuchar en Spotify" [ref=f34e149] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/ejemplo-senal-publica
+                - generic [ref=f34e154]: Spotify
+              - link "Escuchar en Apple Podcasts" [ref=f34e155] [cursor=pointer]:
+                - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+                - generic [ref=f34e160]: Apple Podcasts
+        - region [ref=f34e161]:
+          - heading "En 2 minutos" [level=2] [ref=f34e162]
+          - list [ref=f34e163]:
+            - listitem [ref=f34e164]: En preguntas sobre el contenido de leyes conocidas y estables, como el Código Civil y Comercial, los cuatro sistemas respondieron bien en la gran mayoría de los casos.
+            - listitem [ref=f34e165]: En preguntas sobre plazos, montos actualizados y normas de los últimos dos años, las respuestas incorrectas fueron frecuentes y siempre se dieron sin ninguna señal de duda.
+            - listitem [ref=f34e166]: "Las citas fueron el punto más débil: números de artículo cambiados, decretos inexistentes y resoluciones atribuidas al organismo equivocado."
+            - listitem [ref=f34e167]: Cuando se les pidió la fuente, los sistemas produjeron links que no existían o que apuntaban a otra norma, con el mismo formato que los links reales.
+            - listitem [ref=f34e168]: "La prueba es chica y no es un ranking de productos: es una medida de qué tipo de pregunta se puede delegar y cuál no."
+          - paragraph [ref=f34e169]: "Diseñamos una prueba modesta pero sistemática: sesenta preguntas sobre normativa argentina, escritas por una abogada especialista en derecho administrativo, cada una con su respuesta correcta documentada en la fuente oficial (InfoLEG, Boletín Oficial, sitios de organismos). Las preguntas se agruparon en tres tipos: contenido de normas estables, datos que cambian (plazos, montos, autoridades) y citas precisas (número de artículo, norma, organismo). Se las hicimos de forma idéntica a cuatro chatbots de uso general, en la misma semana, con la conversación en blanco, y un ingeniero de datos registró las respuestas sin editarlas. Después, la abogada evaluó cada respuesta como correcta, incorrecta o incompleta, sin saber de qué sistema venía. En el episodio contamos cómo armamos la prueba, qué resultados obtuvimos por tipo de pregunta, por qué pasa lo que pasa y qué puede hacer un organismo que está pensando en poner un sistema de estos a responder al público. Las preguntas, las respuestas y la planilla de evaluación están publicadas. La prueba, las cifras y los invitados de este episodio son de ejemplo para la demo del sitio."
+          - paragraph [ref=f34e170]: Resumen redactado con asistencia de IA y revisado por Lucía Ferreyra.
+        - figure [ref=f34e171]:
+          - blockquote [ref=f34e172]:
+            - paragraph [ref=f34e173]: El problema no es que se equivoquen. Es que se equivocan con la misma cara con la que aciertan.
+          - generic [ref=f34e174]:
+            - generic [ref=f34e175]:
+              - text: Ana Paula Sosa,
+              - button "00:27:05" [ref=f34e176] [cursor=pointer]
+            - link "Compartir" [ref=f34e177] [cursor=pointer]:
+              - /url: /kit/003-chatbots-contra-el-boletin-oficial
+        - region [ref=f34e183]:
+          - heading "Capítulos" [level=2] [ref=f34e184]
+          - list [ref=f34e185]:
+            - listitem [ref=f34e186]:
+              - link "00:00:00" [ref=f34e187] [cursor=pointer]:
+                - /url: "#cap-0"
+              - generic [ref=f34e188]: Presentación
+            - listitem [ref=f34e189]:
+              - link "00:03:40" [ref=f34e190] [cursor=pointer]:
+                - /url: "#cap-220"
+              - generic [ref=f34e191]: Cómo armamos la prueba
+            - listitem [ref=f34e192]:
+              - link "00:10:15" [ref=f34e193] [cursor=pointer]:
+                - /url: "#cap-615"
+              - generic [ref=f34e194]: Las sesenta preguntas
+            - listitem [ref=f34e195]:
+              - link "00:17:30" [ref=f34e196] [cursor=pointer]:
+                - /url: "#cap-1050"
+              - generic [ref=f34e197]: "Resultados: lo que acertaron"
+            - listitem [ref=f34e198]:
+              - link "00:24:50" [ref=f34e199] [cursor=pointer]:
+                - /url: "#cap-1490"
+              - generic [ref=f34e200]: "Resultados: dónde inventaron"
+            - listitem [ref=f34e201]:
+              - link "00:32:10" [ref=f34e202] [cursor=pointer]:
+                - /url: "#cap-1930"
+              - generic [ref=f34e203]: Por qué pasa esto
+            - listitem [ref=f34e204]:
+              - link "00:39:20" [ref=f34e205] [cursor=pointer]:
+                - /url: "#cap-2360"
+              - generic [ref=f34e206]: Qué puede hacer un organismo
+            - listitem [ref=f34e207]:
+              - link "00:44:00" [ref=f34e208] [cursor=pointer]:
+                - /url: "#cap-2640"
+              - generic [ref=f34e209]: Cierre y fuentes
+        - region [ref=f34e210]:
+          - heading "Fuentes y datos citados" [level=2] [ref=f34e211]
+          - paragraph [ref=f34e212]:
+            - text: 5 de 5 verificadas por el equipo. Las pendientes están marcadas.
+            - link "Biblioteca completa" [ref=f34e213] [cursor=pointer]:
+              - /url: /fuentes
+            - text: .
+          - generic [ref=f34e214]:
+            - heading "Ley o norma" [level=3] [ref=f34e215]
+            - list [ref=f34e216]:
+              - listitem [ref=f34e217]:
+                - link "Código Civil y Comercial de la Nación (Ley 26.994)" [ref=f34e218] [cursor=pointer]:
+                  - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/235975/norma.htm
+                - paragraph [ref=f34e219]:
+                  - text: InfoLEG, Ministerio de Justicia ·
+                  - time [ref=f34e220]: 7 de octubre de 2014
+                - paragraph [ref=f34e221]: Fuente de las preguntas sobre normas estables (plazos de prescripción, capacidad, contratos). Fue el grupo con más aciertos.
+                - paragraph [ref=f34e222]:
+                  - generic [ref=f34e223]: Verificada
+              - listitem [ref=f34e224]:
+                - link "Ley 27.275 de Derecho de Acceso a la Información Pública" [ref=f34e225] [cursor=pointer]:
+                  - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/norma.htm
+                - paragraph [ref=f34e226]:
+                  - text: InfoLEG, Ministerio de Justicia ·
+                  - time [ref=f34e227]: 29 de septiembre de 2016
+                - paragraph [ref=f34e228]: Fuente de las preguntas sobre plazos de respuesta a pedidos de información (arts. 11 y 15), donde varios sistemas dieron plazos incorrectos.
+                - paragraph [ref=f34e229]:
+                  - generic [ref=f34e230]: Verificada
+              - listitem [ref=f34e231]:
+                - link "Ley 24.240 de Defensa del Consumidor" [ref=f34e232] [cursor=pointer]:
+                  - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/638/texact.htm
+                - paragraph [ref=f34e233]:
+                  - text: InfoLEG, Ministerio de Justicia ·
+                  - time [ref=f34e234]: 13 de octubre de 1993
+                - paragraph [ref=f34e235]: Fuente de las preguntas sobre derecho de arrepentimiento y garantías (arts. 11 y 34), con muchas modificaciones posteriores que confundieron a los sistemas.
+                - paragraph [ref=f34e236]:
+                  - generic [ref=f34e237]: Verificada
+          - generic [ref=f34e238]:
+            - heading "Dataset" [level=3] [ref=f34e239]
+            - list [ref=f34e240]:
+              - listitem [ref=f34e241]:
+                - link "InfoLEG, Información Legislativa y Documental" [ref=f34e242] [cursor=pointer]:
+                  - /url: https://www.infoleg.gob.ar
+                - paragraph [ref=f34e243]: Ministerio de Justicia
+                - paragraph [ref=f34e244]: Base oficial contra la que se verificó cada respuesta. Todas las preguntas tienen su respuesta correcta linkeada a InfoLEG o al Boletín Oficial.
+                - paragraph [ref=f34e245]:
+                  - generic [ref=f34e246]: Verificada
+          - generic [ref=f34e247]:
+            - heading "Paper" [level=3] [ref=f34e248]
+            - list [ref=f34e249]:
+              - listitem [ref=f34e250]:
+                - 'link "Large Legal Fictions: Profiling Legal Hallucinations in Large Language Models" [ref=f34e251] [cursor=pointer]':
+                  - /url: https://arxiv.org/abs/2401.01301
+                - paragraph [ref=f34e252]:
+                  - text: Stanford RegLab / Universidad de Yale ·
+                  - time [ref=f34e253]: 2 de enero de 2024
+                - paragraph [ref=f34e254]: Metodología de referencia para clasificar errores de cita. Nuestra prueba adapta su tipología a normativa argentina, en escala mucho menor.
+                - paragraph [ref=f34e255]:
+                  - generic [ref=f34e256]: Verificada
+        - region [ref=f34e257]:
+          - heading "Cómo usamos IA en este episodio" [level=2] [ref=f34e258]
+          - generic [ref=f34e259]:
+            - term [ref=f34e260]: Qué hizo la IA
+            - definition [ref=f34e261]: transcripción automática del audio; borrador del resumen y de los capítulos; los cuatro chatbots evaluados son el objeto de la prueba.
+            - term [ref=f34e262]: Qué no hizo
+            - definition [ref=f34e263]: redacción de las preguntas; evaluación de las respuestas; selección de fuentes; conclusiones del episodio.
+            - term [ref=f34e264]: Quién revisó
+            - definition [ref=f34e265]: Lucía Ferreyra
+          - paragraph [ref=f34e266]:
+            - link "Nuestra política de uso de IA" [ref=f34e267] [cursor=pointer]:
+              - /url: /acerca#ia
+        - region [ref=f34e268]:
+          - heading "Invitados" [level=2] [ref=f34e269]
+          - list [ref=f34e270]:
+            - listitem [ref=f34e271]:
+              - generic [aria-hidden] [ref=f34e272]: AP
+              - generic [ref=f34e273]:
+                - paragraph [ref=f34e274]:
+                  - link "Ana Paula Sosa" [ref=f34e275] [cursor=pointer]:
+                    - /url: /invitados/ana-paula-sosa
+                - paragraph [ref=f34e276]: Abogada, investigadora en derecho administrativo, Universidad Nacional del Litoral
+                - paragraph [ref=f34e277]: Doctora en Derecho. Investiga procedimiento administrativo y acceso a la información pública. En el episodio 3 diseñó las preguntas sobre normativa argentina y revisó una por una las respuestas de los chatbots contra la fuente oficial.
+                - paragraph [ref=f34e278]: Sin conflictos declarados.
+            - listitem [ref=f34e279]:
+              - generic [aria-hidden] [ref=f34e280]: JO
+              - generic [ref=f34e281]:
+                - paragraph [ref=f34e282]:
+                  - link "Julián Ortiz" [ref=f34e283] [cursor=pointer]:
+                    - /url: /invitados/julian-ortiz
+                - paragraph [ref=f34e284]: Ingeniero de datos, Independiente
+                - paragraph [ref=f34e285]: "Ingeniero de datos. Arma y evalúa sistemas con modelos de lenguaje para organizaciones públicas y privadas. En el episodio 3 se ocupó del diseño técnico de la prueba: cómo hacer las mismas preguntas a varios sistemas de forma comparable y cómo registrar las respuestas."
+                - paragraph [ref=f34e286]: "Conflictos declarados: Trabajó como consultor para un proveedor de chatbots entre 2022 y 2023. No tiene relación actual con los sistemas evaluados."
+    - generic [ref=f34e287]:
+      - complementary "Índice de la transcripción" [ref=f34e288]:
+        - paragraph [ref=f34e289]: Transcripción
+        - list [ref=f34e290]:
+          - listitem [ref=f34e291]:
+            - link "00:00 Presentación" [ref=f34e292] [cursor=pointer]:
+              - /url: "#cap-0"
+          - listitem [ref=f34e293]:
+            - link "03:40 Cómo armamos la prueba" [ref=f34e294] [cursor=pointer]:
+              - /url: "#cap-220"
+          - listitem [ref=f34e295]:
+            - link "10:15 Las sesenta preguntas" [ref=f34e296] [cursor=pointer]:
+              - /url: "#cap-615"
+          - listitem [ref=f34e297]:
+            - 'link "17:30 Resultados: lo que acertaron" [ref=f34e298] [cursor=pointer]':
+              - /url: "#cap-1050"
+          - listitem [ref=f34e299]:
+            - 'link "24:50 Resultados: dónde inventaron" [ref=f34e300] [cursor=pointer]':
+              - /url: "#cap-1490"
+          - listitem [ref=f34e301]:
+            - link "32:10 Por qué pasa esto" [ref=f34e302] [cursor=pointer]:
+              - /url: "#cap-1930"
+          - listitem [ref=f34e303]:
+            - link "39:20 Qué puede hacer un organismo" [ref=f34e304] [cursor=pointer]:
+              - /url: "#cap-2360"
+          - listitem [ref=f34e305]:
+            - link "44:00 Cierre y fuentes" [ref=f34e306] [cursor=pointer]:
+              - /url: "#cap-2640"
+        - button "Seguir lectura" [pressed] [ref=f34e307] [cursor=pointer]
+        - paragraph [ref=f34e308]: Con "Seguir lectura" activado, el párrafo que suena queda resaltado y la página lo acompaña.
+      - region [ref=f34e309]:
+        - heading "Transcripción completa" [level=2] [ref=f34e310]
+        - paragraph [ref=f34e311]:
+          - text: "Oradores identificados. Cada párrafo tiene su tiempo: hacé clic para escuchar desde ahí o copiá el link a ese momento. Los términos con subrayado punteado están en el"
+          - link "glosario" [ref=f34e312] [cursor=pointer]:
+            - /url: /glosario
+          - text: .
+        - generic [ref=f34e313]:
+          - heading "Presentación" [level=3] [ref=f34e314]
+          - paragraph [ref=f34e315]:
+            - button "Saltar a 00:00:00" [ref=f34e316] [cursor=pointer]: 00:00:00
+            - button "Copiar link a este momento" [ref=f34e317] [cursor=pointer]
+            - strong [ref=f34e321]: "Lucía Ferreyra:"
+            - text: Hola, esto es Señal Pública. Soy Lucía Ferreyra.
+          - paragraph [ref=f34e322]:
+            - button "Saltar a 00:00:07" [ref=f34e323] [cursor=pointer]: 00:00:07
+            - button "Copiar link a este momento" [ref=f34e324] [cursor=pointer]
+            - strong [ref=f34e328]: "Martín Albarracín:"
+            - text: "Y yo soy Martín Albarracín. Tercer episodio y tercer formato: hoy es una investigación. Armamos una prueba, la corrimos, y vamos a contar los resultados con todos los datos publicados."
+          - paragraph [ref=f34e329]:
+            - button "Saltar a 00:00:28" [ref=f34e330] [cursor=pointer]: 00:00:28
+            - button "Copiar link a este momento" [ref=f34e331] [cursor=pointer]
+            - strong [ref=f34e335]: "Lucía Ferreyra:"
+            - text: "La pregunta es simple y la escuchamos todo el tiempo: si le pregunto a un"
+            - link "chatbot" [ref=f34e336] [cursor=pointer]:
+              - /url: /glosario/chatbot
+            - text: sobre una ley argentina, ¿me responde bien? Hay mucha opinión sobre eso y pocos datos locales. Así que fuimos a buscar los datos.
+          - paragraph [ref=f34e337]:
+            - button "Saltar a 00:00:50" [ref=f34e338] [cursor=pointer]: 00:00:50
+            - button "Copiar link a este momento" [ref=f34e339] [cursor=pointer]
+            - strong [ref=f34e343]: "Martín Albarracín:"
+            - text: Para hacerlo bien necesitábamos dos personas que no somos nosotros. Una abogada que escribiera preguntas con respuesta verificable y evaluara las respuestas. Y alguien que supiera hacerle las mismas preguntas a varios sistemas de forma comparable, sin contaminar la prueba.
+          - paragraph [ref=f34e344]:
+            - button "Saltar a 00:01:14" [ref=f34e345] [cursor=pointer]: 00:01:14
+            - button "Copiar link a este momento" [ref=f34e346] [cursor=pointer]
+            - strong [ref=f34e350]: "Lucía Ferreyra:"
+            - text: Están las dos acá. Ana Paula Sosa, doctora en Derecho, investiga procedimiento administrativo y acceso a la información. Y Julián Ortiz, ingeniero de datos, que arma y evalúa sistemas con
+            - link "modelos de lenguaje" [ref=f34e351] [cursor=pointer]:
+              - /url: /glosario/modelo-de-lenguaje
+            - text: . Bienvenidos.
+          - paragraph [ref=f34e352]:
+            - button "Saltar a 00:01:33" [ref=f34e353] [cursor=pointer]: 00:01:33
+            - button "Copiar link a este momento" [ref=f34e354] [cursor=pointer]
+            - strong [ref=f34e358]: "Ana Paula Sosa:"
+            - text: Gracias. Aclaro desde el principio que yo llegué a esto escéptica, y me fui más escéptica en algunas cosas y menos en otras.
+          - paragraph [ref=f34e359]:
+            - button "Saltar a 00:01:45" [ref=f34e360] [cursor=pointer]: 00:01:45
+            - button "Copiar link a este momento" [ref=f34e361] [cursor=pointer]
+            - strong [ref=f34e365]: "Julián Ortiz:"
+            - text: Y yo llegué del otro lado. Trabajo con estos sistemas todos los días y los defiendo bastante. También me fui con matices.
+          - paragraph [ref=f34e366]:
+            - button "Saltar a 00:01:56" [ref=f34e367] [cursor=pointer]: 00:01:56
+            - button "Copiar link a este momento" [ref=f34e368] [cursor=pointer]
+            - strong [ref=f34e372]: "Martín Albarracín:"
+            - text: "Conflictos de interés, que están en la página: Julián trabajó como consultor para un proveedor de chatbots hasta 2023 y no tiene relación actual con los sistemas evaluados. Ana Paula no declara conflictos."
+          - paragraph [ref=f34e373]:
+            - button "Saltar a 00:02:14" [ref=f34e374] [cursor=pointer]: 00:02:14
+            - button "Copiar link a este momento" [ref=f34e375] [cursor=pointer]
+            - strong [ref=f34e379]: "Lucía Ferreyra:"
+            - text: "Y una aclaración que vamos a repetir varias veces: esto no es un ranking de productos. No vamos a decir qué chatbot es mejor. Son cuatro sistemas de uso general, los llamamos A, B, C y D, y lo que nos importa es qué tipo de pregunta responden bien y cuál mal, porque eso es lo que le sirve a un organismo que está decidiendo si usa uno."
+          - paragraph [ref=f34e380]:
+            - button "Saltar a 00:02:42" [ref=f34e381] [cursor=pointer]: 00:02:42
+            - button "Copiar link a este momento" [ref=f34e382] [cursor=pointer]
+            - strong [ref=f34e386]: "Julián Ortiz:"
+            - text: "Agrego una razón técnica para no dar nombres: estos sistemas cambian cada pocas semanas. Lo que medimos es una foto de una semana de agosto. El ranking de hoy no sirve en octubre. El tipo de error, sí."
+          - paragraph [ref=f34e387]:
+            - button "Saltar a 00:03:02" [ref=f34e388] [cursor=pointer]: 00:03:02
+            - button "Copiar link a este momento" [ref=f34e389] [cursor=pointer]
+            - strong [ref=f34e393]: "Martín Albarracín:"
+            - text: "Todo lo que vamos a contar está publicado: las sesenta preguntas, la respuesta correcta de cada una con su link a la fuente oficial, las respuestas de los cuatro sistemas sin editar, y la planilla de evaluación de Ana Paula. Si alguien quiere repetir la prueba o discutir una evaluación, tiene todo."
+          - paragraph [ref=f34e394]:
+            - button "Saltar a 00:03:25" [ref=f34e395] [cursor=pointer]: 00:03:25
+            - button "Copiar link a este momento" [ref=f34e396] [cursor=pointer]
+            - strong [ref=f34e400]: "Lucía Ferreyra:"
+            - text: Empecemos por el diseño, porque ahí está la mitad del valor de esto.
+          - heading "Cómo armamos la prueba" [level=3] [ref=f34e401]
+          - paragraph [ref=f34e402]:
+            - button "Saltar a 00:03:40" [ref=f34e403] [cursor=pointer]: 00:03:40
+            - button "Copiar link a este momento" [ref=f34e404] [cursor=pointer]
+            - strong [ref=f34e408]: "Ana Paula Sosa:"
+            - text: "La primera decisión fue qué tipo de preguntas. Yo propuse tres grupos, porque en mi experiencia son tres cosas distintas. Primero, el contenido de normas estables: qué dice el Código Civil y Comercial sobre prescripción, qué es la capacidad restringida, cosas que están igual hace diez años y están en todos lados."
+          - paragraph [ref=f34e409]:
+            - button "Saltar a 00:04:08" [ref=f34e410] [cursor=pointer]: 00:04:08
+            - button "Copiar link a este momento" [ref=f34e411] [cursor=pointer]
+            - strong [ref=f34e415]: "Martín Albarracín:"
+            - text: Segundo grupo.
+          - paragraph [ref=f34e416]:
+            - button "Saltar a 00:04:11" [ref=f34e417] [cursor=pointer]: 00:04:11
+            - button "Copiar link a este momento" [ref=f34e418] [cursor=pointer]
+            - strong [ref=f34e422]: "Ana Paula Sosa:"
+            - text: Datos que cambian. Plazos que se modificaron, montos que se actualizan, qué organismo es la autoridad de aplicación hoy. Acá la respuesta correcta de hace dos años puede ser incorrecta ahora.
+          - paragraph [ref=f34e423]:
+            - button "Saltar a 00:04:28" [ref=f34e424] [cursor=pointer]: 00:04:28
+            - button "Copiar link a este momento" [ref=f34e425] [cursor=pointer]
+            - strong [ref=f34e429]: "Lucía Ferreyra:"
+            - text: Y tercero.
+          - paragraph [ref=f34e430]:
+            - button "Saltar a 00:04:30" [ref=f34e431] [cursor=pointer]: 00:04:30
+            - button "Copiar link a este momento" [ref=f34e432] [cursor=pointer]
+            - strong [ref=f34e436]: "Ana Paula Sosa:"
+            - text: Citas precisas. No "qué dice la ley" sino "en qué artículo lo dice", "qué decreto lo reglamenta", "de qué organismo es la resolución". Es lo que un abogado necesita para escribir y lo que un funcionario necesita para fundar un acto.
+          - paragraph [ref=f34e437]:
+            - button "Saltar a 00:04:50" [ref=f34e438] [cursor=pointer]: 00:04:50
+            - button "Copiar link a este momento" [ref=f34e439] [cursor=pointer]
+            - strong [ref=f34e443]: "Julián Ortiz:"
+            - text: Esa división me pareció muy buena desde lo técnico, porque corresponde a tres mecanismos distintos de cómo fallan estos modelos. Lo estable está muy repetido en los
+            - link "datos de entrenamiento" [ref=f34e444] [cursor=pointer]:
+              - /url: /glosario/entrenamiento
+            - text: y lo saben. Lo que cambia depende de la fecha de corte. Y las citas precisas son el caso donde el modelo tiene que producir un dato exacto, número de artículo, y ahí es donde más completa por probabilidad.
+          - paragraph [ref=f34e445]:
+            - button "Saltar a 00:05:22" [ref=f34e446] [cursor=pointer]: 00:05:22
+            - button "Copiar link a este momento" [ref=f34e447] [cursor=pointer]
+            - strong [ref=f34e451]: "Martín Albarracín:"
+            - text: Veinte preguntas por grupo, sesenta en total. ¿Por qué sesenta y no seiscientas?
+          - paragraph [ref=f34e452]:
+            - button "Saltar a 00:05:30" [ref=f34e453] [cursor=pointer]: 00:05:30
+            - button "Copiar link a este momento" [ref=f34e454] [cursor=pointer]
+            - strong [ref=f34e458]: "Ana Paula Sosa:"
+            - text: "Porque cada pregunta me llevó entre media hora y una hora: escribirla sin ambigüedad, buscar la respuesta en la fuente oficial, documentar el link exacto y escribir el criterio de evaluación antes de ver ninguna respuesta. Sesenta son unas cuarenta horas de trabajo. Es una prueba chica y lo decimos. Pero cada pregunta está bien hecha."
+          - paragraph [ref=f34e459]:
+            - button "Saltar a 00:05:58" [ref=f34e460] [cursor=pointer]: 00:05:58
+            - button "Copiar link a este momento" [ref=f34e461] [cursor=pointer]
+            - strong [ref=f34e465]: "Lucía Ferreyra:"
+            - text: Eso de escribir el criterio antes de ver las respuestas me parece clave.
+          - paragraph [ref=f34e466]:
+            - button "Saltar a 00:06:05" [ref=f34e467] [cursor=pointer]: 00:06:05
+            - button "Copiar link a este momento" [ref=f34e468] [cursor=pointer]
+            - strong [ref=f34e472]: "Ana Paula Sosa:"
+            - text: Es lo que evita que yo evalúe con simpatía o antipatía. Para cada pregunta escribí qué tenía que tener una respuesta para ser correcta, qué la hacía incompleta y qué la hacía incorrecta. Después evalué sin saber de qué sistema venía cada respuesta.
+          - paragraph [ref=f34e473]:
+            - button "Saltar a 00:06:27" [ref=f34e474] [cursor=pointer]: 00:06:27
+            - button "Copiar link a este momento" [ref=f34e475] [cursor=pointer]
+            - strong [ref=f34e479]: "Martín Albarracín:"
+            - text: Julián, cómo se hicieron las preguntas a los sistemas.
+          - paragraph [ref=f34e480]:
+            - button "Saltar a 00:06:32" [ref=f34e481] [cursor=pointer]: 00:06:32
+            - button "Copiar link a este momento" [ref=f34e482] [cursor=pointer]
+            - strong [ref=f34e486]: "Julián Ortiz:"
+            - text: Cuatro reglas. Misma semana para los cuatro, para que la foto sea comparable. Conversación nueva para cada pregunta, sin historial, porque el historial cambia las respuestas. El texto exacto de la pregunta, sin agregar instrucciones del tipo "sos un abogado experto", porque queríamos medir lo que recibe una persona común. Y sin navegación web activada, en los sistemas donde eso se puede apagar.
+          - paragraph [ref=f34e487]:
+            - button "Saltar a 00:07:05" [ref=f34e488] [cursor=pointer]: 00:07:05
+            - button "Copiar link a este momento" [ref=f34e489] [cursor=pointer]
+            - strong [ref=f34e493]: "Lucía Ferreyra:"
+            - text: Esa última es discutible. Alguien podría decir que con navegación responderían mejor.
+          - paragraph [ref=f34e494]:
+            - button "Saltar a 00:07:12" [ref=f34e495] [cursor=pointer]: 00:07:12
+            - button "Copiar link a este momento" [ref=f34e496] [cursor=pointer]
+            - strong [ref=f34e500]: "Julián Ortiz:"
+            - text: Es cierto, y es una limitación que declaramos. La decisión fue medir el modelo, no el buscador. Con navegación, estás midiendo también qué tan bien busca en InfoLEG, que es otra pregunta, interesante, para otra prueba. Y en dos de los cuatro sistemas no se podía apagar, así que lo registramos pregunta por pregunta.
+          - paragraph [ref=f34e501]:
+            - button "Saltar a 00:07:40" [ref=f34e502] [cursor=pointer]: 00:07:40
+            - button "Copiar link a este momento" [ref=f34e503] [cursor=pointer]
+            - strong [ref=f34e507]: "Martín Albarracín:"
+            - text: ¿Qué registraron de cada respuesta?
+          - paragraph [ref=f34e508]:
+            - button "Saltar a 00:07:44" [ref=f34e509] [cursor=pointer]: 00:07:44
+            - button "Copiar link a este momento" [ref=f34e510] [cursor=pointer]
+            - strong [ref=f34e514]: "Julián Ortiz:"
+            - text: "El texto completo, la fecha y hora, el sistema, si tenía navegación activa, y si la respuesta incluía alguna señal de incertidumbre: frases como \"creo que\", \"deberías verificar\", \"no estoy seguro\". Esa última columna fue idea de Ana Paula y terminó siendo de las más importantes."
+          - paragraph [ref=f34e515]:
+            - button "Saltar a 00:08:08" [ref=f34e516] [cursor=pointer]: 00:08:08
+            - button "Copiar link a este momento" [ref=f34e517] [cursor=pointer]
+            - strong [ref=f34e521]: "Ana Paula Sosa:"
+            - text: Porque mi hipótesis era que el problema no es que se equivoquen, es que no avisan. Quería medirlo.
+          - paragraph [ref=f34e522]:
+            - button "Saltar a 00:08:18" [ref=f34e523] [cursor=pointer]: 00:08:18
+            - button "Copiar link a este momento" [ref=f34e524] [cursor=pointer]
+            - strong [ref=f34e528]: "Lucía Ferreyra:"
+            - text: "Un detalle más de diseño: después de cada pregunta, hicieron una segunda."
+          - paragraph [ref=f34e529]:
+            - button "Saltar a 00:08:25" [ref=f34e530] [cursor=pointer]: 00:08:25
+            - button "Copiar link a este momento" [ref=f34e531] [cursor=pointer]
+            - strong [ref=f34e535]: "Julián Ortiz:"
+            - text: "Sí. A cada respuesta le pedimos: \"¿me pasás el link a la fuente oficial?\". Queríamos ver qué pasaba cuando se les pedía la fuente. Eso generó un conjunto de datos aparte, de links, que verificamos uno por uno."
+          - paragraph [ref=f34e536]:
+            - button "Saltar a 00:08:45" [ref=f34e537] [cursor=pointer]: 00:08:45
+            - button "Copiar link a este momento" [ref=f34e538] [cursor=pointer]
+            - strong [ref=f34e542]: "Martín Albarracín:"
+            - text: Adelanto que ese conjunto es el más preocupante del episodio.
+          - paragraph [ref=f34e543]:
+            - button "Saltar a 00:08:51" [ref=f34e544] [cursor=pointer]: 00:08:51
+            - button "Copiar link a este momento" [ref=f34e545] [cursor=pointer]
+            - strong [ref=f34e549]: "Ana Paula Sosa:"
+            - text: Y el más fácil de verificar, porque un link existe o no existe.
+          - paragraph [ref=f34e550]:
+            - button "Saltar a 00:09:00" [ref=f34e551] [cursor=pointer]: 00:09:00
+            - button "Copiar link a este momento" [ref=f34e552] [cursor=pointer]
+            - strong [ref=f34e556]: "Lucía Ferreyra:"
+            - text: "Última cosa del método: los"
+            - link "sesgos" [ref=f34e557] [cursor=pointer]:
+              - /url: /glosario/sesgo-algoritmico
+            - text: de la prueba, dichos por ustedes.
+          - paragraph [ref=f34e558]:
+            - button "Saltar a 00:09:07" [ref=f34e559] [cursor=pointer]: 00:09:07
+            - button "Copiar link a este momento" [ref=f34e560] [cursor=pointer]
+            - strong [ref=f34e564]: "Ana Paula Sosa:"
+            - text: Las preguntas las escribí yo, con mi especialidad, que es derecho administrativo. Hay mucho de procedimiento y de acceso a la información y poco de penal o laboral. Otra persona hubiera elegido otras.
+          - paragraph [ref=f34e565]:
+            - button "Saltar a 00:09:24" [ref=f34e566] [cursor=pointer]: 00:09:24
+            - button "Copiar link a este momento" [ref=f34e567] [cursor=pointer]
+            - strong [ref=f34e571]: "Julián Ortiz:"
+            - text: Y cuatro sistemas es poco. Hay modelos especializados en derecho, de pago, que no probamos. Medimos lo que usa la gente común, no lo mejor que existe.
+          - paragraph [ref=f34e572]:
+            - button "Saltar a 00:09:38" [ref=f34e573] [cursor=pointer]: 00:09:38
+            - button "Copiar link a este momento" [ref=f34e574] [cursor=pointer]
+            - strong [ref=f34e578]: "Martín Albarracín:"
+            - text: Con eso dicho, vamos a las preguntas.
+          - heading "Las sesenta preguntas" [level=3] [ref=f34e579]
+          - paragraph [ref=f34e580]:
+            - button "Saltar a 00:10:15" [ref=f34e581] [cursor=pointer]: 00:10:15
+            - button "Copiar link a este momento" [ref=f34e582] [cursor=pointer]
+            - strong [ref=f34e586]: "Ana Paula Sosa:"
+            - text: "Les doy ejemplos de cada grupo para que se entienda el nivel. Del grupo estable: \"¿Cuál es el plazo genérico de prescripción liberatoria según el Código Civil y Comercial?\". Respuesta: cinco años, artículo 2560. Está en el Código desde 2015, está en todos los manuales, está en miles de fallos."
+          - paragraph [ref=f34e587]:
+            - button "Saltar a 00:10:42" [ref=f34e588] [cursor=pointer]: 00:10:42
+            - button "Copiar link a este momento" [ref=f34e589] [cursor=pointer]
+            - strong [ref=f34e593]: "Lucía Ferreyra:"
+            - text: Del grupo de datos que cambian.
+          - paragraph [ref=f34e594]:
+            - button "Saltar a 00:10:46" [ref=f34e595] [cursor=pointer]: 00:10:46
+            - button "Copiar link a este momento" [ref=f34e596] [cursor=pointer]
+            - strong [ref=f34e600]: "Ana Paula Sosa:"
+            - text: "\"¿Cuál es el plazo que tiene un organismo nacional para responder un pedido de acceso a la información pública según la Ley 27.275?\". Respuesta: quince días hábiles, prorrogables por otros quince con fundamento, artículo 11. Acá la trampa es que mucha gente recuerda el plazo del decreto anterior, que era distinto, y que hay regímenes provinciales con otros plazos."
+          - paragraph [ref=f34e601]:
+            - button "Saltar a 00:11:17" [ref=f34e602] [cursor=pointer]: 00:11:17
+            - button "Copiar link a este momento" [ref=f34e603] [cursor=pointer]
+            - strong [ref=f34e607]: "Martín Albarracín:"
+            - text: Y del grupo de citas.
+          - paragraph [ref=f34e608]:
+            - button "Saltar a 00:11:20" [ref=f34e609] [cursor=pointer]: 00:11:20
+            - button "Copiar link a este momento" [ref=f34e610] [cursor=pointer]
+            - strong [ref=f34e614]: "Ana Paula Sosa:"
+            - text: "\"¿Qué artículo de la Ley 24.240 regula el derecho de arrepentimiento en ventas a distancia y cuál es el plazo?\". Respuesta: artículo 34, diez días corridos. Es una ley muy modificada, y los números de artículo son de los que los modelos confunden."
+          - paragraph [ref=f34e615]:
+            - button "Saltar a 00:11:42" [ref=f34e616] [cursor=pointer]: 00:11:42
+            - button "Copiar link a este momento" [ref=f34e617] [cursor=pointer]
+            - strong [ref=f34e621]: "Julián Ortiz:"
+            - text: "Algo que noté al cargar las preguntas: Ana Paula las escribió como las escribiría una persona que no es abogada, sin jerga, pero sin ambigüedad. Eso es muy difícil y es lo que hace que la prueba mida algo real."
+          - paragraph [ref=f34e622]:
+            - button "Saltar a 00:12:00" [ref=f34e623] [cursor=pointer]: 00:12:00
+            - button "Copiar link a este momento" [ref=f34e624] [cursor=pointer]
+            - strong [ref=f34e628]: "Ana Paula Sosa:"
+            - text: Porque la pregunta que importa no es si un abogado puede sacarle una buena respuesta al sistema. Es si una persona que entra a preguntar porque no tiene abogado recibe una respuesta en la que puede confiar.
+          - paragraph [ref=f34e629]:
+            - button "Saltar a 00:12:17" [ref=f34e630] [cursor=pointer]: 00:12:17
+            - button "Copiar link a este momento" [ref=f34e631] [cursor=pointer]
+            - strong [ref=f34e635]: "Lucía Ferreyra:"
+            - text: ¿Hubo preguntas que descartaron?
+          - paragraph [ref=f34e636]:
+            - button "Saltar a 00:12:21" [ref=f34e637] [cursor=pointer]: 00:12:21
+            - button "Copiar link a este momento" [ref=f34e638] [cursor=pointer]
+            - strong [ref=f34e642]: "Ana Paula Sosa:"
+            - text: Varias. Descarté todas las que tenían una respuesta discutida en doctrina, porque no quería evaluar opiniones. Y descarté las que dependían de la jurisdicción sin decirlo. Cada pregunta dice "nacional" o nombra la provincia.
+          - paragraph [ref=f34e643]:
+            - button "Saltar a 00:12:42" [ref=f34e644] [cursor=pointer]: 00:12:42
+            - button "Copiar link a este momento" [ref=f34e645] [cursor=pointer]
+            - strong [ref=f34e649]: "Martín Albarracín:"
+            - text: ¿Y preguntas con trampa? ¿Normas que no existen?
+          - paragraph [ref=f34e650]:
+            - button "Saltar a 00:12:47" [ref=f34e651] [cursor=pointer]: 00:12:47
+            - button "Copiar link a este momento" [ref=f34e652] [cursor=pointer]
+            - strong [ref=f34e656]: "Ana Paula Sosa:"
+            - text: Cinco, dentro del grupo de citas. Preguntas del tipo "¿qué establece el decreto tal sobre tal cosa?" donde el decreto no existe o trata de otro tema. Quería ver si el sistema decía "ese decreto no existe" o inventaba un contenido.
+          - paragraph [ref=f34e657]:
+            - button "Saltar a 00:13:08" [ref=f34e658] [cursor=pointer]: 00:13:08
+            - button "Copiar link a este momento" [ref=f34e659] [cursor=pointer]
+            - strong [ref=f34e663]: "Julián Ortiz:"
+            - text: Esa es la prueba más dura y más justa que se le puede hacer a un modelo de lenguaje. Un buen sistema dice "no encuentro esa norma". Uno malo te explica el decreto con artículos y todo.
+          - paragraph [ref=f34e664]:
+            - button "Saltar a 00:13:24" [ref=f34e665] [cursor=pointer]: 00:13:24
+            - button "Copiar link a este momento" [ref=f34e666] [cursor=pointer]
+            - strong [ref=f34e670]: "Lucía Ferreyra:"
+            - text: "Adelanto: pasó lo segundo. Pero vamos en orden."
+          - paragraph [ref=f34e671]:
+            - button "Saltar a 00:13:32" [ref=f34e672] [cursor=pointer]: 00:13:32
+            - button "Copiar link a este momento" [ref=f34e673] [cursor=pointer]
+            - strong [ref=f34e677]: "Martín Albarracín:"
+            - text: Antes de los resultados, un número que no es de la prueba pero da contexto. Julián, ¿cuánta gente usa estos sistemas para preguntas legales?
+          - paragraph [ref=f34e678]:
+            - button "Saltar a 00:13:44" [ref=f34e679] [cursor=pointer]: 00:13:44
+            - button "Copiar link a este momento" [ref=f34e680] [cursor=pointer]
+            - strong [ref=f34e684]: "Julián Ortiz:"
+            - text: "No hay datos argentinos confiables y no voy a inventar uno. Lo que puedo decir es cualitativo: en los sistemas en los que trabajé, las consultas sobre trámites, derechos y normativa eran una categoría grande y creciente. La gente pregunta por el alquiler, por una multa, por un despido. Y pregunta a las once de la noche, cuando no hay a quién más preguntarle."
+          - paragraph [ref=f34e685]:
+            - button "Saltar a 00:14:12" [ref=f34e686] [cursor=pointer]: 00:14:12
+            - button "Copiar link a este momento" [ref=f34e687] [cursor=pointer]
+            - strong [ref=f34e691]: "Ana Paula Sosa:"
+            - text: Que es el punto. No compiten con un abogado. Compiten con no preguntarle a nadie.
+          - paragraph [ref=f34e692]:
+            - button "Saltar a 00:14:20" [ref=f34e693] [cursor=pointer]: 00:14:20
+            - button "Copiar link a este momento" [ref=f34e694] [cursor=pointer]
+            - strong [ref=f34e698]: "Lucía Ferreyra:"
+            - text: Esa comparación va a importar al final, cuando hablemos de qué hacer.
+          - paragraph [ref=f34e699]:
+            - button "Saltar a 00:14:28" [ref=f34e700] [cursor=pointer]: 00:14:28
+            - button "Copiar link a este momento" [ref=f34e701] [cursor=pointer]
+            - strong [ref=f34e705]: "Martín Albarracín:"
+            - text: ¿Cuánto tardó la evaluación?
+          - paragraph [ref=f34e706]:
+            - button "Saltar a 00:14:31" [ref=f34e707] [cursor=pointer]: 00:14:31
+            - button "Copiar link a este momento" [ref=f34e708] [cursor=pointer]
+            - strong [ref=f34e712]: "Ana Paula Sosa:"
+            - text: Dos semanas. Doscientas cuarenta respuestas, más doscientos cuarenta links. Cada respuesta contra su criterio escrito. Y donde dudé, lo anoté como duda en la planilla y la discutimos entre los tres, con la fuente adelante.
+          - paragraph [ref=f34e713]:
+            - button "Saltar a 00:14:52" [ref=f34e714] [cursor=pointer]: 00:14:52
+            - button "Copiar link a este momento" [ref=f34e715] [cursor=pointer]
+            - strong [ref=f34e719]: "Julián Ortiz:"
+            - text: Hubo once casos de duda. En la planilla están marcados y está la resolución de cada uno.
+          - paragraph [ref=f34e720]:
+            - button "Saltar a 00:15:02" [ref=f34e721] [cursor=pointer]: 00:15:02
+            - button "Copiar link a este momento" [ref=f34e722] [cursor=pointer]
+            - strong [ref=f34e726]: "Lucía Ferreyra:"
+            - text: Un ejemplo de duda.
+          - paragraph [ref=f34e727]:
+            - button "Saltar a 00:15:05" [ref=f34e728] [cursor=pointer]: 00:15:05
+            - button "Copiar link a este momento" [ref=f34e729] [cursor=pointer]
+            - strong [ref=f34e733]: "Ana Paula Sosa:"
+            - text: Una respuesta sobre el plazo de la 27.275 que decía "quince días" sin aclarar hábiles. ¿Es correcta, incompleta o incorrecta? Para un ciudadano, "quince días" se entiende como corridos, y eso lo perjudica. La marcamos incompleta, y en la planilla está por qué.
+          - paragraph [ref=f34e734]:
+            - button "Saltar a 00:15:30" [ref=f34e735] [cursor=pointer]: 00:15:30
+            - button "Copiar link a este momento" [ref=f34e736] [cursor=pointer]
+            - strong [ref=f34e740]: "Martín Albarracín:"
+            - text: "Esa distinción, correcta, incompleta, incorrecta, es importante para leer los números que siguen. \"Incompleta\" no es un error menor: en muchos casos la omisión te hace perder un plazo."
+          - paragraph [ref=f34e741]:
+            - button "Saltar a 00:15:46" [ref=f34e742] [cursor=pointer]: 00:15:46
+            - button "Copiar link a este momento" [ref=f34e743] [cursor=pointer]
+            - strong [ref=f34e747]: "Ana Paula Sosa:"
+            - text: Para mí incompleta es peor que incorrecta en algunos casos, porque la incorrecta se detecta y la incompleta no.
+          - paragraph [ref=f34e748]:
+            - button "Saltar a 00:15:57" [ref=f34e749] [cursor=pointer]: 00:15:57
+            - button "Copiar link a este momento" [ref=f34e750] [cursor=pointer]
+            - strong [ref=f34e754]: "Lucía Ferreyra:"
+            - text: Vamos a los resultados. Primero lo bueno.
+          - 'heading "Resultados: lo que acertaron" [level=3] [ref=f34e755]'
+          - paragraph [ref=f34e756]:
+            - button "Saltar a 00:17:30" [ref=f34e757] [cursor=pointer]: 00:17:30
+            - button "Copiar link a este momento" [ref=f34e758] [cursor=pointer]
+            - strong [ref=f34e762]: "Martín Albarracín:"
+            - text: "Grupo uno, normas estables, veinte preguntas por cuatro sistemas, ochenta respuestas. Los cuatro sistemas estuvieron entre dieciséis y diecinueve correctas de veinte. El resto, mayormente incompletas. Incorrectas en este grupo: tres en total, de ochenta."
+          - paragraph [ref=f34e763]:
+            - button "Saltar a 00:17:55" [ref=f34e764] [cursor=pointer]: 00:17:55
+            - button "Copiar link a este momento" [ref=f34e765] [cursor=pointer]
+            - strong [ref=f34e769]: "Ana Paula Sosa:"
+            - text: "Y las tres incorrectas eran del mismo tipo: confundir el plazo genérico con un plazo especial. No disparates. Errores que un estudiante de tercer año también comete."
+          - paragraph [ref=f34e770]:
+            - button "Saltar a 00:18:10" [ref=f34e771] [cursor=pointer]: 00:18:10
+            - button "Copiar link a este momento" [ref=f34e772] [cursor=pointer]
+            - strong [ref=f34e776]: "Julián Ortiz:"
+            - text: Esto no me sorprendió. El Código Civil y Comercial está en la red miles de veces, comentado, resumido, en fallos. Los modelos lo tienen muy bien representado. Para contenido estable y muy publicado, funcionan.
+          - paragraph [ref=f34e777]:
+            - button "Saltar a 00:18:28" [ref=f34e778] [cursor=pointer]: 00:18:28
+            - button "Copiar link a este momento" [ref=f34e779] [cursor=pointer]
+            - strong [ref=f34e783]: "Lucía Ferreyra:"
+            - text: ¿Qué tan bien escritas estaban las respuestas correctas?
+          - paragraph [ref=f34e784]:
+            - button "Saltar a 00:18:33" [ref=f34e785] [cursor=pointer]: 00:18:33
+            - button "Copiar link a este momento" [ref=f34e786] [cursor=pointer]
+            - strong [ref=f34e790]: "Ana Paula Sosa:"
+            - text: Muy bien. Eso hay que decirlo. Claras, en lenguaje llano, con ejemplos. Mejor que muchos sitios de organismos. Si yo tuviera que explicarle a alguien sin formación qué es la prescripción, varias de esas respuestas me servirían como base.
+          - paragraph [ref=f34e791]:
+            - button "Saltar a 00:18:55" [ref=f34e792] [cursor=pointer]: 00:18:55
+            - button "Copiar link a este momento" [ref=f34e793] [cursor=pointer]
+            - strong [ref=f34e797]: "Martín Albarracín:"
+            - text: Grupo dos, datos que cambian. Acá se abre la diferencia entre sistemas. Los dos que tenían navegación activa estuvieron entre trece y quince correctas de veinte. Los dos sin navegación, entre ocho y once.
+          - paragraph [ref=f34e798]:
+            - button "Saltar a 00:19:15" [ref=f34e799] [cursor=pointer]: 00:19:15
+            - button "Copiar link a este momento" [ref=f34e800] [cursor=pointer]
+            - strong [ref=f34e804]: "Julián Ortiz:"
+            - text: "Que es lo esperable: sin navegación, el modelo responde con lo que sabía a su fecha de corte. Si el plazo cambió después, responde el viejo. Con navegación, a veces encuentra la norma nueva. A veces."
+          - paragraph [ref=f34e805]:
+            - button "Saltar a 00:19:33" [ref=f34e806] [cursor=pointer]: 00:19:33
+            - button "Copiar link a este momento" [ref=f34e807] [cursor=pointer]
+            - strong [ref=f34e811]: "Ana Paula Sosa:"
+            - text: Lo que me llamó la atención en este grupo fue la pregunta sobre la autoridad de aplicación. Varios sistemas nombraron un organismo que fue reestructurado y cambió de nombre. La respuesta era correcta hace tres años. Y la daban en presente.
+          - paragraph [ref=f34e812]:
+            - button "Saltar a 00:19:55" [ref=f34e813] [cursor=pointer]: 00:19:55
+            - button "Copiar link a este momento" [ref=f34e814] [cursor=pointer]
+            - strong [ref=f34e818]: "Lucía Ferreyra:"
+            - text: Sin señal de duda.
+          - paragraph [ref=f34e819]:
+            - button "Saltar a 00:19:58" [ref=f34e820] [cursor=pointer]: 00:19:58
+            - button "Copiar link a este momento" [ref=f34e821] [cursor=pointer]
+            - strong [ref=f34e825]: "Ana Paula Sosa:"
+            - text: Vamos a esa columna porque es el dato que más me importa. De las doscientas cuarenta respuestas, las que incluían alguna señal de incertidumbre fueron veintitrés. Y de esas veintitrés, la mayoría eran respuestas correctas. Es decir, los sistemas dudaban cuando acertaban y afirmaban cuando se equivocaban.
+          - paragraph [ref=f34e826]:
+            - button "Saltar a 00:20:25" [ref=f34e827] [cursor=pointer]: 00:20:25
+            - button "Copiar link a este momento" [ref=f34e828] [cursor=pointer]
+            - strong [ref=f34e832]: "Martín Albarracín:"
+            - text: Quiero que eso quede claro porque es contraintuitivo. La señal de duda no está correlacionada con el error. Si acaso, al revés.
+          - paragraph [ref=f34e833]:
+            - button "Saltar a 00:20:36" [ref=f34e834] [cursor=pointer]: 00:20:36
+            - button "Copiar link a este momento" [ref=f34e835] [cursor=pointer]
+            - strong [ref=f34e839]: "Julián Ortiz:"
+            - text: Tiene una explicación técnica. Los sistemas están entrenados para agregar frases como "consultá con un profesional" en temas legales, como medida de cobertura. Eso aparece en cualquier respuesta legal, acierte o no. No es una estimación real de la confianza del modelo. Es un disclaimer de fábrica.
+          - paragraph [ref=f34e840]:
+            - button "Saltar a 00:21:02" [ref=f34e841] [cursor=pointer]: 00:21:02
+            - button "Copiar link a este momento" [ref=f34e842] [cursor=pointer]
+            - strong [ref=f34e846]: "Ana Paula Sosa:"
+            - text: Que para el usuario es ruido. Si todas las respuestas dicen "consultá con un profesional", ninguna lo dice.
+          - paragraph [ref=f34e847]:
+            - button "Saltar a 00:21:12" [ref=f34e848] [cursor=pointer]: 00:21:12
+            - button "Copiar link a este momento" [ref=f34e849] [cursor=pointer]
+            - strong [ref=f34e853]: "Lucía Ferreyra:"
+            - text: Volvamos a lo que acertaron, que todavía estamos ahí. En el grupo dos, ¿qué tipo de pregunta respondieron bien?
+          - paragraph [ref=f34e854]:
+            - button "Saltar a 00:21:21" [ref=f34e855] [cursor=pointer]: 00:21:21
+            - button "Copiar link a este momento" [ref=f34e856] [cursor=pointer]
+            - strong [ref=f34e860]: "Ana Paula Sosa:"
+            - text: "Las de plazos de leyes que no se modificaron en los últimos años, aunque fueran menos conocidas. Y las de competencia: qué organismo hace qué, siempre que el organismo no hubiera cambiado."
+          - paragraph [ref=f34e861]:
+            - button "Saltar a 00:21:38" [ref=f34e862] [cursor=pointer]: 00:21:38
+            - button "Copiar link a este momento" [ref=f34e863] [cursor=pointer]
+            - strong [ref=f34e867]: "Martín Albarracín:"
+            - text: Grupo tres, citas precisas. Acá los números bajan en todos. Entre siete y doce correctas de veinte, según el sistema. Y, a diferencia de los otros grupos, muchas incorrectas, no incompletas.
+          - paragraph [ref=f34e868]:
+            - button "Saltar a 00:21:57" [ref=f34e869] [cursor=pointer]: 00:21:57
+            - button "Copiar link a este momento" [ref=f34e870] [cursor=pointer]
+            - strong [ref=f34e874]: "Julián Ortiz:"
+            - text: Pero antes de ir a lo malo, quiero rescatar algo del grupo tres. Las preguntas que pedían el artículo de una norma muy citada, como el artículo 34 de la 24.240 o el 2560 del Código, las acertaron casi todos. El problema fue con los artículos de normas menos famosas.
+          - paragraph [ref=f34e875]:
+            - button "Saltar a 00:22:20" [ref=f34e876] [cursor=pointer]: 00:22:20
+            - button "Copiar link a este momento" [ref=f34e877] [cursor=pointer]
+            - strong [ref=f34e881]: "Ana Paula Sosa:"
+            - text: "Sí. Hay una regla que se puede extraer: cuanto más citada es una norma en internet, más probable que el número de artículo esté bien. Eso es útil para saber cuándo desconfiar."
+          - paragraph [ref=f34e882]:
+            - button "Saltar a 00:22:36" [ref=f34e883] [cursor=pointer]: 00:22:36
+            - button "Copiar link a este momento" [ref=f34e884] [cursor=pointer]
+            - strong [ref=f34e888]: "Lucía Ferreyra:"
+            - text: Resumen de lo bueno, en una frase cada uno.
+          - paragraph [ref=f34e889]:
+            - button "Saltar a 00:22:41" [ref=f34e890] [cursor=pointer]: 00:22:41
+            - button "Copiar link a este momento" [ref=f34e891] [cursor=pointer]
+            - strong [ref=f34e895]: "Ana Paula Sosa:"
+            - text: Para explicar qué dice una norma conocida en lenguaje claro, sirven.
+          - paragraph [ref=f34e896]:
+            - button "Saltar a 00:22:48" [ref=f34e897] [cursor=pointer]: 00:22:48
+            - button "Copiar link a este momento" [ref=f34e898] [cursor=pointer]
+            - strong [ref=f34e902]: "Julián Ortiz:"
+            - text: Para datos estables y muy publicados, son confiables en un nivel comparable a una buena búsqueda.
+          - paragraph [ref=f34e903]:
+            - button "Saltar a 00:22:56" [ref=f34e904] [cursor=pointer]: 00:22:56
+            - button "Copiar link a este momento" [ref=f34e905] [cursor=pointer]
+            - strong [ref=f34e909]: "Martín Albarracín:"
+            - text: "Y para preguntas donde la respuesta no cambió en años, el tipo de sistema importa poco: todos anduvieron."
+          - paragraph [ref=f34e910]:
+            - button "Saltar a 00:23:06" [ref=f34e911] [cursor=pointer]: 00:23:06
+            - button "Copiar link a este momento" [ref=f34e912] [cursor=pointer]
+            - strong [ref=f34e916]: "Lucía Ferreyra:"
+            - text: Ahora, lo otro.
+          - 'heading "Resultados: dónde inventaron" [level=3] [ref=f34e917]'
+          - paragraph [ref=f34e918]:
+            - button "Saltar a 00:24:50" [ref=f34e919] [cursor=pointer]: 00:24:50
+            - button "Copiar link a este momento" [ref=f34e920] [cursor=pointer]
+            - strong [ref=f34e924]: "Martín Albarracín:"
+            - text: Las cinco preguntas trampa. Decretos que no existen o que tratan de otro tema. Veinte respuestas en total, cinco por sistema.
+          - paragraph [ref=f34e925]:
+            - button "Saltar a 00:25:02" [ref=f34e926] [cursor=pointer]: 00:25:02
+            - button "Copiar link a este momento" [ref=f34e927] [cursor=pointer]
+            - strong [ref=f34e931]: "Ana Paula Sosa:"
+            - text: Catorce de veinte explicaron el contenido del decreto inexistente. Con artículos. Con fecha de publicación. Con organismo. Tres dijeron que no encontraban la norma. Tres dieron una respuesta ambigua, del tipo "ese decreto regula aspectos relacionados con", sin comprometerse.
+          - paragraph [ref=f34e932]:
+            - button "Saltar a 00:25:28" [ref=f34e933] [cursor=pointer]: 00:25:28
+            - button "Copiar link a este momento" [ref=f34e934] [cursor=pointer]
+            - strong [ref=f34e938]: "Julián Ortiz:"
+            - text: Catorce de veinte es mucho peor de lo que yo esperaba, y lo digo como alguien que defiende estos sistemas. Es el caso donde el modelo tiene toda la información para decir "no sé" y elige completar.
+          - paragraph [ref=f34e939]:
+            - button "Saltar a 00:25:44" [ref=f34e940] [cursor=pointer]: 00:25:44
+            - button "Copiar link a este momento" [ref=f34e941] [cursor=pointer]
+            - strong [ref=f34e945]: "Lucía Ferreyra:"
+            - text: Danos un ejemplo concreto.
+          - paragraph [ref=f34e946]:
+            - button "Saltar a 00:25:48" [ref=f34e947] [cursor=pointer]: 00:25:48
+            - button "Copiar link a este momento" [ref=f34e948] [cursor=pointer]
+            - strong [ref=f34e952]: "Ana Paula Sosa:"
+            - text: "Preguntamos por un decreto con un número que no corresponde a ninguno publicado ese año, sobre \"régimen de notificaciones electrónicas en el procedimiento administrativo\". Un sistema respondió con una explicación de cuatro párrafos: objeto, ámbito de aplicación, obligaciones de los organismos, plazos de entrada en vigencia. Todo inventado. Todo verosímil. Si yo no supiera que el decreto no existe, lo citaba."
+          - paragraph [ref=f34e953]:
+            - button "Saltar a 00:26:22" [ref=f34e954] [cursor=pointer]: 00:26:22
+            - button "Copiar link a este momento" [ref=f34e955] [cursor=pointer]
+            - strong [ref=f34e959]: "Martín Albarracín:"
+            - text: Y cuando le pidieron el link.
+          - paragraph [ref=f34e960]:
+            - button "Saltar a 00:26:25" [ref=f34e961] [cursor=pointer]: 00:26:25
+            - button "Copiar link a este momento" [ref=f34e962] [cursor=pointer]
+            - strong [ref=f34e966]: "Ana Paula Sosa:"
+            - text: Dio un link al Boletín Oficial con el formato correcto de los links del Boletín Oficial. El link no existe. Lleva a un error.
+          - paragraph [ref=f34e967]:
+            - button "Saltar a 00:26:38" [ref=f34e968] [cursor=pointer]: 00:26:38
+            - button "Copiar link a este momento" [ref=f34e969] [cursor=pointer]
+            - strong [ref=f34e973]: "Julián Ortiz:"
+            - text: "El formato correcto es lo que lo hace peligroso. El modelo aprendió cómo se ven los links de boletinoficial.gob.ar y genera uno que se ve igual. No tiene forma de saber si existe, porque no lo está buscando: lo está escribiendo."
+          - paragraph [ref=f34e974]:
+            - button "Saltar a 00:26:56" [ref=f34e975] [cursor=pointer]: 00:26:56
+            - button "Copiar link a este momento" [ref=f34e976] [cursor=pointer]
+            - strong [ref=f34e980]: "Lucía Ferreyra:"
+            - text: Ana Paula, lo que dijiste antes de grabar.
+          - paragraph [ref=f34e981]:
+            - button "Saltar a 00:27:05" [ref=f34e982] [cursor=pointer]: 00:27:05
+            - button "Copiar link a este momento" [ref=f34e983] [cursor=pointer]
+            - strong [ref=f34e987]: "Ana Paula Sosa:"
+            - text: El problema no es que se equivoquen. Es que se equivocan con la misma cara con la que aciertan. Una persona que no sabe no puede distinguir. Y una persona que sabe tiene que verificar todo, con lo cual el tiempo que ahorró lo pierde.
+          - paragraph [ref=f34e988]:
+            - button "Saltar a 00:27:27" [ref=f34e989] [cursor=pointer]: 00:27:27
+            - button "Copiar link a este momento" [ref=f34e990] [cursor=pointer]
+            - strong [ref=f34e994]: "Martín Albarracín:"
+            - text: Los links en general, no solo los de las trampas. Doscientos cuarenta pedidos de fuente.
+          - paragraph [ref=f34e995]:
+            - button "Saltar a 00:27:35" [ref=f34e996] [cursor=pointer]: 00:27:35
+            - button "Copiar link a este momento" [ref=f34e997] [cursor=pointer]
+            - strong [ref=f34e1001]: "Julián Ortiz:"
+            - text: "Los clasificamos en cuatro: link correcto a la norma exacta; link a InfoLEG o al Boletín pero a otra norma; link con formato válido que no existe; y sin link, con una respuesta del tipo \"podés buscarlo en InfoLEG\". Los sistemas con navegación dieron muchos más links correctos. Los sin navegación dieron una proporción alta de links inexistentes y de links a otras normas."
+          - paragraph [ref=f34e1002]:
+            - button "Saltar a 00:28:08" [ref=f34e1003] [cursor=pointer]: 00:28:08
+            - button "Copiar link a este momento" [ref=f34e1004] [cursor=pointer]
+            - strong [ref=f34e1008]: "Ana Paula Sosa:"
+            - text: "El que más me preocupa es el segundo tipo: un link real, que abre, que lleva a InfoLEG, pero a otra ley. Porque la persona ve que el link funciona, ve el logo del ministerio, y confía. No lee que es otra norma."
+          - paragraph [ref=f34e1009]:
+            - button "Saltar a 00:28:28" [ref=f34e1010] [cursor=pointer]: 00:28:28
+            - button "Copiar link a este momento" [ref=f34e1011] [cursor=pointer]
+            - strong [ref=f34e1015]: "Lucía Ferreyra:"
+            - text: Volvamos al grupo tres completo, las citas. ¿Qué tipos de error aparecieron?
+          - paragraph [ref=f34e1016]:
+            - button "Saltar a 00:28:35" [ref=f34e1017] [cursor=pointer]: 00:28:35
+            - button "Copiar link a este momento" [ref=f34e1018] [cursor=pointer]
+            - strong [ref=f34e1022]: "Ana Paula Sosa:"
+            - text: "Cuatro tipos, que adaptamos de la tipología del paper de Stanford y Yale que linkeamos. Número de artículo incorrecto: la norma es la correcta pero el artículo es otro. Norma incorrecta: el contenido es correcto pero lo atribuye a otra ley. Organismo incorrecto: una resolución real atribuida a otro organismo. Y norma inexistente, que es la trampa pero también apareció espontáneamente en preguntas normales."
+          - paragraph [ref=f34e1023]:
+            - button "Saltar a 00:29:10" [ref=f34e1024] [cursor=pointer]: 00:29:10
+            - button "Copiar link a este momento" [ref=f34e1025] [cursor=pointer]
+            - strong [ref=f34e1029]: "Martín Albarracín:"
+            - text: ¿Espontáneamente?
+          - paragraph [ref=f34e1030]:
+            - button "Saltar a 00:29:13" [ref=f34e1031] [cursor=pointer]: 00:29:13
+            - button "Copiar link a este momento" [ref=f34e1032] [cursor=pointer]
+            - strong [ref=f34e1036]: "Ana Paula Sosa:"
+            - text: En cuatro respuestas a preguntas legítimas, el sistema citó, para reforzar, una resolución o un decreto que no existe. No se lo pedimos. Lo agregó como apoyo. Y es lo que hace que una respuesta parezca más sólida.
+          - paragraph [ref=f34e1037]:
+            - button "Saltar a 00:29:32" [ref=f34e1038] [cursor=pointer]: 00:29:32
+            - button "Copiar link a este momento" [ref=f34e1039] [cursor=pointer]
+            - strong [ref=f34e1043]: "Julián Ortiz:"
+            - text: "Eso es importante: la"
+            - link "alucinación" [ref=f34e1044] [cursor=pointer]:
+              - /url: /glosario/alucinacion
+            - text: no aparece solo cuando preguntás por algo falso. Aparece como decoración de respuestas correctas. El núcleo de la respuesta está bien y la cita de apoyo está inventada.
+          - paragraph [ref=f34e1045]:
+            - button "Saltar a 00:29:50" [ref=f34e1046] [cursor=pointer]: 00:29:50
+            - button "Copiar link a este momento" [ref=f34e1047] [cursor=pointer]
+            - strong [ref=f34e1051]: "Lucía Ferreyra:"
+            - text: ¿Hubo diferencias grandes entre sistemas en este grupo?
+          - paragraph [ref=f34e1052]:
+            - button "Saltar a 00:29:55" [ref=f34e1053] [cursor=pointer]: 00:29:55
+            - button "Copiar link a este momento" [ref=f34e1054] [cursor=pointer]
+            - strong [ref=f34e1058]: "Julián Ortiz:"
+            - text: Hubo diferencias, y están en la planilla por sistema. Pero insisto en no convertirlo en ranking porque la diferencia entre el mejor y el peor en citas fue menor que la diferencia entre el grupo uno y el grupo tres en cualquier sistema. El tipo de pregunta importa más que el producto.
+          - paragraph [ref=f34e1059]:
+            - button "Saltar a 00:30:18" [ref=f34e1060] [cursor=pointer]: 00:30:18
+            - button "Copiar link a este momento" [ref=f34e1061] [cursor=pointer]
+            - strong [ref=f34e1065]: "Martín Albarracín:"
+            - text: Eso es un hallazgo en sí mismo. Si estás eligiendo un sistema, la pregunta no es cuál sino para qué.
+          - paragraph [ref=f34e1066]:
+            - button "Saltar a 00:30:28" [ref=f34e1067] [cursor=pointer]: 00:30:28
+            - button "Copiar link a este momento" [ref=f34e1068] [cursor=pointer]
+            - strong [ref=f34e1072]: "Ana Paula Sosa:"
+            - text: Una última cosa de este bloque. Las respuestas incorrectas estaban, en promedio, mejor escritas que las correctas. Más largas, más estructuradas, con más subtítulos. Lo medimos a ojo, no es una estadística, pero los tres lo notamos.
+          - paragraph [ref=f34e1073]:
+            - button "Saltar a 00:30:48" [ref=f34e1074] [cursor=pointer]: 00:30:48
+            - button "Copiar link a este momento" [ref=f34e1075] [cursor=pointer]
+            - strong [ref=f34e1079]: "Julián Ortiz:"
+            - text: Tiene lógica. Cuando el modelo no tiene el dato, genera más texto alrededor. Cuando lo tiene, responde y listo.
+          - paragraph [ref=f34e1080]:
+            - button "Saltar a 00:30:58" [ref=f34e1081] [cursor=pointer]: 00:30:58
+            - button "Copiar link a este momento" [ref=f34e1082] [cursor=pointer]
+            - strong [ref=f34e1086]: "Lucía Ferreyra:"
+            - text: O sea que la longitud y la prolijidad son una señal de alerta, no de calidad.
+          - paragraph [ref=f34e1087]:
+            - button "Saltar a 00:31:05" [ref=f34e1088] [cursor=pointer]: 00:31:05
+            - button "Copiar link a este momento" [ref=f34e1089] [cursor=pointer]
+            - strong [ref=f34e1093]: "Ana Paula Sosa:"
+            - text: En este dominio, sí. Y es exactamente al revés de cómo lee la gente.
+          - paragraph [ref=f34e1094]:
+            - button "Saltar a 00:31:15" [ref=f34e1095] [cursor=pointer]: 00:31:15
+            - button "Copiar link a este momento" [ref=f34e1096] [cursor=pointer]
+            - strong [ref=f34e1100]: "Martín Albarracín:"
+            - text: Vamos a por qué pasa esto, porque sin eso no se puede pensar qué hacer.
+          - heading "Por qué pasa esto" [level=3] [ref=f34e1101]
+          - paragraph [ref=f34e1102]:
+            - button "Saltar a 00:32:10" [ref=f34e1103] [cursor=pointer]: 00:32:10
+            - button "Copiar link a este momento" [ref=f34e1104] [cursor=pointer]
+            - strong [ref=f34e1108]: "Julián Ortiz:"
+            - text: Voy a tratar de explicarlo sin jerga. Un modelo de lenguaje genera texto palabra por palabra, eligiendo cada vez la continuación más probable según lo que vio en su entrenamiento. Cuando le preguntás por el artículo 2560 del Código, esa secuencia apareció tantas veces que la probabilidad de "cinco años" es altísima. Cuando le preguntás por un decreto oscuro, no hay secuencia memorizada, y el modelo igual tiene que elegir la palabra siguiente. Elige la que mejor suena.
+          - paragraph [ref=f34e1109]:
+            - button "Saltar a 00:32:50" [ref=f34e1110] [cursor=pointer]: 00:32:50
+            - button "Copiar link a este momento" [ref=f34e1111] [cursor=pointer]
+            - strong [ref=f34e1115]: "Lucía Ferreyra:"
+            - text: No tiene un paso de "no sé".
+          - paragraph [ref=f34e1116]:
+            - button "Saltar a 00:32:53" [ref=f34e1117] [cursor=pointer]: 00:32:53
+            - button "Copiar link a este momento" [ref=f34e1118] [cursor=pointer]
+            - strong [ref=f34e1122]: "Julián Ortiz:"
+            - text: Tiene algo parecido, pero es débil. Los sistemas se entrenan además para ser útiles y para responder, y eso empuja hacia completar. Decir "no existe ese decreto" requiere que el modelo haya aprendido específicamente a hacerlo, y es una conducta que se entrena menos porque es menos frecuente en los datos.
+          - paragraph [ref=f34e1123]:
+            - button "Saltar a 00:33:18" [ref=f34e1124] [cursor=pointer]: 00:33:18
+            - button "Copiar link a este momento" [ref=f34e1125] [cursor=pointer]
+            - strong [ref=f34e1129]: "Ana Paula Sosa:"
+            - text: "Desde el derecho, lo que yo veo es que el modelo aprendió la forma del discurso jurídico, que es muy regular: \"el artículo tal establece\", \"conforme el decreto tal\", \"la autoridad de aplicación es\". Aprendió el molde. Y llena el molde con lo que tenga."
+          - paragraph [ref=f34e1130]:
+            - button "Saltar a 00:33:40" [ref=f34e1131] [cursor=pointer]: 00:33:40
+            - button "Copiar link a este momento" [ref=f34e1132] [cursor=pointer]
+            - strong [ref=f34e1136]: "Martín Albarracín:"
+            - text: "Lo segundo: la fecha de corte."
+          - paragraph [ref=f34e1137]:
+            - button "Saltar a 00:33:44" [ref=f34e1138] [cursor=pointer]: 00:33:44
+            - button "Copiar link a este momento" [ref=f34e1139] [cursor=pointer]
+            - strong [ref=f34e1143]: "Julián Ortiz:"
+            - text: "Cada modelo se entrena con datos hasta cierta fecha. Lo que pasó después no lo sabe, salvo que navegue. Y la normativa argentina cambia mucho: plazos, montos, organismos. Un modelo con corte de hace un año responde con el mundo de hace un año, y lo responde en presente, porque no tiene noción del tiempo."
+          - paragraph [ref=f34e1144]:
+            - button "Saltar a 00:34:08" [ref=f34e1145] [cursor=pointer]: 00:34:08
+            - button "Copiar link a este momento" [ref=f34e1146] [cursor=pointer]
+            - strong [ref=f34e1150]: "Ana Paula Sosa:"
+            - text: Eso explica el grupo dos casi completo.
+          - paragraph [ref=f34e1151]:
+            - button "Saltar a 00:34:12" [ref=f34e1152] [cursor=pointer]: 00:34:12
+            - button "Copiar link a este momento" [ref=f34e1153] [cursor=pointer]
+            - strong [ref=f34e1157]: "Lucía Ferreyra:"
+            - text: "Lo tercero, que me parece menos discutido: la representación de la normativa argentina en los datos de entrenamiento."
+          - paragraph [ref=f34e1158]:
+            - button "Saltar a 00:34:22" [ref=f34e1159] [cursor=pointer]: 00:34:22
+            - button "Copiar link a este momento" [ref=f34e1160] [cursor=pointer]
+            - strong [ref=f34e1164]: "Julián Ortiz:"
+            - text: Es un punto clave. Estos modelos se entrenan mayormente con texto en inglés, y dentro del español, con lo que más circula. El derecho argentino está en InfoLEG, en el Boletín, en fallos, en algunos blogs. Comparado con el derecho de Estados Unidos, es una fracción minúscula. El modelo sabe mucho menos de la 27.275 que de cualquier ley federal norteamericana, y cuando sabe menos, completa más.
+          - paragraph [ref=f34e1165]:
+            - button "Saltar a 00:34:55" [ref=f34e1166] [cursor=pointer]: 00:34:55
+            - button "Copiar link a este momento" [ref=f34e1167] [cursor=pointer]
+            - strong [ref=f34e1171]: "Ana Paula Sosa:"
+            - text: Y a veces completa con derecho de otro país. Vimos dos respuestas que describían un procedimiento que es correcto en España y no en Argentina. Con terminología española.
+          - paragraph [ref=f34e1172]:
+            - button "Saltar a 00:35:10" [ref=f34e1173] [cursor=pointer]: 00:35:10
+            - button "Copiar link a este momento" [ref=f34e1174] [cursor=pointer]
+            - strong [ref=f34e1178]: "Martín Albarracín:"
+            - text: O sea que el modelo "piensa" en el sistema jurídico que más vio.
+          - paragraph [ref=f34e1179]:
+            - button "Saltar a 00:35:16" [ref=f34e1180] [cursor=pointer]: 00:35:16
+            - button "Copiar link a este momento" [ref=f34e1181] [cursor=pointer]
+            - strong [ref=f34e1185]: "Julián Ortiz:"
+            - text: No piensa, pero la tendencia es esa. Es un sesgo de los datos de entrenamiento que tiene consecuencias directas para un país chico en volumen de texto.
+          - paragraph [ref=f34e1186]:
+            - button "Saltar a 00:35:30" [ref=f34e1187] [cursor=pointer]: 00:35:30
+            - button "Copiar link a este momento" [ref=f34e1188] [cursor=pointer]
+            - strong [ref=f34e1192]: "Lucía Ferreyra:"
+            - text: "Lo cuarto: los links."
+          - paragraph [ref=f34e1193]:
+            - button "Saltar a 00:35:33" [ref=f34e1194] [cursor=pointer]: 00:35:33
+            - button "Copiar link a este momento" [ref=f34e1195] [cursor=pointer]
+            - strong [ref=f34e1199]: "Julián Ortiz:"
+            - text: "Un modelo sin navegación no puede consultar una URL. Cuando le pedís un link, hace lo mismo que con el texto: genera la secuencia de caracteres más probable. Para boletinoficial.gob.ar hay un patrón, con números, y el modelo lo reproduce. No está mintiendo en el sentido humano: está completando un patrón. Pero el resultado es un link falso con aspecto de verdadero."
+          - paragraph [ref=f34e1200]:
+            - button "Saltar a 00:36:03" [ref=f34e1201] [cursor=pointer]: 00:36:03
+            - button "Copiar link a este momento" [ref=f34e1202] [cursor=pointer]
+            - strong [ref=f34e1206]: "Ana Paula Sosa:"
+            - text: "Para mí esto debería estar en la pantalla de cualquier sistema que se use en el Estado: \"los links de esta respuesta pueden no existir\". Con esas palabras."
+          - paragraph [ref=f34e1207]:
+            - button "Saltar a 00:36:17" [ref=f34e1208] [cursor=pointer]: 00:36:17
+            - button "Copiar link a este momento" [ref=f34e1209] [cursor=pointer]
+            - strong [ref=f34e1213]: "Martín Albarracín:"
+            - text: Y con navegación mejora, pero.
+          - paragraph [ref=f34e1214]:
+            - button "Saltar a 00:36:20" [ref=f34e1215] [cursor=pointer]: 00:36:20
+            - button "Copiar link a este momento" [ref=f34e1216] [cursor=pointer]
+            - strong [ref=f34e1220]: "Julián Ortiz:"
+            - text: "Mejora mucho en links y en datos recientes. Pero introduce otro problema: el sistema busca, encuentra tres páginas, y elige. Si elige un blog desactualizado en vez de InfoLEG, responde mal con un link real. Vimos varios de esos."
+          - paragraph [ref=f34e1221]:
+            - button "Saltar a 00:36:42" [ref=f34e1222] [cursor=pointer]: 00:36:42
+            - button "Copiar link a este momento" [ref=f34e1223] [cursor=pointer]
+            - strong [ref=f34e1227]: "Lucía Ferreyra:"
+            - text: Última causa, que es institucional y no técnica.
+          - paragraph [ref=f34e1228]:
+            - button "Saltar a 00:36:47" [ref=f34e1229] [cursor=pointer]: 00:36:47
+            - button "Copiar link a este momento" [ref=f34e1230] [cursor=pointer]
+            - strong [ref=f34e1234]: "Ana Paula Sosa:"
+            - text: Que no hay un
+            - link "benchmark" [ref=f34e1235] [cursor=pointer]:
+              - /url: /glosario/benchmark
+            - text: público de normativa argentina. No existe un conjunto de preguntas con respuesta verificada que cualquiera pueda usar para medir un sistema antes de ponerlo a responder al público. Nuestra prueba de sesenta es un intento mínimo. Debería existir uno de miles, mantenido por un organismo o una universidad, actualizado cuando cambia la norma.
+          - paragraph [ref=f34e1236]:
+            - button "Saltar a 00:37:15" [ref=f34e1237] [cursor=pointer]: 00:37:15
+            - button "Copiar link a este momento" [ref=f34e1238] [cursor=pointer]
+            - strong [ref=f34e1242]: "Julián Ortiz:"
+            - text: Y con eso, los proveedores podrían decir "nuestro sistema acierta tanto en el benchmark argentino" y un funcionario podría exigirlo en un pliego.
+          - paragraph [ref=f34e1243]:
+            - button "Saltar a 00:37:27" [ref=f34e1244] [cursor=pointer]: 00:37:27
+            - button "Copiar link a este momento" [ref=f34e1245] [cursor=pointer]
+            - strong [ref=f34e1249]: "Martín Albarracín:"
+            - text: Hoy el pliego dice "inteligencia artificial" y nada más.
+          - paragraph [ref=f34e1250]:
+            - button "Saltar a 00:37:32" [ref=f34e1251] [cursor=pointer]: 00:37:32
+            - button "Copiar link a este momento" [ref=f34e1252] [cursor=pointer]
+            - strong [ref=f34e1256]: "Ana Paula Sosa:"
+            - text: Hoy el pliego dice lo que dice la demo.
+          - paragraph [ref=f34e1257]:
+            - button "Saltar a 00:37:38" [ref=f34e1258] [cursor=pointer]: 00:37:38
+            - button "Copiar link a este momento" [ref=f34e1259] [cursor=pointer]
+            - strong [ref=f34e1263]: "Lucía Ferreyra:"
+            - text: Lo que puede hacer un organismo.
+          - heading "Qué puede hacer un organismo" [level=3] [ref=f34e1264]
+          - paragraph [ref=f34e1265]:
+            - button "Saltar a 00:39:20" [ref=f34e1266] [cursor=pointer]: 00:39:20
+            - button "Copiar link a este momento" [ref=f34e1267] [cursor=pointer]
+            - strong [ref=f34e1271]: "Martín Albarracín:"
+            - text: Supongamos que alguien que nos escucha trabaja en un organismo y tiene que decidir si pone un sistema de estos a responder al público. Tres recomendaciones por cabeza.
+          - paragraph [ref=f34e1272]:
+            - button "Saltar a 00:39:33" [ref=f34e1273] [cursor=pointer]: 00:39:33
+            - button "Copiar link a este momento" [ref=f34e1274] [cursor=pointer]
+            - strong [ref=f34e1278]: "Ana Paula Sosa:"
+            - text: "Primera: definir qué tipo de pregunta va a responder. Si es explicar qué dice una norma estable en lenguaje claro, los datos dicen que puede funcionar con revisión. Si es dar plazos, montos o citas, no sin conectarlo a la fuente oficial y mostrar la fuente en cada respuesta."
+          - paragraph [ref=f34e1279]:
+            - button "Saltar a 00:39:58" [ref=f34e1280] [cursor=pointer]: 00:39:58
+            - button "Copiar link a este momento" [ref=f34e1281] [cursor=pointer]
+            - strong [ref=f34e1285]: "Julián Ortiz:"
+            - text: "Segunda: conectarlo a la fuente oficial no es opcional. Técnicamente se llama"
+            - link "recuperación aumentada" [ref=f34e1286] [cursor=pointer]:
+              - /url: /glosario/recuperacion-aumentada
+            - text: ": el sistema busca en InfoLEG, en el Boletín o en los documentos del organismo y responde a partir de eso, con el link al documento que usó. No elimina errores, pero cambia la pregunta de \"¿el modelo sabe?\" a \"¿el modelo leyó bien el documento correcto?\", que es verificable."
+          - paragraph [ref=f34e1287]:
+            - button "Saltar a 00:40:30" [ref=f34e1288] [cursor=pointer]: 00:40:30
+            - button "Copiar link a este momento" [ref=f34e1289] [cursor=pointer]
+            - strong [ref=f34e1293]: "Lucía Ferreyra:"
+            - text: Tercera.
+          - paragraph [ref=f34e1294]:
+            - button "Saltar a 00:40:32" [ref=f34e1295] [cursor=pointer]: 00:40:32
+            - button "Copiar link a este momento" [ref=f34e1296] [cursor=pointer]
+            - strong [ref=f34e1300]: "Ana Paula Sosa:"
+            - text: "Que cada respuesta diga de dónde sale. Si no tiene fuente, que lo diga. Y que el sistema tenga prohibido generar links: los links tienen que venir del documento recuperado, no del modelo."
+          - paragraph [ref=f34e1301]:
+            - button "Saltar a 00:40:50" [ref=f34e1302] [cursor=pointer]: 00:40:50
+            - button "Copiar link a este momento" [ref=f34e1303] [cursor=pointer]
+            - strong [ref=f34e1307]: "Julián Ortiz:"
+            - text: "Cuarta, mía: medir antes de lanzar y después de cada cambio. Con un conjunto de preguntas como el nuestro, adaptado al organismo. Si la precisión en citas baja de cierto umbral, el sistema no responde ese tipo de pregunta y deriva a una persona."
+          - paragraph [ref=f34e1308]:
+            - button "Saltar a 00:41:12" [ref=f34e1309] [cursor=pointer]: 00:41:12
+            - button "Copiar link a este momento" [ref=f34e1310] [cursor=pointer]
+            - strong [ref=f34e1314]: "Martín Albarracín:"
+            - text: "Quinta: publicar las métricas. Si un organismo pone un sistema a responder, que publique cuántas preguntas recibe, qué porcentaje deriva y los resultados de la evaluación. Como"
+            - link "datos abiertos" [ref=f34e1315] [cursor=pointer]:
+              - /url: /glosario/datos-abiertos
+            - text: .
+          - paragraph [ref=f34e1316]:
+            - button "Saltar a 00:41:30" [ref=f34e1317] [cursor=pointer]: 00:41:30
+            - button "Copiar link a este momento" [ref=f34e1318] [cursor=pointer]
+            - strong [ref=f34e1322]: "Ana Paula Sosa:"
+            - text: "Y sexta, la más simple: una línea, arriba de cada respuesta, que diga \"esta respuesta fue generada automáticamente y puede contener errores; verificá en la fuente antes de actuar\". No en letra chica. Arriba."
+          - paragraph [ref=f34e1323]:
+            - button "Saltar a 00:41:50" [ref=f34e1324] [cursor=pointer]: 00:41:50
+            - button "Copiar link a este momento" [ref=f34e1325] [cursor=pointer]
+            - strong [ref=f34e1329]: "Lucía Ferreyra:"
+            - text: ¿Y para una persona común, que no es organismo? ¿Qué le dirían?
+          - paragraph [ref=f34e1330]:
+            - button "Saltar a 00:41:57" [ref=f34e1331] [cursor=pointer]: 00:41:57
+            - button "Copiar link a este momento" [ref=f34e1332] [cursor=pointer]
+            - strong [ref=f34e1336]: "Ana Paula Sosa:"
+            - text: Que use el chatbot para entender, no para citar. Para que te explique qué es la prescripción, sirve. Para saber si tu plazo venció, andá a la fuente o a una persona.
+          - paragraph [ref=f34e1337]:
+            - button "Saltar a 00:42:12" [ref=f34e1338] [cursor=pointer]: 00:42:12
+            - button "Copiar link a este momento" [ref=f34e1339] [cursor=pointer]
+            - strong [ref=f34e1343]: "Julián Ortiz:"
+            - text: Y que desconfíe de los links y de las respuestas largas y prolijas con muchos artículos citados. Que pida la fuente y la abra. Si no abre o es otra norma, descarte la respuesta entera.
+          - paragraph [ref=f34e1344]:
+            - button "Saltar a 00:42:30" [ref=f34e1345] [cursor=pointer]: 00:42:30
+            - button "Copiar link a este momento" [ref=f34e1346] [cursor=pointer]
+            - strong [ref=f34e1350]: "Martín Albarracín:"
+            - text: Qué cambia y qué no.
+          - paragraph [ref=f34e1351]:
+            - button "Saltar a 00:42:34" [ref=f34e1352] [cursor=pointer]: 00:42:34
+            - button "Copiar link a este momento" [ref=f34e1353] [cursor=pointer]
+            - strong [ref=f34e1357]: "Lucía Ferreyra:"
+            - text: "Lo que cambia: una persona sin abogado puede entender qué dice una norma a las once de la noche, en lenguaje claro, y eso antes no existía. Lo que no cambia: el dato exacto, el plazo, el artículo, el link, sigue estando solamente en la fuente oficial, y nadie, ni el modelo ni el usuario, puede saltearse el paso de ir a buscarlo."
+          - paragraph [ref=f34e1358]:
+            - button "Saltar a 00:43:02" [ref=f34e1359] [cursor=pointer]: 00:43:02
+            - button "Copiar link a este momento" [ref=f34e1360] [cursor=pointer]
+            - strong [ref=f34e1364]: "Ana Paula Sosa:"
+            - text: "Y agregaría lo que empeora si no se hace nada: respuestas con aspecto oficial, con links con aspecto oficial, circulando sin que nadie sepa que son inventadas. Eso ya pasa, y va a pasar más."
+          - paragraph [ref=f34e1365]:
+            - button "Saltar a 00:43:20" [ref=f34e1366] [cursor=pointer]: 00:43:20
+            - button "Copiar link a este momento" [ref=f34e1367] [cursor=pointer]
+            - strong [ref=f34e1371]: "Julián Ortiz:"
+            - text: "Y lo que mejoraría con una sola decisión pública: un benchmark argentino, abierto, mantenido. No es caro. Es trabajo de gente como Ana Paula, con tiempo pago."
+          - paragraph [ref=f34e1372]:
+            - button "Saltar a 00:43:35" [ref=f34e1373] [cursor=pointer]: 00:43:35
+            - button "Copiar link a este momento" [ref=f34e1374] [cursor=pointer]
+            - strong [ref=f34e1378]: "Martín Albarracín:"
+            - text: Lo anotamos como propuesta concreta y como caso para seguir.
+          - heading "Cierre y fuentes" [level=3] [ref=f34e1379]
+          - paragraph [ref=f34e1380]:
+            - button "Saltar a 00:44:00" [ref=f34e1381] [cursor=pointer]: 00:44:00
+            - button "Copiar link a este momento" [ref=f34e1382] [cursor=pointer]
+            - strong [ref=f34e1386]: "Lucía Ferreyra:"
+            - text: "Fuentes del episodio, todas en la página. El Código Civil y Comercial, la Ley 27.275 y la Ley 24.240 en InfoLEG, que son las normas de las que salieron la mayoría de las preguntas. InfoLEG como base contra la que se verificó cada respuesta. Y el paper de Stanford y Yale sobre alucinaciones legales, del que adaptamos la tipología de errores. Además, publicadas aparte: las sesenta preguntas con su respuesta correcta y link, las doscientas cuarenta respuestas sin editar y la planilla de evaluación."
+          - paragraph [ref=f34e1387]:
+            - button "Saltar a 00:44:38" [ref=f34e1388] [cursor=pointer]: 00:44:38
+            - button "Copiar link a este momento" [ref=f34e1389] [cursor=pointer]
+            - strong [ref=f34e1393]: "Martín Albarracín:"
+            - text: "Cómo usamos IA en este episodio: los cuatro chatbots son el objeto de la prueba. La transcripción es automática y la revisó Lucía. El borrador del resumen y de los capítulos lo generó un modelo y lo corregimos. Las preguntas las escribió Ana Paula sin IA, la evaluación la hizo Ana Paula sin IA, y las fuentes y conclusiones son nuestras."
+          - paragraph [ref=f34e1394]:
+            - button "Saltar a 00:45:05" [ref=f34e1395] [cursor=pointer]: 00:45:05
+            - button "Copiar link a este momento" [ref=f34e1396] [cursor=pointer]
+            - strong [ref=f34e1400]: "Lucía Ferreyra:"
+            - text: "Si alguien encuentra un error en la evaluación de alguna pregunta, la planilla tiene un número por fila: escribinos con ese número y lo revisamos en público."
+          - paragraph [ref=f34e1401]:
+            - button "Saltar a 00:45:18" [ref=f34e1402] [cursor=pointer]: 00:45:18
+            - button "Copiar link a este momento" [ref=f34e1403] [cursor=pointer]
+            - strong [ref=f34e1407]: "Ana Paula Sosa:"
+            - text: Y si alguna universidad u organismo quiere tomar las sesenta preguntas como base para algo más grande, son de uso libre.
+          - paragraph [ref=f34e1408]:
+            - button "Saltar a 00:45:28" [ref=f34e1409] [cursor=pointer]: 00:45:28
+            - button "Copiar link a este momento" [ref=f34e1410] [cursor=pointer]
+            - strong [ref=f34e1414]: "Julián Ortiz:"
+            - text: Yo pongo el código de la recolección. Está publicado.
+          - paragraph [ref=f34e1415]:
+            - button "Saltar a 00:45:34" [ref=f34e1416] [cursor=pointer]: 00:45:34
+            - button "Copiar link a este momento" [ref=f34e1417] [cursor=pointer]
+            - strong [ref=f34e1421]: "Martín Albarracín:"
+            - text: Gracias a los dos.
+          - paragraph [ref=f34e1422]:
+            - button "Saltar a 00:45:37" [ref=f34e1423] [cursor=pointer]: 00:45:37
+            - button "Copiar link a este momento" [ref=f34e1424] [cursor=pointer]
+            - strong [ref=f34e1428]: "Ana Paula Sosa:"
+            - text: Gracias.
+          - paragraph [ref=f34e1429]:
+            - button "Saltar a 00:45:39" [ref=f34e1430] [cursor=pointer]: 00:45:39
+            - button "Copiar link a este momento" [ref=f34e1431] [cursor=pointer]
+            - strong [ref=f34e1435]: "Julián Ortiz:"
+            - text: Gracias.
+          - paragraph [ref=f34e1436]:
+            - button "Saltar a 00:45:42" [ref=f34e1437] [cursor=pointer]: 00:45:42
+            - button "Copiar link a este momento" [ref=f34e1438] [cursor=pointer]
+            - strong [ref=f34e1442]: "Lucía Ferreyra:"
+            - text: Esto fue Señal Pública. Hasta el próximo episodio.
+    - generic [ref=f34e1445]:
+      - region [ref=f34e1446]:
+        - heading "Episodios relacionados" [level=2] [ref=f34e1447]
+        - list [ref=f34e1448]:
+          - listitem [ref=f34e1449]:
+            - generic [ref=f34e1450]: "01"
+            - generic [ref=f34e1451]:
+              - link "¿Puede una IA asesorar a un senador?" [ref=f34e1452] [cursor=pointer]:
+                - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+              - paragraph [ref=f34e1453]: Laboratorio · 38 min · ejemplo
+            - 'button "Reproducir episodio 1: ¿Puede una IA asesorar a un senador?" [ref=f34e1454] [cursor=pointer]'
+          - listitem [ref=f34e1457]:
+            - generic [ref=f34e1458]: "02"
+            - generic [ref=f34e1459]:
+              - link "El chatbot de un municipio, seis meses después" [ref=f34e1460] [cursor=pointer]:
+                - /url: /episodios/002-el-chatbot-de-un-municipio
+              - paragraph [ref=f34e1461]: Caso · 41 min · ejemplo
+            - 'button "Reproducir episodio 2: El chatbot de un municipio, seis meses después" [ref=f34e1462] [cursor=pointer]'
+      - region [ref=f34e1465]:
+        - heading "La señal de la semana" [level=2] [ref=f34e1466]
+        - paragraph [ref=f34e1467]: Un correo por episodio, con el resumen, las fuentes y lo que pasó después. Nada más.
+        - generic [ref=f34e1468]:
+          - generic [ref=f34e1469]: Tu correo
+          - generic [ref=f34e1470]:
+            - textbox "Tu correo" [ref=f34e1471]:
+              - /placeholder: tu@correo.ar
+            - button "Suscribirme" [ref=f34e1472] [cursor=pointer]
+          - paragraph [ref=f34e1473]: Un correo por episodio. Te das de baja con un clic.
+  - contentinfo [ref=f34e1474]:
+    - generic [ref=f34e1475]:
+      - generic [ref=f34e1476]:
+        - paragraph [ref=f34e1477]: Señal Pública
+        - paragraph [ref=f34e1478]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f34e1479]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f34e1480] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f34e1481]:
+        - heading "Escuchalo en" [level=2] [ref=f34e1482]
+        - list [ref=f34e1483]:
+          - listitem [ref=f34e1484]:
+            - link "YouTube" [ref=f34e1485] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f34e1486]:
+            - link "Spotify" [ref=f34e1487] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f34e1488]:
+            - link "Apple Podcasts" [ref=f34e1489] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f34e1490]:
+            - link "RSS del podcast" [ref=f34e1491] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f34e1496]:
+            - link "Todas las opciones" [ref=f34e1497] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f34e1498]:
+        - heading "El sitio" [level=2] [ref=f34e1499]
+        - list [ref=f34e1500]:
+          - listitem [ref=f34e1501]:
+            - link "Empezá por acá" [ref=f34e1502] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f34e1503]:
+            - link "Todos los episodios" [ref=f34e1504] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f34e1505]:
+            - link "Glosario" [ref=f34e1506] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f34e1507]:
+            - link "Biblioteca de fuentes" [ref=f34e1508] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f34e1509]:
+            - link "Proponé un caso" [ref=f34e1510] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f34e1511]:
+        - heading "Cómo trabajamos" [level=2] [ref=f34e1512]
+        - list [ref=f34e1513]:
+          - listitem [ref=f34e1514]:
+            - link "Método y uso de IA" [ref=f34e1515] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f34e1516]:
+            - link "Correcciones" [ref=f34e1517] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f34e1518]:
+            - link "Kit de prensa" [ref=f34e1519] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f34e1520]:
+            - link "hola@senalpublica.ar" [ref=f34e1521] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f34e1522]:
+            - link "LinkedIn" [ref=f34e1523] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f34e1524]:
+            - link "Instagram" [ref=f34e1525] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f34e1527]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f34e1528] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

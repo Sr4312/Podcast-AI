@@ -1,0 +1,192 @@
+- generic [active] [ref=f36e1]:
+  - link "Saltar al contenido" [ref=f36e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f36e3]:
+    - generic [ref=f36e4]:
+      - link "Señal Pública, inicio" [ref=f36e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f36e15]: Señal Pública
+      - button "Abrir menú" [ref=f36e16] [cursor=pointer]
+  - main [ref=f36e20]:
+    - region [ref=f36e21]:
+      - generic [ref=f36e23]:
+        - generic [ref=f36e24]:
+          - term [ref=f36e25]: "Último episodio:"
+          - definition [ref=f36e26]: N.º 3
+        - generic [ref=f36e27]:
+          - term [ref=f36e28]: "Publicado:"
+          - definition [ref=f36e29]:
+            - time [ref=f36e30]: 1 de octubre de 2026
+        - generic [ref=f36e31]:
+          - term [ref=f36e32]: "Duración:"
+          - definition [ref=f36e33]: 47 min
+        - generic [ref=f36e34]:
+          - term [ref=f36e35]: "Formato:"
+          - definition [ref=f36e36]: Investigación
+      - generic [ref=f36e37]:
+        - heading [level=1] [ref=f36e38]:
+          - link "Chatbots contra el Boletín Oficial" [ref=f36e39] [cursor=pointer]:
+            - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+        - paragraph [ref=f36e40]: Le hicimos sesenta preguntas sobre normativa argentina a cuatro chatbots y contrastamos cada respuesta con la fuente oficial. Acertaron mucho, inventaron en lo que más importa.
+        - generic [ref=f36e77]:
+          - button "Reproducir" [ref=f36e78] [cursor=pointer]
+          - paragraph [ref=f36e82]:
+            - text: Escuchalo en
+            - link "YouTube" [ref=f36e83] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+            - text: ·
+            - link "Spotify" [ref=f36e84] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+            - text: ·
+            - link "Apple Podcasts" [ref=f36e85] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+            - text: ·
+            - link "RSS" [ref=f36e86] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+    - region "Qué es el podcast" [ref=f36e87]:
+      - paragraph [ref=f36e88]: Señal Pública toma un problema público concreto por episodio, una ley, un trámite, un servicio municipal, y analiza con fuentes a la vista qué cambia y qué no cambia con inteligencia artificial.
+    - region [ref=f36e89]:
+      - heading "Episodios recientes" [level=2] [ref=f36e90]
+      - list [ref=f36e91]:
+        - listitem [ref=f36e92]:
+          - generic [ref=f36e93]: "02"
+          - generic [ref=f36e94]:
+            - link "El chatbot de un municipio, seis meses después" [ref=f36e95] [cursor=pointer]:
+              - /url: /episodios/002-el-chatbot-de-un-municipio
+            - paragraph [ref=f36e96]: Un municipio mediano puso un asistente de IA a responder consultas de vecinos. Su secretario de Modernización cuenta qué funcionó, qué salió mal y cuánto costó.
+            - paragraph [ref=f36e97]: Caso · 41 min
+          - 'button "Reproducir episodio 2: El chatbot de un municipio, seis meses después" [ref=f36e98] [cursor=pointer]'
+        - listitem [ref=f36e101]:
+          - generic [ref=f36e102]: "01"
+          - generic [ref=f36e103]:
+            - link "¿Puede una IA asesorar a un senador?" [ref=f36e104] [cursor=pointer]:
+              - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+            - paragraph [ref=f36e105]: Un modelo de lenguaje y una asesora legislativa analizan el mismo proyecto de ley sin verse. Comparamos qué encontró cada uno y qué se le escapó.
+            - paragraph [ref=f36e106]: Laboratorio · 38 min
+          - 'button "Reproducir episodio 1: ¿Puede una IA asesorar a un senador?" [ref=f36e107] [cursor=pointer]'
+    - region [ref=f36e110]:
+      - heading "Tres ejes" [level=2] [ref=f36e111]
+      - list [ref=f36e112]:
+        - listitem [ref=f36e113]:
+          - generic [ref=f36e114]:
+            - link "Política pública" [ref=f36e115] [cursor=pointer]:
+              - /url: /temas#politica-publica
+            - paragraph [ref=f36e116]: "Leyes, regulación, trámites y decisiones del Estado: dónde la IA entra en el circuito y qué cambia en el resultado."
+          - generic [ref=f36e117]: 3 episodios
+        - listitem [ref=f36e118]:
+          - generic [ref=f36e119]:
+            - link "Sociedad" [ref=f36e120] [cursor=pointer]:
+              - /url: /temas#sociedad
+            - paragraph [ref=f36e121]: Derechos, información pública, educación, salud y la relación cotidiana entre personas e instituciones.
+          - generic [ref=f36e122]: 1 episodio
+        - listitem [ref=f36e123]:
+          - generic [ref=f36e124]:
+            - link "Economía" [ref=f36e125] [cursor=pointer]:
+              - /url: /temas#economia
+            - paragraph [ref=f36e126]: "Trabajo, productividad, mercados y costos: qué dicen los datos sobre el impacto real de la automatización."
+          - generic [ref=f36e127]: 1 episodio
+    - region [ref=f36e128]:
+      - generic [ref=f36e129]:
+        - heading "Empezá por acá" [level=2] [ref=f36e130]
+        - paragraph [ref=f36e131]: Si es tu primera vez, estos episodios muestran cómo trabajamos.
+      - list [ref=f36e132]:
+        - listitem [ref=f36e133]:
+          - generic [ref=f36e134]: "03"
+          - generic [ref=f36e135]:
+            - link "Chatbots contra el Boletín Oficial" [ref=f36e136] [cursor=pointer]:
+              - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+            - paragraph [ref=f36e137]: Investigación · 47 min
+        - listitem [ref=f36e138]:
+          - generic [ref=f36e139]: "02"
+          - generic [ref=f36e140]:
+            - link "El chatbot de un municipio, seis meses después" [ref=f36e141] [cursor=pointer]:
+              - /url: /episodios/002-el-chatbot-de-un-municipio
+            - paragraph [ref=f36e142]: Caso · 41 min
+        - listitem [ref=f36e143]:
+          - generic [ref=f36e144]: "01"
+          - generic [ref=f36e145]:
+            - link "¿Puede una IA asesorar a un senador?" [ref=f36e146] [cursor=pointer]:
+              - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+            - paragraph [ref=f36e147]: Laboratorio · 38 min
+    - region [ref=f36e148]:
+      - heading "La señal de la semana" [level=2] [ref=f36e149]
+      - generic [ref=f36e150]:
+        - paragraph [ref=f36e151]: Un correo por episodio, con el resumen, las fuentes y lo que pasó después. Nada más.
+        - generic [ref=f36e153]:
+          - generic [ref=f36e154]: Tu correo
+          - generic [ref=f36e155]:
+            - textbox "Tu correo" [ref=f36e156]:
+              - /placeholder: tu@correo.ar
+            - button "Suscribirme" [ref=f36e157] [cursor=pointer]
+  - contentinfo [ref=f36e158]:
+    - generic [ref=f36e159]:
+      - generic [ref=f36e160]:
+        - paragraph [ref=f36e161]: Señal Pública
+        - paragraph [ref=f36e162]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f36e163]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f36e164] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f36e165]:
+        - heading "Escuchalo en" [level=2] [ref=f36e166]
+        - list [ref=f36e167]:
+          - listitem [ref=f36e168]:
+            - link "YouTube" [ref=f36e169] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f36e170]:
+            - link "Spotify" [ref=f36e171] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f36e172]:
+            - link "Apple Podcasts" [ref=f36e173] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f36e174]:
+            - link "RSS del podcast" [ref=f36e175] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f36e180]:
+            - link "Todas las opciones" [ref=f36e181] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f36e182]:
+        - heading "El sitio" [level=2] [ref=f36e183]
+        - list [ref=f36e184]:
+          - listitem [ref=f36e185]:
+            - link "Empezá por acá" [ref=f36e186] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f36e187]:
+            - link "Todos los episodios" [ref=f36e188] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f36e189]:
+            - link "Glosario" [ref=f36e190] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f36e191]:
+            - link "Biblioteca de fuentes" [ref=f36e192] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f36e193]:
+            - link "Proponé un caso" [ref=f36e194] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f36e195]:
+        - heading "Cómo trabajamos" [level=2] [ref=f36e196]
+        - list [ref=f36e197]:
+          - listitem [ref=f36e198]:
+            - link "Método y uso de IA" [ref=f36e199] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f36e200]:
+            - link "Correcciones" [ref=f36e201] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f36e202]:
+            - link "Kit de prensa" [ref=f36e203] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f36e204]:
+            - link "hola@senalpublica.ar" [ref=f36e205] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f36e206]:
+            - link "LinkedIn" [ref=f36e207] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f36e208]:
+            - link "Instagram" [ref=f36e209] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f36e211]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f36e212] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .
