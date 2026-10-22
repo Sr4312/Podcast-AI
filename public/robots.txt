@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /kit/
+Disallow: /estilo
+
+Sitemap: https://senalpublica.ar/sitemap-index.xml

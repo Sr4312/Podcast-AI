@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": 1,
-    "nodeCount": 98,
-    "edgeCount": 184,
+    "nodeCount": 109,
+    "edgeCount": 200,
     "languages": [
       "javascript",
       "tsx",
@@ -648,12 +648,12 @@
       "name": "contenido.ts",
       "kind": "file",
       "path": "src/lib/contenido.ts",
-      "span": "L1-L78",
+      "span": "L1-L137",
       "signature": null,
       "exported": true,
       "origin": "ast",
-      "body_hash": "b629770c5c4f5e4ed7779452cf0b0fa9895a7cf7bc59b6687f6e2ba38f876e11",
-      "chars": 2900,
+      "body_hash": "a7d501ba1d51326df7ac2d098b9284148ff0171ec12cfe3dfdf4d56fc8cd924b",
+      "chars": 5154,
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -687,6 +687,20 @@
       "crux": null
     },
     {
+      "id": "src/lib/contenido.ts#correccionesDe",
+      "name": "correccionesDe",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L109-L113",
+      "signature": "function correccionesDe(episodios: Episodio[])",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "ef5ac6c0a66809c62d2f28e384af0ffa92c71975c00b23b43fa600141cdbb5b7",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
       "id": "src/lib/contenido.ts#duracionSegundos",
       "name": "duracionSegundos",
       "kind": "function",
@@ -715,11 +729,39 @@
       "crux": null
     },
     {
+      "id": "src/lib/contenido.ts#episodiosConTermino",
+      "name": "episodiosConTermino",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L102-L106",
+      "signature": "function episodiosConTermino(termino: CollectionEntry<'glosario'>, episodios: Episodio[]): Episodio[]",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "97ca938bb4a8642a39c7bdea16f6a4b7bab35e2f7557fe1e91df25a636306c4b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#escapeRegex",
+      "name": "escapeRegex",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L97-L99",
+      "signature": "function escapeRegex(s: string)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "26783993563d7940d9070326973c65e3a33dba158e753dda25bfde9d3649298d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
       "id": "src/lib/contenido.ts#fechaCorta",
       "name": "fechaCorta",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L69-L73",
+      "span": "L128-L132",
       "signature": "function fechaCorta(d: Date): string",
       "exported": true,
       "origin": "ast",
@@ -733,7 +775,7 @@
       "name": "fechaISO",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L75-L77",
+      "span": "L134-L136",
       "signature": "function fechaISO(d: Date): string",
       "exported": true,
       "origin": "ast",
@@ -747,11 +789,39 @@
       "name": "fechaLarga",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L65-L67",
+      "span": "L124-L126",
       "signature": "function fechaLarga(d: Date): string",
       "exported": true,
       "origin": "ast",
       "body_hash": "426e2901f4a7ca1660e20e3517a85e6b8cf5271ae2994d1a359063372a1c3ab3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#FuenteAgregada",
+      "name": "FuenteAgregada",
+      "kind": "interface",
+      "path": "src/lib/contenido.ts",
+      "span": "L67-L76",
+      "signature": "interface FuenteAgregada",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e1b020c8483c07fc3e9e569924c7e267d9e7762e1916ab98d0c7ca842789bc3c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#fuentesAgregadas",
+      "name": "fuentesAgregadas",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L79-L95",
+      "signature": "function fuentesAgregadas(episodios: Episodio[]): FuenteAgregada[]",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f86055e6a845e47159d04fb0fae6a74a01aee33a03d20e5abbcd093f76a2d498",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -780,6 +850,20 @@
       "exported": true,
       "origin": "ast",
       "body_hash": "b4ee467de63b051d488cf70f7bcbe5d0c20571104f78001c9e016bc9f54d64d1",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#iniciales",
+      "name": "iniciales",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L115-L122",
+      "signature": "function iniciales(nombre: string): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "d4c1217879b07fdab741bf8484ebdf1ebeb9739637b2adacabb12fad1fa0ab87",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -874,12 +958,12 @@
       "name": "remark-transcripcion.mjs",
       "kind": "file",
       "path": "src/lib/remark-transcripcion.mjs",
-      "span": "L1-L171",
+      "span": "L1-L173",
       "signature": null,
       "exported": true,
       "origin": "ast",
-      "body_hash": "3a9f1638bd551c8ee546583d535406b1ccf0e38b2c8f5b468098ea54071e1ea8",
-      "chars": 5218,
+      "body_hash": "8424b9daec5f82023ae3de5839271514bdf3379128448d6603cc9e6fde6e6a17",
+      "chars": 5350,
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -931,11 +1015,11 @@
       "name": "remarkTranscripcion",
       "kind": "function",
       "path": "src/lib/remark-transcripcion.mjs",
-      "span": "L101-L170",
+      "span": "L101-L172",
       "signature": "function remarkTranscripcion()",
       "exported": true,
       "origin": "ast",
-      "body_hash": "863fef2f583e59c622a5b5be0db5fc02dc93aaa533fee0223d8ada3787d0371f",
+      "body_hash": "5d1abda09d1b14ae4f8aeef9e4a1a2bfd12a2fbdce705be5515788c2f559e2d5",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -1106,6 +1190,77 @@
       "exported": true,
       "origin": "ast",
       "body_hash": "c20a6306a7017c3c75f2219c9290c8b89051e967addf20b9a7b63abde0d1c0f8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/filtros.ts",
+      "name": "filtros.ts",
+      "kind": "file",
+      "path": "src/scripts/filtros.ts",
+      "span": "L1-L61",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "bbb6e783fecd51d65a724b15e79a132a254b4b37cadea89422666ff6b7fd916a",
+      "chars": 2548,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/filtros.ts#initFiltros",
+      "name": "initFiltros",
+      "kind": "function",
+      "path": "src/scripts/filtros.ts",
+      "span": "L10-L57",
+      "signature": "function initFiltros()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "3898ce331609eaac1e1a23eee7360d828b4806242e13dd53d681ce3374c8b406",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/filtros.ts#initFiltros.aplicar",
+      "name": "aplicar",
+      "kind": "function",
+      "path": "src/scripts/filtros.ts",
+      "span": "L30-L47",
+      "signature": "aplicar = (escribir = true)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "02515a81c7c8ea9af806360e34f4bdfe5b244806a9159b5df302e19495329cf5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/filtros.ts#initFiltros.items",
+      "name": "items",
+      "kind": "function",
+      "path": "src/scripts/filtros.ts",
+      "span": "L20-L20",
+      "signature": "items = ()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "c85a074e2e96bc3002f8a6229e30a4be4d6fdfe0d87cab49568b119c41c64369",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/filtros.ts#initFiltros.leerURL",
+      "name": "leerURL",
+      "kind": "function",
+      "path": "src/scripts/filtros.ts",
+      "span": "L22-L28",
+      "signature": "leerURL = ()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "6f9c7e6a0ab5071b7418d5947ce32ea4dc005b9caa6600e27dc00343f2996533",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -2010,6 +2165,12 @@
     },
     {
       "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#correccionesDe",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
       "target": "src/lib/contenido.ts#duracionSegundos",
       "relation": "contains",
       "confidence": "extracted"
@@ -2017,6 +2178,18 @@
     {
       "source": "src/lib/contenido.ts",
       "target": "src/lib/contenido.ts#Episodio",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#episodiosConTermino",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#escapeRegex",
       "relation": "contains",
       "confidence": "extracted"
     },
@@ -2040,6 +2213,18 @@
     },
     {
       "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#FuenteAgregada",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#fuentesAgregadas",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
       "target": "src/lib/contenido.ts#getEpisodio",
       "relation": "contains",
       "confidence": "extracted"
@@ -2047,6 +2232,12 @@
     {
       "source": "src/lib/contenido.ts",
       "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#iniciales",
       "relation": "contains",
       "confidence": "extracted"
     },
@@ -2084,6 +2275,18 @@
       "source": "src/lib/contenido.ts",
       "target": "src/lib/tiempo.ts",
       "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts#capitulosDe",
+      "target": "src/lib/tiempo.ts#aSegundos",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts#duracionSegundos",
+      "target": "src/lib/tiempo.ts#aSegundos",
+      "relation": "references",
       "confidence": "extracted"
     },
     {
@@ -2289,6 +2492,54 @@
       "target": "src/lib/contenido.ts#getEpisodios",
       "relation": "calls",
       "confidence": "inferred"
+    },
+    {
+      "source": "src/scripts/filtros.ts",
+      "target": "src/scripts/filtros.ts#initFiltros",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/filtros.ts",
+      "target": "src/scripts/filtros.ts#initFiltros",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/filtros.ts#initFiltros",
+      "target": "src/scripts/filtros.ts#initFiltros.aplicar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/filtros.ts#initFiltros",
+      "target": "src/scripts/filtros.ts#initFiltros.leerURL",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/filtros.ts#initFiltros",
+      "target": "src/scripts/filtros.ts#initFiltros.aplicar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/filtros.ts#initFiltros",
+      "target": "src/scripts/filtros.ts#initFiltros.items",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/filtros.ts#initFiltros",
+      "target": "src/scripts/filtros.ts#initFiltros.leerURL",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/filtros.ts#initFiltros.aplicar",
+      "target": "src/scripts/filtros.ts#initFiltros.items",
+      "relation": "calls",
+      "confidence": "extracted"
     },
     {
       "source": "src/scripts/reproducir.ts",

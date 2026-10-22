@@ -11,6 +11,7 @@
     "astro": "astro",
     "check": "astro check",
     "check:contenido": "node scripts/check-contenido.mjs",
+    "check:jsonld": "node scripts/validar-jsonld.mjs",
     "peaks": "node scripts/peaks.mjs",
     "audio:ejemplo": "node scripts/audio-ejemplo.mjs",
     "nuevo-episodio": "node scripts/nuevo-episodio.mjs",
@@ -46,6 +47,8 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
+    "@fontsource/newsreader": "^5.3.0",
+    "@fontsource/public-sans": "^5.3.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "typescript": "^6.0.3"

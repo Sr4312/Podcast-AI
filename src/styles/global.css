@@ -517,6 +517,37 @@
     color: var(--color-tinta-2);
   }
 
+  /* Resultados de búsqueda (Pagefind) */
+  .resultado__titulo {
+    font-family: var(--font-titulo);
+    font-size: var(--text-xl);
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .resultado__titulo:hover {
+    color: var(--color-acento);
+  }
+  .resultado__frag {
+    max-width: var(--medida);
+  }
+  .resultado__frag mark,
+  .resultados mark {
+    background: var(--color-acento-suave);
+    color: inherit;
+    padding: 0 0.1em;
+    border-radius: 2px;
+  }
+  .resultado__subs {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1rem;
+    border-left: 2px solid var(--color-linea);
+    font-size: var(--text-meta);
+  }
+  .resultado__subs li + li {
+    margin-top: 0.4rem;
+  }
+
   /* Índice de capítulos fijo junto a la transcripción (desktop) */
   @media (min-width: 64rem) {
     .indice-fijo {

@@ -16,7 +16,7 @@ const glosario = await getEntries(tema.data.glosario);
 const eje = EJES[tema.data.eje];
 ---
 
-<Base titulo={`${tema.data.nombre} · ${SITIO.nombre}`} descripcion={tema.data.descripcion} ruta={`/temas/${tema.id}`}>
+<Base titulo={`${tema.data.nombre} · ${SITIO.nombre}`} descripcion={tema.data.descripcion} ruta={`/temas/${tema.id}`} migas={[{ nombre: 'Temas', ruta: '/temas' }, { nombre: tema.data.nombre }]}>
   <div class="cuaderno">
     <div class="margen">
       <nav aria-label="Migas" class="mb-4"><a href="/temas">Temas</a> / <a href={`/temas#${tema.data.eje}`}>{eje.nombre}</a></nav>

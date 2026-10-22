@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '@/layouts/Base.astro';
 import FilaEpisodio from '@/components/FilaEpisodio.astro';
+import JsonLd from '@/components/JsonLd.astro';
 import { SITIO } from '@/config/sitio';
 import { getEpisodios, iniciales } from '@/lib/contenido';
 
@@ -15,9 +16,25 @@ const { Content } = await render(inv);
 const episodios = (await getEpisodios()).filter((e) => e.data.invitados.some((x) => x.id === inv.id));
 const links = Object.entries(inv.data.links).filter(([, v]) => v) as [string, string][];
 const NOMBRES: Record<string, string> = { web: 'Sitio web', linkedin: 'LinkedIn', x: 'X', bluesky: 'Bluesky', scholar: 'Google Scholar' };
+const jsonLdPersona = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: inv.data.nombre,
+  jobTitle: inv.data.rol,
+  url: `${SITIO.url}/invitados/${inv.id}`,
+  ...(inv.data.organizacion ? { affiliation: { '@type': 'Organization', name: inv.data.organizacion } } : {}),
+  ...(links.length ? { sameAs: links.map(([, v]) => v) } : {}),
+  subjectOf: episodios.map((e) => ({ '@type': 'PodcastEpisode', name: e.data.titulo, url: `${SITIO.url}/episodios/${e.id}` })),
+};
 ---
 
-<Base titulo={`${inv.data.nombre} · ${SITIO.nombre}`} descripcion={`${inv.data.nombre}, ${inv.data.rol}. Episodios en los que participó y conflictos de interés declarados.`} ruta={`/invitados/${inv.id}`}>
+<Base
+  titulo={`${inv.data.nombre} · ${SITIO.nombre}`}
+  descripcion={`${inv.data.nombre}, ${inv.data.rol}. Episodios en los que participó y conflictos de interés declarados.`}
+  ruta={`/invitados/${inv.id}`}
+  migas={[{ nombre: 'Invitados', ruta: '/invitados' }, { nombre: inv.data.nombre }]}
+>
+  <JsonLd datos={jsonLdPersona} slot="head" />
   <div class="cuaderno">
     <div class="margen">
       {inv.data.ejemplo && <p class="aviso-ejemplo mb-5">Perfil ficticio, creado para la demo del sitio.</p>}

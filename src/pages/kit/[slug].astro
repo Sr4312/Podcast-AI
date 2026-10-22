@@ -1,0 +1,147 @@
+---
+import Base from '@/layouts/Base.astro';
+import Icono from '@/components/Icono.astro';
+import { SITIO } from '@/config/sitio';
+import { getEpisodios } from '@/lib/contenido';
+
+export async function getStaticPaths() {
+  const episodios = await getEpisodios();
+  return episodios.map((ep) => ({ params: { slug: ep.id }, props: { ep } }));
+}
+
+const { ep } = Astro.props;
+const url = `${SITIO.url}/episodios/${ep.id}`;
+const textoCorto = `${ep.data.titulo}\n\n${ep.data.bajada}\n\n${url}`;
+const textoFrase = ep.data.frase ? `“${ep.data.frase.texto}”\n${ep.data.frase.autor}, en ${SITIO.nombre} #${ep.data.numero}\n\n${url}` : '';
+const piezas = [
+  { nombre: 'Horizontal', medidas: '1080 × 608', archivo: `/kit/${ep.id}/horizontal.png`, uso: 'LinkedIn, X, Bluesky, Facebook, notas de prensa.', prioridad: true },
+  { nombre: 'Vertical', medidas: '1080 × 1350', archivo: `/kit/${ep.id}/vertical.png`, uso: 'Instagram y historias.' },
+  { nombre: 'Preview de link', medidas: '1200 × 630', archivo: `/og/${ep.id}.png`, uso: 'Es la que aparece sola al compartir el link.' },
+];
+---
+
+<Base titulo={`Kit de redes · Episodio ${ep.data.numero} · ${SITIO.nombre}`} descripcion={`Piezas para compartir el episodio ${ep.data.numero} de ${SITIO.nombre}.`} ruta={`/kit/${ep.id}`} noindex migas={[{ nombre: 'Episodios', ruta: '/episodios' }, { nombre: `N.º ${ep.data.numero}`, ruta: `/episodios/${ep.id}` }, { nombre: 'Kit de redes' }]}>
+  <div class="cuaderno">
+    <div class="margen">
+      <nav aria-label="Migas" class="mb-4"><a href="/episodios">Episodios</a> / <a href={`/episodios/${ep.id}`}>N.º {ep.data.numero}</a></nav>
+      <p>Página interna, sin indexar. Las piezas se generan en cada build desde el archivo del episodio.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Kit de redes</h1>
+      <p class="prosa text-lg mt-4">Episodio {ep.data.numero}: {ep.data.titulo}</p>
+
+      <section class="seccion" aria-labelledby="piezas">
+        <h2 id="piezas" class="mb-4">Piezas</h2>
+        <ul class="piezas">
+          {
+            piezas.map((p) => (
+              <li class="pieza">
+                <a href={p.archivo} class="pieza__img" download>
+                  <img src={p.archivo} alt={`${p.nombre}, ${p.medidas}: ${ep.data.titulo}`} loading="lazy" width={p.medidas.split(' × ')[0]} height={p.medidas.split(' × ')[1]} />
+                </a>
+                <div>
+                  <h3>{p.nombre} <span class="meta mono">{p.medidas}</span>{p.prioridad && <span class="meta"> · la prioritaria</span>}</h3>
+                  <p class="meta mt-1">{p.uso}</p>
+                  <a href={p.archivo} download class="boton boton--secundario mt-3" style="min-height:2.25rem"><Icono nombre="descargar" tamano={16} /> Descargar PNG</a>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="seccion prosa" aria-labelledby="textos">
+        <h2 id="textos">Textos listos</h2>
+        <h3 class="mt-5">Título y bajada</h3>
+        <pre class="texto-kit mt-2" id="texto-corto">{textoCorto}</pre>
+        <button type="button" class="boton boton--secundario mt-2" data-copiar="#texto-corto" style="min-height:2.25rem">Copiar</button>
+        {
+          textoFrase && (
+            <>
+              <h3 class="mt-6">Frase destacada</h3>
+              <pre class="texto-kit mt-2" id="texto-frase">{textoFrase}</pre>
+              <button type="button" class="boton boton--secundario mt-2" data-copiar="#texto-frase" style="min-height:2.25rem">Copiar</button>
+            </>
+          )
+        }
+        <h3 class="mt-6">Link</h3>
+        <pre class="texto-kit mt-2" id="texto-link">{url}</pre>
+        <button type="button" class="boton boton--secundario mt-2" data-copiar="#texto-link" style="min-height:2.25rem">Copiar</button>
+      </section>
+
+      <section class="seccion prosa" aria-labelledby="otros">
+        <h2 id="otros">Otros formatos del episodio</h2>
+        <ul class="mt-3">
+          <li><a href={`/episodios/${ep.id}/capitulos.json`}>Capítulos en JSON Chapters</a> (Podcasting 2.0)</li>
+          <li><a href={`/episodios/${ep.id}/transcripcion.vtt`}>Transcripción en WebVTT</a></li>
+          <li><a href={`/episodios/${ep.id}/picos.json`}>Picos de la waveform</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<script>
+  function init() {
+    document.querySelectorAll<HTMLButtonElement>('[data-copiar]').forEach((b) => {
+      if (b.dataset.listo) return;
+      b.dataset.listo = '1';
+      b.addEventListener('click', async () => {
+        const el = document.querySelector(b.dataset.copiar!);
+        try {
+          await navigator.clipboard.writeText(el?.textContent ?? '');
+          const original = b.textContent;
+          b.textContent = 'Copiado';
+          setTimeout(() => (b.textContent = original), 1500);
+        } catch {
+          b.textContent = 'No se pudo copiar';
+        }
+      });
+    });
+  }
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style>
+  .piezas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .pieza {
+    display: grid;
+    grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+  @media (max-width: 40rem) {
+    .pieza {
+      grid-template-columns: 1fr;
+    }
+  }
+  .pieza__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-linea);
+    border-radius: var(--radius-ui);
+  }
+  .pieza h3 .meta {
+    font-family: var(--font-texto);
+    font-size: var(--text-meta);
+    margin-left: 0.4rem;
+  }
+  .texto-kit {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    background: var(--color-papel-2);
+    border-radius: var(--radius-ui);
+    font: inherit;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+</style>

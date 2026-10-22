@@ -17,7 +17,7 @@ const relacionados = await getEntries(t.data.relacionados);
 const temas = (await getCollection('temas')).filter((x) => x.data.glosario.some((g) => g.id === t.id));
 ---
 
-<Base titulo={`${t.data.termino} · Glosario · ${SITIO.nombre}`} descripcion={t.data.definicion} ruta={`/glosario/${t.id}`}>
+<Base titulo={`${t.data.termino} · Glosario · ${SITIO.nombre}`} descripcion={t.data.definicion} ruta={`/glosario/${t.id}`} migas={[{ nombre: 'Glosario', ruta: '/glosario' }, { nombre: t.data.termino }]}>
   <div class="cuaderno">
     <div class="margen">
       <nav aria-label="Migas" class="mb-4"><a href="/glosario">Glosario</a></nav>
@@ -26,7 +26,7 @@ const temas = (await getCollection('temas')).filter((x) => x.data.glosario.some(
         {temas.length > 0 && <div><dt>Temas</dt><dd>{temas.map((x, k) => <><a href={`/temas/${x.id}`}>{x.data.nombre}</a>{k < temas.length - 1 ? ', ' : ''}</>)}</dd></div>}
       </dl>
     </div>
-    <article class="cuerpo">
+    <article class="cuerpo" data-pagefind-body data-pagefind-meta="tipo:Glosario">
       <h1>{t.data.termino}</h1>
       <p class="prosa text-lg mt-4">{t.data.definicion}</p>
       <div class="prosa mt-6 cuerpo-termino">

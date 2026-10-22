@@ -1,0 +1,13 @@
+---
+/**
+ * Inserta un bloque JSON-LD. Lo que diga acá tiene que coincidir con lo visible
+ * en la página: los datos salen de las mismas fuentes que el HTML.
+ */
+interface Props {
+  datos: Record<string, unknown> | Record<string, unknown>[];
+}
+const { datos } = Astro.props;
+const json = JSON.stringify(datos).replace(/</g, '\\u003c');
+---
+
+<script type="application/ld+json" set:html={json} />

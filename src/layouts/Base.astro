@@ -6,6 +6,14 @@ import Footer from '@/components/Footer.astro';
 import Reproductor from '@/components/reproductor/Reproductor.tsx';
 import '@/styles/global.css';
 
+import JsonLd from '@/components/JsonLd.astro';
+
+interface Miga {
+  nombre: string;
+  /** Sin ruta = página actual. */
+  ruta?: string;
+}
+
 interface Props {
   titulo: string;
   descripcion: string;
@@ -14,11 +22,28 @@ interface Props {
   noindex?: boolean;
   imagen?: string;
   tipoOG?: 'website' | 'article';
+  /** Migas después de "Inicio". Se emiten como BreadcrumbList en JSON-LD. */
+  migas?: Miga[];
 }
 
-const { titulo, descripcion, ruta, noindex = false, imagen, tipoOG = 'website' } = Astro.props;
-const canonical = new URL(ruta ?? Astro.url.pathname, SITIO.url).toString().replace(/\/$/, '') || SITIO.url;
+const { titulo, descripcion, ruta, noindex = false, imagen, tipoOG = 'website', migas = [] } = Astro.props;
+const rutaActual = ruta ?? Astro.url.pathname;
+const canonical = new URL(rutaActual, SITIO.url).toString().replace(/\/$/, '') || SITIO.url;
 const ogImagen = new URL(imagen ?? '/og/portada.png', SITIO.url).toString();
+
+const breadcrumb =
+  rutaActual === '/'
+    ? null
+    : {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [{ nombre: 'Inicio', ruta: '/' }, ...(migas.length ? migas : [{ nombre: titulo.split(' · ')[0] }])].map((m, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: m.nombre,
+          item: new URL(m.ruta ?? rutaActual, SITIO.url).toString().replace(/\/$/, '') || SITIO.url,
+        })),
+      };
 ---
 
 <!doctype html>
@@ -51,6 +76,7 @@ const ogImagen = new URL(imagen ?? '/og/portada.png', SITIO.url).toString();
         if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
       } catch {}
     </script>
+    {breadcrumb && <JsonLd datos={breadcrumb} />}
     <ClientRouter />
     <slot name="head" />
   </head>

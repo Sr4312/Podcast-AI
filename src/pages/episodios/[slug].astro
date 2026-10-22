@@ -7,7 +7,10 @@ import BotonReproducir from '@/components/BotonReproducir.astro';
 import BadgePlataforma from '@/components/BadgePlataforma.astro';
 import FilaEpisodio from '@/components/FilaEpisodio.astro';
 import Newsletter from '@/components/Newsletter.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { getCollection } from 'astro:content';
 import { SITIO, FORMATOS, EJES, TIPOS_FUENTE } from '@/config/sitio';
+import { duracionISO } from '@/lib/tiempo';
 import {
   getEpisodios,
   duracionSegundos,
@@ -41,9 +44,46 @@ const rel = relacionados(ep, todos);
 const plataformas = (['youtube', 'spotify', 'apple', 'ivoox'] as const).filter((p) => ep.data.plataformas[p]);
 const seguimiento = [...ep.data.seguimiento].sort((a, b) => b.fecha.getTime() - a.fecha.getTime());
 const correcciones = [...ep.data.correcciones].sort((a, b) => b.fecha.getTime() - a.fecha.getTime());
+const conductores = (await getCollection('conductores')).sort((a, b) => a.data.orden - b.data.orden);
+const urlEp = `${SITIO.url}/episodios/${ep.id}`;
+const persona = (nombre: string, url?: string) => ({ '@type': 'Person', name: nombre, ...(url ? { url } : {}) });
+const jsonLdEpisodio = {
+  '@context': 'https://schema.org',
+  '@type': 'PodcastEpisode',
+  name: ep.data.titulo,
+  description: ep.data.bajada,
+  url: urlEp,
+  datePublished: fechaISO(ep.data.fecha),
+  episodeNumber: ep.data.numero,
+  partOfSeason: { '@type': 'PodcastSeason', seasonNumber: ep.data.temporada, name: `Temporada ${ep.data.temporada}` },
+  partOfSeries: { '@type': 'PodcastSeries', name: SITIO.nombre, url: SITIO.url, webFeed: SITIO.hosting.rss },
+  image: `${SITIO.url}/og/${ep.id}.png`,
+  inLanguage: 'es-AR',
+  timeRequired: duracionISO(duracionSegundos(ep)),
+  associatedMedia: {
+    '@type': 'AudioObject',
+    contentUrl: ep.data.audio?.url.startsWith('/') ? `${SITIO.url}${ep.data.audio.url}` : ep.data.audio?.url,
+    encodingFormat: ep.data.audio?.tipo ?? 'audio/mpeg',
+    duration: duracionISO(duracionSegundos(ep)),
+    ...(ep.data.audio?.bytes ? { contentSize: String(ep.data.audio.bytes) } : {}),
+  },
+  author: conductores.map((c) => persona(c.data.nombre)),
+  actor: invitados.map((i) => persona(i.data.nombre, `${SITIO.url}/invitados/${i.id}`)),
+  keywords: temasEp.map((t) => t.data.nombre).join(', '),
+  ...(ep.data.youtube ? { video: { '@type': 'VideoObject', name: ep.data.titulo, embedUrl: `https://www.youtube-nocookie.com/embed/${ep.data.youtube}` } } : {}),
+  transcript: `${urlEp}/transcripcion.vtt`,
+};
 ---
 
-<Base titulo={titulo} descripcion={ep.data.bajada} ruta={`/episodios/${ep.id}`} tipoOG="article" imagen={`/og/${ep.id}.png`}>
+<Base
+  titulo={titulo}
+  descripcion={ep.data.bajada}
+  ruta={`/episodios/${ep.id}`}
+  tipoOG="article"
+  imagen={`/og/${ep.id}.png`}
+  migas={[{ nombre: 'Episodios', ruta: '/episodios' }, { nombre: `N.º ${ep.data.numero}` }]}
+>
+  <JsonLd datos={jsonLdEpisodio} slot="head" />
   <div class="cuaderno" data-pagina-episodio data-episodio={JSON.stringify(cargaReproductor(ep))}>
     <div class="margen">
       {ep.data.ejemplo && <p class="aviso-ejemplo mb-5">Contenido de ejemplo: episodio, invitados y cifras ficticios para la demo del sitio.</p>}
@@ -82,9 +122,9 @@ const correcciones = [...ep.data.correcciones].sort((a, b) => b.fecha.getTime() 
       </dl>
     </div>
 
-    <article class="cuerpo">
+    <article class="cuerpo" data-pagefind-body data-pagefind-meta={`numero:${ep.data.numero}`} data-pagefind-filter={`formato:${FORMATOS[ep.data.formato].nombre}`}>
       <header>
-        <p class="meta">Temporada {ep.data.temporada} · Episodio {ep.data.numero}</p>
+        <p class="meta" data-pagefind-meta={`formato:${FORMATOS[ep.data.formato].nombre}`}>Temporada {ep.data.temporada} · Episodio {ep.data.numero}</p>
         <h1 class="mt-2" transition:name={`titulo-${ep.id}`}>{ep.data.titulo}</h1>
         <p class="prosa text-lg mt-4">{ep.data.bajada}</p>
         <div class="mt-6"><Waveform picos={picos} barras={160} alto={64} /></div>
@@ -274,7 +314,7 @@ const correcciones = [...ep.data.correcciones].sort((a, b) => b.fecha.getTime() 
       </button>
       <p class="mt-2">Con "Seguir lectura" activado, el párrafo que suena queda resaltado y la página lo acompaña.</p>
     </aside>
-    <section class="cuerpo prosa" aria-labelledby="transcripcion">
+    <section class="cuerpo prosa" aria-labelledby="transcripcion" data-pagefind-body>
       <h2 id="transcripcion">Transcripción completa</h2>
       <p class="meta">
         Oradores identificados. Cada párrafo tiene su tiempo: hacé clic para escuchar desde ahí o copiá el link a ese momento. Los términos
