@@ -1,0 +1,252 @@
+- generic [active] [ref=f5e1]:
+  - link "Saltar al contenido" [ref=f5e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - link "Señal Pública, inicio" [ref=f5e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f5e15]: Señal Pública
+      - navigation "Principal" [ref=f5e16]:
+        - list [ref=f5e17]:
+          - listitem [ref=f5e18]:
+            - link "Episodios" [ref=f5e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f5e20]:
+            - link "Temas" [ref=f5e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f5e22]:
+            - link "Fuentes" [ref=f5e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f5e24]:
+            - link "Acerca" [ref=f5e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f5e26]:
+            - link "Suscribite" [ref=f5e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f5e28]:
+            - button "Cambiar a modo oscuro" [ref=f5e29] [cursor=pointer]
+  - main [ref=f5e32]:
+    - generic [ref=f5e33]:
+      - generic [ref=f5e35]:
+        - term [ref=f5e36]: Documento
+        - definition [ref=f5e37]: Guía de estilo viva
+        - term [ref=f5e38]: Estado
+        - definition [ref=f5e39]: Se actualiza con cada fase. No se indexa.
+        - term [ref=f5e40]: Concepto
+        - definition [ref=f5e41]: Revista de política pública. La tipografía y el contenido hacen el diseño.
+      - generic [ref=f5e42]:
+        - heading "Guía de estilo" [level=1] [ref=f5e43]
+        - paragraph [ref=f5e44]: Papel y tinta, un solo acento, una waveform real por episodio. Nada que no esté en esta página debería aparecer en el sitio.
+        - region [ref=f5e45]:
+          - heading "Color" [level=2] [ref=f5e46]
+          - paragraph [ref=f5e47]: "Base casi monocromática. El acento es semántico: estado de reproducción, capítulo en curso y links. Verde y ámbar existen solo para el estado de las fuentes."
+          - list [ref=f5e48]:
+            - listitem [ref=f5e49]:
+              - generic [ref=f5e51]:
+                - strong [ref=f5e52]: Papel
+                - code [ref=f5e53]: "--color-papel"
+                - paragraph [ref=f5e54]: Fondo de página.
+            - listitem [ref=f5e55]:
+              - generic [ref=f5e57]:
+                - strong [ref=f5e58]: Papel 2
+                - code [ref=f5e59]: "--color-papel-2"
+                - paragraph [ref=f5e60]: "Fondos secundarios: bloques de cita, inputs."
+            - listitem [ref=f5e61]:
+              - generic [ref=f5e63]:
+                - strong [ref=f5e64]: Tinta
+                - code [ref=f5e65]: "--color-tinta"
+                - paragraph [ref=f5e66]: Texto principal, botón primario.
+            - listitem [ref=f5e67]:
+              - generic [ref=f5e69]:
+                - strong [ref=f5e70]: Tinta 2
+                - code [ref=f5e71]: "--color-tinta-2"
+                - paragraph [ref=f5e72]: Metadatos y texto secundario. Nunca por debajo de 4,5:1.
+            - listitem [ref=f5e73]:
+              - generic [ref=f5e75]:
+                - strong [ref=f5e76]: Línea
+                - code [ref=f5e77]: "--color-linea"
+                - paragraph [ref=f5e78]: Separadores de listas y bordes.
+            - listitem [ref=f5e79]:
+              - generic [ref=f5e81]:
+                - strong [ref=f5e82]: Acento
+                - code [ref=f5e83]: "--color-acento"
+                - paragraph [ref=f5e84]: Links, estado de reproducción, capítulo en curso. Es el único acento.
+            - listitem [ref=f5e85]:
+              - generic [ref=f5e87]:
+                - strong [ref=f5e88]: Acento suave
+                - code [ref=f5e89]: "--color-acento-suave"
+                - paragraph [ref=f5e90]: Fondo del párrafo en curso y hover de timestamps.
+            - listitem [ref=f5e91]:
+              - generic [ref=f5e93]:
+                - strong [ref=f5e94]: Verificada
+                - code [ref=f5e95]: "--color-ok"
+                - paragraph [ref=f5e96]: Solo para el estado de una fuente verificada.
+            - listitem [ref=f5e97]:
+              - generic [ref=f5e99]:
+                - strong [ref=f5e100]: Pendiente
+                - code [ref=f5e101]: "--color-pendiente"
+                - paragraph [ref=f5e102]: Fuente pendiente de verificación y avisos de contenido de ejemplo.
+            - listitem [ref=f5e103]:
+              - generic [ref=f5e105]:
+                - strong [ref=f5e106]: Onda
+                - code [ref=f5e107]: "--color-onda"
+                - paragraph [ref=f5e108]: Barras de la waveform sin reproducir.
+        - region [ref=f5e109]:
+          - heading "Tipografía" [level=2] [ref=f5e110]
+          - paragraph [ref=f5e111]: Newsreader para titulares (tiene ejes ópticos y fue diseñada para pantalla), Public Sans para texto y metadatos, IBM Plex Mono solo para tiempos. Cuerpo de 18 px en desktop y 17 px en mobile, interlineado 1,6, medida de 66 caracteres. Números tabulares en duraciones, timestamps y tablas.
+          - list [ref=f5e112]:
+            - listitem [ref=f5e113]:
+              - generic [ref=f5e114]: Titular · Newsreader 450
+              - generic [ref=f5e115]: Chatbots contra el Boletín Oficial
+            - listitem [ref=f5e116]:
+              - generic [ref=f5e117]: H2 · Newsreader 500
+              - generic [ref=f5e118]: Fuentes y datos citados
+            - listitem [ref=f5e119]:
+              - generic [ref=f5e120]: H3 · Newsreader 500
+              - generic [ref=f5e121]: Ley o norma
+            - listitem [ref=f5e122]:
+              - generic [ref=f5e123]: Bajada · Public Sans 400
+              - generic [ref=f5e124]: Un modelo de lenguaje y una asesora legislativa analizan el mismo proyecto.
+            - listitem [ref=f5e125]:
+              - generic [ref=f5e126]: Cuerpo · Public Sans 400 · 18 px · 1,6
+              - generic [ref=f5e127]: El modelo encontró todos los artículos. Lo que no encontró fue el pasillo.
+            - listitem [ref=f5e128]:
+              - generic [ref=f5e129]: Metadato · Public Sans 400 · mín. 14 px
+              - generic [ref=f5e130]: 3 de septiembre de 2026 · Laboratorio · 38 min
+            - listitem [ref=f5e131]:
+              - generic [ref=f5e132]: Tiempo · IBM Plex Mono · tabular
+              - generic [ref=f5e133]: 00:23:41 / 00:38:20
+        - region [ref=f5e134]:
+          - heading "Retícula de cuaderno" [level=2] [ref=f5e135]
+          - paragraph [ref=f5e136]: "En pantallas anchas, una columna de 11 rem a la izquierda lleva los metadatos (fecha, duración, formato, invitados) y la columna de lectura va a la derecha. Es el único recurso de layout que se repite: lo que no es contenido, va al margen. En mobile, las dos columnas se apilan."
+        - region [ref=f5e137]:
+          - heading "Waveform" [level=2] [ref=f5e138]
+          - paragraph [ref=f5e139]: "Picos reales del audio, calculados con ffmpeg. Es la única imagen del sitio: hero, listados, barra del reproductor, OG y kit de redes. Las barras reproducidas se pintan con el acento."
+          - generic [ref=f5e140]:
+            - paragraph [ref=f5e141]: Hero · 160 barras
+            - paragraph [ref=f5e303]: Listado · 64 barras
+        - region [ref=f5e370]:
+          - heading "Componentes" [level=2] [ref=f5e371]
+          - heading "Botones" [level=3] [ref=f5e372]
+          - paragraph [ref=f5e373]: Primario para la acción principal de la página (una sola), acento solo para Suscribite, secundario para el resto.
+          - paragraph [ref=f5e374]:
+            - button "Reproducir" [ref=f5e375] [cursor=pointer]
+            - link "Suscribite" [ref=f5e378] [cursor=pointer]:
+              - /url: /suscribirse
+            - button "Copiar link" [ref=f5e379] [cursor=pointer]
+            - button "Atrasar 15 segundos" [ref=f5e380] [cursor=pointer]:
+              - img [aria-hidden] [ref=f5e381]:
+                - generic [ref=f5e384]: "15"
+          - heading "Estados de fuente" [level=3] [ref=f5e385]
+          - paragraph [ref=f5e386]:
+            - generic [ref=f5e387]: Verificada
+            - generic [ref=f5e388]: Pendiente de verificación
+          - heading "Aviso de contenido de ejemplo" [level=3] [ref=f5e389]
+          - paragraph [ref=f5e390]: "Contenido de ejemplo: episodio, invitados y cifras ficticios para la demo del sitio."
+          - heading "Lista editorial" [level=3] [ref=f5e391]
+          - list [ref=f5e392]:
+            - listitem [ref=f5e393]:
+              - generic [ref=f5e394]: "03"
+              - generic [ref=f5e395]:
+                - text: Chatbots contra el Boletín Oficial
+                - paragraph [ref=f5e396]: Investigación · 46 min
+            - listitem [ref=f5e397]:
+              - generic [ref=f5e398]: "02"
+              - generic [ref=f5e399]:
+                - text: El chatbot de un municipio, seis meses después
+                - paragraph [ref=f5e400]: Caso · 41 min
+          - heading "Transcripción" [level=3] [ref=f5e401]
+          - generic [ref=f5e402]:
+            - paragraph [ref=f5e403]:
+              - button "Saltar a 00:12:34" [ref=f5e404] [cursor=pointer]: 00:12:34
+              - button "Copiar link a este momento" [ref=f5e405] [cursor=pointer]
+              - strong [ref=f5e409]: "Carolina Bustos:"
+              - text: El modelo encontró todos los artículos. Lo que no encontró fue el
+              - link "pasillo" [ref=f5e410] [cursor=pointer]:
+                - /url: /glosario/prompt
+              - text: .
+            - paragraph [ref=f5e411]:
+              - button "Saltar a 00:12:56" [ref=f5e412] [cursor=pointer]: 00:12:56
+              - strong [ref=f5e413]: "Martín Albarracín:"
+              - text: Este es el párrafo en curso cuando el modo "Seguir lectura" está activo.
+        - region [ref=f5e414]:
+          - heading "Lo que no se hace" [level=2] [ref=f5e415]
+          - list [ref=f5e416]:
+            - listitem [ref=f5e417]: Gradientes, blobs, glassmorphism, bordes con glow, sombras difusas.
+            - listitem [ref=f5e418]: La última palabra del título en color de acento. Etiquetas "eyebrow" sobre las secciones.
+            - listitem [ref=f5e419]: Grillas de cards idénticas con ícono arriba. Emojis como íconos. Navbar flotante en píldora.
+            - listitem [ref=f5e420]: Hero centrado con dos botones. Copy del tipo "Revolucionando…" o "El futuro de…".
+            - listitem [ref=f5e421]: Cifras, logos o testimonios que no salgan de una fuente.
+            - listitem [ref=f5e422]: Texto por debajo de 14 px o con contraste menor a 4,5:1.
+  - contentinfo [ref=f5e423]:
+    - generic [ref=f5e424]:
+      - generic [ref=f5e425]:
+        - paragraph [ref=f5e426]: Señal Pública
+        - paragraph [ref=f5e427]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f5e428]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f5e429] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f5e430]:
+        - heading "Escuchalo en" [level=2] [ref=f5e431]
+        - list [ref=f5e432]:
+          - listitem [ref=f5e433]:
+            - link "YouTube" [ref=f5e434] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f5e435]:
+            - link "Spotify" [ref=f5e436] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f5e437]:
+            - link "Apple Podcasts" [ref=f5e438] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f5e439]:
+            - link "RSS del podcast" [ref=f5e440] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f5e445]:
+            - link "Todas las opciones" [ref=f5e446] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f5e447]:
+        - heading "El sitio" [level=2] [ref=f5e448]
+        - list [ref=f5e449]:
+          - listitem [ref=f5e450]:
+            - link "Empezá por acá" [ref=f5e451] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f5e452]:
+            - link "Todos los episodios" [ref=f5e453] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f5e454]:
+            - link "Glosario" [ref=f5e455] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f5e456]:
+            - link "Biblioteca de fuentes" [ref=f5e457] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f5e458]:
+            - link "Proponé un caso" [ref=f5e459] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f5e460]:
+        - heading "Cómo trabajamos" [level=2] [ref=f5e461]
+        - list [ref=f5e462]:
+          - listitem [ref=f5e463]:
+            - link "Método y uso de IA" [ref=f5e464] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f5e465]:
+            - link "Correcciones" [ref=f5e466] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f5e467]:
+            - link "Kit de prensa" [ref=f5e468] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f5e469]:
+            - link "hola@senalpublica.ar" [ref=f5e470] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f5e471]:
+            - link "LinkedIn" [ref=f5e472] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f5e473]:
+            - link "Instagram" [ref=f5e474] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f5e476]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f5e477] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

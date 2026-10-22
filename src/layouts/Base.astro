@@ -1,6 +1,8 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import { SITIO } from '@/config/sitio';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
 import '@/styles/global.css';
 
 interface Props {
@@ -22,12 +24,14 @@ const ogImagen = new URL(imagen ?? '/og/portada.png', SITIO.url).toString();
 <html lang={SITIO.idioma}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{titulo}</title>
     <meta name="description" content={descripcion.slice(0, 160)} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f2f0eb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161616" media="(prefers-color-scheme: dark)" />
     <meta property="og:site_name" content={SITIO.nombre} />
     <meta property="og:type" content={tipoOG} />
     <meta property="og:title" content={titulo} />
@@ -50,33 +54,37 @@ const ogImagen = new URL(imagen ?? '/og/portada.png', SITIO.url).toString();
     <slot name="head" />
   </head>
   <body>
-    <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-papel focus:px-3 focus:py-2">
-      Saltar al contenido
-    </a>
-    <header class="border-b border-linea">
-      <nav class="contenedor flex items-center justify-between gap-4 py-3" aria-label="Principal">
-        <a href="/" class="font-titulo text-xl no-underline text-tinta">{SITIO.nombre}</a>
-        <ul class="m-0 flex list-none items-center gap-5 p-0 text-[0.9375rem]">
-          <li><a href="/episodios">Episodios</a></li>
-          <li><a href="/temas">Temas</a></li>
-          <li><a href="/fuentes">Fuentes</a></li>
-          <li><a href="/acerca">Acerca</a></li>
-          <li><a href="/suscribirse" class="rounded-sm bg-acento px-3 py-1.5 text-papel no-underline">Suscribite</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id="contenido" class="contenedor py-10">
+    <a href="#contenido" class="salto">Saltar al contenido</a>
+    <Header />
+    <main id="contenido" class="contenedor principal">
       <slot />
     </main>
-    <footer class="mt-16 border-t border-linea">
-      <div class="contenedor py-8 text-[0.9375rem] text-tinta-2">
-        <p class="m-0">{SITIO.nombre} · {SITIO.descripcionCorta}</p>
-        <p class="mt-2 mb-0">
-          <a href={SITIO.hosting.rss}>RSS</a> · <a href="/acerca">Método</a> · <a href="/correcciones">Correcciones</a> ·
-          <a href={`mailto:${SITIO.email}`}>Contacto</a>
-        </p>
-      </div>
-    </footer>
+    <Footer />
     <div id="reproductor" transition:persist="reproductor"></div>
   </body>
 </html>
+
+<style>
+  .principal {
+    padding-top: 2.5rem;
+  }
+  @media (min-width: 48rem) {
+    .principal {
+      padding-top: 3.5rem;
+    }
+  }
+  .salto {
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    z-index: 50;
+    padding: 0.5rem 0.9rem;
+    background: var(--color-tinta);
+    color: var(--color-papel);
+    border-radius: var(--radius-ui);
+    transform: translateY(-200%);
+  }
+  .salto:focus-visible {
+    transform: none;
+  }
+</style>

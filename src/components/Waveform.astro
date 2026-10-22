@@ -1,0 +1,128 @@
+---
+/**
+ * La firma visual del sitio: la waveform real del episodio (picos de `npm run peaks`).
+ *
+ * Dibuja `barras` rectángulos simétricos respecto del eje. Para listados usá pocas
+ * barras (60–80); para el hero, 160. En pantallas angostas se muestra una segunda
+ * versión con `barrasMobile` barras (misma forma, menos densidad). El SVG escala con
+ * el ancho del contenedor y mantiene el alto fijo: no produce layout shift.
+ *
+ * `progreso` (0–1) pinta las barras ya escuchadas con el acento: lo usa el reproductor.
+ */
+interface Props {
+  picos: number[] | null;
+  barras?: number;
+  /** Barras en pantallas < 48rem. 0 = usar las mismas que en desktop. */
+  barrasMobile?: number;
+  alto?: number;
+  progreso?: number;
+  class?: string;
+  decorativa?: boolean;
+  titulo?: string;
+  id?: string;
+}
+
+const {
+  picos,
+  barras = 160,
+  barrasMobile = barras > 96 ? 72 : 0,
+  alto = 72,
+  progreso = 0,
+  class: clase = '',
+  decorativa = true,
+  titulo,
+  id,
+} = Astro.props;
+
+function remuestrear(src: number[], n: number): number[] {
+  if (src.length <= n) return src;
+  const out: number[] = [];
+  const paso = src.length / n;
+  for (let i = 0; i < n; i++) {
+    const a = Math.floor(i * paso);
+    const b = Math.max(a + 1, Math.floor((i + 1) * paso));
+    let s = 0;
+    let max = 0;
+    for (let j = a; j < b; j++) {
+      s += src[j];
+      if (src[j] > max) max = src[j];
+    }
+    out.push(0.6 * (s / (b - a)) + 0.4 * max);
+  }
+  const m = Math.max(...out, 1e-6);
+  return out.map((v) => v / m);
+}
+
+const ANCHO = 1000;
+
+function barrasDe(n: number) {
+  const datos = remuestrear(picos!, n);
+  const paso = ANCHO / n;
+  const grosor = paso * 0.58;
+  const limite = Math.round(progreso * n);
+  return datos.map((p, i) => {
+    const h = Math.max(2.5, p * 96);
+    return { x: i * paso + (paso - grosor) / 2, y: 50 - h / 2, w: grosor, h, hecha: i < limite };
+  });
+}
+
+const variantes = picos
+  ? [
+      { n: barras, clase: barrasMobile ? 'waveform--desktop' : '' },
+      ...(barrasMobile ? [{ n: barrasMobile, clase: 'waveform--mobile' }] : []),
+    ].map((v) => ({ ...v, rects: barrasDe(v.n) }))
+  : [];
+---
+
+{
+  picos ? (
+    variantes.map((v, k) => (
+      <svg
+        id={k === 0 ? id : undefined}
+        class={`waveform ${v.clase} ${clase}`}
+        viewBox={`0 0 ${ANCHO} 100`}
+        preserveAspectRatio="none"
+        style={`height:${alto}px`}
+        aria-hidden={decorativa || k > 0 ? 'true' : undefined}
+        role={decorativa || k > 0 ? undefined : 'img'}
+        data-barras={v.n}
+      >
+        {!decorativa && k === 0 && titulo && <title>{titulo}</title>}
+        {v.rects.map((r) => (
+          <rect x={r.x} y={r.y} width={r.w} height={r.h} class={r.hecha ? 'barra barra--hecha' : 'barra'} />
+        ))}
+      </svg>
+    ))
+  ) : (
+    <div class={`waveform waveform--vacia ${clase}`} style={`height:${alto}px`} aria-hidden="true" />
+  )
+}
+
+<style is:global>
+  .waveform {
+    display: block;
+    width: 100%;
+  }
+  .waveform .barra {
+    fill: var(--color-onda);
+    transition: fill 150ms var(--ease-out);
+  }
+  .waveform .barra--hecha {
+    fill: var(--color-acento);
+  }
+  .waveform--vacia {
+    background: repeating-linear-gradient(90deg, var(--color-linea) 0 2px, transparent 2px 6px);
+    opacity: 0.6;
+  }
+  .waveform--mobile {
+    display: none;
+  }
+  @media (max-width: 47.99rem) {
+    .waveform--desktop {
+      display: none;
+    }
+    .waveform--mobile {
+      display: block;
+    }
+  }
+</style>

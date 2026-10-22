@@ -1,0 +1,214 @@
+---
+import { SITIO } from '@/config/sitio';
+import Icono from './Icono.astro';
+
+const ITEMS = [
+  { href: '/episodios', texto: 'Episodios' },
+  { href: '/temas', texto: 'Temas' },
+  { href: '/fuentes', texto: 'Fuentes' },
+  { href: '/acerca', texto: 'Acerca' },
+];
+const actual = Astro.url.pathname;
+const activo = (href: string) => actual === href || actual.startsWith(href + '/');
+---
+
+<header class="header">
+  <div class="contenedor header__fila">
+    <a href="/" class="header__marca" aria-label={`${SITIO.nombre}, inicio`}>
+      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" class="header__logo">
+        <rect width="32" height="32" rx="2" fill="currentColor" />
+        <g fill="var(--color-papel)">
+          <rect x="5" y="13" width="2" height="6" /><rect x="9" y="9" width="2" height="14" /><rect x="13" y="5" width="2" height="22" />
+          <rect x="17" y="11" width="2" height="10" /><rect x="21" y="7" width="2" height="18" /><rect x="25" y="12" width="2" height="8" />
+        </g>
+      </svg>
+      <span>{SITIO.nombre}</span>
+    </a>
+
+    <button
+      type="button"
+      class="header__menu boton boton--icono boton--secundario"
+      aria-expanded="false"
+      aria-controls="nav-principal"
+      data-menu
+    >
+      <span class="sr-only">Abrir menú</span>
+      <Icono nombre="menu" tamano={22} class="icono-menu" />
+      <Icono nombre="cerrar" tamano={22} class="icono-cerrar" />
+    </button>
+
+    <nav id="nav-principal" class="header__nav" aria-label="Principal">
+      <ul>
+        {
+          ITEMS.map((it) => (
+            <li>
+              <a href={it.href} aria-current={activo(it.href) ? 'page' : undefined}>
+                {it.texto}
+              </a>
+            </li>
+          ))
+        }
+        <li class="header__suscribite">
+          <a href="/suscribirse" class="boton boton--acento" aria-current={activo('/suscribirse') ? 'page' : undefined}>Suscribite</a>
+        </li>
+        <li>
+          <button type="button" class="boton boton--icono boton--secundario header__tema" data-tema aria-label="Cambiar a modo oscuro">
+            <Icono nombre="luna" tamano={20} class="icono-luna" />
+            <Icono nombre="sol" tamano={20} class="icono-sol" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 40;
+    height: var(--alto-header);
+    background: var(--color-papel);
+    border-bottom: 1px solid var(--color-linea);
+  }
+  .header__fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 100%;
+  }
+  .header__marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-titulo);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    color: var(--color-tinta);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .header__logo {
+    color: var(--color-tinta);
+  }
+  .header__nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .header__nav a:not(.boton) {
+    color: var(--color-tinta);
+    text-decoration: none;
+    padding-block: 0.25rem;
+    border-bottom: 1.5px solid transparent;
+  }
+  .header__nav a:not(.boton):hover,
+  .header__nav a:not(.boton)[aria-current='page'] {
+    border-bottom-color: var(--color-acento);
+  }
+  .header__nav .boton {
+    min-height: 2.25rem;
+    padding-block: 0.25rem;
+  }
+  .header__nav .boton--icono {
+    min-width: 2.25rem;
+  }
+  .header__menu {
+    display: none;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+  }
+  @media (max-width: 47.99rem) {
+    .header__menu {
+      display: inline-flex;
+    }
+    .header__nav {
+      display: none;
+      position: fixed;
+      top: var(--alto-header);
+      left: 0;
+      right: 0;
+      background: var(--color-papel);
+      border-bottom: 1px solid var(--color-linea);
+      padding: 0.5rem 1rem 1rem;
+    }
+    .header.abierto .header__nav {
+      display: block;
+    }
+    .header__nav ul {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .header__nav li {
+      border-bottom: 1px solid var(--color-linea);
+    }
+    .header__nav li:last-child {
+      border-bottom: 0;
+    }
+    .header__nav a:not(.boton) {
+      display: block;
+      padding: 0.8rem 0;
+      font-size: var(--text-lg);
+      font-family: var(--font-titulo);
+      border-bottom: 0;
+    }
+    .header__nav a:not(.boton)[aria-current='page'] {
+      color: var(--color-acento);
+    }
+    .header__suscribite {
+      padding: 0.8rem 0;
+    }
+    .header__nav li:has(.header__tema) {
+      padding-top: 0.6rem;
+    }
+  }
+</style>
+
+<script>
+  function initHeader() {
+    const header = document.querySelector<HTMLElement>('.header');
+    const boton = header?.querySelector<HTMLButtonElement>('[data-menu]');
+    const tema = header?.querySelector<HTMLButtonElement>('[data-tema]');
+    if (!header || !boton || !tema) return;
+
+    // Menú mobile
+    const cerrar = () => {
+      header.classList.remove('abierto');
+      boton.setAttribute('aria-expanded', 'false');
+      boton.querySelector('.sr-only')!.textContent = 'Abrir menú';
+    };
+    boton.onclick = () => {
+      const abierto = header.classList.toggle('abierto');
+      boton.setAttribute('aria-expanded', String(abierto));
+      boton.querySelector('.sr-only')!.textContent = abierto ? 'Cerrar menú' : 'Abrir menú';
+    };
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && header.classList.contains('abierto')) {
+        cerrar();
+        boton.focus();
+      }
+    });
+
+    // Tema: sistema por defecto; el toggle guarda la elección.
+    const prefiereOscuro = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const temaActual = () => document.documentElement.dataset.theme ?? (prefiereOscuro() ? 'dark' : 'light');
+    const etiquetar = () =>
+      tema.setAttribute('aria-label', temaActual() === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+    etiquetar();
+    tema.onclick = () => {
+      const nuevo = temaActual() === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = nuevo;
+      try {
+        localStorage.setItem('tema', nuevo);
+      } catch {}
+      etiquetar();
+    };
+  }
+  initHeader();
+  document.addEventListener('astro:page-load', initHeader);
+</script>

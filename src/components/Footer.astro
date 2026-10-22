@@ -1,0 +1,137 @@
+---
+import { SITIO } from '@/config/sitio';
+import Icono from './Icono.astro';
+
+const anio = new Date().getFullYear();
+const plataformas = [
+  { nombre: 'YouTube', href: SITIO.plataformas.youtube },
+  { nombre: 'Spotify', href: SITIO.plataformas.spotify },
+  { nombre: 'Apple Podcasts', href: SITIO.plataformas.apple },
+  { nombre: 'Ivoox', href: SITIO.plataformas.ivoox },
+].filter((p) => p.href);
+const redes = [
+  { nombre: 'LinkedIn', href: SITIO.redes.linkedin },
+  { nombre: 'Instagram', href: SITIO.redes.instagram },
+  { nombre: 'Bluesky', href: SITIO.redes.bluesky },
+].filter((r) => r.href);
+---
+
+<footer class="pie">
+  <div class="contenedor pie__grilla">
+    <div class="pie__sobre">
+      <p class="pie__marca">{SITIO.nombre}</p>
+      <p class="pie__desc">{SITIO.descripcionCorta}</p>
+      <p class="pie__desc">
+        Conducen <a href="/acerca">Lucía Ferreyra y Martín Albarracín</a>. Cada afirmación tiene su fuente; los errores se corrigen en
+        público.
+      </p>
+    </div>
+
+    <nav class="pie__col" aria-labelledby="pie-escuchar">
+      <h2 id="pie-escuchar">Escuchalo en</h2>
+      <ul>
+        {plataformas.map((p) => <li><a href={p.href} rel="noopener">{p.nombre}</a></li>)}
+        <li>
+          <a href={SITIO.hosting.rss}><Icono nombre="rss" tamano={16} /> RSS del podcast</a>
+        </li>
+        <li><a href="/suscribirse">Todas las opciones</a></li>
+      </ul>
+    </nav>
+
+    <nav class="pie__col" aria-labelledby="pie-sitio">
+      <h2 id="pie-sitio">El sitio</h2>
+      <ul>
+        <li><a href="/empezar">Empezá por acá</a></li>
+        <li><a href="/episodios">Todos los episodios</a></li>
+        <li><a href="/glosario">Glosario</a></li>
+        <li><a href="/fuentes">Biblioteca de fuentes</a></li>
+        <li><a href="/proponer-un-caso">Proponé un caso</a></li>
+      </ul>
+    </nav>
+
+    <nav class="pie__col" aria-labelledby="pie-metodo">
+      <h2 id="pie-metodo">Cómo trabajamos</h2>
+      <ul>
+        <li><a href="/acerca#metodo">Método y uso de IA</a></li>
+        <li><a href="/correcciones">Correcciones</a></li>
+        <li><a href="/acerca#prensa">Kit de prensa</a></li>
+        <li><a href={`mailto:${SITIO.email}`}>{SITIO.email}</a></li>
+        {redes.map((r) => <li><a href={r.href} rel="noopener me">{r.nombre}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+  <div class="contenedor pie__legal">
+    <p>
+      {anio} {SITIO.nombre}. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario. <a
+        href="/rss.xml">Feed de novedades de la web</a
+      >.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .pie {
+    margin-top: calc(var(--espacio-seccion) * 1.5);
+    border-top: 1px solid var(--color-linea);
+    font-size: var(--text-meta);
+    color: var(--color-tinta-2);
+  }
+  .pie__grilla {
+    display: grid;
+    gap: 2rem 2.5rem;
+    padding-block: 2.5rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 40rem) {
+    .pie__grilla {
+      grid-template-columns: 1fr 1fr;
+    }
+    .pie__sobre {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (min-width: 64rem) {
+    .pie__grilla {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+    .pie__sobre {
+      grid-column: auto;
+    }
+  }
+  .pie__marca {
+    font-family: var(--font-titulo);
+    font-size: var(--text-xl);
+    color: var(--color-tinta);
+  }
+  .pie__desc {
+    max-width: 38ch;
+    margin-top: 0.5rem;
+  }
+  .pie__col h2 {
+    font-family: var(--font-texto);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    color: var(--color-tinta);
+    margin-bottom: 0.6rem;
+  }
+  .pie__col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .pie__col li + li {
+    margin-top: 0.35rem;
+  }
+  .pie__col a {
+    color: var(--color-tinta-2);
+    text-decoration: none;
+  }
+  .pie__col a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+  }
+  .pie__legal {
+    border-top: 1px solid var(--color-linea);
+    padding-block: 1rem 1.5rem;
+  }
+</style>

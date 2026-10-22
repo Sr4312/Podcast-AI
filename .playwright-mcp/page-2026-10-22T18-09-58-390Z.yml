@@ -1,0 +1,840 @@
+- generic [active] [ref=f4e1]:
+  - link "Saltar al contenido" [ref=f4e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - link "Señal Pública, inicio" [ref=f4e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f4e15]: Señal Pública
+      - navigation "Principal" [ref=f4e16]:
+        - list [ref=f4e17]:
+          - listitem [ref=f4e18]:
+            - link "Episodios" [ref=f4e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f4e20]:
+            - link "Temas" [ref=f4e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f4e22]:
+            - link "Fuentes" [ref=f4e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f4e24]:
+            - link "Acerca" [ref=f4e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f4e26]:
+            - link "Suscribite" [ref=f4e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f4e28]:
+            - button "Cambiar a modo claro" [ref=f4e29] [cursor=pointer]
+  - main [ref=f4e33]:
+    - generic [ref=f4e34]:
+      - generic [ref=f4e35]:
+        - paragraph [ref=f4e36]: "Contenido de ejemplo: episodio, invitados y cifras ficticios para la demo del sitio."
+        - navigation "Migas" [ref=f4e37]:
+          - link "Episodios" [ref=f4e38] [cursor=pointer]:
+            - /url: /episodios
+          - text: / N.º 1
+        - generic [ref=f4e39]:
+          - term [ref=f4e40]: Publicado
+          - definition [ref=f4e41]:
+            - time [ref=f4e42]: 3 de septiembre de 2026
+          - term [ref=f4e43]: Duración
+          - definition [ref=f4e44]: 38 min
+          - term [ref=f4e45]: Formato
+          - definition [ref=f4e46]: Laboratorio
+          - term [ref=f4e47]: Eje
+          - definition [ref=f4e48]: Política pública
+          - term [ref=f4e49]: Invitado
+          - definition [ref=f4e50]:
+            - link "Carolina Bustos" [ref=f4e51] [cursor=pointer]:
+              - /url: /invitados/carolina-bustos
+      - article [ref=f4e52]:
+        - generic [ref=f4e53]:
+          - paragraph [ref=f4e54]: Temporada 1 · Episodio 1
+          - heading "¿Puede una IA asesorar a un senador?" [level=1] [ref=f4e55]
+          - paragraph [ref=f4e56]: Un modelo de lenguaje y una asesora legislativa analizan el mismo proyecto de ley sin verse. Comparamos qué encontró cada uno y qué se le escapó.
+          - generic [ref=f4e219]:
+            - button "Reproducir" [ref=f4e220] [cursor=pointer]
+            - paragraph [ref=f4e223]:
+              - text: Escuchalo en
+              - link "YouTube" [ref=f4e224] [cursor=pointer]:
+                - /url: https://www.youtube.com/@senalpublica
+              - text: ·
+              - link "Spotify" [ref=f4e225] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/ejemplo-senal-publica
+              - text: ·
+              - link "Apple Podcasts" [ref=f4e226] [cursor=pointer]:
+                - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+        - region [ref=f4e227]:
+          - heading "En 2 minutos" [level=2] [ref=f4e228]
+          - list [ref=f4e229]:
+            - listitem [ref=f4e230]: El modelo identificó todos los artículos que modifican la Ley 25.326 y resumió correctamente el objeto del proyecto en menos de un minuto.
+            - listitem [ref=f4e231]: "La asesora detectó dos cosas que el modelo no vio: una remisión a un decreto derogado y el conflicto de un artículo con la Ley 27.275."
+            - listitem [ref=f4e232]: El modelo propuso tres riesgos regulatorios plausibles, pero uno de ellos citaba una norma inexistente con número y fecha.
+            - listitem [ref=f4e233]: "La diferencia no estuvo en la lectura sino en el contexto político: quién pidió cada artículo y qué negociación lo explica."
+            - listitem [ref=f4e234]: "Conclusión provisoria: sirve como primera lectura y como control de consistencia, no como dictamen ni como fuente de citas."
+          - paragraph [ref=f4e235]: "Elegimos un proyecto de ley real que modifica el régimen de protección de datos personales, de los que se presentan cada año en el Senado y rara vez llegan al recinto. Le dimos el texto completo, con fundamentos, a un modelo de lenguaje de uso general con una consigna idéntica a la que recibe un asesor nuevo en una comisión: objeto, artículos clave, normas que toca, riesgos y preguntas para el autor. En paralelo, Carolina Bustos, asesora con quince años en el Senado, hizo el mismo trabajo sin ver la respuesta del modelo. Después pusimos los dos análisis uno al lado del otro y los recorrimos punto por punto en el estudio. Lo que encontramos no es que uno gane y otro pierda, sino que miden cosas distintas: el modelo es exhaustivo con el texto y ciego al proceso; la asesora es selectiva con el texto y precisa con el proceso. Las cifras, el proyecto y los nombres de este episodio son de ejemplo para la demo del sitio."
+          - paragraph [ref=f4e236]: Resumen redactado con asistencia de IA y revisado por Lucía Ferreyra.
+        - figure "Carolina Bustos, 00:29:12" [ref=f4e237]:
+          - blockquote [ref=f4e238]:
+            - paragraph [ref=f4e239]: "El modelo encontró todos los artículos. Lo que no encontró fue el pasillo: quién pidió ese artículo y a cambio de qué."
+        - region [ref=f4e241]:
+          - heading "Capítulos" [level=2] [ref=f4e242]
+          - list [ref=f4e243]:
+            - listitem [ref=f4e244]:
+              - link "00:00:00" [ref=f4e245] [cursor=pointer]:
+                - /url: "#cap-0"
+              - generic [ref=f4e246]: Presentación
+            - listitem [ref=f4e247]:
+              - link "00:03:10" [ref=f4e248] [cursor=pointer]:
+                - /url: "#cap-190"
+              - generic [ref=f4e249]: Qué hace una asesora legislativa
+            - listitem [ref=f4e250]:
+              - link "00:08:45" [ref=f4e251] [cursor=pointer]:
+                - /url: "#cap-525"
+              - generic [ref=f4e252]: El proyecto que elegimos
+            - listitem [ref=f4e253]:
+              - link "00:13:30" [ref=f4e254] [cursor=pointer]:
+                - /url: "#cap-810"
+              - generic [ref=f4e255]: La IA lee el proyecto
+            - listitem [ref=f4e256]:
+              - link "00:20:05" [ref=f4e257] [cursor=pointer]:
+                - /url: "#cap-1205"
+              - generic [ref=f4e258]: La asesora lee el proyecto
+            - listitem [ref=f4e259]:
+              - link "00:26:40" [ref=f4e260] [cursor=pointer]:
+                - /url: "#cap-1600"
+              - generic [ref=f4e261]: Comparación punto por punto
+            - listitem [ref=f4e262]:
+              - link "00:33:15" [ref=f4e263] [cursor=pointer]:
+                - /url: "#cap-1995"
+              - generic [ref=f4e264]: Qué cambia y qué no
+            - listitem [ref=f4e265]:
+              - link "00:36:50" [ref=f4e266] [cursor=pointer]:
+                - /url: "#cap-2210"
+              - generic [ref=f4e267]: Cierre y fuentes
+        - region [ref=f4e268]:
+          - heading "Fuentes y datos citados" [level=2] [ref=f4e269]
+          - generic [ref=f4e270]:
+            - heading "Ley o norma" [level=3] [ref=f4e271]
+            - list [ref=f4e272]:
+              - listitem [ref=f4e273]:
+                - link "Ley 25.326 de Protección de los Datos Personales" [ref=f4e274] [cursor=pointer]:
+                  - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/norma.htm
+                - paragraph [ref=f4e275]:
+                  - text: InfoLEG, Ministerio de Justicia ·
+                  - time [ref=f4e276]: 30 de octubre de 2000
+                - paragraph [ref=f4e277]: Texto vigente de la ley que el proyecto analizado propone modificar. Definiciones de dato personal y dato sensible (art. 2) y consentimiento (art. 5).
+                - paragraph [ref=f4e278]:
+                  - generic [ref=f4e279]: Verificada
+              - listitem [ref=f4e280]:
+                - link "Ley 27.275 de Derecho de Acceso a la Información Pública" [ref=f4e281] [cursor=pointer]:
+                  - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/norma.htm
+                - paragraph [ref=f4e282]:
+                  - text: InfoLEG, Ministerio de Justicia ·
+                  - time [ref=f4e283]: 29 de septiembre de 2016
+                - paragraph [ref=f4e284]: La asesora detectó que un artículo del proyecto entra en tensión con las obligaciones de transparencia activa de esta ley.
+                - paragraph [ref=f4e285]:
+                  - generic [ref=f4e286]: Verificada
+          - generic [ref=f4e287]:
+            - heading "Paper" [level=3] [ref=f4e288]
+            - list [ref=f4e289]:
+              - listitem [ref=f4e290]:
+                - 'link "Large Legal Fictions: Profiling Legal Hallucinations in Large Language Models" [ref=f4e291] [cursor=pointer]':
+                  - /url: https://arxiv.org/abs/2401.01301
+                - paragraph [ref=f4e292]:
+                  - text: Stanford RegLab / Universidad de Yale ·
+                  - time [ref=f4e293]: 2 de enero de 2024
+                - paragraph [ref=f4e294]: Estudio que mide la tasa de citas legales inventadas por modelos de lenguaje. Base de la discusión sobre la norma inexistente que citó el modelo.
+                - paragraph [ref=f4e295]:
+                  - generic [ref=f4e296]: Verificada
+          - generic [ref=f4e297]:
+            - heading "Documento oficial" [level=3] [ref=f4e298]
+            - list [ref=f4e299]:
+              - listitem [ref=f4e300]:
+                - link "Recomendación sobre la ética de la inteligencia artificial" [ref=f4e301] [cursor=pointer]:
+                  - /url: https://unesdoc.unesco.org/ark:/48223/pf0000381137
+                - paragraph [ref=f4e302]:
+                  - text: UNESCO ·
+                  - time [ref=f4e303]: 23 de noviembre de 2021
+                - paragraph [ref=f4e304]: Marco de referencia sobre supervisión humana que citamos al discutir si un dictamen puede apoyarse en un modelo.
+                - paragraph [ref=f4e305]:
+                  - generic [ref=f4e306]: Verificada
+              - listitem [ref=f4e307]:
+                - link "Reglamento de la Cámara de Senadores de la Nación" [ref=f4e308] [cursor=pointer]:
+                  - /url: https://www.senado.gob.ar/parlamentario/reglamento
+                - paragraph [ref=f4e309]: Honorable Senado de la Nación
+                - paragraph [ref=f4e310]: Circuito de un proyecto desde la mesa de entradas hasta el dictamen de comisión. Falta confirmar la URL del texto completo actualizado.
+                - paragraph [ref=f4e311]:
+                  - generic [ref=f4e312]: Pendiente de verificación
+        - region [ref=f4e313]:
+          - heading "Cómo usamos IA en este episodio" [level=2] [ref=f4e314]
+          - generic [ref=f4e315]:
+            - term [ref=f4e316]: Qué hizo la IA
+            - definition [ref=f4e317]: transcripción automática del audio; borrador del resumen y de los capítulos; análisis del proyecto de ley que se discute en el episodio (es el objeto de la prueba).
+            - term [ref=f4e318]: Qué no hizo
+            - definition [ref=f4e319]: selección de fuentes; verificación de las citas legales; conclusiones del episodio.
+            - term [ref=f4e320]: Quién revisó
+            - definition [ref=f4e321]: Lucía Ferreyra
+        - region [ref=f4e322]:
+          - heading "Transcripción completa" [level=2] [ref=f4e323]
+          - paragraph [ref=f4e324]: Oradores identificados. Cada párrafo tiene su tiempo; hacé clic para saltar o copiá el link a ese momento.
+          - generic [ref=f4e325]:
+            - heading "Presentación" [level=2] [ref=f4e326]
+            - paragraph [ref=f4e327]:
+              - button "Saltar a 00:00:00" [ref=f4e328] [cursor=pointer]: 00:00:00
+              - button "Copiar link a este momento" [ref=f4e329] [cursor=pointer]
+              - strong [ref=f4e333]: "Lucía Ferreyra:"
+              - text: Hola, bienvenidos a Señal Pública, un podcast sobre inteligencia artificial aplicada a problemas públicos concretos. Soy Lucía Ferreyra.
+            - paragraph [ref=f4e334]:
+              - button "Saltar a 00:00:14" [ref=f4e335] [cursor=pointer]: 00:00:14
+              - button "Copiar link a este momento" [ref=f4e336] [cursor=pointer]
+              - strong [ref=f4e340]: "Martín Albarracín:"
+              - text: Y yo soy Martín Albarracín. Este es el primer episodio, así que vale una aclaración rápida sobre qué vamos a hacer acá y qué no. No vamos a comentar lanzamientos ni a hablar del futuro. Vamos a tomar un problema público por vez, meterlo en un laboratorio y ver qué pasa.
+            - paragraph [ref=f4e341]:
+              - button "Saltar a 00:00:41" [ref=f4e342] [cursor=pointer]: 00:00:41
+              - button "Copiar link a este momento" [ref=f4e343] [cursor=pointer]
+              - strong [ref=f4e347]: "Lucía Ferreyra:"
+              - text: "El laboratorio de hoy es el Senado. Más precisamente, una pregunta que me hicieron muchas veces en los últimos dos años: si un"
+              - link "modelo de lenguaje" [ref=f4e348] [cursor=pointer]:
+                - /url: /glosario/modelo-de-lenguaje
+              - text: puede hacer el trabajo de un asesor legislativo. Y en vez de opinar, lo probamos.
+            - paragraph [ref=f4e349]:
+              - button "Saltar a 00:01:08" [ref=f4e350] [cursor=pointer]: 00:01:08
+              - button "Copiar link a este momento" [ref=f4e351] [cursor=pointer]
+              - strong [ref=f4e355]: "Martín Albarracín:"
+              - text: La prueba es simple de explicar. Tomamos un proyecto de ley real, se lo dimos a un modelo de lenguaje de uso general con una
+              - link "consigna" [ref=f4e356] [cursor=pointer]:
+                - /url: /glosario/prompt
+              - text: estándar, y le dimos exactamente el mismo proyecto y la misma consigna a una asesora con quince años en comisiones. Ninguno vio el trabajo del otro.
+            - paragraph [ref=f4e357]:
+              - button "Saltar a 00:01:39" [ref=f4e358] [cursor=pointer]: 00:01:39
+              - button "Copiar link a este momento" [ref=f4e359] [cursor=pointer]
+              - strong [ref=f4e363]: "Lucía Ferreyra:"
+              - text: La asesora es Carolina Bustos, que está acá con nosotros. Carolina, gracias por prestarte a esto, que tiene algo de examen.
+            - paragraph [ref=f4e364]:
+              - button "Saltar a 00:01:52" [ref=f4e365] [cursor=pointer]: 00:01:52
+              - button "Copiar link a este momento" [ref=f4e366] [cursor=pointer]
+              - strong [ref=f4e370]: "Carolina Bustos:"
+              - text: "Gracias a ustedes. Tiene algo de examen, sí, pero yo lo tomé al revés: el que rendía era el modelo. Yo hago esto todas las semanas."
+            - paragraph [ref=f4e371]:
+              - button "Saltar a 00:02:10" [ref=f4e372] [cursor=pointer]: 00:02:10
+              - button "Copiar link a este momento" [ref=f4e373] [cursor=pointer]
+              - strong [ref=f4e377]: "Martín Albarracín:"
+              - text: Antes de entrar, una aclaración de método que vamos a repetir en cada episodio. Todo lo que afirmamos tiene una fuente primaria linkeada en la página del episodio, con el artículo o la página exacta. Lo que no pudimos verificar está marcado como pendiente. Y la transcripción completa está publicada, con los tiempos, para que puedan ir al momento exacto.
+            - paragraph [ref=f4e378]:
+              - button "Saltar a 00:02:44" [ref=f4e379] [cursor=pointer]: 00:02:44
+              - button "Copiar link a este momento" [ref=f4e380] [cursor=pointer]
+              - strong [ref=f4e384]: "Lucía Ferreyra:"
+              - text: Empecemos por lo básico, porque mucha gente que nos escucha no trabaja en el Congreso. Carolina, ¿qué hace una asesora legislativa cuando le llega un proyecto?
+            - heading "Qué hace una asesora legislativa" [level=2] [ref=f4e385]
+            - paragraph [ref=f4e386]:
+              - button "Saltar a 00:03:10" [ref=f4e387] [cursor=pointer]: 00:03:10
+              - button "Copiar link a este momento" [ref=f4e388] [cursor=pointer]
+              - strong [ref=f4e392]: "Carolina Bustos:"
+              - text: "Depende del momento, pero el trabajo de base es siempre el mismo. Leés el proyecto entero, incluidos los fundamentos, que es donde el autor dice por qué lo presenta. Identificás qué normas vigentes toca, porque casi ningún proyecto nace en el vacío: modifica una ley, deroga un artículo, crea una excepción. Y después hacés la pregunta importante, que no está en el texto: por qué este proyecto, por qué ahora y quién lo quiere."
+            - paragraph [ref=f4e393]:
+              - button "Saltar a 00:03:51" [ref=f4e394] [cursor=pointer]: 00:03:51
+              - button "Copiar link a este momento" [ref=f4e395] [cursor=pointer]
+              - strong [ref=f4e399]: "Martín Albarracín:"
+              - text: Esa última parte es la que a mí me interesa. ¿Cómo la respondés? ¿De dónde sale esa información?
+            - paragraph [ref=f4e400]:
+              - button "Saltar a 00:04:02" [ref=f4e401] [cursor=pointer]: 00:04:02
+              - button "Copiar link a este momento" [ref=f4e402] [cursor=pointer]
+              - strong [ref=f4e406]: "Carolina Bustos:"
+              - text: De todos lados menos del expediente. Del autor, de los asesores de otros bloques, de los organismos que van a tener que aplicar la norma, de las cámaras empresarias que mandan notas, de las organizaciones que piden audiencia. Un proyecto es un texto más una negociación, y la negociación no está escrita.
+            - paragraph [ref=f4e407]:
+              - button "Saltar a 00:04:33" [ref=f4e408] [cursor=pointer]: 00:04:33
+              - button "Copiar link a este momento" [ref=f4e409] [cursor=pointer]
+              - strong [ref=f4e413]: "Lucía Ferreyra:"
+              - text: Yo agregaría algo que me costó aprender. Un asesor también decide qué no leer. Entran decenas de proyectos por semana y la mayoría no va a avanzar nunca. Saber cuál merece tres horas y cuál merece tres minutos es parte del trabajo.
+            - paragraph [ref=f4e414]:
+              - button "Saltar a 00:04:58" [ref=f4e415] [cursor=pointer]: 00:04:58
+              - button "Copiar link a este momento" [ref=f4e416] [cursor=pointer]
+              - strong [ref=f4e420]: "Carolina Bustos:"
+              - text: Exacto. Y eso un sistema que lee todo con la misma atención no lo hace. Puede ser una ventaja o un problema, después lo vemos.
+            - paragraph [ref=f4e421]:
+              - button "Saltar a 00:05:14" [ref=f4e422] [cursor=pointer]: 00:05:14
+              - button "Copiar link a este momento" [ref=f4e423] [cursor=pointer]
+              - strong [ref=f4e427]: "Martín Albarracín:"
+              - text: "Carolina, para que quede claro el producto final: ¿qué entregás? ¿Un informe, un memo, una charla de pasillo?"
+            - paragraph [ref=f4e428]:
+              - button "Saltar a 00:05:27" [ref=f4e429] [cursor=pointer]: 00:05:27
+              - button "Copiar link a este momento" [ref=f4e430] [cursor=pointer]
+              - strong [ref=f4e434]: "Carolina Bustos:"
+              - text: Para el senador, una página. Objeto del proyecto, qué normas modifica, tres o cuatro puntos de atención, una recomendación de postura y las preguntas que yo le haría al autor si viene a la comisión. Si el tema avanza, eso se convierte en un dictamen o en observaciones al dictamen de otro.
+            - paragraph [ref=f4e435]:
+              - button "Saltar a 00:05:58" [ref=f4e436] [cursor=pointer]: 00:05:58
+              - button "Copiar link a este momento" [ref=f4e437] [cursor=pointer]
+              - strong [ref=f4e441]: "Lucía Ferreyra:"
+              - text: Esa página es exactamente lo que le pedimos al modelo. Martín, contá cómo armamos la consigna.
+            - paragraph [ref=f4e442]:
+              - button "Saltar a 00:06:09" [ref=f4e443] [cursor=pointer]: 00:06:09
+              - button "Copiar link a este momento" [ref=f4e444] [cursor=pointer]
+              - strong [ref=f4e448]: "Martín Albarracín:"
+              - text: "Escribimos un prompt que replica lo que le dirían a un asesor nuevo el primer día. Le dimos el texto completo del proyecto y los fundamentos, y le pedimos cinco cosas: objeto en dos oraciones, lista de normas vigentes que modifica con artículo, riesgos regulatorios, posibles conflictos con otras leyes y preguntas para el autor. Le dijimos explícitamente que si no estaba seguro de una norma lo dijera en vez de completar."
+            - paragraph [ref=f4e449]:
+              - button "Saltar a 00:06:52" [ref=f4e450] [cursor=pointer]: 00:06:52
+              - button "Copiar link a este momento" [ref=f4e451] [cursor=pointer]
+              - strong [ref=f4e455]: "Carolina Bustos:"
+              - text: ¿Y le dijeron que iba a competir conmigo?
+            - paragraph [ref=f4e456]:
+              - button "Saltar a 00:06:56" [ref=f4e457] [cursor=pointer]: 00:06:56
+              - button "Copiar link a este momento" [ref=f4e458] [cursor=pointer]
+              - strong [ref=f4e462]: "Martín Albarracín:"
+              - text: No. Y a vos tampoco te dijimos qué modelo era.
+            - paragraph [ref=f4e463]:
+              - button "Saltar a 00:07:03" [ref=f4e464] [cursor=pointer]: 00:07:03
+              - button "Copiar link a este momento" [ref=f4e465] [cursor=pointer]
+              - strong [ref=f4e469]: "Lucía Ferreyra:"
+              - text: "Un detalle técnico que importa: el proyecto con fundamentos tiene unas doce mil palabras. Entra cómodo en la"
+              - link "ventana de contexto del modelo" [ref=f4e470] [cursor=pointer]:
+                - /url: /glosario/ventana-de-contexto
+              - text: que usamos, así que no hubo recortes. Eso no siempre es así con proyectos largos o con anexos, y es algo que hay que chequear antes de confiar en cualquier resumen.
+            - paragraph [ref=f4e471]:
+              - button "Saltar a 00:07:36" [ref=f4e472] [cursor=pointer]: 00:07:36
+              - button "Copiar link a este momento" [ref=f4e473] [cursor=pointer]
+              - strong [ref=f4e477]: "Martín Albarracín:"
+              - text: También guardamos la conversación completa con el modelo. Está en la página del episodio, sin editar, para que cualquiera pueda ver exactamente qué le preguntamos y qué respondió.
+            - paragraph [ref=f4e478]:
+              - button "Saltar a 00:07:54" [ref=f4e479] [cursor=pointer]: 00:07:54
+              - button "Copiar link a este momento" [ref=f4e480] [cursor=pointer]
+              - strong [ref=f4e484]: "Carolina Bustos:"
+              - text: Eso me parece lo más importante de todo lo que hicieron. Si un senador va a apoyarse en una herramienta así, el prompt y la respuesta tienen que ser parte del expediente.
+            - paragraph [ref=f4e485]:
+              - button "Saltar a 00:08:12" [ref=f4e486] [cursor=pointer]: 00:08:12
+              - button "Copiar link a este momento" [ref=f4e487] [cursor=pointer]
+              - strong [ref=f4e491]: "Lucía Ferreyra:"
+              - text: Lo anotamos como pregunta abierta para el final. Vamos al proyecto.
+            - heading "El proyecto que elegimos" [level=2] [ref=f4e492]
+            - paragraph [ref=f4e493]:
+              - button "Saltar a 00:08:45" [ref=f4e494] [cursor=pointer]: 00:08:45
+              - button "Copiar link a este momento" [ref=f4e495] [cursor=pointer]
+              - strong [ref=f4e499]: "Lucía Ferreyra:"
+              - text: Elegimos un proyecto que modifica la Ley 25.326, la ley de protección de datos personales, que es del año 2000 y que todos los años recibe algún intento de reforma. Este en particular amplía la definición de dato sensible, cambia las reglas de consentimiento para el tratamiento automatizado y crea obligaciones nuevas para organismos públicos.
+            - paragraph [ref=f4e500]:
+              - button "Saltar a 00:09:21" [ref=f4e501] [cursor=pointer]: 00:09:21
+              - button "Copiar link a este momento" [ref=f4e502] [cursor=pointer]
+              - strong [ref=f4e506]: "Martín Albarracín:"
+              - text: "No vamos a decir el número de expediente ni el autor, porque el punto no es el proyecto sino la prueba. Lo que sí importa: es un proyecto de tamaño y complejidad típicos. No es ni una declaración de dos artículos ni un código de quinientos."
+            - paragraph [ref=f4e507]:
+              - button "Saltar a 00:09:45" [ref=f4e508] [cursor=pointer]: 00:09:45
+              - button "Copiar link a este momento" [ref=f4e509] [cursor=pointer]
+              - strong [ref=f4e513]: "Carolina Bustos:"
+              - text: Y es un buen caso porque la 25.326 es una ley con mucha historia. Tiene un decreto reglamentario, tiene disposiciones de la autoridad de aplicación, tiene fallos. Un proyecto que la toca sin mirar todo eso suele tener problemas que no se ven en el texto.
+            - paragraph [ref=f4e514]:
+              - button "Saltar a 00:10:14" [ref=f4e515] [cursor=pointer]: 00:10:14
+              - button "Copiar link a este momento" [ref=f4e516] [cursor=pointer]
+              - strong [ref=f4e520]: "Lucía Ferreyra:"
+              - text: ¿Cuánto tiempo le dedicaste?
+            - paragraph [ref=f4e521]:
+              - button "Saltar a 00:10:18" [ref=f4e522] [cursor=pointer]: 00:10:18
+              - button "Copiar link a este momento" [ref=f4e523] [cursor=pointer]
+              - strong [ref=f4e527]: "Carolina Bustos:"
+              - text: Dos horas y media, en dos sesiones. La primera para leer y marcar, la segunda para escribir la página.
+            - paragraph [ref=f4e528]:
+              - button "Saltar a 00:10:30" [ref=f4e529] [cursor=pointer]: 00:10:30
+              - button "Copiar link a este momento" [ref=f4e530] [cursor=pointer]
+              - strong [ref=f4e534]: "Martín Albarracín:"
+              - text: El modelo tardó cuarenta y un segundos. Lo digo porque es el dato que todo el mundo quiere escuchar, pero es el menos interesante del episodio. Lo importante es qué dijo en esos cuarenta y un segundos.
+            - paragraph [ref=f4e535]:
+              - button "Saltar a 00:10:52" [ref=f4e536] [cursor=pointer]: 00:10:52
+              - button "Copiar link a este momento" [ref=f4e537] [cursor=pointer]
+              - strong [ref=f4e541]: "Lucía Ferreyra:"
+              - text: Antes de eso, Carolina, ¿qué fue lo primero que marcaste al leerlo?
+            - paragraph [ref=f4e542]:
+              - button "Saltar a 00:11:01" [ref=f4e543] [cursor=pointer]: 00:11:01
+              - button "Copiar link a este momento" [ref=f4e544] [cursor=pointer]
+              - strong [ref=f4e548]: "Carolina Bustos:"
+              - text: El artículo cuatro. El proyecto dice que ciertos datos quedan exceptuados del consentimiento cuando los trata un organismo público "en los términos del decreto reglamentario vigente". Y remite a un número de decreto. Ese decreto fue reemplazado. La remisión apunta a una norma que ya no existe.
+            - paragraph [ref=f4e549]:
+              - button "Saltar a 00:11:35" [ref=f4e550] [cursor=pointer]: 00:11:35
+              - button "Copiar link a este momento" [ref=f4e551] [cursor=pointer]
+              - strong [ref=f4e555]: "Martín Albarracín:"
+              - text: Eso es un error de redacción del proyecto, no del modelo ni tuyo.
+            - paragraph [ref=f4e556]:
+              - button "Saltar a 00:11:40" [ref=f4e557] [cursor=pointer]: 00:11:40
+              - button "Copiar link a este momento" [ref=f4e558] [cursor=pointer]
+              - strong [ref=f4e562]: "Carolina Bustos:"
+              - text: Claro, pero es exactamente el tipo de cosa que un asesor tiene que encontrar. Si eso llega al recinto así, la excepción no se puede aplicar o se aplica mal.
+            - paragraph [ref=f4e563]:
+              - button "Saltar a 00:11:58" [ref=f4e564] [cursor=pointer]: 00:11:58
+              - button "Copiar link a este momento" [ref=f4e565] [cursor=pointer]
+              - strong [ref=f4e569]: "Lucía Ferreyra:"
+              - text: Lo segundo que marcaste fue la relación con la Ley 27.275, la de acceso a la información pública.
+            - paragraph [ref=f4e570]:
+              - button "Saltar a 00:12:08" [ref=f4e571] [cursor=pointer]: 00:12:08
+              - button "Copiar link a este momento" [ref=f4e572] [cursor=pointer]
+              - strong [ref=f4e576]: "Carolina Bustos:"
+              - text: Sí. Hay un artículo que permite a los organismos no informar qué sistemas automatizados usan para tratar datos personales, por razones de seguridad. Eso choca de frente con las obligaciones de transparencia activa del artículo 32 de la 27.275. No es que uno derogue al otro; es que van a convivir mal y alguien lo va a litigar.
+            - paragraph [ref=f4e577]:
+              - button "Saltar a 00:12:44" [ref=f4e578] [cursor=pointer]: 00:12:44
+              - button "Copiar link a este momento" [ref=f4e579] [cursor=pointer]
+              - strong [ref=f4e583]: "Martín Albarracín:"
+              - text: Guardemos esas dos cosas, la remisión al decreto derogado y el choque con la 27.275, porque son el corazón de la comparación.
+            - paragraph [ref=f4e584]:
+              - button "Saltar a 00:13:02" [ref=f4e585] [cursor=pointer]: 00:13:02
+              - button "Copiar link a este momento" [ref=f4e586] [cursor=pointer]
+              - strong [ref=f4e590]: "Lucía Ferreyra:"
+              - text: Vamos a la lectura del modelo.
+            - heading "La IA lee el proyecto" [level=2] [ref=f4e591]
+            - paragraph [ref=f4e592]:
+              - button "Saltar a 00:13:30" [ref=f4e593] [cursor=pointer]: 00:13:30
+              - button "Copiar link a este momento" [ref=f4e594] [cursor=pointer]
+              - strong [ref=f4e598]: "Martín Albarracín:"
+              - text: "Les leo el objeto tal como lo escribió el modelo: \"El proyecto amplía la categoría de datos sensibles de la Ley 25.326 para incluir datos biométricos y de geolocalización, establece requisitos específicos de consentimiento para decisiones automatizadas y crea obligaciones de registro y publicidad para organismos públicos que utilicen sistemas de tratamiento automatizado\". Carolina, ¿qué le ponés?"
+            - paragraph [ref=f4e599]:
+              - button "Saltar a 00:14:08" [ref=f4e600] [cursor=pointer]: 00:14:08
+              - button "Copiar link a este momento" [ref=f4e601] [cursor=pointer]
+              - strong [ref=f4e605]: "Carolina Bustos:"
+              - text: Diez. Es mejor que lo que escribí yo, que era más largo. Está completo y no inventa nada.
+            - paragraph [ref=f4e606]:
+              - button "Saltar a 00:14:20" [ref=f4e607] [cursor=pointer]: 00:14:20
+              - button "Copiar link a este momento" [ref=f4e608] [cursor=pointer]
+              - strong [ref=f4e612]: "Lucía Ferreyra:"
+              - text: La segunda parte, la lista de normas que modifica. El modelo listó siete artículos de la 25.326 con el número correcto y una descripción de un renglón del cambio en cada uno.
+            - paragraph [ref=f4e613]:
+              - button "Saltar a 00:14:38" [ref=f4e614] [cursor=pointer]: 00:14:38
+              - button "Copiar link a este momento" [ref=f4e615] [cursor=pointer]
+              - strong [ref=f4e619]: "Carolina Bustos:"
+              - text: "También correcto. Yo había listado los mismos siete. Acá no hay diferencia, y eso es un dato: la tarea de \"qué toca este proyecto\" la hace bien y rápido."
+            - paragraph [ref=f4e620]:
+              - button "Saltar a 00:14:56" [ref=f4e621] [cursor=pointer]: 00:14:56
+              - button "Copiar link a este momento" [ref=f4e622] [cursor=pointer]
+              - strong [ref=f4e626]: "Martín Albarracín:"
+              - text: "Ahora los riesgos. El modelo propuso tres. Uno: que la definición ampliada de dato sensible alcance a sistemas ya en funcionamiento sin régimen de transición. Dos: que el requisito de consentimiento para decisiones automatizadas sea inaplicable en organismos con millones de trámites. Tres, y acá viene lo interesante, que el proyecto \"entre en conflicto con la Resolución 47/2018 de la Agencia de Acceso a la Información Pública sobre evaluación de impacto\"."
+            - paragraph [ref=f4e627]:
+              - button "Saltar a 00:15:42" [ref=f4e628] [cursor=pointer]: 00:15:42
+              - button "Copiar link a este momento" [ref=f4e629] [cursor=pointer]
+              - strong [ref=f4e633]: "Lucía Ferreyra:"
+              - text: Esa resolución no existe. Buscamos en el Boletín Oficial, en InfoLEG y en el sitio de la Agencia. Hay resoluciones de la Agencia sobre temas cercanos, con otros números y otros años, pero esa, con ese número y esa fecha, no.
+            - paragraph [ref=f4e634]:
+              - button "Saltar a 00:16:05" [ref=f4e635] [cursor=pointer]: 00:16:05
+              - button "Copiar link a este momento" [ref=f4e636] [cursor=pointer]
+              - strong [ref=f4e640]: "Carolina Bustos:"
+              - text: Y lo dijo con la misma seguridad que los siete artículos correctos.
+            - paragraph [ref=f4e641]:
+              - button "Saltar a 00:16:11" [ref=f4e642] [cursor=pointer]: 00:16:11
+              - button "Copiar link a este momento" [ref=f4e643] [cursor=pointer]
+              - strong [ref=f4e647]: "Martín Albarracín:"
+              - text: Ese es el punto. No hay ninguna señal en el texto de la respuesta que distinga lo verificado de lo inventado. El modelo
+              - link "alucinó" [ref=f4e648] [cursor=pointer]:
+                - /url: /glosario/alucinacion
+              - text: una norma plausible, con el organismo correcto, el tema correcto y un número que suena bien.
+            - paragraph [ref=f4e649]:
+              - button "Saltar a 00:16:33" [ref=f4e650] [cursor=pointer]: 00:16:33
+              - button "Copiar link a este momento" [ref=f4e651] [cursor=pointer]
+              - strong [ref=f4e655]: "Lucía Ferreyra:"
+              - text: Hay un paper de Stanford y Yale, de enero de 2024, que midió esto de forma sistemática en el sistema legal de Estados Unidos. Encontraron tasas de citas inventadas muy altas en modelos de uso general cuando se les preguntaba por fallos y normas específicas. Lo linkeamos. Nuestro caso es uno solo, no es una medición, pero va en la misma dirección.
+            - paragraph [ref=f4e656]:
+              - button "Saltar a 00:17:05" [ref=f4e657] [cursor=pointer]: 00:17:05
+              - button "Copiar link a este momento" [ref=f4e658] [cursor=pointer]
+              - strong [ref=f4e662]: "Carolina Bustos:"
+              - text: A mí lo que me preocupa no es que invente. Es que si yo fuera una asesora nueva, sin experiencia con la Agencia, lo pondría en la página del senador sin dudar. Suena perfectamente razonable.
+            - paragraph [ref=f4e663]:
+              - button "Saltar a 00:17:24" [ref=f4e664] [cursor=pointer]: 00:17:24
+              - button "Copiar link a este momento" [ref=f4e665] [cursor=pointer]
+              - strong [ref=f4e669]: "Martín Albarracín:"
+              - text: ¿Los otros dos riesgos?
+            - paragraph [ref=f4e670]:
+              - button "Saltar a 00:17:27" [ref=f4e671] [cursor=pointer]: 00:17:27
+              - button "Copiar link a este momento" [ref=f4e672] [cursor=pointer]
+              - strong [ref=f4e676]: "Carolina Bustos:"
+              - text: Los dos son reales y están bien planteados. El de la transición es el más importante del proyecto y yo lo tenía primero. El del volumen de trámites es cierto, aunque yo lo hubiera formulado como pregunta al autor más que como riesgo.
+            - paragraph [ref=f4e677]:
+              - button "Saltar a 00:17:50" [ref=f4e678] [cursor=pointer]: 00:17:50
+              - button "Copiar link a este momento" [ref=f4e679] [cursor=pointer]
+              - strong [ref=f4e683]: "Lucía Ferreyra:"
+              - text: "Cuarta parte: conflictos con otras leyes. El modelo mencionó la Ley 27.275 en general, dijo que \"podrían existir tensiones con el régimen de acceso a la información\", pero no identificó el artículo del proyecto ni el artículo 32 de la 27.275."
+            - paragraph [ref=f4e684]:
+              - button "Saltar a 00:18:14" [ref=f4e685] [cursor=pointer]: 00:18:14
+              - button "Copiar link a este momento" [ref=f4e686] [cursor=pointer]
+              - strong [ref=f4e690]: "Carolina Bustos:"
+              - text: Ahí está la diferencia entre saber que dos leyes se tocan y saber dónde se tocan. Lo primero sirve para una charla. Lo segundo sirve para un dictamen.
+            - paragraph [ref=f4e691]:
+              - button "Saltar a 00:18:30" [ref=f4e692] [cursor=pointer]: 00:18:30
+              - button "Copiar link a este momento" [ref=f4e693] [cursor=pointer]
+              - strong [ref=f4e697]: "Martín Albarracín:"
+              - text: Y sobre la remisión al decreto derogado, nada. El modelo listó el decreto como "norma reglamentaria referenciada" sin advertir que fue reemplazado.
+            - paragraph [ref=f4e698]:
+              - button "Saltar a 00:18:46" [ref=f4e699] [cursor=pointer]: 00:18:46
+              - button "Copiar link a este momento" [ref=f4e700] [cursor=pointer]
+              - strong [ref=f4e704]: "Lucía Ferreyra:"
+              - text: Eso tiene una explicación técnica que vale la pena dar. El modelo que usamos tiene una fecha de corte de
+              - link "entrenamiento" [ref=f4e705] [cursor=pointer]:
+                - /url: /glosario/entrenamiento
+              - text: . Si el reemplazo del decreto es posterior a esa fecha, o si simplemente no está bien representado en sus datos de entrenamiento, no tiene forma de saberlo. No es un error de razonamiento; es un límite de información.
+            - paragraph [ref=f4e706]:
+              - button "Saltar a 00:19:17" [ref=f4e707] [cursor=pointer]: 00:19:17
+              - button "Copiar link a este momento" [ref=f4e708] [cursor=pointer]
+              - strong [ref=f4e712]: "Carolina Bustos:"
+              - text: Pero un asesor nuevo tampoco lo sabe de memoria. Lo sabe porque lo busca. La diferencia es que el asesor sabe que tiene que buscar.
+            - paragraph [ref=f4e713]:
+              - button "Saltar a 00:19:33" [ref=f4e714] [cursor=pointer]: 00:19:33
+              - button "Copiar link a este momento" [ref=f4e715] [cursor=pointer]
+              - strong [ref=f4e719]: "Martín Albarracín:"
+              - text: Última parte, las preguntas para el autor. El modelo propuso cinco. Tres eran buenas, dos eran genéricas del tipo "¿cómo se financiará la implementación?".
+            - paragraph [ref=f4e720]:
+              - button "Saltar a 00:19:50" [ref=f4e721] [cursor=pointer]: 00:19:50
+              - button "Copiar link a este momento" [ref=f4e722] [cursor=pointer]
+              - strong [ref=f4e726]: "Lucía Ferreyra:"
+              - text: Ahora la lectura de Carolina.
+            - heading "La asesora lee el proyecto" [level=2] [ref=f4e727]
+            - paragraph [ref=f4e728]:
+              - button "Saltar a 00:20:05" [ref=f4e729] [cursor=pointer]: 00:20:05
+              - button "Copiar link a este momento" [ref=f4e730] [cursor=pointer]
+              - strong [ref=f4e734]: "Carolina Bustos:"
+              - text: Mi página tenía cuatro puntos de atención y dos recomendaciones. Primero, la remisión al decreto derogado, con la propuesta de corregirla por "la reglamentación vigente" sin número. Segundo, el choque con el artículo 32 de la 27.275, con la sugerencia de agregar un párrafo que aclare que la excepción de seguridad no alcanza a la existencia del sistema sino a sus especificaciones técnicas.
+            - paragraph [ref=f4e735]:
+              - button "Saltar a 00:20:47" [ref=f4e736] [cursor=pointer]: 00:20:47
+              - button "Copiar link a este momento" [ref=f4e737] [cursor=pointer]
+              - strong [ref=f4e741]: "Martín Albarracín:"
+              - text: Esa segunda es una solución, no un diagnóstico. El modelo no propuso ninguna.
+            - paragraph [ref=f4e742]:
+              - button "Saltar a 00:20:55" [ref=f4e743] [cursor=pointer]: 00:20:55
+              - button "Copiar link a este momento" [ref=f4e744] [cursor=pointer]
+              - strong [ref=f4e748]: "Carolina Bustos:"
+              - text: Porque no se lo pidieron, para ser justa. Pero también porque proponer una redacción implica saber qué va a aceptar el autor, y eso es política, no texto.
+            - paragraph [ref=f4e749]:
+              - button "Saltar a 00:21:12" [ref=f4e750] [cursor=pointer]: 00:21:12
+              - button "Copiar link a este momento" [ref=f4e751] [cursor=pointer]
+              - strong [ref=f4e755]: "Lucía Ferreyra:"
+              - text: Tercer punto.
+            - paragraph [ref=f4e756]:
+              - button "Saltar a 00:21:15" [ref=f4e757] [cursor=pointer]: 00:21:15
+              - button "Copiar link a este momento" [ref=f4e758] [cursor=pointer]
+              - strong [ref=f4e762]: "Carolina Bustos:"
+              - text: "El régimen de transición, igual que el modelo. Cuarto, algo que no está en el proyecto: el autor presentó un proyecto casi idéntico hace dos períodos, que perdió estado parlamentario sin tratarse. La diferencia entre aquel y este son dos artículos. Y esos dos artículos son los que crean obligaciones para organismos públicos. Alguien se los pidió."
+            - paragraph [ref=f4e763]:
+              - button "Saltar a 00:21:50" [ref=f4e764] [cursor=pointer]: 00:21:50
+              - button "Copiar link a este momento" [ref=f4e765] [cursor=pointer]
+              - strong [ref=f4e769]: "Martín Albarracín:"
+              - text: ¿Cómo sabés eso?
+            - paragraph [ref=f4e770]:
+              - button "Saltar a 00:21:53" [ref=f4e771] [cursor=pointer]: 00:21:53
+              - button "Copiar link a este momento" [ref=f4e772] [cursor=pointer]
+              - strong [ref=f4e776]: "Carolina Bustos:"
+              - text: Porque estaba en la comisión cuando se presentó el anterior. Y porque busqué el expediente viejo y los comparé. Me llevó veinte minutos.
+            - paragraph [ref=f4e777]:
+              - button "Saltar a 00:22:08" [ref=f4e778] [cursor=pointer]: 00:22:08
+              - button "Copiar link a este momento" [ref=f4e779] [cursor=pointer]
+              - strong [ref=f4e783]: "Lucía Ferreyra:"
+              - text: Eso el modelo no lo puede hacer con el material que le dimos. Le dimos el proyecto, no el historial legislativo del autor.
+            - paragraph [ref=f4e784]:
+              - button "Saltar a 00:22:19" [ref=f4e785] [cursor=pointer]: 00:22:19
+              - button "Copiar link a este momento" [ref=f4e786] [cursor=pointer]
+              - strong [ref=f4e790]: "Carolina Bustos:"
+              - text: Y aunque se lo dieran, lo que importa no es que los dos artículos son nuevos. Es saber quién los pidió, y eso no está escrito en ningún lado.
+            - paragraph [ref=f4e791]:
+              - button "Saltar a 00:22:35" [ref=f4e792] [cursor=pointer]: 00:22:35
+              - button "Copiar link a este momento" [ref=f4e793] [cursor=pointer]
+              - strong [ref=f4e797]: "Martín Albarracín:"
+              - text: Tus recomendaciones.
+            - paragraph [ref=f4e798]:
+              - button "Saltar a 00:22:38" [ref=f4e799] [cursor=pointer]: 00:22:38
+              - button "Copiar link a este momento" [ref=f4e800] [cursor=pointer]
+              - strong [ref=f4e804]: "Carolina Bustos:"
+              - text: Acompañar en general, pedir cambios en los cuatro puntos, y citar al titular de la Agencia de Acceso a la Información a la comisión antes de dictaminar. Esa última es la que más vale, porque convierte un problema de texto en una conversación con el organismo que va a tener que aplicar la norma.
+            - paragraph [ref=f4e805]:
+              - button "Saltar a 00:23:05" [ref=f4e806] [cursor=pointer]: 00:23:05
+              - button "Copiar link a este momento" [ref=f4e807] [cursor=pointer]
+              - strong [ref=f4e811]: "Lucía Ferreyra:"
+              - text: "Una cosa que me llamó la atención de tu página: no tiene ninguna cita a normas que no sean las dos leyes y el decreto. Nada de resoluciones, nada de fallos."
+            - paragraph [ref=f4e812]:
+              - button "Saltar a 00:23:22" [ref=f4e813] [cursor=pointer]: 00:23:22
+              - button "Copiar link a este momento" [ref=f4e814] [cursor=pointer]
+              - strong [ref=f4e818]: "Carolina Bustos:"
+              - text: Porque en una página para el senador no hace falta. Si avanza, en el dictamen sí. Y ahí voy a buscar cada una antes de escribirla, porque si cito mal una resolución en un dictamen, el bloque de enfrente me lo marca en el recinto y queda para siempre en la versión taquigráfica.
+            - paragraph [ref=f4e819]:
+              - button "Saltar a 00:23:48" [ref=f4e820] [cursor=pointer]: 00:23:48
+              - button "Copiar link a este momento" [ref=f4e821] [cursor=pointer]
+              - strong [ref=f4e825]: "Martín Albarracín:"
+              - text: O sea que el costo de una cita inventada, para vos, es altísimo.
+            - paragraph [ref=f4e826]:
+              - button "Saltar a 00:23:54" [ref=f4e827] [cursor=pointer]: 00:23:54
+              - button "Copiar link a este momento" [ref=f4e828] [cursor=pointer]
+              - strong [ref=f4e832]: "Carolina Bustos:"
+              - text: Es tu reputación. Para el modelo, es cero.
+            - paragraph [ref=f4e833]:
+              - button "Saltar a 00:24:03" [ref=f4e834] [cursor=pointer]: 00:24:03
+              - button "Copiar link a este momento" [ref=f4e835] [cursor=pointer]
+              - strong [ref=f4e839]: "Lucía Ferreyra:"
+              - text: Esa asimetría de costos me parece central y quiero volver sobre ella al final.
+            - paragraph [ref=f4e840]:
+              - button "Saltar a 00:24:14" [ref=f4e841] [cursor=pointer]: 00:24:14
+              - button "Copiar link a este momento" [ref=f4e842] [cursor=pointer]
+              - strong [ref=f4e846]: "Martín Albarracín:"
+              - text: "Algo que no preguntamos: ¿qué parte de tu trabajo te hubiera gustado delegarle?"
+            - paragraph [ref=f4e847]:
+              - button "Saltar a 00:24:22" [ref=f4e848] [cursor=pointer]: 00:24:22
+              - button "Copiar link a este momento" [ref=f4e849] [cursor=pointer]
+              - strong [ref=f4e853]: "Carolina Bustos:"
+              - text: La lista de artículos modificados, sin dudar. Es mecánica, es aburrida y el modelo la hizo perfecto. Y el objeto en dos oraciones, que a mí siempre me sale largo. El resto, no todavía.
+            - paragraph [ref=f4e854]:
+              - button "Saltar a 00:24:45" [ref=f4e855] [cursor=pointer]: 00:24:45
+              - button "Copiar link a este momento" [ref=f4e856] [cursor=pointer]
+              - strong [ref=f4e860]: "Lucía Ferreyra:"
+              - text: ¿Y al revés? ¿Qué parte del trabajo del modelo te sirvió, aunque no lo supieras en el momento?
+            - paragraph [ref=f4e861]:
+              - button "Saltar a 00:24:56" [ref=f4e862] [cursor=pointer]: 00:24:56
+              - button "Copiar link a este momento" [ref=f4e863] [cursor=pointer]
+              - strong [ref=f4e867]: "Carolina Bustos:"
+              - text: El riesgo del volumen de trámites. Yo lo tenía como pregunta, él lo tenía como riesgo. Después de leerlo creo que es más riesgo que pregunta. Me hizo cambiar de opinión en algo menor, pero me la hizo cambiar.
+            - paragraph [ref=f4e868]:
+              - button "Saltar a 00:25:20" [ref=f4e869] [cursor=pointer]: 00:25:20
+              - button "Copiar link a este momento" [ref=f4e870] [cursor=pointer]
+              - strong [ref=f4e874]: "Martín Albarracín:"
+              - text: "Eso es interesante porque es el uso menos discutido: no como reemplazo ni como asistente, sino como segunda lectura que te obliga a justificar lo que ya decidiste."
+            - paragraph [ref=f4e875]:
+              - button "Saltar a 00:25:38" [ref=f4e876] [cursor=pointer]: 00:25:38
+              - button "Copiar link a este momento" [ref=f4e877] [cursor=pointer]
+              - strong [ref=f4e881]: "Lucía Ferreyra:"
+              - text: Vamos a la comparación punto por punto.
+            - heading "Comparación punto por punto" [level=2] [ref=f4e882]
+            - paragraph [ref=f4e883]:
+              - button "Saltar a 00:26:40" [ref=f4e884] [cursor=pointer]: 00:26:40
+              - button "Copiar link a este momento" [ref=f4e885] [cursor=pointer]
+              - strong [ref=f4e889]: "Martín Albarracín:"
+              - text: "Hicimos una tabla, que está en la página del episodio. Cinco tareas, dos columnas. Objeto del proyecto: empate, con ventaja leve del modelo por concisión. Normas modificadas: empate exacto. Riesgos: dos de tres correctos para el modelo, con una norma inventada; tres de tres para la asesora, con una que el modelo no vio."
+            - paragraph [ref=f4e890]:
+              - button "Saltar a 00:27:14" [ref=f4e891] [cursor=pointer]: 00:27:14
+              - button "Copiar link a este momento" [ref=f4e892] [cursor=pointer]
+              - strong [ref=f4e896]: "Lucía Ferreyra:"
+              - text: "Conflictos con otras leyes: el modelo detectó la tensión en general, la asesora la ubicó en artículos específicos y propuso una redacción. Y la remisión al decreto derogado, que para mí es el hallazgo más importante del episodio, solo la encontró la asesora."
+            - paragraph [ref=f4e897]:
+              - button "Saltar a 00:27:38" [ref=f4e898] [cursor=pointer]: 00:27:38
+              - button "Copiar link a este momento" [ref=f4e899] [cursor=pointer]
+              - strong [ref=f4e903]: "Carolina Bustos:"
+              - text: Quiero ser justa con el modelo en algo. La tabla compara lo que respondió con lo que respondí yo. Pero yo tuve dos horas y media, acceso a InfoLEG, al expediente viejo y a mi memoria de la comisión. El modelo tuvo doce mil palabras y cuarenta segundos. Si me dieran a mí solo el texto y cuarenta segundos, no encuentro el decreto derogado tampoco.
+            - paragraph [ref=f4e904]:
+              - button "Saltar a 00:28:12" [ref=f4e905] [cursor=pointer]: 00:28:12
+              - button "Copiar link a este momento" [ref=f4e906] [cursor=pointer]
+              - strong [ref=f4e910]: "Martín Albarracín:"
+              - text: "Es verdad, y por eso la pregunta correcta no es \"quién lo hizo mejor\" sino \"qué pasa si le damos al modelo lo mismo que tuviste vos\". Eso es técnicamente posible: conectarlo a InfoLEG, darle el historial de expedientes, pasarle las versiones taquigráficas. Es lo que se llama"
+              - link "recuperación aumentada" [ref=f4e911] [cursor=pointer]:
+                - /url: /glosario/recuperacion-aumentada
+              - text: .
+            - paragraph [ref=f4e912]:
+              - button "Saltar a 00:28:40" [ref=f4e913] [cursor=pointer]: 00:28:40
+              - button "Copiar link a este momento" [ref=f4e914] [cursor=pointer]
+              - strong [ref=f4e918]: "Lucía Ferreyra:"
+              - text: Y es probablemente lo que va a pasar en los próximos años en las comisiones. Pero hay una parte que no se arregla con más datos.
+            - paragraph [ref=f4e919]:
+              - button "Saltar a 00:28:52" [ref=f4e920] [cursor=pointer]: 00:28:52
+              - button "Copiar link a este momento" [ref=f4e921] [cursor=pointer]
+              - strong [ref=f4e925]: "Carolina Bustos:"
+              - text: La parte de quién pidió qué.
+            - paragraph [ref=f4e926]:
+              - button "Saltar a 00:28:56" [ref=f4e927] [cursor=pointer]: 00:28:56
+              - button "Copiar link a este momento" [ref=f4e928] [cursor=pointer]
+              - strong [ref=f4e932]: "Lucía Ferreyra:"
+              - text: Esa. Decilo como lo dijiste antes de grabar, que fue mejor.
+            - paragraph [ref=f4e933]:
+              - button "Saltar a 00:29:12" [ref=f4e934] [cursor=pointer]: 00:29:12
+              - button "Copiar link a este momento" [ref=f4e935] [cursor=pointer]
+              - strong [ref=f4e939]: "Carolina Bustos:"
+              - text: "El modelo encontró todos los artículos. Lo que no encontró fue el pasillo: quién pidió ese artículo y a cambio de qué. Y el pasillo no está en ninguna base de datos. Está en la gente."
+            - paragraph [ref=f4e940]:
+              - button "Saltar a 00:29:33" [ref=f4e941] [cursor=pointer]: 00:29:33
+              - button "Copiar link a este momento" [ref=f4e942] [cursor=pointer]
+              - strong [ref=f4e946]: "Martín Albarracín:"
+              - text: "Hay un contraargumento que quiero poner sobre la mesa. Alguien podría decir: mejor que el análisis técnico no dependa del pasillo. Que el asesor sepa quién pidió qué es información valiosa, pero también es la razón por la cual el análisis legislativo es opaco. Un modelo que solo lee el texto es, en cierto sentido, más imparcial."
+            - paragraph [ref=f4e947]:
+              - button "Saltar a 00:30:08" [ref=f4e948] [cursor=pointer]: 00:30:08
+              - button "Copiar link a este momento" [ref=f4e949] [cursor=pointer]
+              - strong [ref=f4e953]: "Carolina Bustos:"
+              - text: Es un buen contraargumento y lo escuché muchas veces. Mi respuesta es que el pasillo existe igual, lo mires o no. Si el asesor no lo mira, el senador vota sin saber por qué ese artículo está ahí. El análisis técnico no reemplaza al político; lo informa.
+            - paragraph [ref=f4e954]:
+              - button "Saltar a 00:30:36" [ref=f4e955] [cursor=pointer]: 00:30:36
+              - button "Copiar link a este momento" [ref=f4e956] [cursor=pointer]
+              - strong [ref=f4e960]: "Lucía Ferreyra:"
+              - text: Y agregaría que "imparcial" no es lo mismo que "neutral". El modelo tiene
+              - link "sesgos" [ref=f4e961] [cursor=pointer]:
+                - /url: /glosario/sesgo-algoritmico
+              - text: de entrenamiento que no conocemos. Dio por buena una resolución inexistente. Eso no es imparcialidad, es otra forma de opacidad.
+            - paragraph [ref=f4e962]:
+              - button "Saltar a 00:30:58" [ref=f4e963] [cursor=pointer]: 00:30:58
+              - button "Copiar link a este momento" [ref=f4e964] [cursor=pointer]
+              - strong [ref=f4e968]: "Martín Albarracín:"
+              - text: "Un último punto de la comparación que no está en la tabla: el costo. Dos horas y media de una asesora senior contra cuarenta segundos de un modelo. Si uno hace la cuenta por consulta, la diferencia es enorme. Pero esa cuenta es engañosa."
+            - paragraph [ref=f4e969]:
+              - button "Saltar a 00:31:20" [ref=f4e970] [cursor=pointer]: 00:31:20
+              - button "Copiar link a este momento" [ref=f4e971] [cursor=pointer]
+              - strong [ref=f4e975]: "Lucía Ferreyra:"
+              - text: ¿Por qué?
+            - paragraph [ref=f4e976]:
+              - button "Saltar a 00:31:22" [ref=f4e977] [cursor=pointer]: 00:31:22
+              - button "Copiar link a este momento" [ref=f4e978] [cursor=pointer]
+              - strong [ref=f4e982]: "Martín Albarracín:"
+              - text: Porque el costo real no es el de producir la página sino el de equivocarse. Si la norma inventada llega a un dictamen, el costo lo paga el senador, el bloque y eventualmente la ley. Esa asimetría que mencionaba Carolina, que para ella una cita falsa es su reputación y para el modelo es cero, es un problema económico, no solo ético. Alguien tiene que absorber el costo del error, y hoy ese alguien es la persona que revisa.
+            - paragraph [ref=f4e983]:
+              - button "Saltar a 00:32:02" [ref=f4e984] [cursor=pointer]: 00:32:02
+              - button "Copiar link a este momento" [ref=f4e985] [cursor=pointer]
+              - strong [ref=f4e989]: "Carolina Bustos:"
+              - text: Que es lo que yo hago. Y si me dan un modelo que me ahorra la lista de artículos pero me obliga a verificar cada cita, no sé cuánto tiempo gané.
+            - paragraph [ref=f4e990]:
+              - button "Saltar a 00:32:18" [ref=f4e991] [cursor=pointer]: 00:32:18
+              - button "Copiar link a este momento" [ref=f4e992] [cursor=pointer]
+              - strong [ref=f4e996]: "Lucía Ferreyra:"
+              - text: "Esa es exactamente la pregunta que queremos dejar planteada: no si sirve, sino para qué tareas el tiempo que ahorra es mayor que el tiempo de verificar."
+            - paragraph [ref=f4e997]:
+              - button "Saltar a 00:32:35" [ref=f4e998] [cursor=pointer]: 00:32:35
+              - button "Copiar link a este momento" [ref=f4e999] [cursor=pointer]
+              - strong [ref=f4e1003]: "Martín Albarracín:"
+              - text: "Y la respuesta provisoria de este episodio es: para las tareas de forma, sí; para las tareas de hecho, todavía no sin revisión; para las tareas de contexto político, no."
+            - heading "Qué cambia y qué no" [level=2] [ref=f4e1004]
+            - paragraph [ref=f4e1005]:
+              - button "Saltar a 00:33:15" [ref=f4e1006] [cursor=pointer]: 00:33:15
+              - button "Copiar link a este momento" [ref=f4e1007] [cursor=pointer]
+              - strong [ref=f4e1011]: "Lucía Ferreyra:"
+              - text: "Cerremos con la sección que va a estar en todos los episodios: qué cambia y qué no cambia con IA en este problema."
+            - paragraph [ref=f4e1012]:
+              - button "Saltar a 00:33:27" [ref=f4e1013] [cursor=pointer]: 00:33:27
+              - button "Copiar link a este momento" [ref=f4e1014] [cursor=pointer]
+              - strong [ref=f4e1018]: "Martín Albarracín:"
+              - text: "Lo que cambia. Primero, la primera lectura de un proyecto se vuelve casi gratuita. Eso significa que una comisión podría tener una página de análisis de todos los proyectos que entran, no solo de los que alguien decidió mirar. Segundo, aparece un control de consistencia barato: si el modelo y el asesor difieren, hay algo que revisar."
+            - paragraph [ref=f4e1019]:
+              - button "Saltar a 00:34:00" [ref=f4e1020] [cursor=pointer]: 00:34:00
+              - button "Copiar link a este momento" [ref=f4e1021] [cursor=pointer]
+              - strong [ref=f4e1025]: "Carolina Bustos:"
+              - text: Yo agregaría que cambia quién puede hacer la primera lectura. Un bloque chico, con un asesor para doce comisiones, hoy no llega a leer todo. Con esto, llega. Eso achica una desigualdad real entre bloques grandes y chicos.
+            - paragraph [ref=f4e1026]:
+              - button "Saltar a 00:34:24" [ref=f4e1027] [cursor=pointer]: 00:34:24
+              - button "Copiar link a este momento" [ref=f4e1028] [cursor=pointer]
+              - strong [ref=f4e1032]: "Lucía Ferreyra:"
+              - text: Lo que no cambia. La verificación de citas sigue siendo humana y sigue siendo cara. El contexto político, quién pidió qué, no está en ningún texto. Y la responsabilidad por el dictamen sigue siendo de una persona con nombre y apellido.
+            - paragraph [ref=f4e1033]:
+              - button "Saltar a 00:34:48" [ref=f4e1034] [cursor=pointer]: 00:34:48
+              - button "Copiar link a este momento" [ref=f4e1035] [cursor=pointer]
+              - strong [ref=f4e1039]: "Martín Albarracín:"
+              - text: "Y una cosa que cambia para mal si no se hace nada: si el prompt y la respuesta no se guardan en el expediente, el proceso legislativo se vuelve más opaco, no menos. Hoy un dictamen tiene firma. Una página generada por un modelo no tiene nada."
+            - paragraph [ref=f4e1040]:
+              - button "Saltar a 00:35:12" [ref=f4e1041] [cursor=pointer]: 00:35:12
+              - button "Copiar link a este momento" [ref=f4e1042] [cursor=pointer]
+              - strong [ref=f4e1046]: "Carolina Bustos:"
+              - text: Eso para mí es lo urgente. No regular si se usa o no, que se va a usar igual. Regular que quede registro.
+            - paragraph [ref=f4e1047]:
+              - button "Saltar a 00:35:26" [ref=f4e1048] [cursor=pointer]: 00:35:26
+              - button "Copiar link a este momento" [ref=f4e1049] [cursor=pointer]
+              - strong [ref=f4e1053]: "Lucía Ferreyra:"
+              - text: "Lo anotamos como caso para un episodio futuro: qué debería decir un reglamento de comisión sobre el uso de estas herramientas. Si alguien que nos escucha trabaja en eso, en la web hay un formulario para proponer casos."
+            - paragraph [ref=f4e1054]:
+              - button "Saltar a 00:35:47" [ref=f4e1055] [cursor=pointer]: 00:35:47
+              - button "Copiar link a este momento" [ref=f4e1056] [cursor=pointer]
+              - strong [ref=f4e1060]: "Martín Albarracín:"
+              - text: "Y una pregunta abierta que no resolvimos: ¿qué pasa cuando los dos lados usan el mismo modelo? Si oficialismo y oposición le preguntan a la misma herramienta, ¿converge el análisis o se amplifica el sesgo?"
+            - paragraph [ref=f4e1061]:
+              - button "Saltar a 00:36:08" [ref=f4e1062] [cursor=pointer]: 00:36:08
+              - button "Copiar link a este momento" [ref=f4e1063] [cursor=pointer]
+              - strong [ref=f4e1067]: "Carolina Bustos:"
+              - text: Espero que me inviten a ese también.
+            - paragraph [ref=f4e1068]:
+              - button "Saltar a 00:36:12" [ref=f4e1069] [cursor=pointer]: 00:36:12
+              - button "Copiar link a este momento" [ref=f4e1070] [cursor=pointer]
+              - strong [ref=f4e1074]: "Lucía Ferreyra:"
+              - text: Hecho.
+            - heading "Cierre y fuentes" [level=2] [ref=f4e1075]
+            - paragraph [ref=f4e1076]:
+              - button "Saltar a 00:36:50" [ref=f4e1077] [cursor=pointer]: 00:36:50
+              - button "Copiar link a este momento" [ref=f4e1078] [cursor=pointer]
+              - strong [ref=f4e1082]: "Lucía Ferreyra:"
+              - text: "Las fuentes de este episodio, todas linkeadas en la página: la Ley 25.326 y la Ley 27.275 en InfoLEG, el paper de Stanford y Yale sobre alucinaciones legales, y la Recomendación de la UNESCO sobre ética de la inteligencia artificial, que citamos para la parte de supervisión humana. El reglamento del Senado está marcado como pendiente de verificación porque todavía no confirmamos la URL del texto actualizado."
+            - paragraph [ref=f4e1083]:
+              - button "Saltar a 00:37:22" [ref=f4e1084] [cursor=pointer]: 00:37:22
+              - button "Copiar link a este momento" [ref=f4e1085] [cursor=pointer]
+              - strong [ref=f4e1089]: "Martín Albarracín:"
+              - text: "Sobre cómo usamos IA en este episodio: la transcripción se hizo con"
+              - link "transcripción automática" [ref=f4e1090] [cursor=pointer]:
+                - /url: /glosario/transcripcion-automatica
+              - text: y la revisó Lucía. El borrador del resumen y de los capítulos lo generó un modelo y lo corregimos los dos. Las fuentes las elegimos y verificamos nosotros, sin IA. Y las conclusiones son nuestras.
+            - paragraph [ref=f4e1091]:
+              - button "Saltar a 00:37:48" [ref=f4e1092] [cursor=pointer]: 00:37:48
+              - button "Copiar link a este momento" [ref=f4e1093] [cursor=pointer]
+              - strong [ref=f4e1097]: "Lucía Ferreyra:"
+              - text: Si encontrás un error, en la web hay una página de correcciones y un correo. Los errores se corrigen en público, con fecha.
+            - paragraph [ref=f4e1098]:
+              - button "Saltar a 00:37:59" [ref=f4e1099] [cursor=pointer]: 00:37:59
+              - button "Copiar link a este momento" [ref=f4e1100] [cursor=pointer]
+              - strong [ref=f4e1104]: "Martín Albarracín:"
+              - text: Gracias, Carolina.
+            - paragraph [ref=f4e1105]:
+              - button "Saltar a 00:38:02" [ref=f4e1106] [cursor=pointer]: 00:38:02
+              - button "Copiar link a este momento" [ref=f4e1107] [cursor=pointer]
+              - strong [ref=f4e1111]: "Carolina Bustos:"
+              - text: Gracias a ustedes. Me voy a verificar una resolución que no existe.
+            - paragraph [ref=f4e1112]:
+              - button "Saltar a 00:38:08" [ref=f4e1113] [cursor=pointer]: 00:38:08
+              - button "Copiar link a este momento" [ref=f4e1114] [cursor=pointer]
+              - strong [ref=f4e1118]: "Lucía Ferreyra:"
+              - text: Esto fue Señal Pública. Hasta el próximo episodio.
+  - contentinfo [ref=f4e1119]:
+    - generic [ref=f4e1120]:
+      - generic [ref=f4e1121]:
+        - paragraph [ref=f4e1122]: Señal Pública
+        - paragraph [ref=f4e1123]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f4e1124]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f4e1125] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f4e1126]:
+        - heading "Escuchalo en" [level=2] [ref=f4e1127]
+        - list [ref=f4e1128]:
+          - listitem [ref=f4e1129]:
+            - link "YouTube" [ref=f4e1130] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f4e1131]:
+            - link "Spotify" [ref=f4e1132] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f4e1133]:
+            - link "Apple Podcasts" [ref=f4e1134] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f4e1135]:
+            - link "RSS del podcast" [ref=f4e1136] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f4e1141]:
+            - link "Todas las opciones" [ref=f4e1142] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f4e1143]:
+        - heading "El sitio" [level=2] [ref=f4e1144]
+        - list [ref=f4e1145]:
+          - listitem [ref=f4e1146]:
+            - link "Empezá por acá" [ref=f4e1147] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f4e1148]:
+            - link "Todos los episodios" [ref=f4e1149] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f4e1150]:
+            - link "Glosario" [ref=f4e1151] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f4e1152]:
+            - link "Biblioteca de fuentes" [ref=f4e1153] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f4e1154]:
+            - link "Proponé un caso" [ref=f4e1155] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f4e1156]:
+        - heading "Cómo trabajamos" [level=2] [ref=f4e1157]
+        - list [ref=f4e1158]:
+          - listitem [ref=f4e1159]:
+            - link "Método y uso de IA" [ref=f4e1160] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f4e1161]:
+            - link "Correcciones" [ref=f4e1162] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f4e1163]:
+            - link "Kit de prensa" [ref=f4e1164] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f4e1165]:
+            - link "hola@senalpublica.ar" [ref=f4e1166] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f4e1167]:
+            - link "LinkedIn" [ref=f4e1168] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f4e1169]:
+            - link "Instagram" [ref=f4e1170] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f4e1172]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f4e1173] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

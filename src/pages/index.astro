@@ -1,48 +1,214 @@
 ---
 import Base from '@/layouts/Base.astro';
-import { SITIO, FORMATOS } from '@/config/sitio';
-import { getEpisodios, duracionSegundos, fechaCorta } from '@/lib/contenido';
+import Waveform from '@/components/Waveform.astro';
+import Icono from '@/components/Icono.astro';
+import { SITIO, FORMATOS, EJES } from '@/config/sitio';
+import { getEpisodios, duracionSegundos, fechaLarga, fechaISO, picosDe } from '@/lib/contenido';
 import { duracionLegible } from '@/lib/tiempo';
 
 const episodios = await getEpisodios();
 const [ultimo, ...resto] = episodios;
+const picos = ultimo ? await picosDe(ultimo.id) : null;
+const recientes = resto.slice(0, 6);
+const conteoEjes = Object.keys(EJES).map((id) => ({
+  id,
+  ...EJES[id as keyof typeof EJES],
+  n: episodios.filter((e) => e.data.ejes.includes(id as never)).length,
+}));
+const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
 ---
 
 <Base titulo={`${SITIO.nombre} · podcast de IA y problemas públicos`} descripcion={SITIO.descripcionCorta} ruta="/">
   {
     ultimo && (
-      <section aria-labelledby="ultimo">
-        <p class="m-0 text-tinta-2">Episodio {ultimo.data.numero} · {fechaCorta(ultimo.data.fecha)}</p>
-        <h1 id="ultimo" class="mt-2 mb-3 text-4xl md:text-5xl">
-          <a href={`/episodios/${ultimo.id}`} class="text-tinta no-underline">{ultimo.data.titulo}</a>
-        </h1>
-        <p class="prosa m-0 text-xl">{ultimo.data.bajada}</p>
-        <p class="mt-3 text-tinta-2">
-          {FORMATOS[ultimo.data.formato].nombre} · <span class="mono">{duracionLegible(duracionSegundos(ultimo))}</span>
-        </p>
+      <section class="cuaderno" aria-labelledby="ultimo">
+        <div class="margen">
+          <dl>
+            <div>
+              <dt>Último episodio</dt>
+              <dd>N.º {ultimo.data.numero}</dd>
+            </div>
+            <div>
+              <dt>Publicado</dt>
+              <dd>
+                <time datetime={fechaISO(ultimo.data.fecha)}>{fechaLarga(ultimo.data.fecha)}</time>
+              </dd>
+            </div>
+            <div>
+              <dt>Duración</dt>
+              <dd class="mono">{duracionLegible(duracionSegundos(ultimo))}</dd>
+            </div>
+            <div>
+              <dt>Formato</dt>
+              <dd>{FORMATOS[ultimo.data.formato].nombre}</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="cuerpo">
+          <h1 id="ultimo">
+            <a href={`/episodios/${ultimo.id}`} class="titulo-link">{ultimo.data.titulo}</a>
+          </h1>
+          <p class="prosa text-lg mt-4">{ultimo.data.bajada}</p>
+          <div class="mt-6">
+            <Waveform picos={picos} barras={160} alto={64} />
+          </div>
+          <div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <a href={`/episodios/${ultimo.id}`} class="boton"><Icono nombre="play" tamano={18} /> Reproducir</a>
+            <p class="meta">
+              Escuchalo en{' '}
+              {ultimo.data.plataformas.youtube && <a href={ultimo.data.plataformas.youtube}>YouTube</a>}
+              {ultimo.data.plataformas.spotify && <> · <a href={ultimo.data.plataformas.spotify}>Spotify</a></>}
+              {ultimo.data.plataformas.apple && <> · <a href={ultimo.data.plataformas.apple}>Apple Podcasts</a></>}
+              {' · '}<a href={SITIO.hosting.rss}>RSS</a>
+            </p>
+          </div>
+        </div>
       </section>
     )
   }
 
-  <section class="mt-14" aria-labelledby="recientes">
-    <h2 id="recientes" class="text-2xl">Episodios recientes</h2>
-    <ol class="m-0 list-none p-0 divide-y divide-linea border-y border-linea">
+  <section class="cuaderno seccion" aria-label="Qué es el podcast">
+    <div class="margen"></div>
+    <p class="cuerpo prosa text-lg">
+      {SITIO.nombre} toma un problema público concreto por episodio, una ley, un trámite, un servicio municipal, y analiza con fuentes a la
+      vista qué cambia y qué no cambia con inteligencia artificial.
+    </p>
+  </section>
+
+  <section class="cuaderno seccion" aria-labelledby="recientes">
+    <h2 id="recientes" class="margen titulo-margen">Episodios recientes</h2>
+    <ol class="cuerpo lista-editorial">
       {
-        resto.map((ep) => (
-          <li class="flex gap-4 py-4">
-            <span class="mono w-10 shrink-0 text-tinta-2">{String(ep.data.numero).padStart(2, '0')}</span>
-            <div>
-              <a href={`/episodios/${ep.id}`} class="font-titulo text-xl text-tinta no-underline">
-                {ep.data.titulo}
-              </a>
-              <p class="m-0 mt-1">{ep.data.bajada}</p>
-              <p class="m-0 mt-1 text-[0.9375rem] text-tinta-2">
+        recientes.map((ep) => (
+          <li class="fila">
+            <span class="mono meta fila__n">{String(ep.data.numero).padStart(2, '0')}</span>
+            <div class="fila__cuerpo">
+              <a href={`/episodios/${ep.id}`} class="fila__titulo">{ep.data.titulo}</a>
+              <p class="mt-1">{ep.data.bajada}</p>
+              <p class="meta mt-1">
                 {FORMATOS[ep.data.formato].nombre} · <span class="mono">{duracionLegible(duracionSegundos(ep))}</span>
               </p>
             </div>
+            <a href={`/episodios/${ep.id}`} class="boton boton--icono boton--secundario fila__play" aria-label={`Reproducir episodio ${ep.data.numero}`}>
+              <Icono nombre="play" tamano={16} />
+            </a>
           </li>
         ))
       }
     </ol>
   </section>
+
+  <section class="cuaderno seccion" aria-labelledby="ejes">
+    <h2 id="ejes" class="margen titulo-margen">Tres ejes</h2>
+    <ul class="cuerpo lista-editorial">
+      {
+        conteoEjes.map((e) => (
+          <li class="fila fila--sin-n">
+            <div class="fila__cuerpo">
+              <a href={`/temas#${e.id}`} class="fila__titulo">{e.nombre}</a>
+              <p class="mt-1 prosa">{e.descripcion}</p>
+            </div>
+            <span class="meta mono fila__n-derecha">{e.n} {e.n === 1 ? 'episodio' : 'episodios'}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  {
+    destacados.length > 0 && (
+      <section class="cuaderno seccion" aria-labelledby="empezar">
+        <div class="margen">
+          <h2 id="empezar" class="titulo-margen">Empezá por acá</h2>
+          <p class="mt-2">Si es tu primera vez, estos episodios muestran cómo trabajamos.</p>
+        </div>
+        <ol class="cuerpo lista-editorial">
+          {destacados.map((ep) => (
+            <li class="fila">
+              <span class="mono meta fila__n">{String(ep.data.numero).padStart(2, '0')}</span>
+              <div class="fila__cuerpo">
+                <a href={`/episodios/${ep.id}`} class="fila__titulo">{ep.data.titulo}</a>
+                <p class="meta mt-1">
+                  {FORMATOS[ep.data.formato].nombre} · <span class="mono">{duracionLegible(duracionSegundos(ep))}</span>
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  <section class="cuaderno seccion" aria-labelledby="news">
+    <h2 id="news" class="margen titulo-margen">{SITIO.newsletter.nombreLista}</h2>
+    <div class="cuerpo">
+      <p class="prosa">Un correo por episodio, con el resumen, las fuentes y lo que pasó después. Nada más.</p>
+      <form class="mt-4 flex max-w-md flex-wrap gap-2" action={SITIO.newsletter.endpoint} method="post" target="_blank">
+        <label for="email-home" class="sr-only">Tu correo</label>
+        <input id="email-home" name="email" type="email" required placeholder="tu@correo.ar" class="campo grow" autocomplete="email" />
+        <button type="submit" class="boton">Suscribirme</button>
+      </form>
+    </div>
+  </section>
 </Base>
+
+<style>
+  .titulo-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .titulo-link:hover {
+    color: var(--color-acento);
+  }
+  .titulo-margen {
+    font-family: var(--font-texto);
+    font-size: var(--text-meta);
+    font-weight: 600;
+    color: var(--color-tinta);
+    letter-spacing: 0;
+    padding-top: 1.2rem;
+  }
+  .fila {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.25rem 1rem;
+    align-items: start;
+  }
+  .fila--sin-n {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .fila__n {
+    padding-top: 0.45rem;
+    min-width: 1.6rem;
+  }
+  .fila__titulo {
+    font-family: var(--font-titulo);
+    font-size: var(--text-xl);
+    line-height: 1.2;
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .fila__titulo:hover {
+    color: var(--color-acento);
+  }
+  .fila__play {
+    align-self: start;
+    margin-top: 0.15rem;
+  }
+  .fila__n-derecha {
+    padding-top: 0.5rem;
+    white-space: nowrap;
+  }
+  .campo {
+    min-height: 2.75rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--color-linea-2);
+    border-radius: var(--radius-ui);
+    background: var(--color-papel-2);
+    color: var(--color-tinta);
+    font: inherit;
+  }
+  .campo::placeholder {
+    color: var(--color-tinta-2);
+  }
+</style>

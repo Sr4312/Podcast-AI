@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": 1,
-    "nodeCount": 38,
-    "edgeCount": 77,
+    "nodeCount": 49,
+    "edgeCount": 92,
     "languages": [
       "javascript",
       "typescript"
@@ -300,6 +300,161 @@
       "exported": false,
       "origin": "ast",
       "body_hash": "c88e2591e2bf8f4243b40550b08a29985c62158d53c52e193e990b5ecdae5cd5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts",
+      "name": "contenido.ts",
+      "kind": "file",
+      "path": "src/lib/contenido.ts",
+      "span": "L1-L62",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4845064b1842516f1cb91e826005419369f533bb5074afdb653e9b690e0db116",
+      "chars": 2327,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#capitulosDe",
+      "name": "capitulosDe",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L23-L25",
+      "signature": "function capitulosDe(ep: Episodio)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "5a5021735a46e34c2de0fb0b41c3d620cd60e6b98c14aebfe3a74e5246341ec0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#duracionSegundos",
+      "name": "duracionSegundos",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L18-L20",
+      "signature": "function duracionSegundos(ep: Episodio): number",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b2083e58795bbbba37499f984a19ea53a4e0dc866c2afa21e631f3dbdd26e036",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#Episodio",
+      "name": "Episodio",
+      "kind": "type",
+      "path": "src/lib/contenido.ts",
+      "span": "L4-L4",
+      "signature": "type Episodio = CollectionEntry<'episodios'>;",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "1e7cbfecaf34a65bf0a68a04f59bc25e24f661e1c2452761efa9ed54fa6feac9",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#fechaCorta",
+      "name": "fechaCorta",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L53-L57",
+      "signature": "function fechaCorta(d: Date): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "2f9ace339484d4e6d58202203ec1d5c3af9ab1d611833a3af60c86d9751ef571",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#fechaISO",
+      "name": "fechaISO",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L59-L61",
+      "signature": "function fechaISO(d: Date): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "347b7fd2aa22b0f7a5499e08fdd314dc14c62c7f93e2f24c176c2e110abb42b9",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#fechaLarga",
+      "name": "fechaLarga",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L49-L51",
+      "signature": "function fechaLarga(d: Date): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "426e2901f4a7ca1660e20e3517a85e6b8cf5271ae2994d1a359063372a1c3ab3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#getEpisodio",
+      "name": "getEpisodio",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L14-L16",
+      "signature": "async function getEpisodio(slug: string): Promise<Episodio | undefined>",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "33dd72f2ba19820d0d5ec0da2f5eeda8152d0413b1df71f5f5c49daef9a47898",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#getEpisodios",
+      "name": "getEpisodios",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L7-L12",
+      "signature": "async function getEpisodios(): Promise<Episodio[]>",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b4ee467de63b051d488cf70f7bcbe5d0c20571104f78001c9e016bc9f54d64d1",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#picosDe",
+      "name": "picosDe",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L30-L36",
+      "signature": "async function picosDe(slug: string): Promise<number[] | null>",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9125406bd241bd5c15cf15180fe38790e5e791fe1dd68c7e39f39e4a92127345",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/contenido.ts#relacionados",
+      "name": "relacionados",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L39-L47",
+      "signature": "function relacionados(ep: Episodio, todos: Episodio[], n = 3): Episodio[]",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "03c698d5b77efd9a1131ea32f000c0537b68135ee5a3b5aa4bf74d5b1ac585b3",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -859,6 +1014,96 @@
       "source": "src/content.config.ts",
       "target": "astro/zod",
       "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#capitulosDe",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#duracionSegundos",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#Episodio",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#fechaCorta",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#fechaISO",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#fechaLarga",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#getEpisodio",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#picosDe",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#relacionados",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "astro:content",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/tiempo.ts",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts#capitulosDe",
+      "target": "src/lib/tiempo.ts#aSegundos",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts#duracionSegundos",
+      "target": "src/lib/tiempo.ts#aSegundos",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts#getEpisodio",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
       "confidence": "extracted"
     },
     {
