@@ -124,7 +124,9 @@ const jsonLdEpisodio = {
 
     <article class="cuerpo" data-pagefind-body data-pagefind-meta={`numero:${ep.data.numero}`} data-pagefind-filter={`formato:${FORMATOS[ep.data.formato].nombre}`}>
       <header>
-        <p class="meta" data-pagefind-meta={`formato:${FORMATOS[ep.data.formato].nombre}`}>Temporada {ep.data.temporada} · Episodio {ep.data.numero}</p>
+        <p class="meta" data-pagefind-meta={`formato:${FORMATOS[ep.data.formato].nombre}`}>
+          Temporada {ep.data.temporada} · Episodio <span transition:name={`n-${ep.id}`}>{ep.data.numero}</span>
+        </p>
         <h1 class="mt-2" transition:name={`titulo-${ep.id}`}>{ep.data.titulo}</h1>
         <p class="prosa text-lg mt-4">{ep.data.bajada}</p>
         <div class="mt-6"><Waveform picos={picos} barras={160} alto={64} /></div>

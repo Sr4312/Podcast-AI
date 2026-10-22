@@ -88,8 +88,8 @@ const variantes = picos
         data-barras={v.n}
       >
         {!decorativa && k === 0 && titulo && <title>{titulo}</title>}
-        {v.rects.map((r) => (
-          <rect x={r.x} y={r.y} width={r.w} height={r.h} class={r.hecha ? 'barra barra--hecha' : 'barra'} />
+        {v.rects.map((r, i) => (
+          <rect x={r.x} y={r.y} width={r.w} height={r.h} class={r.hecha ? 'barra barra--hecha' : 'barra'} style={`--i:${i}`} />
         ))}
       </svg>
     ))

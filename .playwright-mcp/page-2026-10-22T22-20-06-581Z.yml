@@ -1,0 +1,292 @@
+- generic [active] [ref=f32e1]:
+  - link "Saltar al contenido" [ref=f32e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f32e3]:
+    - generic [ref=f32e4]:
+      - link "Señal Pública, inicio" [ref=f32e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f32e15]: Señal Pública
+      - navigation "Principal" [ref=f32e16]:
+        - list [ref=f32e17]:
+          - listitem [ref=f32e18]:
+            - link "Episodios" [ref=f32e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f32e20]:
+            - link "Temas" [ref=f32e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f32e22]:
+            - link "Fuentes" [ref=f32e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f32e24]:
+            - link "Acerca" [ref=f32e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f32e26]:
+            - link "Suscribite" [ref=f32e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f32e28]:
+            - button "Cambiar a modo oscuro" [ref=f32e29] [cursor=pointer]
+  - main [ref=f32e32]:
+    - generic [ref=f32e33]:
+      - navigation "Secciones" [ref=f32e34]:
+        - list [ref=f32e35]:
+          - listitem [ref=f32e36]:
+            - link "Qué es" [ref=f32e37] [cursor=pointer]:
+              - /url: "#que-es"
+          - listitem [ref=f32e38]:
+            - link "Quiénes conducen" [ref=f32e39] [cursor=pointer]:
+              - /url: "#quienes"
+          - listitem [ref=f32e40]:
+            - link "Línea editorial" [ref=f32e41] [cursor=pointer]:
+              - /url: "#linea"
+          - listitem [ref=f32e42]:
+            - link "Cómo verificamos" [ref=f32e43] [cursor=pointer]:
+              - /url: "#metodo"
+          - listitem [ref=f32e44]:
+            - link "Cómo usamos IA" [ref=f32e45] [cursor=pointer]:
+              - /url: "#ia"
+          - listitem [ref=f32e46]:
+            - link "Conflictos de interés" [ref=f32e47] [cursor=pointer]:
+              - /url: "#conflictos"
+          - listitem [ref=f32e48]:
+            - link "Cómo pedir una corrección" [ref=f32e49] [cursor=pointer]:
+              - /url: "#correcciones"
+          - listitem [ref=f32e50]:
+            - link "Contacto" [ref=f32e51] [cursor=pointer]:
+              - /url: "#contacto"
+          - listitem [ref=f32e52]:
+            - link "Kit de prensa" [ref=f32e53] [cursor=pointer]:
+              - /url: "#prensa"
+      - generic [ref=f32e54]:
+        - heading "Acerca de Señal Pública" [level=1] [ref=f32e55]
+        - region [ref=f32e56]:
+          - heading "Qué es" [level=2] [ref=f32e57]
+          - paragraph [ref=f32e58]: Señal Pública es un podcast sobre inteligencia artificial aplicada a problemas de política pública, sociedad y economía. Cada episodio toma un caso concreto de Argentina o América Latina y analiza, con fuentes a la vista, qué cambia y qué no cambia con IA.
+          - paragraph [ref=f32e59]: No es un podcast de novedades tecnológicas. No reseñamos productos ni hablamos del futuro. Cada episodio parte de un problema que ya existe, una ley en discusión, un trámite, un servicio público, y pregunta qué cambia y qué no cambia cuando entra un sistema de inteligencia artificial.
+        - region [ref=f32e60]:
+          - heading "Quiénes conducen" [level=2] [ref=f32e61]
+          - list [ref=f32e62]:
+            - listitem [ref=f32e63]:
+              - generic [aria-hidden] [ref=f32e64]: LF
+              - generic [ref=f32e65]:
+                - heading "Lucía Ferreyra" [level=3] [ref=f32e66]
+                - paragraph [ref=f32e67]: Politóloga. Conduce Señal Pública.
+                - generic [ref=f32e68]:
+                  - paragraph [ref=f32e69]: Politóloga por la Universidad de Buenos Aires. Durante diez años fue asesora legislativa y vio de cerca cómo se escriben, se negocian y se archivan los proyectos de ley. Hoy investiga gobierno digital y el uso de sistemas automatizados en el Estado. En Señal Pública se ocupa de que cada afirmación tenga una fuente primaria a la vista.
+                  - paragraph [ref=f32e70]:
+                    - emphasis [ref=f32e71]: Perfil de ejemplo para la demo. Reemplazar por el real.
+                - paragraph [ref=f32e72]: "Conflictos declarados: Trabajó como asesora legislativa en el Senado de la Nación entre 2014 y 2024. No asesora actualmente a ningún bloque."
+            - listitem [ref=f32e73]:
+              - generic [aria-hidden] [ref=f32e74]: MA
+              - generic [ref=f32e75]:
+                - heading "Martín Albarracín" [level=3] [ref=f32e76]
+                - paragraph [ref=f32e77]: Economista. Conduce Señal Pública.
+                - generic [ref=f32e78]:
+                  - paragraph [ref=f32e79]: "Economista y docente universitario. Estudia mercados de trabajo, productividad y automatización, con foco en qué dicen los datos y no en qué dicen los pronósticos. Antes de Señal Pública coordinó equipos de análisis de datos en organizaciones de la sociedad civil. En el podcast se ocupa de los números: de dónde salen, qué miden y qué no."
+                  - paragraph [ref=f32e80]:
+                    - emphasis [ref=f32e81]: Perfil de ejemplo para la demo. Reemplazar por el real.
+                - paragraph [ref=f32e82]: Sin conflictos declarados.
+        - region [ref=f32e83]:
+          - heading "Línea editorial" [level=2] [ref=f32e84]
+          - list [ref=f32e85]:
+            - listitem [ref=f32e86]:
+              - strong [ref=f32e87]: Evidencia primero.
+              - text: Una afirmación sin fuente primaria no sale al aire. Si no la encontramos, decimos que no la encontramos.
+            - listitem [ref=f32e88]:
+              - strong [ref=f32e89]: Un problema por episodio.
+              - text: Preferimos un caso concreto, con nombre y fecha, antes que una tendencia.
+            - listitem [ref=f32e90]:
+              - strong [ref=f32e91]: Qué cambia y qué no.
+              - text: Cada episodio termina con esa sección. El "no cambia" suele ser lo más útil.
+            - listitem [ref=f32e92]:
+              - strong [ref=f32e93]: Sin pánico ni publicidad.
+              - text: No usamos la palabra "revolución". No aceptamos episodios pagos ni contenido de proveedores.
+            - listitem [ref=f32e94]:
+              - strong [ref=f32e95]: Para gente que decide.
+              - text: Escribimos para funcionarios, legisladores, periodistas, investigadores y organizaciones, en lenguaje llano.
+        - region [ref=f32e96]:
+          - heading "Cómo verificamos" [level=2] [ref=f32e97]
+          - list [ref=f32e98]:
+            - listitem [ref=f32e99]: Antes de grabar, listamos cada dato o afirmación verificable que va a aparecer en el episodio.
+            - listitem [ref=f32e100]: "Para cada uno buscamos la fuente primaria: Boletín Oficial, InfoLEG, el organismo que produce el dato, el paper, el dataset. No citamos notas periodísticas como fuente de un dato si existe la fuente original."
+            - listitem [ref=f32e101]:
+              - text: Una persona del equipo abre el documento y confirma el dato. Recién entonces la fuente se marca como
+              - generic [ref=f32e102]: Verificada
+              - text: en la página del episodio.
+            - listitem [ref=f32e103]:
+              - text: Si no pudimos confirmar algo antes de publicar, queda marcado como
+              - generic [ref=f32e104]: Pendiente de verificación
+              - text: ", a la vista."
+            - listitem [ref=f32e105]: Cuando un episodio cita una cifra, la página dice de dónde sale y qué mide. Si la cifra la aportó un invitado y no la auditamos, lo decimos.
+          - paragraph [ref=f32e106]:
+            - text: La
+            - link "biblioteca de fuentes" [ref=f32e107] [cursor=pointer]:
+              - /url: /fuentes
+            - text: reúne todo lo citado en todos los episodios.
+        - region [ref=f32e108]:
+          - heading "Cómo usamos IA en la producción" [level=2] [ref=f32e109]
+          - paragraph [ref=f32e110]: Usamos sistemas de IA para tareas de forma y los mantenemos fuera de las tareas de hecho. En cada episodio, la sección "Cómo usamos IA en este episodio" lo detalla.
+          - heading "Lo que hace la IA" [level=3] [ref=f32e111]
+          - list [ref=f32e112]:
+            - listitem [ref=f32e113]: Transcripción automática del audio, que después revisa una persona (nombres, cifras y siglas son lo que más falla).
+            - listitem [ref=f32e114]: Borrador del resumen y de los capítulos, que corregimos y firmamos.
+            - listitem [ref=f32e115]: En los episodios de laboratorio e investigación, los sistemas de IA son el objeto de la prueba.
+          - heading "Lo que no hace" [level=3] [ref=f32e116]
+          - list [ref=f32e117]:
+            - listitem [ref=f32e118]: Elegir fuentes ni verificar citas. Eso lo hace una persona, documento en mano.
+            - listitem [ref=f32e119]: Sacar conclusiones ni escribir el guion.
+            - listitem [ref=f32e120]: Generar imágenes. La identidad visual del sitio es la waveform real de cada episodio.
+            - listitem [ref=f32e121]: Clonar voces ni generar audio.
+          - paragraph [ref=f32e122]: Cada resumen lleva al pie quién lo revisó. Si en algún momento cambiamos esta política, lo anunciamos en un episodio y acá.
+        - region [ref=f32e123]:
+          - heading "Conflictos de interés" [level=2] [ref=f32e124]
+          - paragraph [ref=f32e125]: Pedimos a cada persona invitada que declare, antes de grabar, vínculos laborales, económicos o institucionales con el tema del episodio. La declaración se publica en su perfil y en la página del episodio, o se indica "Sin conflictos declarados".
+          - paragraph [ref=f32e126]: Los conductores declaran los suyos en esta página y los actualizan cuando cambian. El podcast no recibe dinero de proveedores de tecnología ni de organismos cuyos sistemas analiza. Si eso cambiara, se declararía episodio por episodio.
+          - paragraph [ref=f32e127]: "Que alguien tenga un conflicto no lo excluye: lo que importa es que quien escucha lo sepa."
+        - region [ref=f32e128]:
+          - heading "Cómo pedir una corrección" [level=2] [ref=f32e129]
+          - paragraph [ref=f32e130]:
+            - text: Si encontrás un error, un dato mal citado, un nombre equivocado, una fuente que no dice lo que decimos que dice, escribinos a
+            - link "correcciones@senalpublica.ar" [ref=f32e131] [cursor=pointer]:
+              - /url: mailto:correcciones@senalpublica.ar
+            - text: con el episodio, el minuto y la fuente que lo contradice.
+          - paragraph [ref=f32e132]:
+            - text: Las correcciones se publican con fecha en la página del episodio y en la
+            - link "fe de erratas pública" [ref=f32e133] [cursor=pointer]:
+              - /url: /correcciones
+            - text: ". No borramos el error: dejamos constancia de qué decía y qué dice ahora. Si el error está en el audio, lo aclaramos al inicio del episodio siguiente."
+        - region [ref=f32e134]:
+          - heading "Contacto" [level=2] [ref=f32e135]
+          - list [ref=f32e136]:
+            - listitem [ref=f32e137]:
+              - text: "General:"
+              - link "hola@senalpublica.ar" [ref=f32e138] [cursor=pointer]:
+                - /url: mailto:hola@senalpublica.ar
+            - listitem [ref=f32e139]:
+              - text: "Correcciones:"
+              - link "correcciones@senalpublica.ar" [ref=f32e140] [cursor=pointer]:
+                - /url: mailto:correcciones@senalpublica.ar
+            - listitem [ref=f32e141]:
+              - text: "Casos para analizar:"
+              - link "el formulario" [ref=f32e142] [cursor=pointer]:
+                - /url: /proponer-un-caso
+            - listitem [ref=f32e143]:
+              - link "LinkedIn" [ref=f32e144] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+            - listitem [ref=f32e145]:
+              - link "Instagram" [ref=f32e146] [cursor=pointer]:
+                - /url: https://www.instagram.com/ejemplo.senalpublica
+        - region [ref=f32e147]:
+          - heading "Kit de prensa" [level=2] [ref=f32e148]
+          - paragraph [ref=f32e149]: Podés usar este material para hablar del podcast sin pedir permiso. Para entrevistas o apariciones, escribinos.
+          - heading "Logo y portada" [level=3] [ref=f32e150]
+          - list [ref=f32e151]:
+            - listitem [ref=f32e152]:
+              - link "Isotipo (SVG)" [ref=f32e153] [cursor=pointer]:
+                - /url: /favicon.svg
+            - listitem [ref=f32e154]:
+              - link "Portada 512×512 (PNG)" [ref=f32e155] [cursor=pointer]:
+                - /url: /img/portada-512.png
+            - listitem [ref=f32e156]: "Fotos de los conductores: TODO: pendientes de producción."
+          - heading "Descripción en 50 palabras" [level=3] [ref=f32e157]
+          - paragraph [ref=f32e158]: Señal Pública es un podcast sobre inteligencia artificial aplicada a problemas de política pública, sociedad y economía. Cada episodio toma un caso concreto de Argentina o América Latina y analiza, con fuentes a la vista, qué cambia y qué no cambia con IA.
+          - button "Copiar" [ref=f32e159] [cursor=pointer]
+          - heading "Descripción en 150 palabras" [level=3] [ref=f32e160]
+          - paragraph [ref=f32e161]: "Señal Pública es un podcast sobre inteligencia artificial aplicada a problemas públicos concretos. No es un programa de novedades tecnológicas: cada episodio parte de un problema real —una ley en discusión, un trámite municipal, un mercado de trabajo, un servicio público— y lo somete a prueba. Comparamos lo que hace un sistema de IA con lo que hace una persona experta, contrastamos respuestas de chatbots con normativa oficial y seguimos casos de implementación en el Estado. Todo lo que afirmamos tiene una fuente primaria citada y verificable: boletines oficiales, datasets públicos, papers y documentos de organismos. Está pensado para funcionarios, legisladores y sus equipos, periodistas, investigadores, organizaciones sociales y público informado que quiere entender la IA sin publicidad ni pánico. Publicamos transcripciones completas, capítulos, fuentes y una fe de erratas pública."
+          - button "Copiar" [ref=f32e162] [cursor=pointer]
+          - heading "Datos" [level=3] [ref=f32e163]
+          - table [ref=f32e164]:
+            - rowgroup [ref=f32e165]:
+              - row [ref=f32e166]:
+                - rowheader "Nombre" [ref=f32e167]
+                - cell "Señal Pública" [ref=f32e168]
+              - row [ref=f32e169]:
+                - rowheader "Desde" [ref=f32e170]
+                - cell "2026" [ref=f32e171]
+              - row [ref=f32e172]:
+                - rowheader "Idioma" [ref=f32e173]
+                - cell "Español (Argentina)" [ref=f32e174]
+              - row [ref=f32e175]:
+                - rowheader "Frecuencia" [ref=f32e176]
+                - 'cell "Quincenal (TODO: confirmar)" [ref=f32e177]'
+              - row [ref=f32e178]:
+                - rowheader "Web" [ref=f32e179]
+                - cell [ref=f32e180]:
+                  - link "senalpublica.ar" [ref=f32e181] [cursor=pointer]:
+                    - /url: https://senalpublica.ar
+              - row [ref=f32e182]:
+                - rowheader "RSS" [ref=f32e183]
+                - cell [ref=f32e184]:
+                  - link "https://feeds.transistor.fm/senal-publica" [ref=f32e185] [cursor=pointer]:
+                    - /url: https://feeds.transistor.fm/senal-publica
+  - contentinfo [ref=f32e186]:
+    - generic [ref=f32e187]:
+      - generic [ref=f32e188]:
+        - paragraph [ref=f32e189]: Señal Pública
+        - paragraph [ref=f32e190]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f32e191]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f32e192] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f32e193]:
+        - heading "Escuchalo en" [level=2] [ref=f32e194]
+        - list [ref=f32e195]:
+          - listitem [ref=f32e196]:
+            - link "YouTube" [ref=f32e197] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f32e198]:
+            - link "Spotify" [ref=f32e199] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f32e200]:
+            - link "Apple Podcasts" [ref=f32e201] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f32e202]:
+            - link "RSS del podcast" [ref=f32e203] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f32e208]:
+            - link "Todas las opciones" [ref=f32e209] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f32e210]:
+        - heading "El sitio" [level=2] [ref=f32e211]
+        - list [ref=f32e212]:
+          - listitem [ref=f32e213]:
+            - link "Empezá por acá" [ref=f32e214] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f32e215]:
+            - link "Todos los episodios" [ref=f32e216] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f32e217]:
+            - link "Glosario" [ref=f32e218] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f32e219]:
+            - link "Biblioteca de fuentes" [ref=f32e220] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f32e221]:
+            - link "Proponé un caso" [ref=f32e222] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f32e223]:
+        - heading "Cómo trabajamos" [level=2] [ref=f32e224]
+        - list [ref=f32e225]:
+          - listitem [ref=f32e226]:
+            - link "Método y uso de IA" [ref=f32e227] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f32e228]:
+            - link "Correcciones" [ref=f32e229] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f32e230]:
+            - link "Kit de prensa" [ref=f32e231] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f32e232]:
+            - link "hola@senalpublica.ar" [ref=f32e233] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f32e234]:
+            - link "LinkedIn" [ref=f32e235] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f32e236]:
+            - link "Instagram" [ref=f32e237] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f32e239]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f32e240] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

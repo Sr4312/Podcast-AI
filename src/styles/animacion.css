@@ -1,0 +1,245 @@
+/*
+ * Animación del sitio. Reglas: solo transform y opacity (fill en la waveform del
+ * reproductor, porque "llenarse" es su estado), ease-out fuerte en entradas,
+ * nada por encima de 300 ms salvo la waveform (580 ms en total, por barras).
+ * Todo lo que se dispara seguido (filtros, tema, teclado) no se anima.
+ * Movimiento reducido: sin desplazamientos ni escalas; fundidos ≤ 150 ms.
+ */
+
+/* ---------- Waveform que se dibuja al entrar ---------- */
+.waveform .barra {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+/* Con JS, las barras arrancan plegadas y se despliegan al entrar en pantalla.
+   Sin JS no se oculta nada. */
+html.js .waveform:not(.dibujada):not(.repro__onda) .barra {
+  transform: scaleY(0);
+}
+html.js .waveform.dibujar .barra {
+  animation: barra-dibujar 260ms var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 2ms);
+}
+@keyframes barra-dibujar {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* ---------- Secciones y listas que aparecen una vez al hacer scroll ---------- */
+html.js .revelable {
+  opacity: 0;
+  transform: translateY(12px);
+}
+html.js .revelable.revelado {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 300ms var(--ease-out),
+    transform 300ms var(--ease-out);
+}
+/* Stagger en listas editoriales dentro de una sección revelada: 35 ms, tope 6 ítems. */
+html.js .revelable .lista-editorial > li,
+html.js .revelable .recorrido > li {
+  opacity: 0;
+  transform: translateY(8px);
+}
+html.js .revelable.revelado .lista-editorial > li,
+html.js .revelable.revelado .recorrido > li {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 260ms var(--ease-out),
+    transform 260ms var(--ease-out);
+}
+html.js .revelable.revelado .lista-editorial > li:nth-child(2),
+html.js .revelable.revelado .recorrido > li:nth-child(2) {
+  transition-delay: 35ms;
+}
+html.js .revelable.revelado .lista-editorial > li:nth-child(3),
+html.js .revelable.revelado .recorrido > li:nth-child(3) {
+  transition-delay: 70ms;
+}
+html.js .revelable.revelado .lista-editorial > li:nth-child(4),
+html.js .revelable.revelado .recorrido > li:nth-child(4) {
+  transition-delay: 105ms;
+}
+html.js .revelable.revelado .lista-editorial > li:nth-child(5),
+html.js .revelable.revelado .recorrido > li:nth-child(5) {
+  transition-delay: 140ms;
+}
+html.js .revelable.revelado .lista-editorial > li:nth-child(n + 6),
+html.js .revelable.revelado .recorrido > li:nth-child(n + 6) {
+  transition-delay: 175ms;
+}
+
+/* ---------- Párrafo y capítulo en curso: el resaltado es un pseudo-elemento que funde ---------- */
+.parrafo {
+  z-index: 0;
+}
+.parrafo::before {
+  content: '';
+  position: absolute;
+  inset: -0.35rem -0.6rem;
+  z-index: -1;
+  border-radius: var(--radius-ui);
+  background: var(--color-acento-suave);
+  opacity: 0;
+  transition: opacity 200ms var(--ease-out);
+}
+.parrafo.en-curso::before {
+  opacity: 1;
+}
+
+/* ---------- Reproductor ---------- */
+.repro {
+  animation: repro-entrar 250ms var(--ease-out) both;
+}
+@keyframes repro-entrar {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+.repro__play svg {
+  animation: icono-pop 120ms var(--ease-out) both;
+}
+@keyframes icono-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.repro__play,
+.repro__salto,
+.repro__velocidad,
+.boton {
+  transition:
+    transform 100ms var(--ease-out),
+    background-color 150ms var(--ease-out),
+    border-color 150ms var(--ease-out),
+    color 150ms var(--ease-out);
+}
+.repro__play:active,
+.repro__salto:active,
+.repro__velocidad:active,
+.boton:active {
+  transform: scale(0.97);
+}
+.repro__cursor,
+.repro__tooltip {
+  transition: opacity 150ms var(--ease-out);
+}
+.repro__tooltip {
+  animation: tip-entrar 150ms var(--ease-out) both;
+}
+
+/* ---------- Tooltip del glosario y menú mobile ---------- */
+.tooltip-glosario:not([hidden]) {
+  animation: tip-entrar 150ms var(--ease-out) both;
+}
+@keyframes tip-entrar {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.header.abierto .header__nav {
+  animation: menu-entrar 180ms var(--ease-out) both;
+}
+@keyframes menu-entrar {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- View Transitions: morph de número y título, fundido del resto ---------- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 180ms;
+  animation-timing-function: var(--ease-out);
+}
+::view-transition-group(*) {
+  animation-duration: 260ms;
+  animation-timing-function: var(--ease-in-out);
+}
+
+/* ---------- Movimiento reducido: menos y más suave, no cero ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html.js .waveform:not(.dibujada):not(.repro__onda) .barra {
+    transform: none;
+    opacity: 0;
+  }
+  html.js .waveform.dibujar .barra {
+    animation: barra-fundir 150ms linear both;
+    animation-delay: 0ms;
+  }
+  @keyframes barra-fundir {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  html.js .revelable,
+  html.js .revelable .lista-editorial > li,
+  html.js .revelable .recorrido > li {
+    transform: none;
+  }
+  html.js .revelable.revelado,
+  html.js .revelable.revelado .lista-editorial > li,
+  html.js .revelable.revelado .recorrido > li {
+    transition: opacity 150ms linear;
+    transition-delay: 0ms;
+  }
+  .repro {
+    animation: solo-fundir 150ms linear both;
+  }
+  .repro__play svg,
+  .tooltip-glosario:not([hidden]),
+  .repro__tooltip,
+  .header.abierto .header__nav {
+    animation: solo-fundir 120ms linear both;
+  }
+  @keyframes solo-fundir {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .repro__play:active,
+  .repro__salto:active,
+  .repro__velocidad:active,
+  .boton:active {
+    transform: none;
+  }
+  .parrafo::before {
+    transition-duration: 120ms;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

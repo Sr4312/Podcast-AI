@@ -70,6 +70,8 @@ const breadcrumb =
     <link rel="alternate" type="application/rss+xml" title={`${SITIO.nombre} (novedades de la web)`} href="/rss.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script is:inline>
+      // Marca que hay JS (las animaciones de entrada solo ocultan algo si después lo van a mostrar).
+      document.documentElement.classList.add('js');
       // Tema guardado, antes del primer pintado para evitar parpadeo.
       try {
         const t = localStorage.getItem('tema');
@@ -90,6 +92,7 @@ const breadcrumb =
     {/* client:only: el reproductor no tiene HTML de servidor, así los scripts de página pueden cargar un episodio antes de que React monte sin provocar desajustes de hidratación. */}
     <Reproductor client:only="react" transition:persist="reproductor" />
     <script src="@/scripts/reproducir.ts"></script>
+    <script src="@/scripts/animacion.ts"></script>
   </body>
 </html>
 

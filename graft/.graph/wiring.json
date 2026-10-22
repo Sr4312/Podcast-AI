@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": 1,
-    "nodeCount": 109,
-    "edgeCount": 200,
+    "nodeCount": 161,
+    "edgeCount": 343,
     "languages": [
       "javascript",
       "tsx",
@@ -215,6 +215,49 @@
       "exported": false,
       "origin": "ast",
       "body_hash": "e831a0be94b06b7eb186c2eed9ff8a7ed63fbc15525520e5f49575e290fb3b43",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/validar-jsonld.mjs",
+      "name": "validar-jsonld.mjs",
+      "kind": "file",
+      "path": "scripts/validar-jsonld.mjs",
+      "span": "L1-L129",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "38893ca209dab5ad0b49770fbaa6da8ae91259fd468ac251b53d6fb2dffaddde",
+      "chars": 4943,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/validar-jsonld.mjs#decodificar",
+      "name": "decodificar",
+      "kind": "function",
+      "path": "scripts/validar-jsonld.mjs",
+      "span": "L34-L35",
+      "signature": "decodificar = (s)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "26e5d698573081cc02f1474aff9568e5c7488d88b5da5d62698f09c4e1078466",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/validar-jsonld.mjs#html",
+      "name": "html",
+      "kind": "function",
+      "path": "scripts/validar-jsonld.mjs",
+      "span": "L26-L32",
+      "signature": "function* html(dir)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "20d24fecdbfe8c10aabb436bd18af41f8d09d2d918d6e7c8859c72e0355c0623",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -897,6 +940,245 @@
       "crux": null
     },
     {
+      "id": "src/lib/imagenes.ts",
+      "name": "imagenes.ts",
+      "kind": "file",
+      "path": "src/lib/imagenes.ts",
+      "span": "L1-L256",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9180f8d1fafc83b0ccc8bd3399606dc09c06db005beb5766f07e8dbc371849c2",
+      "chars": 10024,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#cargarFuentes",
+      "name": "cargarFuentes",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L23-L33",
+      "signature": "function cargarFuentes(): SatoriOptions['fonts']",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "4cfe9c5a05843ec13779de67654efa50822b0aa36739c13d916470df6e7cc51b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#cargarFuentes.leer",
+      "name": "leer",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L25-L25",
+      "signature": "leer = (pkg: string, archivo: string)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "f2040ab7e7f85c092903edd92e872bc25ffcad0d32146946d524c51d411126e8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#DatosImagen",
+      "name": "DatosImagen",
+      "kind": "interface",
+      "path": "src/lib/imagenes.ts",
+      "span": "L136-L139",
+      "signature": "interface DatosImagen",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "6b8474a1ef152ac348dd3e194d68d0048501c96c5c3ac58a7615c941d7221994",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#fila",
+      "name": "fila",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L106-L114",
+      "signature": "function fila(izquierda: Nodo, derecha: Nodo): Nodo",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "3b29e8894350806c94c7d29b1cbf3b5e72b8b17ef33582b05d0748c192e17b69",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#lienzo",
+      "name": "lienzo",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L120-L134",
+      "signature": "function lienzo(ancho: number, alto: number, margen: string, children: Nodo[]): Nodo",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "efd57b4646807268d7fb2451218dc1bb3bbd0c3c8ec77ad4549254e46cf14c0e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#marca",
+      "name": "marca",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L80-L100",
+      "signature": "function marca(tamano = 22): Nodo",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "c773c11ba19b55d42a7a28f89f1b75acb112fa4e3e5cadbe3d69afe932b5eed8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#Nodo",
+      "name": "Nodo",
+      "kind": "type",
+      "path": "src/lib/imagenes.ts",
+      "span": "L54-L54",
+      "signature": "type Nodo = { type: string; props: Record<string, unknown> };",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "8a70273f8be55552a3cede745e0bedd61d27a99915455fb13592780db9829318",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#onda",
+      "name": "onda",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L57-L78",
+      "signature": "function onda(picos: number[] | null, barras: number, alto: number, color = ONDA, acento?: { hasta: number; color: string }): Nodo",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "a20c58b860c30a642c3c3d44472c519cad4633147a4f9188d0c622b6f05a9f0d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#plantillaHorizontal",
+      "name": "plantillaHorizontal",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L158-L183",
+      "signature": "function plantillaHorizontal({ ep, picos }: DatosImagen)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "2253d5049c37b2f1993d39786f2d887c4ff7bdcad7c771248bf4756d54a6a3a6",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#plantillaOG",
+      "name": "plantillaOG",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L142-L155",
+      "signature": "function plantillaOG({ ep, picos }: DatosImagen)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "95a0a815f44bada4f8364e0940a7ff470c1e8642a585e7ca53298f9ffe714caf",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#plantillaPortada",
+      "name": "plantillaPortada",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L226-L247",
+      "signature": "function plantillaPortada(picos: number[] | null)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "84915df4f0ac99a18704801b3b76dd02faf3814704ab17f445f9f16cc44494ae",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#plantillaVertical",
+      "name": "plantillaVertical",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L186-L223",
+      "signature": "function plantillaVertical({ ep, picos }: DatosImagen)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4d46aae86c6f578e7668d80e716a9a86dd99e27b2f6b76500f272086d9d60c4c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#remuestrear",
+      "name": "remuestrear",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L35-L52",
+      "signature": "function remuestrear(src: number[], n: number): number[]",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "2dda50179f43c2f8a0b4d93b473fd7a9dfd82dc3d5668b00b0e077a67bcef23d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#renderizarPNG",
+      "name": "renderizarPNG",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L249-L252",
+      "signature": "async function renderizarPNG(arbol: unknown, ancho: number, alto: number): Promise<Uint8Array>",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "dc5aa8733ebd0c27ff3b81098d3ca0830c03cda96eddcd7784707abc1c44595a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#respuestaPNG",
+      "name": "respuestaPNG",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L254-L255",
+      "signature": "respuestaPNG = (png: Uint8Array)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "2848aaffabb251b36b1b0dd7b9515d2b38d646cc3b5d2023f996d952de023e72",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/imagenes.ts#texto",
+      "name": "texto",
+      "kind": "function",
+      "path": "src/lib/imagenes.ts",
+      "span": "L102-L104",
+      "signature": "function texto(contenido: string, estilo: Record<string, unknown>): Nodo",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "6ad9040a680c31f027c9691d9d7a6df6b6d1afd16041d2c9ebfcf504dda91e71",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
       "id": "src/lib/remark-glosario.mjs",
       "name": "remark-glosario.mjs",
       "kind": "file",
@@ -1152,6 +1434,49 @@
       "crux": null
     },
     {
+      "id": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "name": "capitulos.json.ts",
+      "kind": "file",
+      "path": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "span": "L1-L33",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "8d1bdc6c963bc18005749e533449532c53693d5b91696a348ad7b121bae04e5e",
+      "chars": 1170,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/capitulos.json.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "span": "L15-L32",
+      "signature": "GET: APIRoute = async ({ props })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "6b8d9e8d1586f963e3f5c1da177431f75b84f5ae0126dc5fba6cc025b4b9b7f0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/capitulos.json.ts#getStaticPaths",
+      "name": "getStaticPaths",
+      "kind": "function",
+      "path": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "span": "L5-L8",
+      "signature": "async function getStaticPaths()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "92312c7e3f899f0b93612b0b48ce5395017436cec3ba17116987a399e3ca8745",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
       "id": "src/pages/episodios/[slug]/picos.json.ts",
       "name": "picos.json.ts",
       "kind": "file",
@@ -1190,6 +1515,420 @@
       "exported": true,
       "origin": "ast",
       "body_hash": "c20a6306a7017c3c75f2219c9290c8b89051e967addf20b9a7b63abde0d1c0f8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "name": "transcripcion.vtt.ts",
+      "kind": "file",
+      "path": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "span": "L1-L55",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7e2fe40c8e0a52230460265a1cf4338de492cc9d320d8403dabcacb455af07fd",
+      "chars": 2145,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/transcripcion.vtt.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "span": "L32-L54",
+      "signature": "GET: APIRoute = async ({ props })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e752c5584d6c3be60919d368f364cc9aeaca7b917981f91a4b6375ca050233ca",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/transcripcion.vtt.ts#getStaticPaths",
+      "name": "getStaticPaths",
+      "kind": "function",
+      "path": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "span": "L4-L7",
+      "signature": "async function getStaticPaths()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "92312c7e3f899f0b93612b0b48ce5395017436cec3ba17116987a399e3ca8745",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/transcripcion.vtt.ts#limpiar",
+      "name": "limpiar",
+      "kind": "function",
+      "path": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "span": "L19-L26",
+      "signature": "function limpiar(texto: string): string",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "e50620909ad8293e7faa1d6f903bb34cc80a504112fda13f417a1cfaf9854082",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/transcripcion.vtt.ts#vttTiempo",
+      "name": "vttTiempo",
+      "kind": "function",
+      "path": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "span": "L11-L16",
+      "signature": "function vttTiempo(s: number): string",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "6013d1fa31c8e93ca7af9e2f0265ebb46a089dd789a15be0b3bceba0da031361",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/kit/[slug]/horizontal.png.ts",
+      "name": "horizontal.png.ts",
+      "kind": "file",
+      "path": "src/pages/kit/[slug]/horizontal.png.ts",
+      "span": "L1-L16",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0650733f33548b28d75f96fbd2058672b35c69f506b1dd37070a7c211860b322",
+      "chars": 655,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/kit/[slug]/horizontal.png.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/kit/[slug]/horizontal.png.ts",
+      "span": "L11-L15",
+      "signature": "GET: APIRoute = async ({ props })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "08d477cbb2dfb8879041cb658674c916907cfc0767d2eed08c8975dabd6a6e04",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/kit/[slug]/horizontal.png.ts#getStaticPaths",
+      "name": "getStaticPaths",
+      "kind": "function",
+      "path": "src/pages/kit/[slug]/horizontal.png.ts",
+      "span": "L5-L8",
+      "signature": "async function getStaticPaths()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "92312c7e3f899f0b93612b0b48ce5395017436cec3ba17116987a399e3ca8745",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/kit/[slug]/vertical.png.ts",
+      "name": "vertical.png.ts",
+      "kind": "file",
+      "path": "src/pages/kit/[slug]/vertical.png.ts",
+      "span": "L1-L16",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7e9eb48824e39f9e028acafd7ad6466e81c442134431a5e506c691160bcdc992",
+      "chars": 651,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/kit/[slug]/vertical.png.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/kit/[slug]/vertical.png.ts",
+      "span": "L11-L15",
+      "signature": "GET: APIRoute = async ({ props })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "11791b9806692a6be74e79c719cf1d06100d883d70d15f9d6f745cf05aab58d2",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/kit/[slug]/vertical.png.ts#getStaticPaths",
+      "name": "getStaticPaths",
+      "kind": "function",
+      "path": "src/pages/kit/[slug]/vertical.png.ts",
+      "span": "L5-L8",
+      "signature": "async function getStaticPaths()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "92312c7e3f899f0b93612b0b48ce5395017436cec3ba17116987a399e3ca8745",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/llms.txt.ts",
+      "name": "llms.txt.ts",
+      "kind": "file",
+      "path": "src/pages/llms.txt.ts",
+      "span": "L1-L42",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3b98302f40c9b68b17475a991b96dcb8e22597ad9a80052f5bc140498a00b72a",
+      "chars": 2109,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/llms.txt.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/llms.txt.ts",
+      "span": "L7-L41",
+      "signature": "GET: APIRoute = async ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "ab351c91262cfaa71c698c7a1308c8a5de27ed79663baf3d3b7f4fbbf187c28b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/og/[slug].png.ts",
+      "name": "[slug].png.ts",
+      "kind": "file",
+      "path": "src/pages/og/[slug].png.ts",
+      "span": "L1-L15",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "6ca65e3848050513e4dc206a15695bf239d913ea20c0e909f403baaa94f40c58",
+      "chars": 587,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/og/[slug].png.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/og/[slug].png.ts",
+      "span": "L10-L14",
+      "signature": "GET: APIRoute = async ({ props })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c82b5018397d188cf7f6dcb5d06e34d4cd52e27111eb3776d59fe38518e0bd95",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/og/[slug].png.ts#getStaticPaths",
+      "name": "getStaticPaths",
+      "kind": "function",
+      "path": "src/pages/og/[slug].png.ts",
+      "span": "L5-L8",
+      "signature": "async function getStaticPaths()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "92312c7e3f899f0b93612b0b48ce5395017436cec3ba17116987a399e3ca8745",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/og/portada.png.ts",
+      "name": "portada.png.ts",
+      "kind": "file",
+      "path": "src/pages/og/portada.png.ts",
+      "span": "L1-L11",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9e00be65632fb062201f10ad2725f15961b4e171f584981d976adddbf3f31ec5",
+      "chars": 472,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/og/portada.png.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/og/portada.png.ts",
+      "span": "L6-L10",
+      "signature": "GET: APIRoute = async ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e14bf2383a7b874d6ed8a1fd2e4084aafc6149bd5a0c41844e71aaa18e852495",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/rss.xml.ts",
+      "name": "rss.xml.ts",
+      "kind": "file",
+      "path": "src/pages/rss.xml.ts",
+      "span": "L1-L29",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "1b0b0eb822f628aaec340e821fee20532cd406970073c0269d92f37d33f06bf1",
+      "chars": 1388,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/rss.xml.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/rss.xml.ts",
+      "span": "L10-L28",
+      "signature": "async function GET(context: APIContext)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "6cde53ca5ee6b6cf0abebd0df036db694979d91e9740da795a2a8b1b960c0767",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts",
+      "name": "buscador.ts",
+      "kind": "file",
+      "path": "src/scripts/buscador.ts",
+      "span": "L1-L113",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "218a8f78b6336d8ed3ad71e4cbaa17cf181be7e580c8dae52840f6142683733c",
+      "chars": 4578,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts#cargarPagefind",
+      "name": "cargarPagefind",
+      "kind": "function",
+      "path": "src/scripts/buscador.ts",
+      "span": "L19-L30",
+      "signature": "async function cargarPagefind(): Promise<Pagefind | null>",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "4e850dc2bafab30f36f42154b0e84124c3ae4d214405f8924a801f5f9c24136e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts#initBuscador",
+      "name": "initBuscador",
+      "kind": "function",
+      "path": "src/scripts/buscador.ts",
+      "span": "L38-L109",
+      "signature": "function initBuscador()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "5f6ba18a6946b4f5612bafa685432f390ecc6e257b88f24e4cc71786c5a85193",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts#initBuscador.buscar",
+      "name": "buscar",
+      "kind": "function",
+      "path": "src/scripts/buscador.ts",
+      "span": "L56-L99",
+      "signature": "buscar = async ()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "157efeec93f9dd320356998f7da66f9ecc2abc77f5c256939e50bd92eb8ce9a6",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts#initBuscador.mostrarLista",
+      "name": "mostrarLista",
+      "kind": "function",
+      "path": "src/scripts/buscador.ts",
+      "span": "L49-L53",
+      "signature": "mostrarLista = (si: boolean)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "741f574a0f2601c74fb19629e35e61d8d7d2620a1d25ce1aec63d507b16c7fe8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts#limpiarUrl",
+      "name": "limpiarUrl",
+      "kind": "function",
+      "path": "src/scripts/buscador.ts",
+      "span": "L32-L36",
+      "signature": "function limpiarUrl(u: string)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "b790ea6709e6952e13db2c9cd7101d9fbec1cc121ffaf3aad7dcab95fc4fef7b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts#Pagefind",
+      "name": "Pagefind",
+      "kind": "type",
+      "path": "src/scripts/buscador.ts",
+      "span": "L9-L13",
+      "signature": "type Pagefind = { init: () => Promise<void>; search: (q: string) => Promise<{ results: { id: string; data: () => Promise<Resultado> }[] }>; debouncedSearch: (q: string, opts?: unknown, ms?: number) => Promise<{ results: { id: string; data: () => Promise<Resultado> }[] } | null>; };",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "e295f2cdce21766096f1b440a5b00f85a71d48336a8a6fab64f4e75204fda309",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts#Resultado",
+      "name": "Resultado",
+      "kind": "type",
+      "path": "src/scripts/buscador.ts",
+      "span": "L15-L15",
+      "signature": "type Resultado = { url: string; excerpt: string; meta: { title?: string; numero?: string; formato?: string }; sub_results: Sub[] };",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d09bb0bc49e8c93ce2b22eb3aad3a35fb65a7f42d130655a552b979d6e33a1b8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/buscador.ts#Sub",
+      "name": "Sub",
+      "kind": "type",
+      "path": "src/scripts/buscador.ts",
+      "span": "L14-L14",
+      "signature": "type Sub = { title: string; url: string; excerpt: string };",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "080bfbf0b3fe5e4fb98a8f3aa38d2c012a9d2f6404367e253078f7097bc138c9",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -1816,6 +2555,48 @@
       "confidence": "extracted"
     },
     {
+      "source": "scripts/validar-jsonld.mjs",
+      "target": "scripts/validar-jsonld.mjs#decodificar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/validar-jsonld.mjs",
+      "target": "scripts/validar-jsonld.mjs#html",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/validar-jsonld.mjs",
+      "target": "scripts/validar-jsonld.mjs#decodificar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/validar-jsonld.mjs",
+      "target": "scripts/validar-jsonld.mjs#html",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/validar-jsonld.mjs",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/validar-jsonld.mjs",
+      "target": "node:path",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/validar-jsonld.mjs#html",
+      "target": "scripts/validar-jsonld.mjs#html",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
       "source": "src/components/reproductor/Reproductor.tsx",
       "target": "src/components/reproductor/Reproductor.tsx#Icono",
       "relation": "contains",
@@ -2296,6 +3077,318 @@
       "confidence": "extracted"
     },
     {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#cargarFuentes",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#DatosImagen",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#fila",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#lienzo",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#marca",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#Nodo",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#onda",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#plantillaHorizontal",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#plantillaOG",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#plantillaPortada",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#plantillaVertical",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#remuestrear",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#renderizarPNG",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#respuestaPNG",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/imagenes.ts#texto",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "@/config/sitio",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "@resvg/resvg-js",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "node:module",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "satori",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/contenido.ts",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts",
+      "target": "src/lib/tiempo.ts",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#cargarFuentes",
+      "target": "src/lib/imagenes.ts#cargarFuentes.leer",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#cargarFuentes",
+      "target": "src/lib/imagenes.ts#cargarFuentes.leer",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#onda",
+      "target": "src/lib/imagenes.ts#remuestrear",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaHorizontal",
+      "target": "src/lib/imagenes.ts#fila",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaHorizontal",
+      "target": "src/lib/imagenes.ts#lienzo",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaHorizontal",
+      "target": "src/lib/imagenes.ts#marca",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaHorizontal",
+      "target": "src/lib/imagenes.ts#onda",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaHorizontal",
+      "target": "src/lib/imagenes.ts#texto",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaHorizontal",
+      "target": "src/lib/tiempo.ts#aSegundos",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaOG",
+      "target": "src/lib/imagenes.ts#fila",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaOG",
+      "target": "src/lib/imagenes.ts#lienzo",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaOG",
+      "target": "src/lib/imagenes.ts#marca",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaOG",
+      "target": "src/lib/imagenes.ts#onda",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaOG",
+      "target": "src/lib/imagenes.ts#texto",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaOG",
+      "target": "src/lib/tiempo.ts#duracionLegible",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaOG",
+      "target": "src/lib/tiempo.ts#aSegundos",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaOG",
+      "target": "src/lib/tiempo.ts#duracionLegible",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaPortada",
+      "target": "src/lib/imagenes.ts#lienzo",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaPortada",
+      "target": "src/lib/imagenes.ts#marca",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaPortada",
+      "target": "src/lib/imagenes.ts#onda",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaPortada",
+      "target": "src/lib/imagenes.ts#texto",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaVertical",
+      "target": "src/lib/imagenes.ts#fila",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaVertical",
+      "target": "src/lib/imagenes.ts#lienzo",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaVertical",
+      "target": "src/lib/imagenes.ts#marca",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaVertical",
+      "target": "src/lib/imagenes.ts#onda",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaVertical",
+      "target": "src/lib/imagenes.ts#texto",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaVertical",
+      "target": "src/lib/tiempo.ts#duracionLegible",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaVertical",
+      "target": "src/lib/tiempo.ts#aSegundos",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#plantillaVertical",
+      "target": "src/lib/tiempo.ts#duracionLegible",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/imagenes.ts#renderizarPNG",
+      "target": "src/lib/imagenes.ts#cargarFuentes",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
       "source": "src/lib/remark-glosario.mjs",
       "target": "src/lib/remark-glosario.mjs#cargarGlosario",
       "relation": "contains",
@@ -2458,6 +3551,48 @@
       "confidence": "extracted"
     },
     {
+      "source": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "target": "src/pages/episodios/[slug]/capitulos.json.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "target": "src/pages/episodios/[slug]/capitulos.json.ts#getStaticPaths",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "target": "@/config/sitio",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/capitulos.json.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/capitulos.json.ts#GET",
+      "target": "src/lib/contenido.ts#capitulosDe",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/capitulos.json.ts#getStaticPaths",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
       "source": "src/pages/episodios/[slug]/picos.json.ts",
       "target": "src/pages/episodios/[slug]/picos.json.ts#GET",
       "relation": "contains",
@@ -2492,6 +3627,468 @@
       "target": "src/lib/contenido.ts#getEpisodios",
       "relation": "calls",
       "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "target": "src/pages/episodios/[slug]/transcripcion.vtt.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "target": "src/pages/episodios/[slug]/transcripcion.vtt.ts#getStaticPaths",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "target": "src/pages/episodios/[slug]/transcripcion.vtt.ts#limpiar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "target": "src/pages/episodios/[slug]/transcripcion.vtt.ts#vttTiempo",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts#GET",
+      "target": "src/lib/contenido.ts#duracionSegundos",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts#GET",
+      "target": "src/pages/episodios/[slug]/transcripcion.vtt.ts#limpiar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts#GET",
+      "target": "src/pages/episodios/[slug]/transcripcion.vtt.ts#vttTiempo",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/transcripcion.vtt.ts#getStaticPaths",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts",
+      "target": "src/pages/kit/[slug]/horizontal.png.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts",
+      "target": "src/pages/kit/[slug]/horizontal.png.ts#getStaticPaths",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts",
+      "target": "@/lib/imagenes",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts#GET",
+      "target": "src/lib/contenido.ts#picosDe",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts#GET",
+      "target": "src/lib/imagenes.ts#plantillaHorizontal",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts#GET",
+      "target": "src/lib/imagenes.ts#renderizarPNG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts#GET",
+      "target": "src/lib/imagenes.ts#respuestaPNG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/horizontal.png.ts#getStaticPaths",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts",
+      "target": "src/pages/kit/[slug]/vertical.png.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts",
+      "target": "src/pages/kit/[slug]/vertical.png.ts#getStaticPaths",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts",
+      "target": "@/lib/imagenes",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts#GET",
+      "target": "src/lib/contenido.ts#picosDe",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts#GET",
+      "target": "src/lib/imagenes.ts#plantillaVertical",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts#GET",
+      "target": "src/lib/imagenes.ts#renderizarPNG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts#GET",
+      "target": "src/lib/imagenes.ts#respuestaPNG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/kit/[slug]/vertical.png.ts#getStaticPaths",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/llms.txt.ts",
+      "target": "src/pages/llms.txt.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/llms.txt.ts",
+      "target": "@/config/sitio",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/llms.txt.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/llms.txt.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/llms.txt.ts",
+      "target": "astro:content",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/llms.txt.ts#GET",
+      "target": "src/lib/contenido.ts#fechaISO",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/llms.txt.ts#GET",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts",
+      "target": "src/pages/og/[slug].png.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts",
+      "target": "src/pages/og/[slug].png.ts#getStaticPaths",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts",
+      "target": "@/lib/imagenes",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts#GET",
+      "target": "src/lib/contenido.ts#picosDe",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts#GET",
+      "target": "src/lib/imagenes.ts#plantillaOG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts#GET",
+      "target": "src/lib/imagenes.ts#renderizarPNG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts#GET",
+      "target": "src/lib/imagenes.ts#respuestaPNG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/[slug].png.ts#getStaticPaths",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts",
+      "target": "src/pages/og/portada.png.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts",
+      "target": "@/lib/imagenes",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts#GET",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts#GET",
+      "target": "src/lib/contenido.ts#picosDe",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts#GET",
+      "target": "src/lib/imagenes.ts#plantillaPortada",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts#GET",
+      "target": "src/lib/imagenes.ts#renderizarPNG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/og/portada.png.ts#GET",
+      "target": "src/lib/imagenes.ts#respuestaPNG",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/rss.xml.ts",
+      "target": "src/pages/rss.xml.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/rss.xml.ts",
+      "target": "@/config/sitio",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/rss.xml.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/rss.xml.ts",
+      "target": "@astrojs/rss",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/rss.xml.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/rss.xml.ts#GET",
+      "target": "src/lib/contenido.ts#duracionSegundos",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/rss.xml.ts#GET",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/scripts/buscador.ts",
+      "target": "src/scripts/buscador.ts#initBuscador",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts",
+      "target": "src/scripts/buscador.ts#cargarPagefind",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts",
+      "target": "src/scripts/buscador.ts#initBuscador",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts",
+      "target": "src/scripts/buscador.ts#limpiarUrl",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts",
+      "target": "src/scripts/buscador.ts#Pagefind",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts",
+      "target": "src/scripts/buscador.ts#Resultado",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts",
+      "target": "src/scripts/buscador.ts#Sub",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts#initBuscador",
+      "target": "src/scripts/buscador.ts#cargarPagefind",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts#initBuscador",
+      "target": "src/scripts/buscador.ts#initBuscador.buscar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts#initBuscador",
+      "target": "src/scripts/buscador.ts#initBuscador.buscar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts#initBuscador",
+      "target": "src/scripts/buscador.ts#initBuscador.mostrarLista",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts#initBuscador.buscar",
+      "target": "src/scripts/buscador.ts#cargarPagefind",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts#initBuscador.buscar",
+      "target": "src/scripts/buscador.ts#initBuscador.mostrarLista",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/buscador.ts#initBuscador.buscar",
+      "target": "src/scripts/buscador.ts#limpiarUrl",
+      "relation": "calls",
+      "confidence": "extracted"
     },
     {
       "source": "src/scripts/filtros.ts",

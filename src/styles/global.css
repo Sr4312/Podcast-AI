@@ -7,6 +7,7 @@
 @import '@fontsource/ibm-plex-mono/400.css';
 @import '@fontsource/ibm-plex-mono/500.css';
 @import './reproductor.css' layer(components);
+@import './animacion.css' layer(components);
 
 @theme {
   /* ---- Tipografía: Newsreader (titulares) · Public Sans (texto) · IBM Plex Mono (tiempos) ---- */
@@ -174,13 +175,9 @@
     display: inline-block;
     vertical-align: middle;
   }
+  /* Movimiento reducido: las reglas específicas están en animacion.css. Acá solo el scroll. */
   @media (prefers-reduced-motion: reduce) {
-    *,
-    ::before,
-    ::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
+    html {
       scroll-behavior: auto !important;
     }
   }
@@ -416,10 +413,7 @@
   .parrafo .orador {
     font-weight: 600;
   }
-  .parrafo.en-curso {
-    background: var(--color-acento-suave);
-    box-shadow: 0 0 0 0.6rem var(--color-acento-suave);
-  }
+  /* El resaltado del párrafo en curso es un pseudo-elemento que funde (animacion.css). */
   a.glosario {
     color: inherit;
     text-decoration-style: dotted;
