@@ -2,9 +2,9 @@
 import { render, getEntries } from 'astro:content';
 import Base from '@/layouts/Base.astro';
 import Waveform from '@/components/Waveform.astro';
-import Icono from '@/components/Icono.astro';
+import BotonReproducir from '@/components/BotonReproducir.astro';
 import { SITIO, FORMATOS, EJES, TIPOS_FUENTE } from '@/config/sitio';
-import { getEpisodios, duracionSegundos, capitulosDe, fechaLarga, fechaISO, picosDe } from '@/lib/contenido';
+import { getEpisodios, duracionSegundos, capitulosDe, fechaLarga, fechaISO, picosDe, cargaReproductor } from '@/lib/contenido';
 import { duracionLegible } from '@/lib/tiempo';
 
 export async function getStaticPaths() {
@@ -24,7 +24,7 @@ const fuentesPorTipo = Object.entries(TIPOS_FUENTE)
 ---
 
 <Base titulo={titulo} descripcion={ep.data.bajada} ruta={`/episodios/${ep.id}`} tipoOG="article">
-  <div class="cuaderno">
+  <div class="cuaderno" data-pagina-episodio data-episodio={JSON.stringify(cargaReproductor(ep))}>
     <div class="margen">
       {ep.data.ejemplo && <p class="aviso-ejemplo mb-5">Contenido de ejemplo: episodio, invitados y cifras ficticios para la demo del sitio.</p>}
       <nav aria-label="Migas" class="mb-4">
@@ -72,12 +72,12 @@ const fuentesPorTipo = Object.entries(TIPOS_FUENTE)
         <p class="prosa text-lg mt-4">{ep.data.bajada}</p>
         <div class="mt-6"><Waveform picos={picos} barras={160} alto={64} /></div>
         <div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
-          <button type="button" class="boton" data-reproducir={ep.id}><Icono nombre="play" tamano={18} /> Reproducir</button>
+          <BotonReproducir ep={ep} principal />
           <p class="meta">
             Escuchalo en{' '}
-            {ep.data.plataformas.youtube && <a href={ep.data.plataformas.youtube}>YouTube</a>}
-            {ep.data.plataformas.spotify && <> · <a href={ep.data.plataformas.spotify}>Spotify</a></>}
-            {ep.data.plataformas.apple && <> · <a href={ep.data.plataformas.apple}>Apple Podcasts</a></>}
+            {ep.data.plataformas.youtube && <a href={ep.data.plataformas.youtube} data-plataforma="youtube" data-episodio-id={ep.id}>YouTube</a>}
+            {ep.data.plataformas.spotify && <> · <a href={ep.data.plataformas.spotify} data-plataforma="spotify" data-episodio-id={ep.id}>Spotify</a></>}
+            {ep.data.plataformas.apple && <> · <a href={ep.data.plataformas.apple} data-plataforma="apple" data-episodio-id={ep.id}>Apple Podcasts</a></>}
           </p>
         </div>
       </header>
@@ -176,6 +176,57 @@ const fuentesPorTipo = Object.entries(TIPOS_FUENTE)
     </article>
   </div>
 </Base>
+
+<script>
+  import { $episodio, $capituloActual, leerPosicion, cargarEpisodio, type EpisodioCarga } from '@/stores/reproductor';
+  import { formatoCorto } from '@/lib/tiempo';
+
+  let desuscribir: (() => void)[] = [];
+
+  function init() {
+    desuscribir.forEach((f) => f());
+    desuscribir = [];
+    const raiz = document.querySelector<HTMLElement>('[data-pagina-episodio]');
+    if (!raiz) return;
+    const carga: EpisodioCarga = JSON.parse(raiz.dataset.episodio!);
+    const principal = raiz.querySelector<HTMLElement>('[data-reproducir-principal]');
+    const texto = principal?.querySelector<HTMLElement>('.texto');
+    if (texto && !texto.dataset.original) texto.dataset.original = texto.textContent || 'Reproducir';
+
+    // Deep link ?t=754: posiciona el reproductor sin autoplay y ofrece "Reproducir desde".
+    const t = new URLSearchParams(location.search).get('t');
+    const seg = t && /^\d+$/.test(t) ? Number(t) : null;
+    if (seg !== null && seg < carga.duracion) {
+      cargarEpisodio(carga, { t: seg, autoplay: false });
+      if (principal && texto) {
+        principal.dataset.desde = String(seg);
+        texto.textContent = `Reproducir desde ${formatoCorto(seg)}`;
+      }
+    } else if (principal && texto && $episodio.get()?.id !== carga.id) {
+      const pos = leerPosicion(carga.id);
+      if (pos) {
+        principal.dataset.desde = String(pos);
+        texto.textContent = `Seguir desde ${formatoCorto(pos)}`;
+      }
+    }
+
+    // Capítulo en curso en la lista de capítulos.
+    const items = raiz.querySelectorAll<HTMLElement>('.capitulos li');
+    const marcar = () => {
+      const ep = $episodio.get();
+      const cap = $capituloActual.get();
+      items.forEach((li) => {
+        const href = li.querySelector('a')?.getAttribute('href');
+        const activo = !!ep && ep.id === carga.id && !!cap && href === `#cap-${cap.t}`;
+        li.classList.toggle('en-curso', activo);
+        if (activo) li.setAttribute('aria-current', 'true');
+        else li.removeAttribute('aria-current');
+      });
+    };
+    desuscribir.push($capituloActual.subscribe(marcar), $episodio.subscribe(marcar));
+  }
+  document.addEventListener('astro:page-load', init);
+</script>
 
 <style>
   .frase blockquote {

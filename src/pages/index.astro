@@ -1,7 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import Waveform from '@/components/Waveform.astro';
-import Icono from '@/components/Icono.astro';
+import BotonReproducir from '@/components/BotonReproducir.astro';
 import { SITIO, FORMATOS, EJES } from '@/config/sitio';
 import { getEpisodios, duracionSegundos, fechaLarga, fechaISO, picosDe } from '@/lib/contenido';
 import { duracionLegible } from '@/lib/tiempo';
@@ -53,13 +53,13 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
             <Waveform picos={picos} barras={160} alto={64} />
           </div>
           <div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <a href={`/episodios/${ultimo.id}`} class="boton"><Icono nombre="play" tamano={18} /> Reproducir</a>
+            <BotonReproducir ep={ultimo} />
             <p class="meta">
               Escuchalo en{' '}
-              {ultimo.data.plataformas.youtube && <a href={ultimo.data.plataformas.youtube}>YouTube</a>}
-              {ultimo.data.plataformas.spotify && <> · <a href={ultimo.data.plataformas.spotify}>Spotify</a></>}
-              {ultimo.data.plataformas.apple && <> · <a href={ultimo.data.plataformas.apple}>Apple Podcasts</a></>}
-              {' · '}<a href={SITIO.hosting.rss}>RSS</a>
+              {ultimo.data.plataformas.youtube && <a href={ultimo.data.plataformas.youtube} data-plataforma="youtube" data-episodio-id={ultimo.id}>YouTube</a>}
+              {ultimo.data.plataformas.spotify && <> · <a href={ultimo.data.plataformas.spotify} data-plataforma="spotify" data-episodio-id={ultimo.id}>Spotify</a></>}
+              {ultimo.data.plataformas.apple && <> · <a href={ultimo.data.plataformas.apple} data-plataforma="apple" data-episodio-id={ultimo.id}>Apple Podcasts</a></>}
+              {' · '}<a href={SITIO.hosting.rss} data-plataforma="rss">RSS</a>
             </p>
           </div>
         </div>
@@ -89,9 +89,7 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
                 {FORMATOS[ep.data.formato].nombre} · <span class="mono">{duracionLegible(duracionSegundos(ep))}</span>
               </p>
             </div>
-            <a href={`/episodios/${ep.id}`} class="boton boton--icono boton--secundario fila__play" aria-label={`Reproducir episodio ${ep.data.numero}`}>
-              <Icono nombre="play" tamano={16} />
-            </a>
+            <BotonReproducir ep={ep} variante="icono" class="fila__play" />
           </li>
         ))
       }

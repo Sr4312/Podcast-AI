@@ -1,0 +1,223 @@
+/* Mini-reproductor fijo abajo. Mismos tokens que el resto del sitio. */
+.repro {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 40;
+  background: var(--color-papel);
+  border-top: 1px solid var(--color-linea);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  font-size: var(--text-meta);
+}
+.repro__fila {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    'info info tiempos'
+    'controles barra barra';
+  align-items: center;
+  gap: 0.35rem 0.75rem;
+  padding-block: 0.5rem 0.6rem;
+}
+@media (min-width: 64rem) {
+  .repro__fila {
+    grid-template-columns: auto 18rem minmax(0, 1fr) auto;
+    grid-template-areas: 'controles info barra tiempos';
+    gap: 1rem;
+    padding-block: 0.6rem;
+  }
+}
+
+.repro__controles {
+  grid-area: controles;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.repro__play,
+.repro__salto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  border-radius: var(--radius-ui);
+  color: var(--color-tinta);
+}
+.repro__play {
+  background: var(--color-tinta);
+  color: var(--color-papel);
+}
+.repro__play[aria-pressed='true'] {
+  background: var(--color-acento);
+  color: var(--color-acento-contraste);
+}
+.repro__play[data-cargando] {
+  opacity: 0.7;
+}
+.repro__salto:hover {
+  color: var(--color-acento);
+}
+
+.repro__info {
+  grid-area: info;
+  min-width: 0;
+}
+.repro__titulo {
+  display: block;
+  color: var(--color-tinta);
+  text-decoration: none;
+  font-family: var(--font-titulo);
+  font-size: var(--text-base);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.repro__titulo:hover {
+  color: var(--color-acento);
+}
+.repro__n {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-tinta-2);
+}
+.repro__n::after {
+  content: ' ·';
+}
+.repro__capitulo {
+  color: var(--color-tinta-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+.repro__error {
+  color: var(--color-pendiente);
+}
+
+.repro__barra-zona {
+  grid-area: barra;
+  min-width: 0;
+  padding-block: 0.25rem;
+}
+.repro__barra {
+  position: relative;
+  height: 2.75rem;
+  cursor: pointer;
+  touch-action: none;
+  border-radius: var(--radius-ui);
+}
+.repro__barra:focus-visible {
+  outline-offset: 2px;
+}
+.repro__onda {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.repro__onda .barra {
+  fill: var(--color-onda);
+}
+.repro__onda .barra--hecha {
+  fill: var(--color-acento);
+}
+.repro__linea {
+  position: absolute;
+  inset: 50% 0 auto 0;
+  height: 3px;
+  margin-top: -1.5px;
+  background: var(--color-linea-2);
+  overflow: hidden;
+}
+.repro__linea-hecha {
+  height: 100%;
+  background: var(--color-acento);
+  transform-origin: left;
+}
+.repro__marca {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background: var(--color-papel);
+  box-shadow: 0 0 0 0.5px var(--color-tinta-2);
+  pointer-events: none;
+}
+.repro__cursor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--color-acento);
+  pointer-events: none;
+  opacity: 0;
+}
+.repro__barra:hover .repro__cursor,
+.repro__barra:focus-visible .repro__cursor,
+.repro__barra[data-arrastrando] .repro__cursor {
+  opacity: 1;
+}
+.repro__tooltip {
+  position: absolute;
+  bottom: calc(100% + 0.35rem);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--color-tinta);
+  color: var(--color-papel);
+  border-radius: var(--radius-ui);
+  white-space: nowrap;
+  pointer-events: none;
+  font-size: var(--text-meta);
+  line-height: 1.3;
+}
+.repro__tooltip-cap {
+  max-width: 16rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.repro__tiempos {
+  grid-area: tiempos;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+  color: var(--color-tinta-2);
+  justify-self: end;
+}
+.repro__velocidad {
+  min-width: 2.75rem;
+  min-height: 2.25rem;
+  padding: 0 0.4rem;
+  border: 1px solid var(--color-linea-2);
+  border-radius: var(--radius-ui);
+  color: var(--color-tinta);
+}
+.repro__velocidad:hover {
+  border-color: var(--color-acento);
+  color: var(--color-acento);
+}
+
+/* Botones Reproducir de las páginas: muestran pausa cuando su episodio está sonando. */
+[data-reproducir] .icono-pausa {
+  display: none;
+}
+[data-reproducir][aria-pressed='true'] .icono-play {
+  display: none;
+}
+[data-reproducir][aria-pressed='true'] .icono-pausa {
+  display: inline-block;
+}
+
+/* Capítulo en curso en la lista de la página de episodio. */
+.capitulos li.en-curso {
+  color: var(--color-acento);
+}
+.capitulos li.en-curso a {
+  font-weight: 500;
+}

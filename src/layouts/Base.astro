@@ -3,6 +3,7 @@ import { ClientRouter } from 'astro:transitions';
 import { SITIO } from '@/config/sitio';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import Reproductor from '@/components/reproductor/Reproductor.tsx';
 import '@/styles/global.css';
 
 interface Props {
@@ -60,7 +61,9 @@ const ogImagen = new URL(imagen ?? '/og/portada.png', SITIO.url).toString();
       <slot />
     </main>
     <Footer />
-    <div id="reproductor" transition:persist="reproductor"></div>
+    {/* client:only: el reproductor no tiene HTML de servidor, así los scripts de página pueden cargar un episodio antes de que React monte sin provocar desajustes de hidratación. */}
+    <Reproductor client:only="react" transition:persist="reproductor" />
+    <script src="@/scripts/reproducir.ts"></script>
   </body>
 </html>
 

@@ -1,5 +1,21 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { aSegundos } from './tiempo';
+import { SITIO } from '@/config/sitio';
+import type { EpisodioCarga } from '@/stores/reproductor';
+
+/** Datos mínimos que el reproductor necesita para cargar un episodio. */
+export function cargaReproductor(ep: CollectionEntry<'episodios'>): EpisodioCarga {
+  return {
+    id: ep.id,
+    numero: ep.data.numero,
+    titulo: ep.data.titulo,
+    url: ep.data.audio?.url ?? '',
+    duracion: aSegundos(ep.data.duracion),
+    ruta: `/episodios/${ep.id}`,
+    capitulos: ep.data.capitulos.map((c) => ({ t: aSegundos(c.t), titulo: c.titulo })),
+    podcast: SITIO.nombre,
+  };
+}
 
 export type Episodio = CollectionEntry<'episodios'>;
 

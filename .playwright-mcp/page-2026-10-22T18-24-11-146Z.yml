@@ -1,0 +1,1036 @@
+- generic [active] [ref=f10e1]:
+  - link "Saltar al contenido" [ref=f10e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f10e3]:
+    - generic [ref=f10e4]:
+      - link "Señal Pública, inicio" [ref=f10e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f10e15]: Señal Pública
+      - navigation "Principal" [ref=f10e16]:
+        - list [ref=f10e17]:
+          - listitem [ref=f10e18]:
+            - link "Episodios" [ref=f10e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f10e20]:
+            - link "Temas" [ref=f10e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f10e22]:
+            - link "Fuentes" [ref=f10e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f10e24]:
+            - link "Acerca" [ref=f10e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f10e26]:
+            - link "Suscribite" [ref=f10e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f10e28]:
+            - button "Cambiar a modo oscuro" [ref=f10e29] [cursor=pointer]
+  - main [ref=f10e32]:
+    - generic [ref=f10e33]:
+      - generic [ref=f10e34]:
+        - paragraph [ref=f10e35]: "Contenido de ejemplo: episodio, invitados y cifras ficticios para la demo del sitio."
+        - navigation "Migas" [ref=f10e36]:
+          - link "Episodios" [ref=f10e37] [cursor=pointer]:
+            - /url: /episodios
+          - text: / N.º 2
+        - generic [ref=f10e38]:
+          - generic [ref=f10e39]:
+            - term [ref=f10e40]: Publicado
+            - definition [ref=f10e41]:
+              - time [ref=f10e42]: 17 de septiembre de 2026
+          - generic [ref=f10e43]:
+            - term [ref=f10e44]: Duración
+            - definition [ref=f10e45]: 41 min
+          - generic [ref=f10e46]:
+            - term [ref=f10e47]: Formato
+            - definition [ref=f10e48]: Caso
+          - generic [ref=f10e49]:
+            - term [ref=f10e50]: Ejes
+            - definition [ref=f10e51]: Política pública, Economía
+          - generic [ref=f10e52]:
+            - term [ref=f10e53]: Invitado
+            - definition [ref=f10e54]:
+              - link "Diego Lamarque" [ref=f10e55] [cursor=pointer]:
+                - /url: /invitados/diego-lamarque
+      - article [ref=f10e56]:
+        - generic [ref=f10e57]:
+          - paragraph [ref=f10e58]: Temporada 1 · Episodio 2
+          - heading "El chatbot de un municipio, seis meses después" [level=1] [ref=f10e59]
+          - paragraph [ref=f10e60]: Un municipio mediano puso un asistente de IA a responder consultas de vecinos. Su secretario de Modernización cuenta qué funcionó, qué salió mal y cuánto costó.
+          - generic [ref=f10e223]:
+            - button "Reproducir desde 12:34" [ref=f10e224] [cursor=pointer]
+            - paragraph [ref=f10e228]:
+              - text: Escuchalo en
+              - link "YouTube" [ref=f10e229] [cursor=pointer]:
+                - /url: https://www.youtube.com/@senalpublica
+              - text: ·
+              - link "Spotify" [ref=f10e230] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/ejemplo-senal-publica
+              - text: ·
+              - link "Apple Podcasts" [ref=f10e231] [cursor=pointer]:
+                - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+        - region [ref=f10e232]:
+          - heading "En 2 minutos" [level=2] [ref=f10e233]
+          - list [ref=f10e234]:
+            - listitem [ref=f10e235]: El asistente resolvió bien las consultas de horarios, requisitos y estado de trámites, que eran la mayoría, y descomprimió la mesa de entradas.
+            - listitem [ref=f10e236]: "Falló en lo que tenía excepciones: plazos que dependen del caso, tasas con descuentos y normativa local reciente que no estaba en los documentos cargados."
+            - listitem [ref=f10e237]: El contrato se pagó por consulta procesada, y el costo mensual terminó siendo mayor que el estimado porque nadie había medido cuántas consultas había antes.
+            - listitem [ref=f10e238]: El municipio no tenía definido qué pasa con los datos de las conversaciones ni quién responde cuando el asistente da una respuesta errónea.
+            - listitem [ref=f10e239]: El cambio más valioso no fue el chatbot sino el inventario de trámites y respuestas que hubo que escribir para alimentarlo.
+          - paragraph [ref=f10e240]: "Este episodio sigue un caso de implementación en un municipio de tamaño medio, con un equipo de modernización de tres personas y una mesa de entradas que atendía consultas presenciales, telefónicas y por redes sin ningún registro unificado. En 2025 el municipio contrató a un proveedor para poner en marcha un asistente conversacional basado en un modelo de lenguaje, alimentado con los documentos de trámites del propio municipio. Seis meses después, hablamos con Diego Lamarque, el funcionario que lideró el proyecto, que aceptó discutir en público tanto los resultados como los errores. Recorremos el caso en orden: qué problema querían resolver, qué compraron y cómo se pagó, qué pasó en las primeras semanas, dónde falló, qué se hizo con los datos de las personas y qué le diría a otro intendente que esté por firmar un contrato parecido. El municipio, el funcionario y las cifras de este episodio son ficticios, creados para la demo del sitio."
+          - paragraph [ref=f10e241]: Resumen redactado con asistencia de IA y revisado por Martín Albarracín.
+        - figure "Diego Lamarque, 00:36:48" [ref=f10e242]:
+          - blockquote [ref=f10e243]:
+            - paragraph [ref=f10e244]: Lo que más sirvió no fue el bot. Fue que por primera vez tuvimos que escribir en un documento cómo se hace cada trámite. Eso no lo teníamos.
+        - region [ref=f10e246]:
+          - heading "Capítulos" [level=2] [ref=f10e247]
+          - list [ref=f10e248]:
+            - listitem [ref=f10e249]:
+              - link "00:00:00" [ref=f10e250] [cursor=pointer]:
+                - /url: "#cap-0"
+              - generic [ref=f10e251]: Presentación
+            - listitem [ref=f10e252]:
+              - link "00:02:50" [ref=f10e253] [cursor=pointer]:
+                - /url: "#cap-170"
+              - generic [ref=f10e254]: Un lunes en la mesa de entradas
+            - listitem [ref=f10e255]:
+              - link "00:09:20" [ref=f10e256] [cursor=pointer]:
+                - /url: "#cap-560"
+              - generic [ref=f10e257]: Qué compró el municipio y cuánto costó
+            - listitem [ref=f10e258]:
+              - link "00:16:10" [ref=f10e259] [cursor=pointer]:
+                - /url: "#cap-970"
+              - generic [ref=f10e260]: "Primeras semanas: lo que funcionó"
+            - listitem [ref=f10e261]:
+              - link "00:22:40" [ref=f10e262] [cursor=pointer]:
+                - /url: "#cap-1360"
+              - generic [ref=f10e263]: Lo que salió mal
+            - listitem [ref=f10e264]:
+              - link "00:29:30" [ref=f10e265] [cursor=pointer]:
+                - /url: "#cap-1770"
+              - generic [ref=f10e266]: Datos personales y quién responde
+            - listitem [ref=f10e267]:
+              - link "00:35:15" [ref=f10e268] [cursor=pointer]:
+                - /url: "#cap-2115"
+              - generic [ref=f10e269]: Qué le diría a otro intendente
+            - listitem [ref=f10e270]:
+              - link "00:39:00" [ref=f10e271] [cursor=pointer]:
+                - /url: "#cap-2340"
+              - generic [ref=f10e272]: Cierre y fuentes
+        - region [ref=f10e273]:
+          - heading "Fuentes y datos citados" [level=2] [ref=f10e274]
+          - generic [ref=f10e275]:
+            - heading "Ley o norma" [level=3] [ref=f10e276]
+            - list [ref=f10e277]:
+              - listitem [ref=f10e278]:
+                - link "Ley 25.326 de Protección de los Datos Personales" [ref=f10e279] [cursor=pointer]:
+                  - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/norma.htm
+                - paragraph [ref=f10e280]:
+                  - text: InfoLEG, Ministerio de Justicia ·
+                  - time [ref=f10e281]: 30 de octubre de 2000
+                - paragraph [ref=f10e282]: Obligaciones del responsable del tratamiento (arts. 9 y 10) que discutimos al hablar de las conversaciones almacenadas por el proveedor.
+                - paragraph [ref=f10e283]:
+                  - generic [ref=f10e284]: Verificada
+          - generic [ref=f10e285]:
+            - heading "Dataset" [level=3] [ref=f10e286]
+            - list [ref=f10e287]:
+              - listitem [ref=f10e288]:
+                - link "Portal Nacional de Datos Abiertos" [ref=f10e289] [cursor=pointer]:
+                  - /url: https://datos.gob.ar
+                - paragraph [ref=f10e290]: Jefatura de Gabinete de Ministros
+                - paragraph [ref=f10e291]: Referencia al hablar de publicar el inventario de trámites y las métricas del asistente como datos abiertos.
+                - paragraph [ref=f10e292]:
+                  - generic [ref=f10e293]: Verificada
+          - generic [ref=f10e294]:
+            - heading "Documento oficial" [level=3] [ref=f10e295]
+            - list [ref=f10e296]:
+              - listitem [ref=f10e297]:
+                - link "Algorithmic Accountability for the Public Sector" [ref=f10e298] [cursor=pointer]:
+                  - /url: https://www.opengovpartnership.org/documents/algorithmic-accountability-public-sector/
+                - paragraph [ref=f10e299]:
+                  - text: Open Government Partnership, Ada Lovelace Institute, AI Now Institute ·
+                  - time [ref=f10e300]: 1 de agosto de 2021
+                - paragraph [ref=f10e301]: Informe sobre mecanismos de rendición de cuentas para sistemas automatizados en el Estado. Falta confirmar la URL del documento completo.
+                - paragraph [ref=f10e302]:
+                  - generic [ref=f10e303]: Pendiente de verificación
+              - listitem [ref=f10e304]:
+                - link "Recomendación sobre la ética de la inteligencia artificial" [ref=f10e305] [cursor=pointer]:
+                  - /url: https://unesdoc.unesco.org/ark:/48223/pf0000381137
+                - paragraph [ref=f10e306]:
+                  - text: UNESCO ·
+                  - time [ref=f10e307]: 23 de noviembre de 2021
+                - paragraph [ref=f10e308]: Principio de supervisión y determinación humanas, citado al discutir quién responde por una respuesta errónea del asistente.
+                - paragraph [ref=f10e309]:
+                  - generic [ref=f10e310]: Verificada
+        - region [ref=f10e311]:
+          - heading "Cómo usamos IA en este episodio" [level=2] [ref=f10e312]
+          - generic [ref=f10e313]:
+            - term [ref=f10e314]: Qué hizo la IA
+            - definition [ref=f10e315]: transcripción automática del audio; borrador del resumen y de los capítulos.
+            - term [ref=f10e316]: Qué no hizo
+            - definition [ref=f10e317]: selección de fuentes; verificación de las cifras del caso; conclusiones del episodio.
+            - term [ref=f10e318]: Quién revisó
+            - definition [ref=f10e319]: Martín Albarracín
+        - region [ref=f10e320]:
+          - heading "Transcripción completa" [level=2] [ref=f10e321]
+          - paragraph [ref=f10e322]: Oradores identificados. Cada párrafo tiene su tiempo; hacé clic para saltar o copiá el link a ese momento.
+          - generic [ref=f10e323]:
+            - heading "Presentación" [level=2] [ref=f10e324]
+            - paragraph [ref=f10e325]:
+              - button "Saltar a 00:00:00" [ref=f10e326] [cursor=pointer]: 00:00:00
+              - button "Copiar link a este momento" [ref=f10e327] [cursor=pointer]
+              - strong [ref=f10e331]: "Martín Albarracín:"
+              - text: Bienvenidos a Señal Pública. Soy Martín Albarracín.
+            - paragraph [ref=f10e332]:
+              - button "Saltar a 00:00:08" [ref=f10e333] [cursor=pointer]: 00:00:08
+              - button "Copiar link a este momento" [ref=f10e334] [cursor=pointer]
+              - strong [ref=f10e338]: "Lucía Ferreyra:"
+              - text: "Y yo soy Lucía Ferreyra. Hoy cambiamos de formato. El episodio pasado fue un laboratorio: armamos una prueba y vimos qué pasaba. Este es un caso: algo que ya pasó, en un lugar concreto, y lo vamos a reconstruir con la persona que lo hizo."
+            - paragraph [ref=f10e339]:
+              - button "Saltar a 00:00:34" [ref=f10e340] [cursor=pointer]: 00:00:34
+              - button "Copiar link a este momento" [ref=f10e341] [cursor=pointer]
+              - strong [ref=f10e345]: "Martín Albarracín:"
+              - text: El lugar es un municipio de tamaño medio, de esos que tienen una mesa de entradas, una línea telefónica que nadie atiende a tiempo y una cuenta de Instagram donde los vecinos preguntan de todo. En 2025 el municipio contrató un asistente de inteligencia artificial para responder consultas. Pasaron seis meses.
+            - paragraph [ref=f10e346]:
+              - button "Saltar a 00:01:02" [ref=f10e347] [cursor=pointer]: 00:01:02
+              - button "Copiar link a este momento" [ref=f10e348] [cursor=pointer]
+              - strong [ref=f10e352]: "Lucía Ferreyra:"
+              - text: "Con nosotros está Diego Lamarque, secretario de Modernización del municipio, que lideró el proyecto. Diego, lo primero: gracias por venir a hablar también de lo que salió mal, que no es lo habitual."
+            - paragraph [ref=f10e353]:
+              - button "Saltar a 00:01:20" [ref=f10e354] [cursor=pointer]: 00:01:20
+              - button "Copiar link a este momento" [ref=f10e355] [cursor=pointer]
+              - strong [ref=f10e359]: "Diego Lamarque:"
+              - text: Gracias a ustedes. Lo pensé bastante antes de aceptar. Me convenció que ustedes publican las fuentes y la transcripción completa. Si voy a contar errores, prefiero que se escuche todo y no un recorte.
+            - paragraph [ref=f10e360]:
+              - button "Saltar a 00:01:40" [ref=f10e361] [cursor=pointer]: 00:01:40
+              - button "Copiar link a este momento" [ref=f10e362] [cursor=pointer]
+              - strong [ref=f10e366]: "Martín Albarracín:"
+              - text: Una aclaración de método. Diego es funcionario del municipio que contrató el sistema, y eso está declarado en la página del episodio como conflicto de interés. No es neutral, y no se lo pedimos. Lo que sí le pedimos fueron los números, y los trajo.
+            - paragraph [ref=f10e367]:
+              - button "Saltar a 00:02:03" [ref=f10e368] [cursor=pointer]: 00:02:03
+              - button "Copiar link a este momento" [ref=f10e369] [cursor=pointer]
+              - strong [ref=f10e373]: "Lucía Ferreyra:"
+              - text: "Y una aclaración sobre el proveedor: no vamos a decir el nombre de la empresa. El punto del episodio no es evaluar un producto sino una decisión pública. Lo que contamos aplica a cualquier sistema de este tipo."
+            - paragraph [ref=f10e374]:
+              - button "Saltar a 00:02:24" [ref=f10e375] [cursor=pointer]: 00:02:24
+              - button "Copiar link a este momento" [ref=f10e376] [cursor=pointer]
+              - strong [ref=f10e380]: "Diego Lamarque:"
+              - text: Eso también me lo pidieron a mí desde el municipio, para ser transparente.
+            - paragraph [ref=f10e381]:
+              - button "Saltar a 00:02:31" [ref=f10e382] [cursor=pointer]: 00:02:31
+              - button "Copiar link a este momento" [ref=f10e383] [cursor=pointer]
+              - strong [ref=f10e387]: "Martín Albarracín:"
+              - text: Empecemos por antes del
+              - link "chatbot" [ref=f10e388] [cursor=pointer]:
+                - /url: /glosario/chatbot
+              - text: . Diego, llevanos a un lunes cualquiera en la mesa de entradas, en 2024.
+            - heading "Un lunes en la mesa de entradas" [level=2] [ref=f10e389]
+            - paragraph [ref=f10e390]:
+              - button "Saltar a 00:02:50" [ref=f10e391] [cursor=pointer]: 00:02:50
+              - button "Copiar link a este momento" [ref=f10e392] [cursor=pointer]
+              - strong [ref=f10e396]: "Diego Lamarque:"
+              - text: "Un lunes a las ocho de la mañana hay quince personas en la fila. Dos empleadas atienden. De esas quince, mi estimación de aquel momento, porque no teníamos registro, es que diez venían a preguntar algo que se resuelve en treinta segundos: a qué hora abre tal oficina, qué papeles necesito para habilitar un comercio, si ya salió mi certificado. Y cinco venían a hacer un trámite de verdad."
+            - paragraph [ref=f10e397]:
+              - button "Saltar a 00:03:25" [ref=f10e398] [cursor=pointer]: 00:03:25
+              - button "Copiar link a este momento" [ref=f10e399] [cursor=pointer]
+              - strong [ref=f10e403]: "Lucía Ferreyra:"
+              - text: Diez de quince que podrían no haber ido.
+            - paragraph [ref=f10e404]:
+              - button "Saltar a 00:03:29" [ref=f10e405] [cursor=pointer]: 00:03:29
+              - button "Copiar link a este momento" [ref=f10e406] [cursor=pointer]
+              - strong [ref=f10e410]: "Diego Lamarque:"
+              - text: Que podrían haber preguntado por teléfono, si alguien atendiera el teléfono. El teléfono lo atendían las mismas dos empleadas, cuando podían. Y las redes las manejaba el área de prensa, que respondía "te mandamos mensaje privado" y después se olvidaba.
+            - paragraph [ref=f10e411]:
+              - button "Saltar a 00:03:50" [ref=f10e412] [cursor=pointer]: 00:03:50
+              - button "Copiar link a este momento" [ref=f10e413] [cursor=pointer]
+              - strong [ref=f10e417]: "Martín Albarracín:"
+              - text: Dijiste "mi estimación porque no teníamos registro". Quiero detenerme ahí porque va a volver después.
+            - paragraph [ref=f10e418]:
+              - button "Saltar a 00:03:59" [ref=f10e419] [cursor=pointer]: 00:03:59
+              - button "Copiar link a este momento" [ref=f10e420] [cursor=pointer]
+              - strong [ref=f10e424]: "Diego Lamarque:"
+              - text: Sí, y es el primer error, anterior al chatbot. No sabíamos cuántas consultas recibíamos ni de qué tipo. Teníamos una sensación. Cuando fuimos a contratar, el proveedor nos preguntó el volumen mensual y le dijimos un número que inventamos entre tres personas en una reunión.
+            - paragraph [ref=f10e425]:
+              - button "Saltar a 00:04:22" [ref=f10e426] [cursor=pointer]: 00:04:22
+              - button "Copiar link a este momento" [ref=f10e427] [cursor=pointer]
+              - strong [ref=f10e431]: "Lucía Ferreyra:"
+              - text: ¿Cuál era el problema que querían resolver? Porque "la fila" es un síntoma.
+            - paragraph [ref=f10e432]:
+              - button "Saltar a 00:04:30" [ref=f10e433] [cursor=pointer]: 00:04:30
+              - button "Copiar link a este momento" [ref=f10e434] [cursor=pointer]
+              - strong [ref=f10e438]: "Diego Lamarque:"
+              - text: El problema que escribimos en el proyecto era "reducir el tiempo de espera presencial". El problema real, que entendí después, era que no teníamos ninguna fuente única de respuestas. Cada empleada respondía según lo que sabía. Si preguntabas lo mismo en la mesa de entradas, por teléfono y por Instagram, podías recibir tres respuestas distintas.
+            - paragraph [ref=f10e439]:
+              - button "Saltar a 00:04:58" [ref=f10e440] [cursor=pointer]: 00:04:58
+              - button "Copiar link a este momento" [ref=f10e441] [cursor=pointer]
+              - strong [ref=f10e445]: "Martín Albarracín:"
+              - text: Esto que decís es importante porque es un problema de información, no de tecnología.
+            - paragraph [ref=f10e446]:
+              - button "Saltar a 00:05:05" [ref=f10e447] [cursor=pointer]: 00:05:05
+              - button "Copiar link a este momento" [ref=f10e448] [cursor=pointer]
+              - strong [ref=f10e452]: "Diego Lamarque:"
+              - text: Totalmente. Y lo que nos vendieron era tecnología.
+            - paragraph [ref=f10e453]:
+              - button "Saltar a 00:05:12" [ref=f10e454] [cursor=pointer]: 00:05:12
+              - button "Copiar link a este momento" [ref=f10e455] [cursor=pointer]
+              - strong [ref=f10e459]: "Lucía Ferreyra:"
+              - text: ¿Cómo llegó la idea del chatbot? ¿Fue de ustedes o vino de afuera?
+            - paragraph [ref=f10e460]:
+              - button "Saltar a 00:05:19" [ref=f10e461] [cursor=pointer]: 00:05:19
+              - button "Copiar link a este momento" [ref=f10e462] [cursor=pointer]
+              - strong [ref=f10e466]: "Diego Lamarque:"
+              - text: "Vino de afuera. Un proveedor que ya trabajaba con otro municipio de la provincia nos mostró una demo. La demo era muy buena: le preguntabas cualquier cosa y respondía con naturalidad. El intendente la vio y la decisión estaba tomada antes de que mi equipo evaluara nada."
+            - paragraph [ref=f10e467]:
+              - button "Saltar a 00:05:44" [ref=f10e468] [cursor=pointer]: 00:05:44
+              - button "Copiar link a este momento" [ref=f10e469] [cursor=pointer]
+              - strong [ref=f10e473]: "Martín Albarracín:"
+              - text: ¿Hubo licitación?
+            - paragraph [ref=f10e474]:
+              - button "Saltar a 00:05:47" [ref=f10e475] [cursor=pointer]: 00:05:47
+              - button "Copiar link a este momento" [ref=f10e476] [cursor=pointer]
+              - strong [ref=f10e480]: "Diego Lamarque:"
+              - text: Hubo una contratación directa, dentro de los montos que la ordenanza permite. Legal, pero sin comparar alternativas. Eso también lo cuento como error.
+            - paragraph [ref=f10e481]:
+              - button "Saltar a 00:06:02" [ref=f10e482] [cursor=pointer]: 00:06:02
+              - button "Copiar link a este momento" [ref=f10e483] [cursor=pointer]
+              - strong [ref=f10e487]: "Lucía Ferreyra:"
+              - text: ¿Y qué alternativas había?
+            - paragraph [ref=f10e488]:
+              - button "Saltar a 00:06:06" [ref=f10e489] [cursor=pointer]: 00:06:06
+              - button "Copiar link a este momento" [ref=f10e490] [cursor=pointer]
+              - strong [ref=f10e494]: "Diego Lamarque:"
+              - text: Mirando para atrás, al menos dos. Una era no comprar nada y escribir las respuestas en una página web bien organizada, con un buscador. Otra era un sistema de preguntas frecuentes con menú, de los de antes, sin
+              - link "modelo de lenguaje" [ref=f10e495] [cursor=pointer]:
+                - /url: /glosario/modelo-de-lenguaje
+              - text: . Más tonto pero predecible.
+            - paragraph [ref=f10e496]:
+              - button "Saltar a 00:06:30" [ref=f10e497] [cursor=pointer]: 00:06:30
+              - button "Copiar link a este momento" [ref=f10e498] [cursor=pointer]
+              - strong [ref=f10e502]: "Martín Albarracín:"
+              - text: ¿Por qué no se consideraron?
+            - paragraph [ref=f10e503]:
+              - button "Saltar a 00:06:33" [ref=f10e504] [cursor=pointer]: 00:06:33
+              - button "Copiar link a este momento" [ref=f10e505] [cursor=pointer]
+              - strong [ref=f10e509]: "Diego Lamarque:"
+              - text: "Porque la demo era mejor. Y porque \"inteligencia artificial\" en el título de un proyecto municipal consigue apoyo político que \"página web ordenada\" no consigue. Lo digo sin ironía: es un dato de la realidad."
+            - paragraph [ref=f10e510]:
+              - button "Saltar a 00:06:55" [ref=f10e511] [cursor=pointer]: 00:06:55
+              - button "Copiar link a este momento" [ref=f10e512] [cursor=pointer]
+              - strong [ref=f10e516]: "Lucía Ferreyra:"
+              - text: "Lo anotamos. Es un patrón que vamos a ver en otros casos: la tecnología se elige por lo que comunica, no por lo que resuelve."
+            - paragraph [ref=f10e517]:
+              - button "Saltar a 00:07:08" [ref=f10e518] [cursor=pointer]: 00:07:08
+              - button "Copiar link a este momento" [ref=f10e519] [cursor=pointer]
+              - strong [ref=f10e523]: "Diego Lamarque:"
+              - text: "Ahora, para ser justo con el intendente: la demo también le mostró algo real. Que los vecinos podían escribir como hablan, con errores, con medias palabras, y el sistema entendía. Eso el menú de preguntas frecuentes no lo hace, y es una diferencia genuina para gente que no está acostumbrada a los formularios."
+            - paragraph [ref=f10e524]:
+              - button "Saltar a 00:07:35" [ref=f10e525] [cursor=pointer]: 00:07:35
+              - button "Copiar link a este momento" [ref=f10e526] [cursor=pointer]
+              - strong [ref=f10e530]: "Martín Albarracín:"
+              - text: "Esa es la ventaja real de los modelos de lenguaje en atención ciudadana: la tolerancia a cómo pregunta la gente. Lo que hay que ver es si vale lo que cuesta."
+            - paragraph [ref=f10e531]:
+              - button "Saltar a 00:07:50" [ref=f10e532] [cursor=pointer]: 00:07:50
+              - button "Copiar link a este momento" [ref=f10e533] [cursor=pointer]
+              - strong [ref=f10e537]: "Lucía Ferreyra:"
+              - text: ¿Quiénes eran los usuarios que tenían en la cabeza?
+            - paragraph [ref=f10e538]:
+              - button "Saltar a 00:07:55" [ref=f10e539] [cursor=pointer]: 00:07:55
+              - button "Copiar link a este momento" [ref=f10e540] [cursor=pointer]
+              - strong [ref=f10e544]: "Diego Lamarque:"
+              - text: Comerciantes que hacen habilitaciones, gente que paga tasas, gente que pide turnos. Adultos, en general. Después descubrimos que una parte grande de las consultas venía de personas mayores que preguntaban por el transporte y por la farmacia de turno, que ni siquiera estaban en nuestro inventario.
+            - paragraph [ref=f10e545]:
+              - button "Saltar a 00:08:22" [ref=f10e546] [cursor=pointer]: 00:08:22
+              - button "Copiar link a este momento" [ref=f10e547] [cursor=pointer]
+              - strong [ref=f10e551]: "Martín Albarracín:"
+              - text: O sea que el inventario de preguntas lo armaron antes de saber qué preguntaba la gente.
+            - paragraph [ref=f10e552]:
+              - button "Saltar a 00:08:29" [ref=f10e553] [cursor=pointer]: 00:08:29
+              - button "Copiar link a este momento" [ref=f10e554] [cursor=pointer]
+              - strong [ref=f10e558]: "Diego Lamarque:"
+              - text: Exactamente al revés de como hay que hacerlo.
+            - paragraph [ref=f10e559]:
+              - button "Saltar a 00:08:35" [ref=f10e560] [cursor=pointer]: 00:08:35
+              - button "Copiar link a este momento" [ref=f10e561] [cursor=pointer]
+              - strong [ref=f10e565]: "Lucía Ferreyra:"
+              - text: Vamos a la compra. Qué compraron exactamente y cómo se pagó.
+            - heading "Qué compró el municipio y cuánto costó" [level=2] [ref=f10e566]
+            - paragraph [ref=f10e567]:
+              - button "Saltar a 00:09:20" [ref=f10e568] [cursor=pointer]: 00:09:20
+              - button "Copiar link a este momento" [ref=f10e569] [cursor=pointer]
+              - strong [ref=f10e573]: "Diego Lamarque:"
+              - text: Compramos un servicio, no un sistema. El proveedor pone el asistente, que funciona sobre un modelo de lenguaje de una empresa grande, y lo conecta con documentos que nosotros le damos. Cuando un vecino pregunta, el asistente busca en nuestros documentos, le pasa los fragmentos relevantes al modelo y el modelo redacta la respuesta.
+            - paragraph [ref=f10e574]:
+              - button "Saltar a 00:09:50" [ref=f10e575] [cursor=pointer]: 00:09:50
+              - button "Copiar link a este momento" [ref=f10e576] [cursor=pointer]
+              - strong [ref=f10e580]: "Martín Albarracín:"
+              - text: "Eso que describís tiene nombre:"
+              - link "recuperación aumentada" [ref=f10e581] [cursor=pointer]:
+                - /url: /glosario/recuperacion-aumentada
+              - text: . El modelo no sabe nada del municipio; responde a partir de los documentos que se le muestran en cada consulta.
+            - paragraph [ref=f10e582]:
+              - button "Saltar a 00:10:04" [ref=f10e583] [cursor=pointer]: 00:10:04
+              - button "Copiar link a este momento" [ref=f10e584] [cursor=pointer]
+              - strong [ref=f10e588]: "Diego Lamarque:"
+              - text: Sí, aunque la palabra la aprendí después. Al principio yo creía que el sistema "aprendía" nuestros trámites. No aprende nada. Si el documento no está, inventa o dice que no sabe, según el día.
+            - paragraph [ref=f10e589]:
+              - button "Saltar a 00:10:22" [ref=f10e590] [cursor=pointer]: 00:10:22
+              - button "Copiar link a este momento" [ref=f10e591] [cursor=pointer]
+              - strong [ref=f10e595]: "Lucía Ferreyra:"
+              - text: ¿Qué documentos le dieron?
+            - paragraph [ref=f10e596]:
+              - button "Saltar a 00:10:25" [ref=f10e597] [cursor=pointer]: 00:10:25
+              - button "Copiar link a este momento" [ref=f10e598] [cursor=pointer]
+              - strong [ref=f10e602]: "Diego Lamarque:"
+              - text: "Acá está la primera sorpresa. No teníamos documentos. Teníamos ordenanzas en PDF escaneado, un folleto de habilitaciones de 2019 y lo que sabían las empleadas. El proveedor nos dijo: necesitamos una ficha por trámite, con requisitos, costos, plazos y oficina. Eso llevó dos meses y lo escribió mi equipo con las empleadas de la mesa de entradas."
+            - paragraph [ref=f10e603]:
+              - button "Saltar a 00:10:58" [ref=f10e604] [cursor=pointer]: 00:10:58
+              - button "Copiar link a este momento" [ref=f10e605] [cursor=pointer]
+              - strong [ref=f10e609]: "Martín Albarracín:"
+              - text: Guardá eso porque vas a decir al final que fue lo más valioso.
+            - paragraph [ref=f10e610]:
+              - button "Saltar a 00:11:04" [ref=f10e611] [cursor=pointer]: 00:11:04
+              - button "Copiar link a este momento" [ref=f10e612] [cursor=pointer]
+              - strong [ref=f10e616]: "Diego Lamarque:"
+              - text: Lo voy a decir.
+            - paragraph [ref=f10e617]:
+              - button "Saltar a 00:11:08" [ref=f10e618] [cursor=pointer]: 00:11:08
+              - button "Copiar link a este momento" [ref=f10e619] [cursor=pointer]
+              - strong [ref=f10e623]: "Lucía Ferreyra:"
+              - text: El precio.
+            - paragraph [ref=f10e624]:
+              - button "Saltar a 00:11:12" [ref=f10e625] [cursor=pointer]: 00:11:12
+              - button "Copiar link a este momento" [ref=f10e626] [cursor=pointer]
+              - strong [ref=f10e630]: "Diego Lamarque:"
+              - text: Un costo de implementación inicial, fijo, y después un pago por consulta procesada, con un mínimo mensual. El mínimo cubría una cantidad de consultas que el proveedor calculó a partir del número que nosotros le habíamos inventado.
+            - paragraph [ref=f10e631]:
+              - button "Saltar a 00:11:40" [ref=f10e632] [cursor=pointer]: 00:11:40
+              - button "Copiar link a este momento" [ref=f10e633] [cursor=pointer]
+              - strong [ref=f10e637]: "Martín Albarracín:"
+              - text: "Y acá va la corrección que publicamos la semana pasada: en el resumen original dijimos \"pago mensual\" y es \"pago por consulta con mínimo mensual\". No es lo mismo, y la diferencia es el centro de lo que sigue."
+            - paragraph [ref=f10e638]:
+              - button "Saltar a 00:11:57" [ref=f10e639] [cursor=pointer]: 00:11:57
+              - button "Copiar link a este momento" [ref=f10e640] [cursor=pointer]
+              - strong [ref=f10e644]: "Diego Lamarque:"
+              - text: "No es lo mismo porque cuando el asistente empezó a funcionar, las consultas fueron más del triple de lo que habíamos estimado. Parte era demanda que existía y no veíamos. Parte era gente que probaba el sistema por curiosidad. Y parte, que no esperábamos, eran conversaciones largas: una persona hacía ocho preguntas seguidas y cada una contaba como consulta."
+            - paragraph [ref=f10e645]:
+              - button "Saltar a 00:12:30" [ref=f10e646] [cursor=pointer]: 00:12:30
+              - button "Copiar link a este momento" [ref=f10e647] [cursor=pointer]
+              - strong [ref=f10e651]: "Lucía Ferreyra:"
+              - text: Entonces la factura del segundo mes fue más alta que la del mínimo.
+            - paragraph [ref=f10e652]:
+              - button "Saltar a 00:12:35" [ref=f10e653] [cursor=pointer]: 00:12:35
+              - button "Copiar link a este momento" [ref=f10e654] [cursor=pointer]
+              - strong [ref=f10e658]: "Diego Lamarque:"
+              - text: "Bastante más alta. No voy a dar el número exacto porque está en una negociación, pero el orden de magnitud fue: lo que habíamos presupuestado para un año se gastó en cinco meses."
+            - paragraph [ref=f10e659]:
+              - button "Saltar a 00:12:52" [ref=f10e660] [cursor=pointer]: 00:12:52
+              - button "Copiar link a este momento" [ref=f10e661] [cursor=pointer]
+              - strong [ref=f10e665]: "Martín Albarracín:"
+              - text: Quiero traducir esto a algo que sirva para cualquier municipio. El precio de estos sistemas está atado a
+              - link "tokens" [ref=f10e666] [cursor=pointer]:
+                - /url: /glosario/token
+              - text: ", que es la unidad en que el modelo procesa texto. El proveedor le paga a la empresa del modelo por token y te cobra a vos por consulta. Si no sabés cuántas consultas vas a tener ni cuán largas, no sabés cuánto vas a pagar. Es como contratar un servicio de agua sin medidor y descubrir el consumo con la primera factura."
+            - paragraph [ref=f10e667]:
+              - button "Saltar a 00:13:30" [ref=f10e668] [cursor=pointer]: 00:13:30
+              - button "Copiar link a este momento" [ref=f10e669] [cursor=pointer]
+              - strong [ref=f10e673]: "Diego Lamarque:"
+              - text: Es exacto. Y lo peor es que no teníamos forma de discutir la factura, porque la métrica de "consulta" la definía el proveedor y los registros los tenía el proveedor.
+            - paragraph [ref=f10e674]:
+              - button "Saltar a 00:13:45" [ref=f10e675] [cursor=pointer]: 00:13:45
+              - button "Copiar link a este momento" [ref=f10e676] [cursor=pointer]
+              - strong [ref=f10e680]: "Lucía Ferreyra:"
+              - text: ¿El contrato decía algo sobre acceso a los registros?
+            - paragraph [ref=f10e681]:
+              - button "Saltar a 00:13:50" [ref=f10e682] [cursor=pointer]: 00:13:50
+              - button "Copiar link a este momento" [ref=f10e683] [cursor=pointer]
+              - strong [ref=f10e687]: "Diego Lamarque:"
+              - text: Decía que teníamos acceso a "reportes". Reportes eran un PDF mensual con totales. No las conversaciones, no los tiempos, no las consultas sin respuesta.
+            - paragraph [ref=f10e688]:
+              - button "Saltar a 00:14:05" [ref=f10e689] [cursor=pointer]: 00:14:05
+              - button "Copiar link a este momento" [ref=f10e690] [cursor=pointer]
+              - strong [ref=f10e694]: "Martín Albarracín:"
+              - text: ¿Qué hubieras puesto en el contrato, hoy?
+            - paragraph [ref=f10e695]:
+              - button "Saltar a 00:14:10" [ref=f10e696] [cursor=pointer]: 00:14:10
+              - button "Copiar link a este momento" [ref=f10e697] [cursor=pointer]
+              - strong [ref=f10e701]: "Diego Lamarque:"
+              - text: "Tres cosas. Definición exacta de qué es una consulta facturable. Acceso completo a los registros en formato de datos, no en PDF. Y un tope mensual con corte: si se pasa, el sistema avisa y se decide si seguir."
+            - paragraph [ref=f10e702]:
+              - button "Saltar a 00:14:30" [ref=f10e703] [cursor=pointer]: 00:14:30
+              - button "Copiar link a este momento" [ref=f10e704] [cursor=pointer]
+              - strong [ref=f10e708]: "Lucía Ferreyra:"
+              - text: Esas tres cosas no son técnicas. Son cláusulas.
+            - paragraph [ref=f10e709]:
+              - button "Saltar a 00:14:35" [ref=f10e710] [cursor=pointer]: 00:14:35
+              - button "Copiar link a este momento" [ref=f10e711] [cursor=pointer]
+              - strong [ref=f10e715]: "Diego Lamarque:"
+              - text: Son cláusulas que nadie en el municipio sabía que había que pedir, incluido yo.
+            - paragraph [ref=f10e716]:
+              - button "Saltar a 00:14:44" [ref=f10e717] [cursor=pointer]: 00:14:44
+              - button "Copiar link a este momento" [ref=f10e718] [cursor=pointer]
+              - strong [ref=f10e722]: "Martín Albarracín:"
+              - text: Una pregunta sobre el costo de oportunidad. Lo que se gastó en el chatbot, ¿qué otra cosa hubiera comprado?
+            - paragraph [ref=f10e723]:
+              - button "Saltar a 00:14:53" [ref=f10e724] [cursor=pointer]: 00:14:53
+              - button "Copiar link a este momento" [ref=f10e725] [cursor=pointer]
+              - strong [ref=f10e729]: "Diego Lamarque:"
+              - text: Dos empleadas más en la mesa de entradas por un año, más o menos. No digo que hubiera sido mejor. Digo que nunca hicimos esa comparación, y había que hacerla.
+            - paragraph [ref=f10e730]:
+              - button "Saltar a 00:15:10" [ref=f10e731] [cursor=pointer]: 00:15:10
+              - button "Copiar link a este momento" [ref=f10e732] [cursor=pointer]
+              - strong [ref=f10e736]: "Lucía Ferreyra:"
+              - text: "Esa comparación es la que vamos a pedir en cada caso que analicemos: no \"cuánto cuesta el sistema\" sino \"cuánto cuesta contra la alternativa más aburrida\"."
+            - paragraph [ref=f10e737]:
+              - button "Saltar a 00:15:25" [ref=f10e738] [cursor=pointer]: 00:15:25
+              - button "Copiar link a este momento" [ref=f10e739] [cursor=pointer]
+              - strong [ref=f10e743]: "Martín Albarracín:"
+              - text: Vamos a las primeras semanas, que no fueron todas malas.
+            - 'heading "Primeras semanas: lo que funcionó" [level=2] [ref=f10e744]'
+            - paragraph [ref=f10e745]:
+              - button "Saltar a 00:16:10" [ref=f10e746] [cursor=pointer]: 00:16:10
+              - button "Copiar link a este momento" [ref=f10e747] [cursor=pointer]
+              - strong [ref=f10e751]: "Diego Lamarque:"
+              - text: "Lo primero que funcionó fue lo más simple: horarios, direcciones, requisitos de trámites que no tienen excepciones. \"Qué necesito para sacar la libreta sanitaria\" tiene una respuesta, y el asistente la daba bien, a cualquier hora, por el canal que fuera."
+            - paragraph [ref=f10e752]:
+              - button "Saltar a 00:16:35" [ref=f10e753] [cursor=pointer]: 00:16:35
+              - button "Copiar link a este momento" [ref=f10e754] [cursor=pointer]
+              - strong [ref=f10e758]: "Lucía Ferreyra:"
+              - text: ¿Cómo sabés que la daba bien?
+            - paragraph [ref=f10e759]:
+              - button "Saltar a 00:16:38" [ref=f10e760] [cursor=pointer]: 00:16:38
+              - button "Copiar link a este momento" [ref=f10e761] [cursor=pointer]
+              - strong [ref=f10e765]: "Diego Lamarque:"
+              - text: Porque las primeras dos semanas leímos todas las conversaciones. Le pedimos al proveedor acceso de emergencia, que nos dio por fuera del contrato, y una persona de mi equipo las leyó una por una. Eso fue clave y no estaba planificado.
+            - paragraph [ref=f10e766]:
+              - button "Saltar a 00:16:58" [ref=f10e767] [cursor=pointer]: 00:16:58
+              - button "Copiar link a este momento" [ref=f10e768] [cursor=pointer]
+              - strong [ref=f10e772]: "Martín Albarracín:"
+              - text: ¿Cuántas eran?
+            - paragraph [ref=f10e773]:
+              - button "Saltar a 00:17:01" [ref=f10e774] [cursor=pointer]: 00:17:01
+              - button "Copiar link a este momento" [ref=f10e775] [cursor=pointer]
+              - strong [ref=f10e779]: "Diego Lamarque:"
+              - text: Varios cientos por semana. Se podía leer. Después ya no.
+            - paragraph [ref=f10e780]:
+              - button "Saltar a 00:17:08" [ref=f10e781] [cursor=pointer]: 00:17:08
+              - button "Copiar link a este momento" [ref=f10e782] [cursor=pointer]
+              - strong [ref=f10e786]: "Lucía Ferreyra:"
+              - text: ¿Qué vieron en esas lecturas?
+            - paragraph [ref=f10e787]:
+              - button "Saltar a 00:17:12" [ref=f10e788] [cursor=pointer]: 00:17:12
+              - button "Copiar link a este momento" [ref=f10e789] [cursor=pointer]
+              - strong [ref=f10e793]: "Diego Lamarque:"
+              - text: "Tres cosas. Que la mayoría de las consultas eran de las simples, como suponíamos. Que la gente escribía con mucha más informalidad de la que imaginábamos, y el sistema la toleraba bien. Y que había una cantidad de preguntas sobre cosas que no eran del municipio: trámites provinciales, nacionales, el banco. El asistente, al principio, respondía igual."
+            - paragraph [ref=f10e794]:
+              - button "Saltar a 00:17:45" [ref=f10e795] [cursor=pointer]: 00:17:45
+              - button "Copiar link a este momento" [ref=f10e796] [cursor=pointer]
+              - strong [ref=f10e800]: "Martín Albarracín:"
+              - text: ¿Respondía cosas sobre trámites provinciales sin tener documentos?
+            - paragraph [ref=f10e801]:
+              - button "Saltar a 00:17:50" [ref=f10e802] [cursor=pointer]: 00:17:50
+              - button "Copiar link a este momento" [ref=f10e803] [cursor=pointer]
+              - strong [ref=f10e807]: "Diego Lamarque:"
+              - text: Respondía con lo que el modelo sabía de su
+              - link "entrenamiento" [ref=f10e808] [cursor=pointer]:
+                - /url: /glosario/entrenamiento
+              - text: ", que era genérico y a veces viejo. Eso lo corregimos rápido con una instrucción: si no está en los documentos del municipio, decir que no es competencia municipal y dar el link al organismo. Pero lo corregimos porque lo leímos, no porque el sistema lo avisara."
+            - paragraph [ref=f10e809]:
+              - button "Saltar a 00:18:18" [ref=f10e810] [cursor=pointer]: 00:18:18
+              - button "Copiar link a este momento" [ref=f10e811] [cursor=pointer]
+              - strong [ref=f10e815]: "Lucía Ferreyra:"
+              - text: El impacto en la fila.
+            - paragraph [ref=f10e816]:
+              - button "Saltar a 00:18:21" [ref=f10e817] [cursor=pointer]: 00:18:21
+              - button "Copiar link a este momento" [ref=f10e818] [cursor=pointer]
+              - strong [ref=f10e822]: "Diego Lamarque:"
+              - text: "Se notó. No tengo una medición rigurosa, insisto en esto, pero las empleadas lo dijeron y yo lo vi: la fila de la mañana bajó. Las consultas que quedaron en la mesa de entradas eran las de trámites reales. Eso para las empleadas fue un alivio enorme y creo que es el resultado más sólido de todo el proyecto."
+            - paragraph [ref=f10e823]:
+              - button "Saltar a 00:18:50" [ref=f10e824] [cursor=pointer]: 00:18:50
+              - button "Copiar link a este momento" [ref=f10e825] [cursor=pointer]
+              - strong [ref=f10e829]: "Martín Albarracín:"
+              - text: Qué pasó con el teléfono y las redes.
+            - paragraph [ref=f10e830]:
+              - button "Saltar a 00:18:54" [ref=f10e831] [cursor=pointer]: 00:18:54
+              - button "Copiar link a este momento" [ref=f10e832] [cursor=pointer]
+              - strong [ref=f10e836]: "Diego Lamarque:"
+              - text: El teléfono siguió igual, porque el asistente era por texto. Las redes mejoraron, porque prensa empezó a derivar al asistente en vez de prometer un mensaje privado.
+            - paragraph [ref=f10e837]:
+              - button "Saltar a 00:19:10" [ref=f10e838] [cursor=pointer]: 00:19:10
+              - button "Copiar link a este momento" [ref=f10e839] [cursor=pointer]
+              - strong [ref=f10e843]: "Lucía Ferreyra:"
+              - text: "Un detalle que me contaste antes de grabar y que me parece importante: el asistente respondía a las tres de la mañana."
+            - paragraph [ref=f10e844]:
+              - button "Saltar a 00:19:20" [ref=f10e845] [cursor=pointer]: 00:19:20
+              - button "Copiar link a este momento" [ref=f10e846] [cursor=pointer]
+              - strong [ref=f10e850]: "Diego Lamarque:"
+              - text: Sí. Y eso cambió quién consultaba. Gente que trabaja en horario de oficina y nunca podía ir a la mesa de entradas empezó a preguntar de noche. Eso es demanda que antes no existía, no porque no hubiera necesidad sino porque no había canal. Es parte de por qué las consultas fueron el triple.
+            - paragraph [ref=f10e851]:
+              - button "Saltar a 00:19:48" [ref=f10e852] [cursor=pointer]: 00:19:48
+              - button "Copiar link a este momento" [ref=f10e853] [cursor=pointer]
+              - strong [ref=f10e857]: "Martín Albarracín:"
+              - text: "Esto es un punto económico interesante. Cuando bajás el costo de preguntar, la gente pregunta más. No es que el sistema \"falló\" en la estimación: es que cambió la demanda. Cualquier presupuesto que no contemple eso va a quedar corto."
+            - paragraph [ref=f10e858]:
+              - button "Saltar a 00:20:10" [ref=f10e859] [cursor=pointer]: 00:20:10
+              - button "Copiar link a este momento" [ref=f10e860] [cursor=pointer]
+              - strong [ref=f10e864]: "Lucía Ferreyra:"
+              - text: ¿Y la calidad de las respuestas en las simples se mantuvo?
+            - paragraph [ref=f10e865]:
+              - button "Saltar a 00:20:16" [ref=f10e866] [cursor=pointer]: 00:20:16
+              - button "Copiar link a este momento" [ref=f10e867] [cursor=pointer]
+              - strong [ref=f10e871]: "Diego Lamarque:"
+              - text: En las simples sí, mientras los documentos estuvieran actualizados. Que es la transición al siguiente tema.
+            - paragraph [ref=f10e872]:
+              - button "Saltar a 00:20:28" [ref=f10e873] [cursor=pointer]: 00:20:28
+              - button "Copiar link a este momento" [ref=f10e874] [cursor=pointer]
+              - strong [ref=f10e878]: "Martín Albarracín:"
+              - text: Una más antes de pasar. ¿Hubo alguien del municipio que se opusiera?
+            - paragraph [ref=f10e879]:
+              - button "Saltar a 00:20:35" [ref=f10e880] [cursor=pointer]: 00:20:35
+              - button "Copiar link a este momento" [ref=f10e881] [cursor=pointer]
+              - strong [ref=f10e885]: "Diego Lamarque:"
+              - text: Las empleadas, al principio, por miedo a que las reemplazaran. No pasó, y fueron ellas las que escribieron las fichas de trámites, así que terminaron siendo las que más sabían del sistema. Pero el miedo era razonable y nadie se los explicó antes.
+            - paragraph [ref=f10e886]:
+              - button "Saltar a 00:21:00" [ref=f10e887] [cursor=pointer]: 00:21:00
+              - button "Copiar link a este momento" [ref=f10e888] [cursor=pointer]
+              - strong [ref=f10e892]: "Lucía Ferreyra:"
+              - text: ¿Cambió su trabajo?
+            - paragraph [ref=f10e893]:
+              - button "Saltar a 00:21:03" [ref=f10e894] [cursor=pointer]: 00:21:03
+              - button "Copiar link a este momento" [ref=f10e895] [cursor=pointer]
+              - strong [ref=f10e899]: "Diego Lamarque:"
+              - text: "Cambió para mejor en lo cotidiano: menos preguntas repetidas. Y cambió para peor en algo que no habíamos previsto: ahora les llegan los casos que el asistente no pudo resolver, que son los más difíciles, y les llegan con una persona que ya está enojada porque el bot le dio una vuelta."
+            - paragraph [ref=f10e900]:
+              - button "Saltar a 00:21:30" [ref=f10e901] [cursor=pointer]: 00:21:30
+              - button "Copiar link a este momento" [ref=f10e902] [cursor=pointer]
+              - strong [ref=f10e906]: "Martín Albarracín:"
+              - text: El sistema filtró lo fácil y concentró lo difícil en las mismas dos personas.
+            - paragraph [ref=f10e907]:
+              - button "Saltar a 00:21:36" [ref=f10e908] [cursor=pointer]: 00:21:36
+              - button "Copiar link a este momento" [ref=f10e909] [cursor=pointer]
+              - strong [ref=f10e913]: "Diego Lamarque:"
+              - text: Con el mismo sueldo.
+            - paragraph [ref=f10e914]:
+              - button "Saltar a 00:21:40" [ref=f10e915] [cursor=pointer]: 00:21:40
+              - button "Copiar link a este momento" [ref=f10e916] [cursor=pointer]
+              - strong [ref=f10e920]: "Lucía Ferreyra:"
+              - text: Lo que salió mal.
+            - heading "Lo que salió mal" [level=2] [ref=f10e921]
+            - paragraph [ref=f10e922]:
+              - button "Saltar a 00:22:40" [ref=f10e923] [cursor=pointer]: 00:22:40
+              - button "Copiar link a este momento" [ref=f10e924] [cursor=pointer]
+              - strong [ref=f10e928]: "Diego Lamarque:"
+              - text: "Lo primero: las excepciones. Un trámite tiene una respuesta general y después tiene casos. La tasa de un comercio tiene un valor, pero hay descuentos por pago anticipado, por rubro, por zona. El asistente daba el valor general con total seguridad. La persona iba a pagar, descubría que era otro monto, y volvía enojada."
+            - paragraph [ref=f10e929]:
+              - button "Saltar a 00:23:12" [ref=f10e930] [cursor=pointer]: 00:23:12
+              - button "Copiar link a este momento" [ref=f10e931] [cursor=pointer]
+              - strong [ref=f10e935]: "Martín Albarracín:"
+              - text: ¿Eso es un problema del sistema o de los documentos?
+            - paragraph [ref=f10e936]:
+              - button "Saltar a 00:23:17" [ref=f10e937] [cursor=pointer]: 00:23:17
+              - button "Copiar link a este momento" [ref=f10e938] [cursor=pointer]
+              - strong [ref=f10e942]: "Diego Lamarque:"
+              - text: De los dos. Los documentos tenían las excepciones, pero en párrafos largos, y el modelo elegía la parte simple. Y el sistema no tenía forma de preguntar "¿de qué rubro es tu comercio?" antes de responder. Respondía con lo primero que encontraba.
+            - paragraph [ref=f10e943]:
+              - button "Saltar a 00:23:40" [ref=f10e944] [cursor=pointer]: 00:23:40
+              - button "Copiar link a este momento" [ref=f10e945] [cursor=pointer]
+              - strong [ref=f10e949]: "Lucía Ferreyra:"
+              - text: Lo segundo.
+            - paragraph [ref=f10e950]:
+              - button "Saltar a 00:23:43" [ref=f10e951] [cursor=pointer]: 00:23:43
+              - button "Copiar link a este momento" [ref=f10e952] [cursor=pointer]
+              - strong [ref=f10e956]: "Diego Lamarque:"
+              - text: La normativa nueva. El Concejo aprobó una ordenanza que cambiaba requisitos de habilitación. Nadie actualizó la ficha. Durante tres semanas el asistente dio requisitos derogados a todo el que preguntó. Con total seguridad, de nuevo.
+            - paragraph [ref=f10e957]:
+              - button "Saltar a 00:24:05" [ref=f10e958] [cursor=pointer]: 00:24:05
+              - button "Copiar link a este momento" [ref=f10e959] [cursor=pointer]
+              - strong [ref=f10e963]: "Martín Albarracín:"
+              - text: ¿Cómo se enteraron?
+            - paragraph [ref=f10e964]:
+              - button "Saltar a 00:24:08" [ref=f10e965] [cursor=pointer]: 00:24:08
+              - button "Copiar link a este momento" [ref=f10e966] [cursor=pointer]
+              - strong [ref=f10e970]: "Diego Lamarque:"
+              - text: Por un vecino que fue con los papeles viejos y la empleada le dijo que eso había cambiado. El vecino mostró la conversación con el asistente. Ahí nos dimos cuenta de que no teníamos ningún proceso para que un cambio de normativa llegara a los documentos del sistema.
+            - paragraph [ref=f10e971]:
+              - button "Saltar a 00:24:30" [ref=f10e972] [cursor=pointer]: 00:24:30
+              - button "Copiar link a este momento" [ref=f10e973] [cursor=pointer]
+              - strong [ref=f10e977]: "Lucía Ferreyra:"
+              - text: "Esto me parece el error más importante del caso, y no tiene nada de tecnológico. Es un problema de circuito administrativo: quién avisa a quién cuando cambia una norma."
+            - paragraph [ref=f10e978]:
+              - button "Saltar a 00:24:45" [ref=f10e979] [cursor=pointer]: 00:24:45
+              - button "Copiar link a este momento" [ref=f10e980] [cursor=pointer]
+              - strong [ref=f10e984]: "Diego Lamarque:"
+              - text: Y ese circuito no existía antes del chatbot tampoco. Las empleadas se enteraban de los cambios por el diario local, a veces. El chatbot hizo visible un problema que ya teníamos.
+            - paragraph [ref=f10e985]:
+              - button "Saltar a 00:25:03" [ref=f10e986] [cursor=pointer]: 00:25:03
+              - button "Copiar link a este momento" [ref=f10e987] [cursor=pointer]
+              - strong [ref=f10e991]: "Martín Albarracín:"
+              - text: Lo tercero.
+            - paragraph [ref=f10e992]:
+              - button "Saltar a 00:25:06" [ref=f10e993] [cursor=pointer]: 00:25:06
+              - button "Copiar link a este momento" [ref=f10e994] [cursor=pointer]
+              - strong [ref=f10e998]: "Diego Lamarque:"
+              - text: Las respuestas inventadas. Pocas, en proporción, pero graves. Un vecino preguntó por un subsidio municipal que no existe, y el asistente le explicó los requisitos. Inventó un programa entero, con nombre, a partir de fragmentos de otros programas. La persona fue a la mesa de entradas a inscribirse.
+            - paragraph [ref=f10e999]:
+              - button "Saltar a 00:25:35" [ref=f10e1000] [cursor=pointer]: 00:25:35
+              - button "Copiar link a este momento" [ref=f10e1001] [cursor=pointer]
+              - strong [ref=f10e1005]: "Lucía Ferreyra:"
+              - text: Esto es lo que en el episodio anterior llamamos
+              - link "alucinación" [ref=f10e1006] [cursor=pointer]:
+                - /url: /glosario/alucinacion
+              - text: . El modelo completa con lo más probable cuando no tiene el dato.
+            - paragraph [ref=f10e1007]:
+              - button "Saltar a 00:25:46" [ref=f10e1008] [cursor=pointer]: 00:25:46
+              - button "Copiar link a este momento" [ref=f10e1009] [cursor=pointer]
+              - strong [ref=f10e1013]: "Diego Lamarque:"
+              - text: "Después de eso cambiamos la instrucción para que fuera mucho más conservador, y bajó. Pero también bajó la utilidad: empezó a decir \"consultá en la mesa de entradas\" para cosas que antes respondía bien. Hay una perilla entre inventar y no servir, y nadie te dice dónde ponerla."
+            - paragraph [ref=f10e1014]:
+              - button "Saltar a 00:26:12" [ref=f10e1015] [cursor=pointer]: 00:26:12
+              - button "Copiar link a este momento" [ref=f10e1016] [cursor=pointer]
+              - strong [ref=f10e1020]: "Martín Albarracín:"
+              - text: ¿Midieron cuántas respuestas eran incorrectas?
+            - paragraph [ref=f10e1021]:
+              - button "Saltar a 00:26:17" [ref=f10e1022] [cursor=pointer]: 00:26:17
+              - button "Copiar link a este momento" [ref=f10e1023] [cursor=pointer]
+              - strong [ref=f10e1027]: "Diego Lamarque:"
+              - text: "No de forma sistemática, y es otro error. Tenemos la lectura de las primeras dos semanas y después muestras ocasionales. No puedo decirte un porcentaje confiable. Lo que puedo decir es que las incorrectas se concentraban en tres tipos: excepciones, normativa reciente y cosas que no existían."
+            - paragraph [ref=f10e1028]:
+              - button "Saltar a 00:26:45" [ref=f10e1029] [cursor=pointer]: 00:26:45
+              - button "Copiar link a este momento" [ref=f10e1030] [cursor=pointer]
+              - strong [ref=f10e1034]: "Lucía Ferreyra:"
+              - text: Eso ya es un hallazgo útil, aunque no sea una cifra. Son tres categorías que cualquier municipio puede revisar antes de lanzar.
+            - paragraph [ref=f10e1035]:
+              - button "Saltar a 00:26:58" [ref=f10e1036] [cursor=pointer]: 00:26:58
+              - button "Copiar link a este momento" [ref=f10e1037] [cursor=pointer]
+              - strong [ref=f10e1041]: "Martín Albarracín:"
+              - text: Lo cuarto, que me contaste y es menos obvio.
+            - paragraph [ref=f10e1042]:
+              - button "Saltar a 00:27:03" [ref=f10e1043] [cursor=pointer]: 00:27:03
+              - button "Copiar link a este momento" [ref=f10e1044] [cursor=pointer]
+              - strong [ref=f10e1048]: "Diego Lamarque:"
+              - text: El tono. El asistente era amable de una forma que a algunos vecinos les molestaba. Pedía disculpas todo el tiempo, usaba frases largas, y cuando no sabía, en vez de decir "no sé" daba vueltas. Personas mayores, en particular, nos dijeron que preferían una respuesta corta y seca.
+            - paragraph [ref=f10e1049]:
+              - button "Saltar a 00:27:30" [ref=f10e1050] [cursor=pointer]: 00:27:30
+              - button "Copiar link a este momento" [ref=f10e1051] [cursor=pointer]
+              - strong [ref=f10e1055]: "Lucía Ferreyra:"
+              - text: Eso también es una decisión de configuración.
+            - paragraph [ref=f10e1056]:
+              - button "Saltar a 00:27:34" [ref=f10e1057] [cursor=pointer]: 00:27:34
+              - button "Copiar link a este momento" [ref=f10e1058] [cursor=pointer]
+              - strong [ref=f10e1062]: "Diego Lamarque:"
+              - text: Lo es, pero la configuración venía por defecto del proveedor y nosotros no sabíamos que se podía cambiar. Hay un documento de instrucciones del sistema, un
+              - link "prompt" [ref=f10e1063] [cursor=pointer]:
+                - /url: /glosario/prompt
+              - text: ", que define cómo habla. Lo vimos por primera vez al cuarto mes."
+            - paragraph [ref=f10e1064]:
+              - button "Saltar a 00:27:55" [ref=f10e1065] [cursor=pointer]: 00:27:55
+              - button "Copiar link a este momento" [ref=f10e1066] [cursor=pointer]
+              - strong [ref=f10e1070]: "Martín Albarracín:"
+              - text: ¿Ese documento es público?
+            - paragraph [ref=f10e1071]:
+              - button "Saltar a 00:28:00" [ref=f10e1072] [cursor=pointer]: 00:28:00
+              - button "Copiar link a este momento" [ref=f10e1073] [cursor=pointer]
+              - strong [ref=f10e1077]: "Diego Lamarque:"
+              - text: No lo era. Yo creo que debería serlo. Si el municipio le habla a los vecinos a través de un sistema, cómo está instruido ese sistema es una decisión pública.
+            - paragraph [ref=f10e1078]:
+              - button "Saltar a 00:28:15" [ref=f10e1079] [cursor=pointer]: 00:28:15
+              - button "Copiar link a este momento" [ref=f10e1080] [cursor=pointer]
+              - strong [ref=f10e1084]: "Lucía Ferreyra:"
+              - text: "Lo anotamos como recomendación concreta: el prompt del sistema como documento público."
+            - paragraph [ref=f10e1085]:
+              - button "Saltar a 00:28:25" [ref=f10e1086] [cursor=pointer]: 00:28:25
+              - button "Copiar link a este momento" [ref=f10e1087] [cursor=pointer]
+              - strong [ref=f10e1091]: "Martín Albarracín:"
+              - text: ¿Algo que salió mal y fuera culpa del proveedor, no del municipio?
+            - paragraph [ref=f10e1092]:
+              - button "Saltar a 00:28:31" [ref=f10e1093] [cursor=pointer]: 00:28:31
+              - button "Copiar link a este momento" [ref=f10e1094] [cursor=pointer]
+              - strong [ref=f10e1098]: "Diego Lamarque:"
+              - text: El acceso a los datos, que ya dije. Y que la demo mostraba un sistema con documentos perfectos que ellos habían preparado, y nunca nos dijeron cuánto trabajo era llegar a eso. No mintieron. Pero no lo dijeron.
+            - paragraph [ref=f10e1099]:
+              - button "Saltar a 00:28:52" [ref=f10e1100] [cursor=pointer]: 00:28:52
+              - button "Copiar link a este momento" [ref=f10e1101] [cursor=pointer]
+              - strong [ref=f10e1105]: "Lucía Ferreyra:"
+              - text: Vamos a los datos personales, que es la parte que menos se discutió y más me preocupa.
+            - heading "Datos personales y quién responde" [level=2] [ref=f10e1106]
+            - paragraph [ref=f10e1107]:
+              - button "Saltar a 00:29:30" [ref=f10e1108] [cursor=pointer]: 00:29:30
+              - button "Copiar link a este momento" [ref=f10e1109] [cursor=pointer]
+              - strong [ref=f10e1113]: "Lucía Ferreyra:"
+              - text: Un vecino le escribe al asistente "soy Juan Pérez, DNI tanto, quiero saber si mi expediente de discapacidad ya salió". Esa conversación, ¿dónde queda?
+            - paragraph [ref=f10e1114]:
+              - button "Saltar a 00:29:45" [ref=f10e1115] [cursor=pointer]: 00:29:45
+              - button "Copiar link a este momento" [ref=f10e1116] [cursor=pointer]
+              - strong [ref=f10e1120]: "Diego Lamarque:"
+              - text: En los servidores del proveedor. Y, según el contrato del proveedor con la empresa del modelo, posiblemente también pasa por los servidores de esa empresa, fuera del país. Eso lo averigüé después de firmar.
+            - paragraph [ref=f10e1121]:
+              - button "Saltar a 00:30:05" [ref=f10e1122] [cursor=pointer]: 00:30:05
+              - button "Copiar link a este momento" [ref=f10e1123] [cursor=pointer]
+              - strong [ref=f10e1127]: "Martín Albarracín:"
+              - text: ¿El contrato con el proveedor decía algo sobre esto?
+            - paragraph [ref=f10e1128]:
+              - button "Saltar a 00:30:10" [ref=f10e1129] [cursor=pointer]: 00:30:10
+              - button "Copiar link a este momento" [ref=f10e1130] [cursor=pointer]
+              - strong [ref=f10e1134]: "Diego Lamarque:"
+              - text: Tenía una cláusula genérica de confidencialidad. No decía dónde se almacenan los datos, por cuánto tiempo, ni si se usan para otra cosa. No decía quién es el responsable del tratamiento en los términos de la Ley 25.326.
+            - paragraph [ref=f10e1135]:
+              - button "Saltar a 00:30:30" [ref=f10e1136] [cursor=pointer]: 00:30:30
+              - button "Copiar link a este momento" [ref=f10e1137] [cursor=pointer]
+              - strong [ref=f10e1141]: "Lucía Ferreyra:"
+              - text: "Para quien no está en el tema: la 25.326 es la ley argentina de datos personales. Define un responsable del tratamiento, que es quien decide qué se hace con los datos, y le pone obligaciones. Acá hay tres actores, municipio, proveedor y empresa del modelo, y no estaba escrito quién era qué."
+            - paragraph [ref=f10e1142]:
+              - button "Saltar a 00:30:58" [ref=f10e1143] [cursor=pointer]: 00:30:58
+              - button "Copiar link a este momento" [ref=f10e1144] [cursor=pointer]
+              - strong [ref=f10e1148]: "Diego Lamarque:"
+              - text: Y hay datos sensibles. Discapacidad, salud, situación económica. La gente los escribe porque el asistente pregunta con naturalidad y se siente como hablar con una persona.
+            - paragraph [ref=f10e1149]:
+              - button "Saltar a 00:31:15" [ref=f10e1150] [cursor=pointer]: 00:31:15
+              - button "Copiar link a este momento" [ref=f10e1151] [cursor=pointer]
+              - strong [ref=f10e1155]: "Martín Albarracín:"
+              - text: ¿Qué hicieron cuando se dieron cuenta?
+            - paragraph [ref=f10e1156]:
+              - button "Saltar a 00:31:19" [ref=f10e1157] [cursor=pointer]: 00:31:19
+              - button "Copiar link a este momento" [ref=f10e1158] [cursor=pointer]
+              - strong [ref=f10e1162]: "Diego Lamarque:"
+              - text: Tres cosas. Pusimos un aviso al inicio de la conversación que dice que no se ingresen datos personales. Le pedimos al proveedor que configurara el sistema para no pedir DNI ni número de expediente, y que derivara esos casos a la mesa de entradas. Y empezamos a redactar un anexo al contrato sobre datos, que todavía está en negociación.
+            - paragraph [ref=f10e1163]:
+              - button "Saltar a 00:31:50" [ref=f10e1164] [cursor=pointer]: 00:31:50
+              - button "Copiar link a este momento" [ref=f10e1165] [cursor=pointer]
+              - strong [ref=f10e1169]: "Lucía Ferreyra:"
+              - text: El aviso, ¿funciona?
+            - paragraph [ref=f10e1170]:
+              - button "Saltar a 00:31:53" [ref=f10e1171] [cursor=pointer]: 00:31:53
+              - button "Copiar link a este momento" [ref=f10e1172] [cursor=pointer]
+              - strong [ref=f10e1176]: "Diego Lamarque:"
+              - text: Poco. La gente lo acepta sin leer y después escribe el DNI igual. Es como los avisos de cookies.
+            - paragraph [ref=f10e1177]:
+              - button "Saltar a 00:32:05" [ref=f10e1178] [cursor=pointer]: 00:32:05
+              - button "Copiar link a este momento" [ref=f10e1179] [cursor=pointer]
+              - strong [ref=f10e1183]: "Martín Albarracín:"
+              - text: "La otra pregunta de esta sección: cuando el asistente le dio los requisitos derogados a un vecino durante tres semanas, ¿quién responde?"
+            - paragraph [ref=f10e1184]:
+              - button "Saltar a 00:32:17" [ref=f10e1185] [cursor=pointer]: 00:32:17
+              - button "Copiar link a este momento" [ref=f10e1186] [cursor=pointer]
+              - strong [ref=f10e1190]: "Diego Lamarque:"
+              - text: Legalmente, el municipio. El vecino se relaciona con el municipio, no con el proveedor. En la práctica, el vecino no tenía a quién reclamarle porque no había un procedimiento. Iba a la mesa de entradas y la empleada le decía "eso lo dijo el bot".
+            - paragraph [ref=f10e1191]:
+              - button "Saltar a 00:32:40" [ref=f10e1192] [cursor=pointer]: 00:32:40
+              - button "Copiar link a este momento" [ref=f10e1193] [cursor=pointer]
+              - strong [ref=f10e1197]: "Lucía Ferreyra:"
+              - text: "\"Lo dijo el bot\" como respuesta institucional."
+            - paragraph [ref=f10e1198]:
+              - button "Saltar a 00:32:45" [ref=f10e1199] [cursor=pointer]: 00:32:45
+              - button "Copiar link a este momento" [ref=f10e1200] [cursor=pointer]
+              - strong [ref=f10e1204]: "Diego Lamarque:"
+              - text: "Sí. Y es inaceptable, lo sé. Ahora hay un procedimiento: si una respuesta del asistente generó un perjuicio, se registra como reclamo y lo firma una persona. Pero tardamos cuatro meses en tenerlo."
+            - paragraph [ref=f10e1205]:
+              - button "Saltar a 00:33:05" [ref=f10e1206] [cursor=pointer]: 00:33:05
+              - button "Copiar link a este momento" [ref=f10e1207] [cursor=pointer]
+              - strong [ref=f10e1211]: "Martín Albarracín:"
+              - text: "Hay un documento que linkeamos, de la Open Government Partnership con el Ada Lovelace Institute, sobre rendición de cuentas de sistemas automatizados en el Estado. Lo marcamos como pendiente de verificación porque todavía no confirmamos la URL del PDF completo. Una de sus recomendaciones es exactamente esa: que cada decisión asistida por un sistema tenga una persona responsable identificable."
+            - paragraph [ref=f10e1212]:
+              - button "Saltar a 00:33:38" [ref=f10e1213] [cursor=pointer]: 00:33:38
+              - button "Copiar link a este momento" [ref=f10e1214] [cursor=pointer]
+              - strong [ref=f10e1218]: "Lucía Ferreyra:"
+              - text: "Y la Recomendación de la UNESCO sobre ética de IA, que citamos en el episodio pasado, lo dice como principio: supervisión y determinación humanas. Que no es un principio abstracto: es que haya alguien a quien reclamarle."
+            - paragraph [ref=f10e1219]:
+              - button "Saltar a 00:33:58" [ref=f10e1220] [cursor=pointer]: 00:33:58
+              - button "Copiar link a este momento" [ref=f10e1221] [cursor=pointer]
+              - strong [ref=f10e1225]: "Diego Lamarque:"
+              - text: Lo que yo aprendí es que la supervisión humana no es un botón. Es una persona con tiempo asignado para leer conversaciones, un procedimiento de reclamo y un circuito para actualizar documentos. Todo eso cuesta plata y no estaba en el presupuesto del proyecto.
+            - paragraph [ref=f10e1226]:
+              - button "Saltar a 00:34:22" [ref=f10e1227] [cursor=pointer]: 00:34:22
+              - button "Copiar link a este momento" [ref=f10e1228] [cursor=pointer]
+              - strong [ref=f10e1232]: "Martín Albarracín:"
+              - text: O sea que el costo real del sistema es el costo del contrato más el costo de supervisarlo, y el segundo no se contó.
+            - paragraph [ref=f10e1233]:
+              - button "Saltar a 00:34:31" [ref=f10e1234] [cursor=pointer]: 00:34:31
+              - button "Copiar link a este momento" [ref=f10e1235] [cursor=pointer]
+              - strong [ref=f10e1239]: "Diego Lamarque:"
+              - text: Nunca.
+            - paragraph [ref=f10e1240]:
+              - button "Saltar a 00:34:35" [ref=f10e1241] [cursor=pointer]: 00:34:35
+              - button "Copiar link a este momento" [ref=f10e1242] [cursor=pointer]
+              - strong [ref=f10e1246]: "Lucía Ferreyra:"
+              - text: Última sección. Diego, un intendente de un municipio parecido te llama mañana y te dice que está por firmar.
+            - heading "Qué le diría a otro intendente" [level=2] [ref=f10e1247]
+            - paragraph [ref=f10e1248]:
+              - button "Saltar a 00:35:15" [ref=f10e1249] [cursor=pointer]: 00:35:15
+              - button "Copiar link a este momento" [ref=f10e1250] [cursor=pointer]
+              - strong [ref=f10e1254]: "Diego Lamarque:"
+              - text: "Primero le diría: antes de firmar nada, medí un mes de consultas. Con una planilla, a mano, en la mesa de entradas, el teléfono y las redes. Qué preguntan, cuántos, cuándo. Sin eso no podés negociar el precio ni saber si el problema es el que creés."
+            - paragraph [ref=f10e1255]:
+              - button "Saltar a 00:35:40" [ref=f10e1256] [cursor=pointer]: 00:35:40
+              - button "Copiar link a este momento" [ref=f10e1257] [cursor=pointer]
+              - strong [ref=f10e1261]: "Martín Albarracín:"
+              - text: Segundo.
+            - paragraph [ref=f10e1262]:
+              - button "Saltar a 00:35:42" [ref=f10e1263] [cursor=pointer]: 00:35:42
+              - button "Copiar link a este momento" [ref=f10e1264] [cursor=pointer]
+              - strong [ref=f10e1268]: "Diego Lamarque:"
+              - text: Escribí las fichas de trámites antes de elegir proveedor. Si no tenés las respuestas escritas, ningún sistema las va a inventar bien. Y si las tenés escritas, capaz descubrís que con una buena página web te alcanza.
+            - paragraph [ref=f10e1269]:
+              - button "Saltar a 00:36:00" [ref=f10e1270] [cursor=pointer]: 00:36:00
+              - button "Copiar link a este momento" [ref=f10e1271] [cursor=pointer]
+              - strong [ref=f10e1275]: "Lucía Ferreyra:"
+              - text: Tercero.
+            - paragraph [ref=f10e1276]:
+              - button "Saltar a 00:36:02" [ref=f10e1277] [cursor=pointer]: 00:36:02
+              - button "Copiar link a este momento" [ref=f10e1278] [cursor=pointer]
+              - strong [ref=f10e1282]: "Diego Lamarque:"
+              - text: "En el contrato: definición de consulta facturable, acceso a todos los registros en datos, tope mensual, dónde se guardan los datos personales y quién es el responsable. Y el prompt del sistema como anexo, para que lo puedas leer y cambiar."
+            - paragraph [ref=f10e1283]:
+              - button "Saltar a 00:36:22" [ref=f10e1284] [cursor=pointer]: 00:36:22
+              - button "Copiar link a este momento" [ref=f10e1285] [cursor=pointer]
+              - strong [ref=f10e1289]: "Martín Albarracín:"
+              - text: Cuarto.
+            - paragraph [ref=f10e1290]:
+              - button "Saltar a 00:36:24" [ref=f10e1291] [cursor=pointer]: 00:36:24
+              - button "Copiar link a este momento" [ref=f10e1292] [cursor=pointer]
+              - strong [ref=f10e1296]: "Diego Lamarque:"
+              - text: Presupuestá una persona para supervisar. No medio día de alguien que ya tiene otro trabajo. Una persona.
+            - paragraph [ref=f10e1297]:
+              - button "Saltar a 00:36:35" [ref=f10e1298] [cursor=pointer]: 00:36:35
+              - button "Copiar link a este momento" [ref=f10e1299] [cursor=pointer]
+              - strong [ref=f10e1303]: "Lucía Ferreyra:"
+              - text: Y si te preguntara si valió la pena.
+            - paragraph [ref=f10e1304]:
+              - button "Saltar a 00:36:48" [ref=f10e1305] [cursor=pointer]: 00:36:48
+              - button "Copiar link a este momento" [ref=f10e1306] [cursor=pointer]
+              - strong [ref=f10e1310]: "Diego Lamarque:"
+              - text: Le diría que lo que más sirvió no fue el bot. Fue que por primera vez tuvimos que escribir en un documento cómo se hace cada trámite. Eso no lo teníamos. Hoy las empleadas responden igual en todos los canales, los cambios de ordenanza llegan a una ficha, y hay alguien que lee lo que la gente pregunta. Si mañana apagamos el asistente, eso queda.
+            - paragraph [ref=f10e1311]:
+              - button "Saltar a 00:37:20" [ref=f10e1312] [cursor=pointer]: 00:37:20
+              - button "Copiar link a este momento" [ref=f10e1313] [cursor=pointer]
+              - strong [ref=f10e1317]: "Martín Albarracín:"
+              - text: "Es un resultado curioso: el valor estuvo en la preparación, no en el producto."
+            - paragraph [ref=f10e1318]:
+              - button "Saltar a 00:37:27" [ref=f10e1319] [cursor=pointer]: 00:37:27
+              - button "Copiar link a este momento" [ref=f10e1320] [cursor=pointer]
+              - strong [ref=f10e1324]: "Diego Lamarque:"
+              - text: Y me pregunto si no hubiéramos llegado a la preparación sin la excusa del producto. Probablemente no. Nadie aprueba un proyecto que se llama "escribir fichas de trámites".
+            - paragraph [ref=f10e1325]:
+              - button "Saltar a 00:37:42" [ref=f10e1326] [cursor=pointer]: 00:37:42
+              - button "Copiar link a este momento" [ref=f10e1327] [cursor=pointer]
+              - strong [ref=f10e1331]: "Lucía Ferreyra:"
+              - text: Lo que cambia y lo que no, en un minuto cada uno.
+            - paragraph [ref=f10e1332]:
+              - button "Saltar a 00:37:48" [ref=f10e1333] [cursor=pointer]: 00:37:48
+              - button "Copiar link a este momento" [ref=f10e1334] [cursor=pointer]
+              - strong [ref=f10e1338]: "Martín Albarracín:"
+              - text: "Lo que cambia: la atención de las consultas simples se puede resolver a cualquier hora y por cualquier canal, y eso libera a las personas para lo difícil. Lo que no cambia: alguien tiene que escribir y mantener las respuestas, alguien tiene que leer lo que el sistema dice, y alguien tiene que responder cuando se equivoca. Si esas tres personas no existen, el sistema no reemplaza a nadie: solo reparte el trabajo de otra manera y lo hace menos visible."
+            - paragraph [ref=f10e1339]:
+              - button "Saltar a 00:38:25" [ref=f10e1340] [cursor=pointer]: 00:38:25
+              - button "Copiar link a este momento" [ref=f10e1341] [cursor=pointer]
+              - strong [ref=f10e1345]: "Lucía Ferreyra:"
+              - text: "Y una pregunta que dejamos abierta: ¿qué pasa cuando el contrato termina? Las fichas quedan. Las conversaciones, los registros, lo aprendido sobre qué pregunta la gente, eso está en servidores del proveedor. Portabilidad de datos en contratos públicos de IA: caso para otro episodio."
+            - heading "Cierre y fuentes" [level=2] [ref=f10e1346]
+            - paragraph [ref=f10e1347]:
+              - button "Saltar a 00:39:00" [ref=f10e1348] [cursor=pointer]: 00:39:00
+              - button "Copiar link a este momento" [ref=f10e1349] [cursor=pointer]
+              - strong [ref=f10e1353]: "Martín Albarracín:"
+              - text: "Fuentes del episodio: la Ley 25.326 en InfoLEG, para la parte de responsables del tratamiento; el Portal Nacional de"
+              - link "Datos Abiertos" [ref=f10e1354] [cursor=pointer]:
+                - /url: /glosario/datos-abiertos
+              - text: ", que mencionamos como lugar donde publicar el inventario de trámites y las métricas del asistente; el informe de la Open Government Partnership sobre rendición de cuentas algorítmica, pendiente de verificación de URL; y la Recomendación de la UNESCO."
+            - paragraph [ref=f10e1355]:
+              - button "Saltar a 00:39:30" [ref=f10e1356] [cursor=pointer]: 00:39:30
+              - button "Copiar link a este momento" [ref=f10e1357] [cursor=pointer]
+              - strong [ref=f10e1361]: "Lucía Ferreyra:"
+              - text: "Cómo usamos IA en este episodio: la transcripción es automática y la revisó Martín. El borrador del resumen y los capítulos lo generó un modelo y lo corregimos. Las cifras del caso las aportó Diego y las contrastamos con lo que pudimos: no son auditadas, y lo decimos. Las fuentes y las conclusiones son nuestras."
+            - paragraph [ref=f10e1362]:
+              - button "Saltar a 00:39:58" [ref=f10e1363] [cursor=pointer]: 00:39:58
+              - button "Copiar link a este momento" [ref=f10e1364] [cursor=pointer]
+              - strong [ref=f10e1368]: "Martín Albarracín:"
+              - text: "Y una corrección ya publicada: en la primera versión del resumen decíamos \"pago mensual\" y es \"pago por consulta con mínimo mensual\". Está en la página con la fecha."
+            - paragraph [ref=f10e1369]:
+              - button "Saltar a 00:40:12" [ref=f10e1370] [cursor=pointer]: 00:40:12
+              - button "Copiar link a este momento" [ref=f10e1371] [cursor=pointer]
+              - strong [ref=f10e1375]: "Lucía Ferreyra:"
+              - text: Diego, gracias por la franqueza.
+            - paragraph [ref=f10e1376]:
+              - button "Saltar a 00:40:16" [ref=f10e1377] [cursor=pointer]: 00:40:16
+              - button "Copiar link a este momento" [ref=f10e1378] [cursor=pointer]
+              - strong [ref=f10e1382]: "Diego Lamarque:"
+              - text: Gracias a ustedes. Si algún funcionario quiere los modelos de ficha de trámite que armamos, que escriba. Son públicos.
+            - paragraph [ref=f10e1383]:
+              - button "Saltar a 00:40:28" [ref=f10e1384] [cursor=pointer]: 00:40:28
+              - button "Copiar link a este momento" [ref=f10e1385] [cursor=pointer]
+              - strong [ref=f10e1389]: "Martín Albarracín:"
+              - text: Lo linkeamos cuando los tengamos. Esto fue Señal Pública.
+            - paragraph [ref=f10e1390]:
+              - button "Saltar a 00:40:35" [ref=f10e1391] [cursor=pointer]: 00:40:35
+              - button "Copiar link a este momento" [ref=f10e1392] [cursor=pointer]
+              - strong [ref=f10e1396]: "Lucía Ferreyra:"
+              - text: Hasta la próxima.
+  - contentinfo [ref=f10e1397]:
+    - generic [ref=f10e1398]:
+      - generic [ref=f10e1399]:
+        - paragraph [ref=f10e1400]: Señal Pública
+        - paragraph [ref=f10e1401]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f10e1402]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f10e1403] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f10e1404]:
+        - heading "Escuchalo en" [level=2] [ref=f10e1405]
+        - list [ref=f10e1406]:
+          - listitem [ref=f10e1407]:
+            - link "YouTube" [ref=f10e1408] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f10e1409]:
+            - link "Spotify" [ref=f10e1410] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f10e1411]:
+            - link "Apple Podcasts" [ref=f10e1412] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f10e1413]:
+            - link "RSS del podcast" [ref=f10e1414] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f10e1419]:
+            - link "Todas las opciones" [ref=f10e1420] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f10e1421]:
+        - heading "El sitio" [level=2] [ref=f10e1422]
+        - list [ref=f10e1423]:
+          - listitem [ref=f10e1424]:
+            - link "Empezá por acá" [ref=f10e1425] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f10e1426]:
+            - link "Todos los episodios" [ref=f10e1427] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f10e1428]:
+            - link "Glosario" [ref=f10e1429] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f10e1430]:
+            - link "Biblioteca de fuentes" [ref=f10e1431] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f10e1432]:
+            - link "Proponé un caso" [ref=f10e1433] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f10e1434]:
+        - heading "Cómo trabajamos" [level=2] [ref=f10e1435]
+        - list [ref=f10e1436]:
+          - listitem [ref=f10e1437]:
+            - link "Método y uso de IA" [ref=f10e1438] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f10e1439]:
+            - link "Correcciones" [ref=f10e1440] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f10e1441]:
+            - link "Kit de prensa" [ref=f10e1442] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f10e1443]:
+            - link "hola@senalpublica.ar" [ref=f10e1444] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f10e1445]:
+            - link "LinkedIn" [ref=f10e1446] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f10e1447]:
+            - link "Instagram" [ref=f10e1448] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f10e1450]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f10e1451] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

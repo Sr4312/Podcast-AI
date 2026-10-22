@@ -1,0 +1,9 @@
+[     582ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ya (http://localhost:4321/_astro/client.Cd-EeyjT.js:8:32142)
+    at _l (http://localhost:4321/_astro/client.Cd-EeyjT.js:8:84141)
+    at Zd (http://localhost:4321/_astro/client.Cd-EeyjT.js:8:127811)
+    at Xd (http://localhost:4321/_astro/client.Cd-EeyjT.js:8:127784)
+    at Yd (http://localhost:4321/_astro/client.Cd-EeyjT.js:8:127646)
+    at Fd (http://localhost:4321/_astro/client.Cd-EeyjT.js:8:123126)
+    at jf (http://localhost:4321/_astro/client.Cd-EeyjT.js:8:135743)
+    at MessagePort.x (http://localhost:4321/_astro/client.Cd-EeyjT.js:1:1588)

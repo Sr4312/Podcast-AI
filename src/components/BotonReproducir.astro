@@ -1,0 +1,50 @@
+---
+/**
+ * Botón que carga un episodio en el reproductor persistente sin navegar.
+ * Lleva los datos del episodio en `data-episodio`; el script global de
+ * Base.astro delega los clics y marca aria-pressed cuando ese episodio suena.
+ */
+import Icono from './Icono.astro';
+import { cargaReproductor, type Episodio } from '@/lib/contenido';
+
+interface Props {
+  ep: Episodio;
+  variante?: 'principal' | 'icono' | 'fila';
+  class?: string;
+  /** Marca el botón principal de la página del episodio (deep links y "Seguir desde"). */
+  principal?: boolean;
+}
+
+const { ep, variante = 'principal', class: clase = '', principal = false } = Astro.props;
+const carga = cargaReproductor(ep);
+const label = `Reproducir episodio ${ep.data.numero}: ${ep.data.titulo}`;
+---
+
+{
+  variante === 'icono' ? (
+    <button
+      type="button"
+      class={`boton boton--icono boton--secundario ${clase}`}
+      data-reproducir={ep.id}
+      data-episodio={JSON.stringify(carga)}
+      aria-label={label}
+      aria-pressed="false"
+    >
+      <Icono nombre="play" tamano={16} class="icono-play" />
+      <Icono nombre="pausa" tamano={16} class="icono-pausa" />
+    </button>
+  ) : (
+    <button
+      type="button"
+      class={`boton ${clase}`}
+      data-reproducir={ep.id}
+      data-episodio={JSON.stringify(carga)}
+      data-reproducir-principal={principal || undefined}
+      aria-pressed="false"
+    >
+      <Icono nombre="play" tamano={18} class="icono-play" />
+      <Icono nombre="pausa" tamano={18} class="icono-pausa" />
+      <span class="texto">Reproducir</span>
+    </button>
+  )
+}
