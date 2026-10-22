@@ -1,0 +1,27 @@
+# Cloudflare Pages: cabeceras por ruta.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Opener-Policy: same-origin
+
+# Assets con hash en el nombre: caché inmutable.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/pagefind/*
+  Cache-Control: public, max-age=86400
+
+# Capítulos y transcripciones los leen apps de podcast y el hosting: permitir CORS.
+/episodios/*/capitulos.json
+  Access-Control-Allow-Origin: *
+  Content-Type: application/json+chapters; charset=utf-8
+
+/episodios/*/transcripcion.vtt
+  Access-Control-Allow-Origin: *
+  Content-Type: text/vtt; charset=utf-8
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8

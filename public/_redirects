@@ -1,0 +1,3 @@
+# Cloudflare Pages: redirecciones.
+# /feed es el alias estable del RSS del hosting. TODO: actualizar junto con SITIO.hosting.rss en src/config/sitio.ts.
+/feed  https://feeds.transistor.fm/senal-publica  301
