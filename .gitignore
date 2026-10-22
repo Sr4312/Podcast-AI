@@ -17,3 +17,6 @@ Thumbs.db
 
 # capturas de QA locales
 capturas/
+
+# índice de graft (herramienta local)
+graft/.cache/
