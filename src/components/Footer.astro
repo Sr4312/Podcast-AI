@@ -70,11 +70,26 @@ const redes = [
 </footer>
 
 <style>
+  /* El pie es "estudio": oscuro en ambos modos, con la línea de señal arriba. */
   .pie {
+    position: relative;
     margin-top: calc(var(--espacio-seccion) * 1.5);
-    border-top: 1px solid var(--color-linea);
+    background: var(--color-estudio);
     font-size: var(--text-meta);
-    color: var(--color-tinta-2);
+    color: var(--color-estudio-tinta-2);
+  }
+  .pie::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-marca), #ffa36b 45%, var(--color-estudio-acento));
+  }
+  .pie a {
+    color: var(--color-estudio-acento);
+  }
+  .pie :focus-visible {
+    outline-color: var(--color-marca);
   }
   .pie__grilla {
     display: grid;
@@ -99,9 +114,19 @@ const redes = [
     }
   }
   .pie__marca {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     font-family: var(--font-titulo);
     font-size: var(--text-xl);
-    color: var(--color-tinta);
+    color: var(--color-estudio-tinta);
+  }
+  .pie__marca::before {
+    content: '';
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 2px;
+    background: var(--color-marca);
   }
   .pie__desc {
     max-width: 38ch;
@@ -110,8 +135,9 @@ const redes = [
   .pie__col h2 {
     font-family: var(--font-texto);
     font-size: var(--text-meta);
-    font-weight: 600;
-    color: var(--color-tinta);
+    font-family: var(--font-mono);
+    font-weight: 500;
+    color: var(--color-estudio-tinta);
     margin-bottom: 0.6rem;
   }
   .pie__col ul {
@@ -123,15 +149,15 @@ const redes = [
     margin-top: 0.35rem;
   }
   .pie__col a {
-    color: var(--color-tinta-2);
+    color: var(--color-estudio-tinta-2);
     text-decoration: none;
   }
   .pie__col a:hover {
-    color: var(--color-acento);
+    color: var(--color-marca);
     text-decoration: underline;
   }
   .pie__legal {
-    border-top: 1px solid var(--color-linea);
+    border-top: 1px solid var(--color-estudio-linea);
     padding-block: 1rem 1.5rem;
   }
 </style>

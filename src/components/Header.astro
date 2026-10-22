@@ -16,8 +16,8 @@ const activo = (href: string) => actual === href || actual.startsWith(href + '/'
   <div class="contenedor header__fila">
     <a href="/" class="header__marca" aria-label={`${SITIO.nombre}, inicio`}>
       <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true" class="header__logo">
-        <rect width="32" height="32" rx="2" fill="currentColor" />
-        <g fill="var(--color-papel)">
+        <rect width="32" height="32" rx="7" fill="var(--color-marca)" />
+        <g fill="var(--color-marca-contraste)">
           <rect x="5" y="13" width="2" height="6" /><rect x="9" y="9" width="2" height="14" /><rect x="13" y="5" width="2" height="22" />
           <rect x="17" y="11" width="2" height="10" /><rect x="21" y="7" width="2" height="18" /><rect x="25" y="12" width="2" height="8" />
         </g>
@@ -68,7 +68,7 @@ const activo = (href: string) => actual === href || actual.startsWith(href + '/'
     inset: 0 0 auto 0;
     z-index: 40;
     height: var(--alto-header);
-    background: var(--color-papel);
+    background: color-mix(in srgb, var(--color-papel) 94%, transparent);
     border-bottom: 1px solid var(--color-linea);
   }
   .header__fila {
@@ -92,6 +92,9 @@ const activo = (href: string) => actual === href || actual.startsWith(href + '/'
   .header__logo {
     color: var(--color-tinta);
   }
+  .header__marca span {
+    letter-spacing: -0.01em;
+  }
   .header__nav ul {
     display: flex;
     align-items: center;
@@ -108,7 +111,7 @@ const activo = (href: string) => actual === href || actual.startsWith(href + '/'
   }
   .header__nav a:not(.boton):hover,
   .header__nav a:not(.boton)[aria-current='page'] {
-    border-bottom-color: var(--color-acento);
+    border-bottom-color: var(--color-marca);
   }
   .header__nav .boton {
     min-height: 2.25rem;
@@ -158,7 +161,7 @@ const activo = (href: string) => actual === href || actual.startsWith(href + '/'
       border-bottom: 0;
     }
     .header__nav a:not(.boton)[aria-current='page'] {
-      color: var(--color-acento);
+      color: var(--color-marca-texto);
     }
     .header__suscribite {
       padding: 0.8rem 0;

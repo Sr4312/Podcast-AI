@@ -14,11 +14,15 @@ const colores = [
   { nombre: 'Tinta', token: '--color-tinta', uso: 'Texto principal, botón primario.' },
   { nombre: 'Tinta 2', token: '--color-tinta-2', uso: 'Metadatos y texto secundario. Nunca por debajo de 4,5:1.' },
   { nombre: 'Línea', token: '--color-linea', uso: 'Separadores de listas y bordes.' },
-  { nombre: 'Acento', token: '--color-acento', uso: 'Links, estado de reproducción, capítulo en curso. Es el único acento.' },
+  { nombre: 'Marca', token: '--color-marca', uso: 'Naranja señal: logo, botón principal, waveform, rótulos. Sobre ella el texto va en tinta oscura.' },
+  { nombre: 'Marca texto', token: '--color-marca-texto', uso: 'La marca cuando es texto (números de episodio): pasa 4,5:1 sobre papel.' },
+  { nombre: 'Marca suave', token: '--color-marca-suave', uso: 'Hover de filas, selección de texto, panel de newsletter.' },
+  { nombre: 'Acento', token: '--color-acento', uso: 'Links, estado de reproducción, capítulo en curso.' },
   { nombre: 'Acento suave', token: '--color-acento-suave', uso: 'Fondo del párrafo en curso y hover de timestamps.' },
   { nombre: 'Verificada', token: '--color-ok', uso: 'Solo para el estado de una fuente verificada.' },
   { nombre: 'Pendiente', token: '--color-pendiente', uso: 'Fuente pendiente de verificación y avisos de contenido de ejemplo.' },
   { nombre: 'Onda', token: '--color-onda', uso: 'Barras de la waveform sin reproducir.' },
+  { nombre: 'Estudio', token: '--color-estudio', uso: 'Superficie oscura de la consola del hero y del pie, en ambos modos.' },
 ];
 
 const escala = [
@@ -53,14 +57,14 @@ const escala = [
     <div class="cuerpo">
       <h1>Guía de estilo</h1>
       <p class="prosa text-lg mt-4">
-        Papel y tinta, un solo acento, una waveform real por episodio. Nada que no esté en esta página debería aparecer en el sitio.
+        Papel y tinta, naranja señal como marca, azul como acento, una waveform real por episodio. Nada que no esté en esta página debería aparecer en el sitio.
       </p>
 
       <section class="seccion" aria-labelledby="e-color">
         <h2 id="e-color">Color</h2>
         <p class="prosa">
-          Base casi monocromática. El acento es semántico: estado de reproducción, capítulo en curso y links. Verde y ámbar existen solo
-          para el estado de las fuentes.
+          Base de papel y tinta con dos colores: el naranja señal es la marca (identidad, acción principal, waveform) y el azul es el acento
+          semántico (links, estado de reproducción, capítulo en curso). Verde y ámbar existen solo para el estado de las fuentes.
         </p>
         <ul class="muestras mt-6">
           {

@@ -39,13 +39,14 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
   <JsonLd datos={jsonLdSerie} slot="head" />
   {
     ultimo && (
-      <section class="cuaderno" aria-labelledby="ultimo">
+      <section class="consola" aria-labelledby="ultimo">
+        <div class="consola__barra">
+          <span class="consola__estado"><span class="consola__led" aria-hidden="true" />Último episodio</span>
+          <span class="mono">N.º {String(ultimo.data.numero).padStart(2, '0')}</span>
+        </div>
+        <div class="cuaderno consola__cuerpo">
         <div class="margen">
           <dl>
-            <div>
-              <dt>Último episodio</dt>
-              <dd>N.º {ultimo.data.numero}</dd>
-            </div>
             <div>
               <dt>Publicado</dt>
               <dd>
@@ -67,8 +68,8 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
             <a href={`/episodios/${ultimo.id}`} class="titulo-link">{ultimo.data.titulo}</a>
           </h1>
           <p class="prosa text-lg mt-4">{ultimo.data.bajada}</p>
-          <div class="mt-6">
-            <Waveform picos={picos} barras={160} alto={64} />
+          <div class="mt-7 consola__onda">
+            <Waveform picos={picos} barras={160} alto={72} degradado />
           </div>
           <div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
             <BotonReproducir ep={ultimo} />
@@ -81,13 +82,14 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
             </p>
           </div>
         </div>
+        </div>
       </section>
     )
   }
 
   <section class="cuaderno seccion" aria-label="Qué es el podcast">
     <div class="margen"></div>
-    <p class="cuerpo prosa text-lg">
+    <p class="cuerpo prosa manifiesto">
       {SITIO.nombre} toma un problema público concreto por episodio, una ley, un trámite, un servicio municipal, y analiza con fuentes a la
       vista qué cambia y qué no cambia con inteligencia artificial.
     </p>
@@ -99,7 +101,7 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
       {
         recientes.map((ep) => (
           <li class="fila">
-            <span class="mono meta fila__n" transition:name={`n-${ep.id}`}>{String(ep.data.numero).padStart(2, '0')}</span>
+            <span class="meta fila__n" transition:name={`n-${ep.id}`}><span class="num-ep">{String(ep.data.numero).padStart(2, '0')}</span></span>
             <div class="fila__cuerpo">
               <a href={`/episodios/${ep.id}`} class="fila__titulo" transition:name={`titulo-${ep.id}`}>{ep.data.titulo}</a>
               <p class="mt-1">{ep.data.bajada}</p>
@@ -141,7 +143,7 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
         <ol class="cuerpo lista-editorial">
           {destacados.map((ep) => (
             <li class="fila">
-              <span class="mono meta fila__n" transition:name={`n-${ep.id}`}>{String(ep.data.numero).padStart(2, '0')}</span>
+              <span class="meta fila__n" transition:name={`n-${ep.id}`}><span class="num-ep">{String(ep.data.numero).padStart(2, '0')}</span></span>
               <div class="fila__cuerpo">
                 <a href={`/episodios/${ep.id}`} class="fila__titulo" transition:name={`titulo-${ep.id}`}>{ep.data.titulo}</a>
                 <p class="meta mt-1">
@@ -157,7 +159,7 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
 
   <section class="cuaderno seccion" aria-labelledby="news">
     <h2 id="news" class="margen titulo-margen">{SITIO.newsletter.nombreLista}</h2>
-    <div class="cuerpo">
+    <div class="cuerpo news-panel">
       <p class="prosa">Un correo por episodio, con el resumen, las fuentes y lo que pasó después. Nada más.</p>
       <div class="mt-4"><Newsletter id="news-home" compacto /></div>
     </div>
@@ -173,12 +175,142 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
     color: var(--color-acento);
   }
   .titulo-margen {
-    font-family: var(--font-texto);
+    display: flex;
+    align-self: start;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
     font-size: var(--text-meta);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-tinta);
-    letter-spacing: 0;
+    letter-spacing: 0.01em;
     padding-top: 1.2rem;
+  }
+  .titulo-margen::before {
+    content: '';
+    transform: translateY(-0.05rem);
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 1px;
+    background: var(--color-marca);
+    flex: none;
+  }
+
+  /* ---------- Hero: consola de estudio ---------- */
+  .consola {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-estudio-linea);
+    border-radius: var(--radius-panel);
+    background-color: var(--color-estudio);
+    /* Retícula técnica muy tenue, como papel milimetrado de estudio. */
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--color-estudio-tinta);
+  }
+  /* Línea de señal arriba: marca → azul. */
+  .consola::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-marca), #ffa36b 45%, var(--color-estudio-acento));
+  }
+  .consola__barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--color-estudio-linea);
+    font-family: var(--font-mono);
+    font-size: var(--text-meta);
+    color: var(--color-estudio-tinta-2);
+  }
+  .consola__estado {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--color-estudio-tinta);
+  }
+  .consola__led {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--color-marca);
+    animation: led 2.4s ease-in-out infinite;
+  }
+  @keyframes led {
+    50% {
+      opacity: 0.35;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .consola__led {
+      animation: none;
+    }
+  }
+  .consola__cuerpo {
+    padding: 1.5rem 1.25rem 1.75rem;
+  }
+  @media (min-width: 48rem) {
+    .consola__barra {
+      padding-inline: 2rem;
+    }
+    .consola__cuerpo {
+      padding: 2.5rem 2rem 2.25rem;
+    }
+  }
+  .consola .margen,
+  .consola .margen dt,
+  .consola .meta {
+    color: var(--color-estudio-tinta-2);
+  }
+  .consola .margen dd {
+    color: var(--color-estudio-tinta);
+  }
+  .consola .prosa {
+    color: #cfd3dc;
+  }
+  .consola a:not(.titulo-link):not(.boton) {
+    color: var(--color-estudio-acento);
+  }
+  .consola .titulo-link {
+    color: var(--color-estudio-tinta);
+  }
+  .consola .titulo-link:hover {
+    color: var(--color-marca);
+  }
+  .consola :global(.boton:hover) {
+    background: var(--color-estudio-tinta);
+    border-color: var(--color-estudio-tinta);
+    color: var(--color-estudio);
+  }
+  .consola :global(:focus-visible) {
+    outline-color: var(--color-marca);
+  }
+  .consola__onda {
+    padding-block: 0.75rem;
+    border-block: 1px dashed var(--color-estudio-linea);
+  }
+
+  /* Bajada del podcast: frase grande en serif, con una regla de marca. */
+  .manifiesto {
+    font-family: var(--font-titulo);
+    font-size: clamp(var(--text-xl), 1.2rem + 0.8vw, var(--text-2xl));
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--color-marca);
+  }
+
+  .news-panel {
+    padding: 1.5rem;
+    border: 1px solid var(--color-linea);
+    border-radius: var(--radius-panel);
+    background: linear-gradient(135deg, var(--color-marca-suave), var(--color-papel-2) 60%);
   }
   .fila {
     display: grid;
@@ -190,8 +322,8 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
     grid-template-columns: minmax(0, 1fr) auto;
   }
   .fila__n {
-    padding-top: 0.45rem;
-    min-width: 1.6rem;
+    padding-top: 0.3rem;
+    min-width: 2rem;
   }
   .fila__titulo {
     font-family: var(--font-titulo);

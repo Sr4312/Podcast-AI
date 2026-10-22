@@ -25,19 +25,36 @@
   --leading-titulo: 1.12;
   --medida: 66ch;
 
-  /* ---- Papel y tinta. Un solo acento semántico: azul tinta. ---- */
-  --color-papel: #f2f0eb;
-  --color-papel-2: #e9e6df;
-  --color-tinta: #1b1b1b;
-  --color-tinta-2: #4f4d48;
-  --color-linea: #d3cfc6;
-  --color-linea-2: #bdb8ad;
-  --color-acento: #1f4b8f;
-  --color-acento-suave: #dde6f4;
-  --color-acento-contraste: #f2f0eb;
+  /* ---- Papel y tinta + marca (naranja señal) + acento semántico (azul). ----
+     Marca: identidad (logo, CTA principal, waveform, detalles). Sobre ella el texto va en tinta oscura.
+     Marca texto: la versión que pasa 4,5:1 sobre papel, para cuando la marca es texto.
+     Acento: links, estado de reproducción, capítulo en curso. */
+  --color-papel: #f4f3ef;
+  --color-papel-2: #eae8e2;
+  --color-tinta: #14161c;
+  --color-tinta-2: #4d505a;
+  --color-linea: #d6d4cd;
+  --color-linea-2: #bcb9b0;
+  --color-marca: #ff5f2e;
+  --color-marca-texto: #b83a0e;
+  --color-marca-suave: #ffe3d6;
+  --color-marca-contraste: #14161c;
+  --color-acento: #2343b0;
+  --color-acento-suave: #dfe5f8;
+  --color-acento-contraste: #f4f3ef;
   --color-ok: #2f5e3a;
   --color-pendiente: #8a5a12;
-  --color-onda: #6b6862;
+  --color-onda: #9a9aa2;
+  --color-punto: rgb(20 22 28 / 0.07);
+
+  /* "Estudio": superficie oscura de la consola del hero y del pie, igual en ambos modos. */
+  --color-estudio: #12151d;
+  --color-estudio-2: #1b2030;
+  --color-estudio-tinta: #eceae4;
+  --color-estudio-tinta-2: #a3a8b6;
+  --color-estudio-linea: #2b3245;
+  --color-estudio-onda: #4a5266;
+  --color-estudio-acento: #9db5ff;
 
   /* ---- Ritmo vertical ---- */
   --espacio-seccion: 4.5rem;
@@ -47,40 +64,57 @@
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 
-  --radius-ui: 3px;
+  --radius-ui: 6px;
+  --radius-panel: 14px;
 }
 
 /* Modo oscuro: por preferencia del sistema o por data-theme guardado. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --color-papel: #161616;
-    --color-papel-2: #201f1d;
-    --color-tinta: #e8e4db;
-    --color-tinta-2: #aea89c;
-    --color-linea: #35332f;
-    --color-linea-2: #4b4843;
-    --color-acento: #8fb4f0;
-    --color-acento-suave: #1c2a42;
-    --color-acento-contraste: #161616;
+    --color-papel: #12141a;
+    --color-papel-2: #1b1e26;
+    --color-tinta: #ebe8e1;
+    --color-tinta-2: #a9adb8;
+    --color-linea: #2a2e38;
+    --color-linea-2: #3c414e;
+    --color-marca: #ff6a3d;
+    --color-marca-texto: #ff8f66;
+    --color-marca-suave: #3a1e15;
+    --color-marca-contraste: #12141a;
+    --color-acento: #93b0ff;
+    --color-acento-suave: #1d2744;
+    --color-acento-contraste: #12141a;
     --color-ok: #8fcb9b;
     --color-pendiente: #e0b063;
-    --color-onda: #8a867d;
+    --color-onda: #626877;
+    --color-punto: rgb(235 232 225 / 0.06);
+    --color-estudio: #181c27;
+    --color-estudio-2: #212738;
+    --color-estudio-linea: #313951;
     color-scheme: dark;
   }
 }
 :root[data-theme='dark'] {
-  --color-papel: #161616;
-  --color-papel-2: #201f1d;
-  --color-tinta: #e8e4db;
-  --color-tinta-2: #aea89c;
-  --color-linea: #35332f;
-  --color-linea-2: #4b4843;
-  --color-acento: #8fb4f0;
-  --color-acento-suave: #1c2a42;
-  --color-acento-contraste: #161616;
+  --color-papel: #12141a;
+  --color-papel-2: #1b1e26;
+  --color-tinta: #ebe8e1;
+  --color-tinta-2: #a9adb8;
+  --color-linea: #2a2e38;
+  --color-linea-2: #3c414e;
+  --color-marca: #ff6a3d;
+  --color-marca-texto: #ff8f66;
+  --color-marca-suave: #3a1e15;
+  --color-marca-contraste: #12141a;
+  --color-acento: #93b0ff;
+  --color-acento-suave: #1d2744;
+  --color-acento-contraste: #12141a;
   --color-ok: #8fcb9b;
   --color-pendiente: #e0b063;
-  --color-onda: #8a867d;
+  --color-onda: #626877;
+  --color-punto: rgb(235 232 225 / 0.06);
+  --color-estudio: #181c27;
+  --color-estudio-2: #212738;
+  --color-estudio-linea: #313951;
   color-scheme: dark;
 }
 
@@ -102,7 +136,11 @@
   body {
     margin: 0;
     min-height: 100dvh;
-    background: var(--color-papel);
+    background-color: var(--color-papel);
+    /* Retícula de puntos muy tenue: el guiño técnico, sin ruido. Se desvanece hacia abajo. */
+    background-image: radial-gradient(var(--color-punto) 1px, transparent 1.2px);
+    background-size: 22px 22px;
+    background-attachment: fixed;
     color: var(--color-tinta);
     padding-top: var(--alto-header);
     /* El mini-reproductor (F3) suma su alto acá vía --alto-reproductor. */
@@ -156,7 +194,7 @@
     cursor: pointer;
   }
   ::selection {
-    background: var(--color-acento-suave);
+    background: var(--color-marca-suave);
   }
   time,
   .mono {
@@ -281,40 +319,41 @@
     color: var(--color-tinta-2);
   }
 
-  /* Botones: dos variantes, sin sombras, esquinas mínimas. */
+  /* Botones. Primario = marca (texto oscuro: contraste > 6:1 en ambos modos). */
   .boton {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     min-height: 2.75rem;
-    padding: 0.4rem 1rem;
-    border: 1px solid var(--color-tinta);
+    padding: 0.4rem 1.1rem;
+    border: 1px solid var(--color-marca);
     border-radius: var(--radius-ui);
-    background: var(--color-tinta);
-    color: var(--color-papel);
-    font-weight: 500;
+    background: var(--color-marca);
+    color: var(--color-marca-contraste);
+    font-weight: 600;
     text-decoration: none;
     transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out);
   }
   .boton:hover {
-    background: var(--color-acento);
-    border-color: var(--color-acento);
-    color: var(--color-acento-contraste);
+    background: var(--color-tinta);
+    border-color: var(--color-tinta);
+    color: var(--color-papel);
   }
   .boton--secundario {
-    background: transparent;
+    background: color-mix(in srgb, var(--color-papel) 70%, transparent);
     color: var(--color-tinta);
     border-color: var(--color-linea-2);
+    font-weight: 500;
   }
   .boton--secundario:hover {
-    background: transparent;
-    color: var(--color-acento);
-    border-color: var(--color-acento);
+    background: var(--color-marca-suave);
+    color: var(--color-tinta);
+    border-color: var(--color-marca);
   }
   .boton--acento {
-    background: var(--color-acento);
-    border-color: var(--color-acento);
-    color: var(--color-acento-contraste);
+    background: var(--color-marca);
+    border-color: var(--color-marca);
+    color: var(--color-marca-contraste);
   }
   .boton--acento:hover {
     background: var(--color-tinta);
@@ -341,8 +380,59 @@
     border-top: 1px solid var(--color-linea);
   }
   .lista-editorial > li {
+    position: relative;
     border-bottom: 1px solid var(--color-linea);
     padding: 1.1rem 0;
+  }
+  /* Hover de fila: una franja de marca a la izquierda y un velo tenue. Sin cards. */
+  .lista-editorial > li::before {
+    content: '';
+    position: absolute;
+    inset: -1px -0.9rem -1px -0.9rem;
+    z-index: -1;
+    border-left: 2px solid var(--color-marca);
+    background: linear-gradient(90deg, var(--color-marca-suave), transparent 70%);
+    opacity: 0;
+    transition: opacity 150ms var(--ease-out);
+    pointer-events: none;
+  }
+  .lista-editorial > li:hover::before,
+  .lista-editorial > li:focus-within::before {
+    opacity: 0.7;
+  }
+  .lista-editorial {
+    isolation: isolate;
+  }
+
+  /* Rótulo técnico: mono, chico, con un cuadradito de marca. Para títulos de margen y la consola. */
+  .rotulo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: var(--text-meta);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-tinta);
+  }
+  .rotulo::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 1px;
+    background: var(--color-marca);
+    flex: none;
+  }
+  /* Número de episodio como etiqueta: mono sobre un chip con borde. */
+  .num-ep {
+    display: inline-block;
+    padding: 0.05rem 0.4rem;
+    border: 1px solid var(--color-linea-2);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    color: var(--color-marca-texto);
+    background: var(--color-papel);
+    line-height: 1.5;
   }
 
   /* Estados de fuente */
@@ -431,6 +521,10 @@
     color: var(--color-tinta);
     font: inherit;
     width: 100%;
+    transition: border-color 150ms var(--ease-out);
+  }
+  .campo:focus {
+    border-color: var(--color-marca);
   }
   .campo::placeholder {
     color: var(--color-tinta-2);
@@ -482,8 +576,8 @@
     width: 4.5rem;
     height: 4.5rem;
     border: 1px solid var(--color-linea);
-    background: var(--color-papel-2);
-    color: var(--color-tinta-2);
+    background: var(--color-marca-suave);
+    color: var(--color-marca-texto);
     font-family: var(--font-titulo);
     font-size: var(--text-xl);
     border-radius: var(--radius-ui);
