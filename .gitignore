@@ -1,0 +1,19 @@
+# dependencias y build
+node_modules/
+dist/
+.astro/
+
+# audio de prueba: se regenera con `npm run audio:ejemplo`
+public/audio/*.mp3
+
+# entorno
+.env
+.env.*
+!.env.example
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# capturas de QA locales
+capturas/

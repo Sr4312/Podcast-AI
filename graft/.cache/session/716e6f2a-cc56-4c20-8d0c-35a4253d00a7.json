@@ -1,0 +1,9 @@
+{
+  "lastQuery": "<task-notification>\n<task-id>b3ub0c2u4</task-id>\n<tool-use-id>toolu_01NZUa86mZvPUetWBeNBxHZe</tool-use-id>\n<output-file>C:\\Users\\CRA\\AppData\\Local\\Temp\\claude\\c--Users-CRA-Desktop-WEB-POD\\716e6f2a-cc56-4c20-8d0c-35a4253d00a7\\tasks\\b3ub0c2u4.output</output-file>\n<status>completed</status>\n<summary>Background command \"Generate the three example MP3 files with ffmpeg\" completed (exit code 0)</summary>\n</task-notification>",
+  "perAgentQuery": {},
+  "graftReads": 0,
+  "sourceReads": 0,
+  "savedTokens": 0,
+  "injectedPointers": [],
+  "nudges": 2
+}

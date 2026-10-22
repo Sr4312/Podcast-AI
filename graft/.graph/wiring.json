@@ -1,0 +1,1027 @@
+{
+  "meta": {
+    "version": 1,
+    "nodeCount": 38,
+    "edgeCount": 77,
+    "languages": [
+      "javascript",
+      "typescript"
+    ],
+    "scopes": [
+      {
+        "prefix": "",
+        "label": "",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "astro.config.mjs",
+      "name": "astro.config.mjs",
+      "kind": "file",
+      "path": "astro.config.mjs",
+      "span": "L1-L46",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "ee20a976cb9b36e3e2072d7727e2e5200362a9fbb44cfbeeb241abc93fd2baa2",
+      "chars": 1236,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/audio-ejemplo.mjs",
+      "name": "audio-ejemplo.mjs",
+      "kind": "file",
+      "path": "scripts/audio-ejemplo.mjs",
+      "span": "L1-L56",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b1766082061e187b5cdc6cb0265c2e0d989c538fdef5a4bc3dd38b179b0b0b2f",
+      "chars": 2085,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-contenido.mjs",
+      "name": "check-contenido.mjs",
+      "kind": "file",
+      "path": "scripts/check-contenido.mjs",
+      "span": "L1-L171",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "acfc7351dc915ab488ea0102971246d3692fb44f42153a4aa31346c117cf4f09",
+      "chars": 6710,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-contenido.mjs#aviso",
+      "name": "aviso",
+      "kind": "function",
+      "path": "scripts/check-contenido.mjs",
+      "span": "L32-L32",
+      "signature": "aviso = (m)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "16a87aec5cdd93ef23b38aff76e45d51e96021e0050023aa0d5f0e0a96ebf329",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-contenido.mjs#C",
+      "name": "C",
+      "kind": "function",
+      "path": "scripts/check-contenido.mjs",
+      "span": "L21-L21",
+      "signature": "C = (sub)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "73375f5466401a61001fa3ef2e09b8ab664eb785ddaf8c0f13435326231dfd53",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-contenido.mjs#ctrl",
+      "name": "ctrl",
+      "kind": "function",
+      "path": "scripts/check-contenido.mjs",
+      "span": "L149-L149",
+      "signature": "ctrl = (ms)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "16e34a56bf69f291d304a8ca383a5e6e686fc4c2af5394b271c3c63ef68e8b01",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-contenido.mjs#error",
+      "name": "error",
+      "kind": "function",
+      "path": "scripts/check-contenido.mjs",
+      "span": "L31-L31",
+      "signature": "error = (m)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "49d12e3fc8f8f60bca605f5973cf3e436f57fb5fbef8a162ea1735db833ddeb7",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-contenido.mjs#hms",
+      "name": "hms",
+      "kind": "function",
+      "path": "scripts/check-contenido.mjs",
+      "span": "L34-L37",
+      "signature": "function hms(s)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "4bc683ef899e68ed9982ad2e1bc94a9e95855a8ed765502e08aeb0caa548f998",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/check-contenido.mjs#leerColeccion",
+      "name": "leerColeccion",
+      "kind": "function",
+      "path": "scripts/check-contenido.mjs",
+      "span": "L39-L61",
+      "signature": "function leerColeccion(nombre)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "1eab793070f1daa204cea478ba4cb25e7b2c1f59e247b2659abc7538b29589c8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/peaks.mjs",
+      "name": "peaks.mjs",
+      "kind": "file",
+      "path": "scripts/peaks.mjs",
+      "span": "L1-L123",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "61e23981af63f5019452b146bfa8d626c8d86c1a0f3347bfa8299f19ad6de5a2",
+      "chars": 4207,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/peaks.mjs#calcularPicos",
+      "name": "calcularPicos",
+      "kind": "function",
+      "path": "scripts/peaks.mjs",
+      "span": "L57-L82",
+      "signature": "function calcularPicos(pcm)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "5e241722ff9cb5993c76622a7b0cfb4413ecdf8dd4a756cd879cd1d0853a6711",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/peaks.mjs#decodificar",
+      "name": "decodificar",
+      "kind": "function",
+      "path": "scripts/peaks.mjs",
+      "span": "L35-L54",
+      "signature": "function decodificar(fuente)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "e9599139c67c3d188169be7dd6a642db6c2a92a73201ea51733dc7d918a43306",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/peaks.mjs#leerFrontmatter",
+      "name": "leerFrontmatter",
+      "kind": "function",
+      "path": "scripts/peaks.mjs",
+      "span": "L23-L33",
+      "signature": "function leerFrontmatter(slug)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "593074183bb6b7adb83ce5cac1a62cff64e0106f4384eaed9af48930c77e8a7d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/peaks.mjs#procesar",
+      "name": "procesar",
+      "kind": "function",
+      "path": "scripts/peaks.mjs",
+      "span": "L84-L102",
+      "signature": "async function procesar(slug)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "e831a0be94b06b7eb186c2eed9ff8a7ed63fbc15525520e5f49575e290fb3b43",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/config/sitio.ts",
+      "name": "sitio.ts",
+      "kind": "file",
+      "path": "src/config/sitio.ts",
+      "span": "L1-L125",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "1e52bf8772ad51d7526e016f150a4431baab4e5cf3e719bba8650c410044890e",
+      "chars": 5394,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/config/sitio.ts#EjeId",
+      "name": "EjeId",
+      "kind": "type",
+      "path": "src/config/sitio.ts",
+      "span": "L85-L85",
+      "signature": "type EjeId = keyof typeof EJES;",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b4f78f871aa62c21d1d9a292617c436503b7a4aa07cf2e532809d27818938d0b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/config/sitio.ts#FormatoId",
+      "name": "FormatoId",
+      "kind": "type",
+      "path": "src/config/sitio.ts",
+      "span": "L114-L114",
+      "signature": "type FormatoId = keyof typeof FORMATOS;",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "a158c758f93e27fba0a9217f3fef53e2bbc812f52f028a57acf3b3a7348eabf0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/config/sitio.ts#TipoFuente",
+      "name": "TipoFuente",
+      "kind": "type",
+      "path": "src/config/sitio.ts",
+      "span": "L124-L124",
+      "signature": "type TipoFuente = keyof typeof TIPOS_FUENTE;",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "6a464c27d3b906e613de366db5f4b6da3966d9640fd99fd4244ba2b043055396",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/content.config.ts",
+      "name": "content.config.ts",
+      "kind": "file",
+      "path": "src/content.config.ts",
+      "span": "L1-L177",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7728790e008cd3247cab600a668bc8015949e8ab4257eb7d382a01c4cf79ee16",
+      "chars": 6111,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/content.config.ts#falta",
+      "name": "falta",
+      "kind": "function",
+      "path": "src/content.config.ts",
+      "span": "L100-L101",
+      "signature": "falta = (campo: string, msg: string)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "c88e2591e2bf8f4243b40550b08a29985c62158d53c52e193e990b5ecdae5cd5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-glosario.mjs",
+      "name": "remark-glosario.mjs",
+      "kind": "file",
+      "path": "src/lib/remark-glosario.mjs",
+      "span": "L1-L104",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b261ad1b5e4d8fb5e523c70b860508119065b41b3450774fb4d8d058361f156d",
+      "chars": 3884,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-glosario.mjs#cargarGlosario",
+      "name": "cargarGlosario",
+      "kind": "function",
+      "path": "src/lib/remark-glosario.mjs",
+      "span": "L21-L45",
+      "signature": "function cargarGlosario()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "9b83aa0097a073c72c845bbbd0991077eed29fa622672899f13e5d6f473e2fc8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-glosario.mjs#escapeRegex",
+      "name": "escapeRegex",
+      "kind": "function",
+      "path": "src/lib/remark-glosario.mjs",
+      "span": "L17-L19",
+      "signature": "function escapeRegex(s)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "c0b01b55980622d29d28f8e766be1b2e156013adc0d05661d0876b169dffb27e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-glosario.mjs#remarkGlosario",
+      "name": "remarkGlosario",
+      "kind": "function",
+      "path": "src/lib/remark-glosario.mjs",
+      "span": "L48-L103",
+      "signature": "function remarkGlosario()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e1f9fc09ebb188b8178b0e0e15282e985e7543825148c9f02751fd05301e1d7a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-transcripcion.mjs",
+      "name": "remark-transcripcion.mjs",
+      "kind": "file",
+      "path": "src/lib/remark-transcripcion.mjs",
+      "span": "L1-L171",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3a9f1638bd551c8ee546583d535406b1ccf0e38b2c8f5b468098ea54071e1ea8",
+      "chars": 5218,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-transcripcion.mjs#aSegundos",
+      "name": "aSegundos",
+      "kind": "function",
+      "path": "src/lib/remark-transcripcion.mjs",
+      "span": "L28-L30",
+      "signature": "function aSegundos(h, m, s)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "dead7a16a4ca8c4b0855a6f7cf08c6c14bbb67db0a85069ac036565a6a372d95",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-transcripcion.mjs#botonCopiar",
+      "name": "botonCopiar",
+      "kind": "function",
+      "path": "src/lib/remark-transcripcion.mjs",
+      "span": "L63-L98",
+      "signature": "function botonCopiar(segundos)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "79dd2a948db3ec2d119b33ba7672257ed5317308adb21facdffbcace42ddd7ec",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-transcripcion.mjs#botonTimestamp",
+      "name": "botonTimestamp",
+      "kind": "function",
+      "path": "src/lib/remark-transcripcion.mjs",
+      "span": "L47-L61",
+      "signature": "function botonTimestamp(hms, segundos)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "c658e0c61dc7506b91e80c814c0cae1388214068ccccd5f3e91dc82c6b73dfdf",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-transcripcion.mjs#remarkTranscripcion",
+      "name": "remarkTranscripcion",
+      "kind": "function",
+      "path": "src/lib/remark-transcripcion.mjs",
+      "span": "L101-L170",
+      "signature": "function remarkTranscripcion()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "863fef2f583e59c622a5b5be0db5fc02dc93aaa533fee0223d8ada3787d0371f",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-transcripcion.mjs#slugify",
+      "name": "slugify",
+      "kind": "function",
+      "path": "src/lib/remark-transcripcion.mjs",
+      "span": "L32-L39",
+      "signature": "function slugify(texto)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "e850b4be4078e78f2acd1fbbc9588bb2b737f3caba7cf59f61f13d1cf640d516",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/remark-transcripcion.mjs#textoDe",
+      "name": "textoDe",
+      "kind": "function",
+      "path": "src/lib/remark-transcripcion.mjs",
+      "span": "L41-L45",
+      "signature": "function textoDe(nodo)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "61cc2d3ac0ad0dcfb35fae669039720298520e5a02029fa36d9e1f7daceb9c2b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/tiempo.ts",
+      "name": "tiempo.ts",
+      "kind": "file",
+      "path": "src/lib/tiempo.ts",
+      "span": "L1-L61",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0a26dbbe59f60bd59c2d8e6ad607491f7cbd8c20cf55956ba0eafa316e008854",
+      "chars": 2321,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/tiempo.ts#aSegundos",
+      "name": "aSegundos",
+      "kind": "function",
+      "path": "src/lib/tiempo.ts",
+      "span": "L6-L10",
+      "signature": "function aSegundos(hms: string): number",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c0b5f242774813b88def0be2c53dba36cdfb1d4a39e09b01478d60e269dea7ac",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/tiempo.ts#duracionAccesible",
+      "name": "duracionAccesible",
+      "kind": "function",
+      "path": "src/lib/tiempo.ts",
+      "span": "L41-L51",
+      "signature": "function duracionAccesible(segundos: number): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e82be1508afd8bfc79c1abd51ddc89ccff482861f3bffdaec03157c8704b1571",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/tiempo.ts#duracionISO",
+      "name": "duracionISO",
+      "kind": "function",
+      "path": "src/lib/tiempo.ts",
+      "span": "L54-L60",
+      "signature": "function duracionISO(segundos: number): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3673f510d145014635c0d92e677aee7b54e94c96e62d5fcbdd467f43204986e8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/tiempo.ts#duracionLegible",
+      "name": "duracionLegible",
+      "kind": "function",
+      "path": "src/lib/tiempo.ts",
+      "span": "L32-L38",
+      "signature": "function duracionLegible(segundos: number): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "a706a47755b452ba1281d33d7061357c1cf4c31c95a452400457759002dbe02b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/tiempo.ts#formatoCorto",
+      "name": "formatoCorto",
+      "kind": "function",
+      "path": "src/lib/tiempo.ts",
+      "span": "L13-L20",
+      "signature": "function formatoCorto(segundos: number): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3466e7c8be06635b3b7ee381a9fc838c0662e66f9f92e4143c397ea1d7067813",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/tiempo.ts#formatoHMS",
+      "name": "formatoHMS",
+      "kind": "function",
+      "path": "src/lib/tiempo.ts",
+      "span": "L23-L29",
+      "signature": "function formatoHMS(segundos: number): string",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "260c84ebbbb7fbd9606674bef3c36b2a4e72bad7ba7ca1a6cbedbdb46b9bdeb7",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "astro.config.mjs",
+      "target": "@astrojs/markdown-remark",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "@astrojs/mdx",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "@astrojs/react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "@astrojs/sitemap",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "@tailwindcss/vite",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "astro/config",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "src/config/sitio.ts",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "src/lib/remark-glosario.mjs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "src/lib/remark-transcripcion.mjs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "src/lib/remark-glosario.mjs#remarkGlosario",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "astro.config.mjs",
+      "target": "src/lib/remark-transcripcion.mjs#remarkTranscripcion",
+      "relation": "references",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/audio-ejemplo.mjs",
+      "target": "node:child_process",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/audio-ejemplo.mjs",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/audio-ejemplo.mjs",
+      "target": "node:path",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#aviso",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#ctrl",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#error",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#hms",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#leerColeccion",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#aviso",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#C",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#ctrl",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#error",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#hms",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "scripts/check-contenido.mjs#leerColeccion",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "node:path",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs",
+      "target": "yaml",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs#leerColeccion",
+      "target": "scripts/check-contenido.mjs#C",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/check-contenido.mjs#leerColeccion",
+      "target": "scripts/check-contenido.mjs#error",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "scripts/peaks.mjs#procesar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "scripts/peaks.mjs#calcularPicos",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "scripts/peaks.mjs#decodificar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "scripts/peaks.mjs#leerFrontmatter",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "scripts/peaks.mjs#procesar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "node:child_process",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "node:path",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs",
+      "target": "yaml",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs#procesar",
+      "target": "scripts/peaks.mjs#calcularPicos",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs#procesar",
+      "target": "scripts/peaks.mjs#decodificar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/peaks.mjs#procesar",
+      "target": "scripts/peaks.mjs#leerFrontmatter",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/config/sitio.ts",
+      "target": "src/config/sitio.ts#EjeId",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/config/sitio.ts",
+      "target": "src/config/sitio.ts#FormatoId",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/config/sitio.ts",
+      "target": "src/config/sitio.ts#TipoFuente",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/content.config.ts",
+      "target": "src/content.config.ts#falta",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/content.config.ts",
+      "target": "src/content.config.ts#falta",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/content.config.ts",
+      "target": "astro:content",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/content.config.ts",
+      "target": "astro/loaders",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/content.config.ts",
+      "target": "astro/zod",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs",
+      "target": "src/lib/remark-glosario.mjs#cargarGlosario",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs",
+      "target": "src/lib/remark-glosario.mjs#escapeRegex",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs",
+      "target": "src/lib/remark-glosario.mjs#remarkGlosario",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs",
+      "target": "node:path",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs",
+      "target": "unist-util-visit",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs",
+      "target": "yaml",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs#cargarGlosario",
+      "target": "src/lib/remark-glosario.mjs#escapeRegex",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-glosario.mjs#remarkGlosario",
+      "target": "src/lib/remark-glosario.mjs#cargarGlosario",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs",
+      "target": "src/lib/remark-transcripcion.mjs#aSegundos",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs",
+      "target": "src/lib/remark-transcripcion.mjs#botonCopiar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs",
+      "target": "src/lib/remark-transcripcion.mjs#botonTimestamp",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs",
+      "target": "src/lib/remark-transcripcion.mjs#remarkTranscripcion",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs",
+      "target": "src/lib/remark-transcripcion.mjs#slugify",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs",
+      "target": "src/lib/remark-transcripcion.mjs#textoDe",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs",
+      "target": "unist-util-visit",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs#remarkTranscripcion",
+      "target": "src/lib/remark-transcripcion.mjs#aSegundos",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs#remarkTranscripcion",
+      "target": "src/lib/remark-transcripcion.mjs#botonCopiar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs#remarkTranscripcion",
+      "target": "src/lib/remark-transcripcion.mjs#botonTimestamp",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs#remarkTranscripcion",
+      "target": "src/lib/remark-transcripcion.mjs#slugify",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/remark-transcripcion.mjs#remarkTranscripcion",
+      "target": "src/lib/remark-transcripcion.mjs#textoDe",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/tiempo.ts",
+      "target": "src/lib/tiempo.ts#aSegundos",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/tiempo.ts",
+      "target": "src/lib/tiempo.ts#duracionAccesible",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/tiempo.ts",
+      "target": "src/lib/tiempo.ts#duracionISO",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/tiempo.ts",
+      "target": "src/lib/tiempo.ts#duracionLegible",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/tiempo.ts",
+      "target": "src/lib/tiempo.ts#formatoCorto",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/tiempo.ts",
+      "target": "src/lib/tiempo.ts#formatoHMS",
+      "relation": "contains",
+      "confidence": "extracted"
+    }
+  ]
+}

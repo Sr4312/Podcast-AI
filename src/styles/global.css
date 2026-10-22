@@ -1,0 +1,178 @@
+@import 'tailwindcss';
+
+/* Fuentes self-hosted (Fontsource, subset latino lo resuelve el propio paquete). */
+@import '@fontsource-variable/newsreader/wght.css';
+@import '@fontsource-variable/newsreader/wght-italic.css';
+@import '@fontsource-variable/public-sans/wght.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+
+@theme {
+  /* Tipografía: Newsreader (titulares) · Public Sans (texto) · IBM Plex Mono (tiempos) */
+  --font-titulo: 'Newsreader Variable', 'Iowan Old Style', Georgia, serif;
+  --font-texto: 'Public Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Papel y tinta. Un solo acento semántico: azul tinta. */
+  --color-papel: #f6f3ec;
+  --color-papel-2: #ede9df;
+  --color-tinta: #1c1b19;
+  --color-tinta-2: #4a4742;
+  --color-linea: #cfc9bb;
+  --color-acento: #1f4b8f;
+  --color-acento-suave: #dfe7f5;
+  --color-ok: #2f5e3a;
+  --color-pendiente: #8a5a12;
+
+  --text-base: 1.125rem; /* 18 px */
+  --leading-texto: 1.6;
+  --medida: 68ch;
+
+  /* Curvas (skill animate). Se usan recién en F6. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Modo oscuro: por preferencia del sistema o por data-theme guardado. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-papel: #151412;
+    --color-papel-2: #1f1d1a;
+    --color-tinta: #ece8df;
+    --color-tinta-2: #b4ada0;
+    --color-linea: #3a3732;
+    --color-acento: #8fb4f0;
+    --color-acento-suave: #1d2a40;
+    --color-ok: #8fcb9b;
+    --color-pendiente: #e0b063;
+  }
+}
+:root[data-theme='dark'] {
+  --color-papel: #151412;
+  --color-papel-2: #1f1d1a;
+  --color-tinta: #ece8df;
+  --color-tinta-2: #b4ada0;
+  --color-linea: #3a3732;
+  --color-acento: #8fb4f0;
+  --color-acento-suave: #1d2a40;
+  --color-ok: #8fcb9b;
+  --color-pendiente: #e0b063;
+}
+
+@layer base {
+  html {
+    background: var(--color-papel);
+    color: var(--color-tinta);
+    font-family: var(--font-texto);
+    font-size: 17px;
+    line-height: var(--leading-texto);
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  @media (min-width: 48rem) {
+    html {
+      font-size: 18px;
+    }
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--color-papel);
+    color: var(--color-tinta);
+  }
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-titulo);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  a {
+    color: var(--color-acento);
+    text-decoration-thickness: from-font;
+    text-underline-offset: 0.15em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+  }
+  button {
+    font: inherit;
+    color: inherit;
+  }
+  .mono,
+  time,
+  .ts {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .contenedor {
+    width: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+  }
+  .prosa {
+    max-width: var(--medida);
+  }
+  .prosa p {
+    margin-block: 0 1.1em;
+  }
+  .prosa h2 {
+    font-size: 1.6rem;
+    margin-block: 2.2em 0.7em;
+  }
+  /* Transcripción */
+  .parrafo {
+    position: relative;
+  }
+  .parrafo .ts {
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0 0.3em;
+    font-size: 0.875rem;
+    color: var(--color-acento);
+    background: transparent;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .parrafo .copiar-t {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.5em;
+    padding: 0.15em;
+    color: var(--color-tinta-2);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    vertical-align: -0.15em;
+  }
+  .parrafo .orador {
+    font-weight: 600;
+  }
+  .parrafo.en-curso {
+    background: var(--color-acento-suave);
+    box-shadow: 0 0 0 0.5rem var(--color-acento-suave);
+    border-radius: 2px;
+  }
+  a.glosario {
+    text-decoration-style: dotted;
+    text-decoration-color: var(--color-tinta-2);
+    color: inherit;
+  }
+  .aviso-ejemplo {
+    border: 1px solid var(--color-pendiente);
+    color: var(--color-pendiente);
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9375rem;
+    border-radius: 2px;
+  }
+}

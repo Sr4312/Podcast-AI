@@ -1,0 +1,48 @@
+---
+import Base from '@/layouts/Base.astro';
+import { SITIO, FORMATOS } from '@/config/sitio';
+import { getEpisodios, duracionSegundos, fechaCorta } from '@/lib/contenido';
+import { duracionLegible } from '@/lib/tiempo';
+
+const episodios = await getEpisodios();
+const [ultimo, ...resto] = episodios;
+---
+
+<Base titulo={`${SITIO.nombre} · podcast de IA y problemas públicos`} descripcion={SITIO.descripcionCorta} ruta="/">
+  {
+    ultimo && (
+      <section aria-labelledby="ultimo">
+        <p class="m-0 text-tinta-2">Episodio {ultimo.data.numero} · {fechaCorta(ultimo.data.fecha)}</p>
+        <h1 id="ultimo" class="mt-2 mb-3 text-4xl md:text-5xl">
+          <a href={`/episodios/${ultimo.id}`} class="text-tinta no-underline">{ultimo.data.titulo}</a>
+        </h1>
+        <p class="prosa m-0 text-xl">{ultimo.data.bajada}</p>
+        <p class="mt-3 text-tinta-2">
+          {FORMATOS[ultimo.data.formato].nombre} · <span class="mono">{duracionLegible(duracionSegundos(ultimo))}</span>
+        </p>
+      </section>
+    )
+  }
+
+  <section class="mt-14" aria-labelledby="recientes">
+    <h2 id="recientes" class="text-2xl">Episodios recientes</h2>
+    <ol class="m-0 list-none p-0 divide-y divide-linea border-y border-linea">
+      {
+        resto.map((ep) => (
+          <li class="flex gap-4 py-4">
+            <span class="mono w-10 shrink-0 text-tinta-2">{String(ep.data.numero).padStart(2, '0')}</span>
+            <div>
+              <a href={`/episodios/${ep.id}`} class="font-titulo text-xl text-tinta no-underline">
+                {ep.data.titulo}
+              </a>
+              <p class="m-0 mt-1">{ep.data.bajada}</p>
+              <p class="m-0 mt-1 text-[0.9375rem] text-tinta-2">
+                {FORMATOS[ep.data.formato].nombre} · <span class="mono">{duracionLegible(duracionSegundos(ep))}</span>
+              </p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</Base>

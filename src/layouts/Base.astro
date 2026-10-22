@@ -1,0 +1,82 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import { SITIO } from '@/config/sitio';
+import '@/styles/global.css';
+
+interface Props {
+  titulo: string;
+  descripcion: string;
+  /** Ruta canónica sin dominio, p. ej. "/episodios/001-..." */
+  ruta?: string;
+  noindex?: boolean;
+  imagen?: string;
+  tipoOG?: 'website' | 'article';
+}
+
+const { titulo, descripcion, ruta, noindex = false, imagen, tipoOG = 'website' } = Astro.props;
+const canonical = new URL(ruta ?? Astro.url.pathname, SITIO.url).toString().replace(/\/$/, '') || SITIO.url;
+const ogImagen = new URL(imagen ?? '/og/portada.png', SITIO.url).toString();
+---
+
+<!doctype html>
+<html lang={SITIO.idioma}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titulo}</title>
+    <meta name="description" content={descripcion.slice(0, 160)} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:site_name" content={SITIO.nombre} />
+    <meta property="og:type" content={tipoOG} />
+    <meta property="og:title" content={titulo} />
+    <meta property="og:description" content={descripcion.slice(0, 200)} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImagen} />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" type="application/rss+xml" title={`${SITIO.nombre} (podcast)`} href={SITIO.hosting.rss} />
+    <link rel="alternate" type="application/rss+xml" title={`${SITIO.nombre} (novedades de la web)`} href="/rss.xml" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>
+      // Tema guardado, antes del primer pintado para evitar parpadeo.
+      try {
+        const t = localStorage.getItem('tema');
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
+    <ClientRouter />
+    <slot name="head" />
+  </head>
+  <body>
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-papel focus:px-3 focus:py-2">
+      Saltar al contenido
+    </a>
+    <header class="border-b border-linea">
+      <nav class="contenedor flex items-center justify-between gap-4 py-3" aria-label="Principal">
+        <a href="/" class="font-titulo text-xl no-underline text-tinta">{SITIO.nombre}</a>
+        <ul class="m-0 flex list-none items-center gap-5 p-0 text-[0.9375rem]">
+          <li><a href="/episodios">Episodios</a></li>
+          <li><a href="/temas">Temas</a></li>
+          <li><a href="/fuentes">Fuentes</a></li>
+          <li><a href="/acerca">Acerca</a></li>
+          <li><a href="/suscribirse" class="rounded-sm bg-acento px-3 py-1.5 text-papel no-underline">Suscribite</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="contenido" class="contenedor py-10">
+      <slot />
+    </main>
+    <footer class="mt-16 border-t border-linea">
+      <div class="contenedor py-8 text-[0.9375rem] text-tinta-2">
+        <p class="m-0">{SITIO.nombre} · {SITIO.descripcionCorta}</p>
+        <p class="mt-2 mb-0">
+          <a href={SITIO.hosting.rss}>RSS</a> · <a href="/acerca">Método</a> · <a href="/correcciones">Correcciones</a> ·
+          <a href={`mailto:${SITIO.email}`}>Contacto</a>
+        </p>
+      </div>
+    </footer>
+    <div id="reproductor" transition:persist="reproductor"></div>
+  </body>
+</html>
