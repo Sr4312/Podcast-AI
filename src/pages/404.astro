@@ -1,0 +1,35 @@
+---
+import Base from '@/layouts/Base.astro';
+import FilaEpisodio from '@/components/FilaEpisodio.astro';
+import { SITIO } from '@/config/sitio';
+import { getEpisodios } from '@/lib/contenido';
+
+const ultimos = (await getEpisodios()).slice(0, 3);
+---
+
+<Base titulo={`Página no encontrada · ${SITIO.nombre}`} descripcion="Esa dirección no existe. Buscá en el sitio o empezá por los últimos episodios." ruta="/404" noindex>
+  <div class="cuaderno">
+    <div class="margen">
+      <p class="mt-1 mono">Error 404</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Esa página no existe</h1>
+      <p class="prosa text-lg mt-4">Puede que el link esté mal escrito o que hayamos movido la página. Lo que sí existe:</p>
+
+      <div class="mt-8" data-buscador>
+        <label for="q404" class="etiqueta">Buscar en episodios, transcripciones y glosario</label>
+        <input id="q404" type="search" class="campo" placeholder="p. ej. datos personales" autocomplete="off" style="max-width:34rem" />
+        <div id="resultados-busqueda" class="mt-3" aria-live="polite"></div>
+      </div>
+
+      <section class="seccion" aria-labelledby="ult">
+        <h2 id="ult" class="mb-4">Últimos episodios</h2>
+        <ol class="lista-editorial">{ultimos.map((ep) => <FilaEpisodio ep={ep} conFecha />)}</ol>
+      </section>
+
+      <p class="mt-8 prosa">
+        O andá a la <a href="/">portada</a>, al <a href="/episodios">archivo</a> o a <a href="/empezar">Empezá por acá</a>.
+      </p>
+    </div>
+  </div>
+</Base>

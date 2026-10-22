@@ -1,0 +1,179 @@
+- generic [active] [ref=f15e1]:
+  - link "Saltar al contenido" [ref=f15e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f15e3]:
+    - generic [ref=f15e4]:
+      - link "Señal Pública, inicio" [ref=f15e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f15e15]: Señal Pública
+      - navigation "Principal" [ref=f15e16]:
+        - list [ref=f15e17]:
+          - listitem [ref=f15e18]:
+            - link "Episodios" [ref=f15e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f15e20]:
+            - link "Temas" [ref=f15e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f15e22]:
+            - link "Fuentes" [ref=f15e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f15e24]:
+            - link "Acerca" [ref=f15e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f15e26]:
+            - link "Suscribite" [ref=f15e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f15e28]:
+            - button "Cambiar a modo oscuro" [ref=f15e29] [cursor=pointer]
+  - main [ref=f15e32]:
+    - generic [ref=f15e33]:
+      - paragraph [ref=f15e35]: Tres ejes, 10 temas. Cada tema tiene su página con episodios y términos del glosario relacionados.
+      - generic [ref=f15e36]:
+        - heading "Temas" [level=1] [ref=f15e37]
+        - region [ref=f15e38]:
+          - heading "Política pública" [level=2] [ref=f15e39]
+          - paragraph [ref=f15e40]: "Leyes, regulación, trámites y decisiones del Estado: dónde la IA entra en el circuito y qué cambia en el resultado."
+          - paragraph [ref=f15e41]: 3 episodios
+          - list [ref=f15e42]:
+            - listitem [ref=f15e43]:
+              - generic [ref=f15e44]:
+                - link "Legislación" [ref=f15e45] [cursor=pointer]:
+                  - /url: /temas/legislacion
+                - paragraph [ref=f15e46]: "Proyectos de ley, dictámenes y normas en discusión: qué pasa cuando un sistema de IA entra en el circuito de redactar, analizar o votar."
+              - generic [ref=f15e47]: 2 eps.
+            - listitem [ref=f15e48]:
+              - generic [ref=f15e49]:
+                - link "Asesoramiento legislativo" [ref=f15e50] [cursor=pointer]:
+                  - /url: /temas/asesoramiento-legislativo
+                - paragraph [ref=f15e51]: "El trabajo de los equipos que leen, resumen y negocian proyectos: cuánto de eso puede hacer un modelo de lenguaje y cuánto depende de saber quién pidió qué."
+              - generic [ref=f15e52]: 1 ep.
+            - listitem [ref=f15e53]:
+              - generic [ref=f15e54]:
+                - link "Gobierno digital" [ref=f15e55] [cursor=pointer]:
+                  - /url: /temas/gobierno-digital
+                - paragraph [ref=f15e56]: "Trámites, expedientes y sistemas del Estado: dónde la automatización ahorra tiempo de verdad y dónde solo mueve la cola de lugar."
+              - generic [ref=f15e57]: 1 ep.
+            - listitem [ref=f15e58]:
+              - generic [ref=f15e59]:
+                - link "Municipios" [ref=f15e60] [cursor=pointer]:
+                  - /url: /temas/municipios
+                - paragraph [ref=f15e61]: "Gobiernos locales con presupuesto chico y demanda grande: cómo compran tecnología, qué contratan y quién responde cuando falla."
+              - generic [ref=f15e62]: 1 ep.
+        - region [ref=f15e63]:
+          - heading "Sociedad" [level=2] [ref=f15e64]
+          - paragraph [ref=f15e65]: Derechos, información pública, educación, salud y la relación cotidiana entre personas e instituciones.
+          - paragraph [ref=f15e66]: 1 episodio
+          - list [ref=f15e67]:
+            - listitem [ref=f15e68]:
+              - generic [ref=f15e69]:
+                - link "Datos personales" [ref=f15e70] [cursor=pointer]:
+                  - /url: /temas/datos-personales
+                - paragraph [ref=f15e71]: Qué datos de las personas entran a un sistema de IA, con qué base legal, quién los guarda y durante cuánto tiempo. La Ley 25.326 como punto de partida.
+              - generic [ref=f15e72]: 2 eps.
+            - listitem [ref=f15e73]:
+              - generic [ref=f15e74]:
+                - link "Atención ciudadana" [ref=f15e75] [cursor=pointer]:
+                  - /url: /temas/atencion-ciudadana
+                - paragraph [ref=f15e76]: "Mesas de entrada, líneas telefónicas y chats de consulta: qué le pasa a la persona del otro lado cuando quien responde es un sistema automatizado."
+              - generic [ref=f15e77]: 1 ep.
+            - listitem [ref=f15e78]:
+              - generic [ref=f15e79]:
+                - link "Chatbots" [ref=f15e80] [cursor=pointer]:
+                  - /url: /temas/chatbots
+                - paragraph [ref=f15e81]: "Sistemas conversacionales que responden preguntas del público: qué tan bien lo hacen cuando la pregunta es sobre una norma, un plazo o un derecho."
+              - generic [ref=f15e82]: 1 ep.
+            - listitem [ref=f15e83]:
+              - generic [ref=f15e84]:
+                - link "Información pública" [ref=f15e85] [cursor=pointer]:
+                  - /url: /temas/informacion-publica
+                - paragraph [ref=f15e86]: "El derecho a saber qué hace el Estado: cómo cambia el acceso a la información cuando las respuestas las da un sistema y no una oficina."
+              - generic [ref=f15e87]: 1 ep.
+        - region [ref=f15e88]:
+          - heading "Economía" [level=2] [ref=f15e89]
+          - paragraph [ref=f15e90]: "Trabajo, productividad, mercados y costos: qué dicen los datos sobre el impacto real de la automatización."
+          - paragraph [ref=f15e91]: 1 episodio
+          - list [ref=f15e92]:
+            - listitem [ref=f15e93]:
+              - generic [ref=f15e94]:
+                - link "Costos del Estado" [ref=f15e95] [cursor=pointer]:
+                  - /url: /temas/costos-del-estado
+                - paragraph [ref=f15e96]: Cuánto cuesta un sistema de IA en el sector público, contra qué se compara ese costo y qué pasa con el gasto cuando el contrato termina.
+              - generic [ref=f15e97]: 1 ep.
+            - listitem [ref=f15e98]:
+              - generic [ref=f15e99]:
+                - link "Trabajo y automatización" [ref=f15e100] [cursor=pointer]:
+                  - /url: /temas/trabajo-y-automatizacion
+                - paragraph [ref=f15e101]: Qué tareas concretas cambian cuando llega un sistema de IA a una oficina, qué empleos se reorganizan y qué dicen los datos, no los pronósticos.
+              - generic [ref=f15e102]: 0 eps.
+  - contentinfo [ref=f15e103]:
+    - generic [ref=f15e104]:
+      - generic [ref=f15e105]:
+        - paragraph [ref=f15e106]: Señal Pública
+        - paragraph [ref=f15e107]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f15e108]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f15e109] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f15e110]:
+        - heading "Escuchalo en" [level=2] [ref=f15e111]
+        - list [ref=f15e112]:
+          - listitem [ref=f15e113]:
+            - link "YouTube" [ref=f15e114] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f15e115]:
+            - link "Spotify" [ref=f15e116] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f15e117]:
+            - link "Apple Podcasts" [ref=f15e118] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f15e119]:
+            - link "RSS del podcast" [ref=f15e120] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f15e125]:
+            - link "Todas las opciones" [ref=f15e126] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f15e127]:
+        - heading "El sitio" [level=2] [ref=f15e128]
+        - list [ref=f15e129]:
+          - listitem [ref=f15e130]:
+            - link "Empezá por acá" [ref=f15e131] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f15e132]:
+            - link "Todos los episodios" [ref=f15e133] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f15e134]:
+            - link "Glosario" [ref=f15e135] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f15e136]:
+            - link "Biblioteca de fuentes" [ref=f15e137] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f15e138]:
+            - link "Proponé un caso" [ref=f15e139] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f15e140]:
+        - heading "Cómo trabajamos" [level=2] [ref=f15e141]
+        - list [ref=f15e142]:
+          - listitem [ref=f15e143]:
+            - link "Método y uso de IA" [ref=f15e144] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f15e145]:
+            - link "Correcciones" [ref=f15e146] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f15e147]:
+            - link "Kit de prensa" [ref=f15e148] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f15e149]:
+            - link "hola@senalpublica.ar" [ref=f15e150] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f15e151]:
+            - link "LinkedIn" [ref=f15e152] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f15e153]:
+            - link "Instagram" [ref=f15e154] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f15e156]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f15e157] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

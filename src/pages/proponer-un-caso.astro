@@ -1,0 +1,139 @@
+---
+import Base from '@/layouts/Base.astro';
+import { SITIO } from '@/config/sitio';
+
+const endpoint = SITIO.formularios.proponerCaso;
+---
+
+<Base titulo={`Proponé un caso · ${SITIO.nombre}`} descripcion="Contanos un problema público concreto donde la IA ya está (o está por entrar) y lo evaluamos para un episodio." ruta="/proponer-un-caso">
+  <div class="cuaderno">
+    <div class="margen">
+      <p class="mt-1">Leemos todo. Respondemos cuando un caso avanza a investigación, y lo acreditamos en el episodio si querés.</p>
+      <p class="mt-3">Lo que más nos sirve: un organismo o lugar concreto, un documento o dato público, y una persona con quien hablar.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Proponé un caso</h1>
+      <p class="prosa text-lg mt-4">
+        Un trámite que cambió, un sistema que se contrató, una ley que se discute, un servicio que se automatizó. Si pasó cerca tuyo y
+        creés que merece una mirada con fuentes, contanos.
+      </p>
+
+      <form class="formulario mt-8 prosa" method="post" action={endpoint || undefined} data-formulario-caso data-demo={!endpoint || undefined} novalidate>
+        <div class="campo-grupo">
+          <label for="nombre" class="etiqueta">Nombre</label>
+          <input id="nombre" name="nombre" type="text" class="campo" required autocomplete="name" />
+        </div>
+        <div class="campo-grupo">
+          <label for="email" class="etiqueta">Correo</label>
+          <input id="email" name="email" type="email" class="campo" required autocomplete="email" inputmode="email" />
+          <p class="meta mt-1">Solo para responderte. No lo compartimos ni lo sumamos a la newsletter.</p>
+        </div>
+        <div class="campo-grupo">
+          <label for="organizacion" class="etiqueta">Organización (opcional)</label>
+          <input id="organizacion" name="organizacion" type="text" class="campo" autocomplete="organization" />
+        </div>
+        <div class="campo-grupo">
+          <label for="problema" class="etiqueta">El problema, en hasta 500 caracteres</label>
+          <textarea id="problema" name="problema" class="campo" maxlength="500" required aria-describedby="contador"></textarea>
+          <p class="meta mt-1" id="contador" aria-live="polite"><span data-restantes>500</span> caracteres disponibles</p>
+        </div>
+        <div class="campo-grupo">
+          <label for="link" class="etiqueta">Link a datos, documentos o notas (opcional)</label>
+          <input id="link" name="link" type="url" class="campo" placeholder="https://" inputmode="url" />
+        </div>
+        <div class="campo-grupo campo-oculto" aria-hidden="true">
+          <label for="sitio-web">No completar</label>
+          <input id="sitio-web" name="sitio_web" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+        <div class="campo-grupo">
+          <label class="check">
+            <input type="checkbox" name="acreditar" value="si" />
+            <span>Si el caso se convierte en episodio, quiero que me acrediten por nombre.</span>
+          </label>
+        </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <button type="submit" class="boton">Enviar el caso</button>
+          <p class="meta" role="status" aria-live="polite" data-estado></p>
+        </div>
+        {
+          !endpoint && (
+            <p class="aviso-ejemplo mt-4">Modo demo: el formulario todavía no tiene destino configurado (TODO en sitio.ts). Se valida pero no envía.</p>
+          )
+        }
+      </form>
+
+      <section class="seccion prosa" aria-labelledby="alt">
+        <h2 id="alt">Si preferís el correo</h2>
+        <p class="mt-3">Escribí a <a href={`mailto:${SITIO.email}?subject=Caso%20para%20${encodeURIComponent(SITIO.nombre)}`}>{SITIO.email}</a> con el asunto "Caso". Mismos datos, mismo tratamiento.</p>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<script>
+  function init() {
+    const form = document.querySelector<HTMLFormElement>('[data-formulario-caso]');
+    if (!form || form.dataset.listo) return;
+    form.dataset.listo = '1';
+    const problema = form.querySelector<HTMLTextAreaElement>('#problema')!;
+    const restantes = form.querySelector<HTMLElement>('[data-restantes]')!;
+    const estado = form.querySelector<HTMLElement>('[data-estado]')!;
+    const actualizar = () => (restantes.textContent = String(500 - problema.value.length));
+    problema.addEventListener('input', actualizar);
+    actualizar();
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      estado.textContent = '';
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      if ((form.elements.namedItem('sitio_web') as HTMLInputElement).value) return; // bot
+      if (form.dataset.demo) {
+        estado.textContent = 'Modo demo: el caso es válido pero no se envió. Configurá el destino en sitio.ts.';
+        return;
+      }
+      estado.textContent = 'Enviando…';
+      try {
+        const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (!r.ok) throw new Error(String(r.status));
+        form.reset();
+        actualizar();
+        estado.textContent = 'Recibido. Te escribimos si el caso avanza.';
+      } catch {
+        estado.textContent = `No se pudo enviar. Probá de nuevo o escribinos por correo.`;
+      }
+    });
+  }
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style>
+  .formulario {
+    max-width: 36rem;
+  }
+  .campo-grupo + .campo-grupo,
+  .campo-grupo + div {
+    margin-top: 1.25rem;
+  }
+  .campo-oculto {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .check {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+  .check input {
+    margin-top: 0.35rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: var(--color-acento);
+  }
+</style>

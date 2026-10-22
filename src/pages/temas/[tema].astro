@@ -1,0 +1,83 @@
+---
+import { getCollection, getEntries } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import FilaEpisodio from '@/components/FilaEpisodio.astro';
+import { SITIO, EJES } from '@/config/sitio';
+import { getEpisodios } from '@/lib/contenido';
+
+export async function getStaticPaths() {
+  const temas = await getCollection('temas');
+  return temas.map((t) => ({ params: { tema: t.id }, props: { tema: t } }));
+}
+
+const { tema } = Astro.props;
+const episodios = (await getEpisodios()).filter((e) => e.data.temas.some((t) => t.id === tema.id));
+const glosario = await getEntries(tema.data.glosario);
+const eje = EJES[tema.data.eje];
+---
+
+<Base titulo={`${tema.data.nombre} · ${SITIO.nombre}`} descripcion={tema.data.descripcion} ruta={`/temas/${tema.id}`}>
+  <div class="cuaderno">
+    <div class="margen">
+      <nav aria-label="Migas" class="mb-4"><a href="/temas">Temas</a> / <a href={`/temas#${tema.data.eje}`}>{eje.nombre}</a></nav>
+      <dl>
+        <div><dt>Eje</dt><dd>{eje.nombre}</dd></div>
+        <div><dt>Episodios</dt><dd>{episodios.length}</dd></div>
+      </dl>
+    </div>
+    <div class="cuerpo">
+      <h1>{tema.data.nombre}</h1>
+      <p class="prosa text-lg mt-4">{tema.data.descripcion}</p>
+
+      <section class="seccion" aria-labelledby="eps">
+        <h2 id="eps" class="mb-4">Episodios</h2>
+        {
+          episodios.length ? (
+            <ol class="lista-editorial">{episodios.map((ep) => <FilaEpisodio ep={ep} conInvitados conFecha />)}</ol>
+          ) : (
+            <p class="prosa">Todavía no hay episodios sobre este tema. Si tenés un caso, <a href="/proponer-un-caso">proponelo</a>.</p>
+          )
+        }
+      </section>
+
+      {
+        glosario.length > 0 && (
+          <section class="seccion prosa" aria-labelledby="glo">
+            <h2 id="glo">Términos relacionados</h2>
+            <dl class="terminos mt-4">
+              {glosario.map((g) => (
+                <div>
+                  <dt>
+                    <a href={`/glosario/${g.id}`}>{g.data.termino}</a>
+                  </dt>
+                  <dd>{g.data.definicion}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )
+      }
+    </div>
+  </div>
+</Base>
+
+<style>
+  .terminos div {
+    padding: 0.8rem 0;
+    border-top: 1px solid var(--color-linea);
+  }
+  .terminos dt {
+    font-family: var(--font-titulo);
+    font-size: var(--text-lg);
+  }
+  .terminos dt a {
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .terminos dt a:hover {
+    color: var(--color-acento);
+  }
+  .terminos dd {
+    margin: 0.2rem 0 0;
+  }
+</style>

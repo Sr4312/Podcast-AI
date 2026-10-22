@@ -1,0 +1,91 @@
+---
+import Base from '@/layouts/Base.astro';
+import BadgePlataforma from '@/components/BadgePlataforma.astro';
+import Newsletter from '@/components/Newsletter.astro';
+import Icono from '@/components/Icono.astro';
+import { SITIO } from '@/config/sitio';
+
+const plataformas = (['spotify', 'apple', 'youtube', 'ivoox'] as const).filter((p) => SITIO.plataformas[p]);
+---
+
+<Base titulo={`Suscribite · ${SITIO.nombre}`} descripcion={`Todas las formas de seguir ${SITIO.nombre}: Spotify, Apple Podcasts, YouTube, RSS y el correo de cada episodio.`} ruta="/suscribirse">
+  <div class="cuaderno">
+    <div class="margen">
+      <p class="mt-1">Elegí tu app. Si usás otra, el RSS funciona en todas.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Suscribite</h1>
+      <p class="prosa text-lg mt-4">Un episodio cada dos semanas. Gratis, sin publicidad y con todas las fuentes en la web.</p>
+
+      <section class="seccion" aria-labelledby="apps">
+        <h2 id="apps" class="mb-4">En tu app de podcasts</h2>
+        <div class="flex flex-wrap gap-3">
+          {plataformas.map((p) => <BadgePlataforma id={p} href={SITIO.plataformas[p]} grande />)}
+        </div>
+      </section>
+
+      <section class="seccion prosa" aria-labelledby="rss">
+        <h2 id="rss">Con RSS, en cualquier app</h2>
+        <p class="mt-3">Copiá esta dirección y pegala en "Agregar por URL" o "Añadir feed" de tu aplicación. Funciona en Pocket Casts, Overcast, AntennaPod, Castro y las demás.</p>
+        <div class="rss mt-3">
+          <code class="mono" id="rss-url">{SITIO.hosting.rss}</code>
+          <button type="button" class="boton boton--secundario" data-copiar="#rss-url"><Icono nombre="copiar" tamano={16} /> Copiar</button>
+          <a href={SITIO.hosting.rss} class="boton boton--secundario" data-plataforma="rss"><Icono nombre="rss" tamano={16} /> Abrir</a>
+        </div>
+        <p class="meta mt-3">El feed lo sirve {SITIO.hosting.nombre}. <a href="/feed">{SITIO.dominio}/feed</a> redirige siempre a la dirección vigente.</p>
+      </section>
+
+      <section class="seccion" aria-labelledby="correo">
+        <h2 id="correo" class="mb-2">Por correo: {SITIO.newsletter.nombreLista}</h2>
+        <p class="prosa mb-4">Un correo por episodio, con el resumen en dos minutos, las fuentes y lo que pasó después. Nada más, y te das de baja con un clic.</p>
+        <Newsletter id="news-sus" />
+      </section>
+
+      <section class="seccion prosa" aria-labelledby="redes">
+        <h2 id="redes">En redes</h2>
+        <p class="mt-3">Publicamos la frase destacada y el resumen de cada episodio en
+          {SITIO.redes.linkedin && <> <a href={SITIO.redes.linkedin} rel="noopener me">LinkedIn</a></>}
+          {SITIO.redes.instagram && <> e <a href={SITIO.redes.instagram} rel="noopener me">Instagram</a></>}. Las piezas para compartir están en el kit de cada episodio.</p>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<script>
+  function init() {
+    document.querySelectorAll<HTMLButtonElement>('[data-copiar]').forEach((b) => {
+      if (b.dataset.listo) return;
+      b.dataset.listo = '1';
+      b.addEventListener('click', async () => {
+        const el = document.querySelector(b.dataset.copiar!);
+        try {
+          await navigator.clipboard.writeText(el?.textContent?.trim() ?? '');
+          const original = b.innerHTML;
+          b.textContent = 'Copiado';
+          setTimeout(() => (b.innerHTML = original), 1500);
+        } catch {
+          b.textContent = 'No se pudo copiar';
+        }
+      });
+    });
+  }
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style>
+  .rss {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .rss code {
+    padding: 0.5rem 0.8rem;
+    background: var(--color-papel-2);
+    border: 1px solid var(--color-linea);
+    border-radius: var(--radius-ui);
+    font-size: var(--text-meta);
+    word-break: break-all;
+  }
+</style>

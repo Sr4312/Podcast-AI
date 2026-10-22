@@ -1,0 +1,103 @@
+---
+import Base from '@/layouts/Base.astro';
+import BotonReproducir from '@/components/BotonReproducir.astro';
+import Newsletter from '@/components/Newsletter.astro';
+import { SITIO, FORMATOS } from '@/config/sitio';
+import { getEpisodios, duracionSegundos } from '@/lib/contenido';
+import { duracionLegible } from '@/lib/tiempo';
+
+const episodios = await getEpisodios();
+const destacados = episodios.filter((e) => e.data.destacado).sort((a, b) => a.data.numero - b.data.numero).slice(0, 5);
+---
+
+<Base titulo={`Empezá por acá · ${SITIO.nombre}`} descripcion={`Si es tu primera vez en ${SITIO.nombre}: un recorrido corto de episodios elegidos a mano para entender cómo trabajamos.`} ruta="/empezar">
+  <div class="cuaderno">
+    <div class="margen">
+      <p class="mt-1">Un recorrido de {destacados.length} episodios, en el orden que recomendamos. Cada uno se puede escuchar suelto.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Empezá por acá</h1>
+      <p class="prosa text-lg mt-4">
+        {SITIO.nombre} no comenta novedades: toma un problema público concreto y lo pone a prueba. Estos episodios muestran los tres
+        formatos con los que trabajamos y la manera en que citamos cada dato.
+      </p>
+
+      <ol class="recorrido mt-10">
+        {
+          destacados.map((ep, i) => (
+            <li class="paso">
+              <span class="paso__n mono" aria-hidden="true">{i + 1}</span>
+              <div class="paso__cuerpo">
+                <p class="meta">
+                  {FORMATOS[ep.data.formato].nombre} · <span class="mono">{duracionLegible(duracionSegundos(ep))}</span>
+                </p>
+                <h2 class="mt-1">
+                  <a href={`/episodios/${ep.id}`}>{ep.data.titulo}</a>
+                </h2>
+                <p class="prosa mt-2">{ep.data.bajada}</p>
+                <p class="prosa mt-3 por-que">
+                  <strong>Por qué empezar por acá:</strong> {FORMATOS[ep.data.formato].descripcion}
+                  {ep.data.resumen && <> Lo que te llevás: {ep.data.resumen.puntos[0].charAt(0).toLowerCase() + ep.data.resumen.puntos[0].slice(1)}</>}
+                </p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                  <BotonReproducir ep={ep} />
+                  <a href={`/episodios/${ep.id}#resumen`} class="boton boton--secundario">Leer el resumen</a>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+
+      <section class="seccion prosa" aria-labelledby="despues">
+        <h2 id="despues">Después de estos</h2>
+        <ul class="mt-3">
+          <li><a href="/episodios">El archivo completo</a>, con filtros por eje, formato y tema, y búsqueda dentro de las transcripciones.</li>
+          <li><a href="/glosario">El glosario</a>, si algún término te quedó dando vueltas.</li>
+          <li><a href="/acerca#metodo">Cómo trabajamos</a>: qué verificamos, cómo usamos IA y cómo pedir una corrección.</li>
+        </ul>
+      </section>
+
+      <section class="seccion" aria-labelledby="news">
+        <h2 id="news" class="mb-3">{SITIO.newsletter.nombreLista}</h2>
+        <Newsletter id="news-empezar" />
+      </section>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .recorrido {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .paso {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--color-linea);
+  }
+  .paso:last-child {
+    border-bottom: 1px solid var(--color-linea);
+  }
+  .paso__n {
+    font-size: var(--text-2xl);
+    color: var(--color-tinta-2);
+    line-height: 1;
+    padding-top: 0.2rem;
+    min-width: 1.5rem;
+  }
+  .paso h2 a {
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .paso h2 a:hover {
+    color: var(--color-acento);
+  }
+  .por-que {
+    padding-left: 1rem;
+    border-left: 2px solid var(--color-linea-2);
+  }
+</style>

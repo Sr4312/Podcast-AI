@@ -333,6 +333,12 @@
     justify-content: center;
     padding: 0.4rem;
   }
+  /* Estado activado de un botón conmutable (Seguir lectura, filtros). */
+  .boton--secundario[aria-pressed='true'] {
+    background: var(--color-acento-suave);
+    border-color: var(--color-acento);
+    color: var(--color-tinta);
+  }
 
   /* Listas editoriales: filas separadas por línea, sin cards. */
   .lista-editorial {
@@ -423,6 +429,126 @@
   a.glosario:hover {
     text-decoration-color: var(--color-acento);
     color: var(--color-acento);
+  }
+
+  /* Campos de formulario */
+  .campo {
+    min-height: 2.75rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--color-linea-2);
+    border-radius: var(--radius-ui);
+    background: var(--color-papel-2);
+    color: var(--color-tinta);
+    font: inherit;
+    width: 100%;
+  }
+  .campo::placeholder {
+    color: var(--color-tinta-2);
+  }
+  textarea.campo {
+    min-height: 8rem;
+    resize: vertical;
+  }
+  select.campo {
+    width: auto;
+    padding-right: 2rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23777' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.6rem center;
+  }
+  .etiqueta {
+    display: block;
+    font-size: var(--text-meta);
+    color: var(--color-tinta-2);
+    margin-bottom: 0.3rem;
+  }
+
+  /* Tooltip del glosario */
+  .tooltip-glosario {
+    position: absolute;
+    z-index: 45;
+    max-width: 22rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--color-tinta);
+    color: var(--color-papel);
+    border-radius: var(--radius-ui);
+    font-size: var(--text-meta);
+    line-height: 1.45;
+    pointer-events: none;
+  }
+  .tooltip-glosario strong {
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+  .tooltip-glosario[hidden] {
+    display: none;
+  }
+
+  /* Persona sin foto: iniciales sobre papel 2, nada de avatares genéricos. */
+  .persona-sin-foto {
+    display: grid;
+    place-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 1px solid var(--color-linea);
+    background: var(--color-papel-2);
+    color: var(--color-tinta-2);
+    font-family: var(--font-titulo);
+    font-size: var(--text-xl);
+    border-radius: var(--radius-ui);
+  }
+
+  /* Tablas de datos */
+  .tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-meta);
+  }
+  .tabla th,
+  .tabla td {
+    text-align: left;
+    padding: 0.5rem 0.75rem 0.5rem 0;
+    border-bottom: 1px solid var(--color-linea);
+    vertical-align: top;
+  }
+  .tabla th {
+    font-weight: 600;
+    color: var(--color-tinta-2);
+  }
+
+  /* Índice de capítulos fijo junto a la transcripción (desktop) */
+  @media (min-width: 64rem) {
+    .indice-fijo {
+      position: sticky;
+      top: calc(var(--alto-header) + 1.5rem);
+      align-self: start;
+      max-height: calc(100dvh - var(--alto-header) - var(--alto-reproductor, 0px) - 3rem);
+      overflow: auto;
+    }
+  }
+  .indice-fijo ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .indice-fijo li {
+    padding: 0.3rem 0;
+  }
+  .indice-fijo a {
+    color: var(--color-tinta-2);
+    text-decoration: none;
+  }
+  .indice-fijo a:hover {
+    color: var(--color-acento);
+  }
+  .indice-fijo li.en-curso a {
+    color: var(--color-acento);
+    font-weight: 500;
+  }
+  .copiar-t.copiado {
+    color: var(--color-ok);
+    opacity: 1;
   }
 
   /* Íconos alternos del header (menú/cerrar, luna/sol). Globales porque viven en un componente hijo. */

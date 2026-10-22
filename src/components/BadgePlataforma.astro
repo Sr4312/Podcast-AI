@@ -1,0 +1,79 @@
+---
+/**
+ * Botón de plataforma. Si existe el badge oficial en public/badges/{id}.svg
+ * (descargado de la guía de marca de cada plataforma), lo usa; si no, un botón
+ * de texto sobrio. Nunca redibujamos logos de terceros a mano.
+ *
+ *   Apple Podcasts: https://www.apple.com/itunes/marketing-on-podcasts/identity-guidelines.html
+ *   Spotify:        https://developer.spotify.com/documentation/design
+ *   YouTube:        https://www.youtube.com/howyoutubeworks/resources/brand-resources/
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+import Icono from './Icono.astro';
+
+interface Props {
+  id: 'youtube' | 'spotify' | 'apple' | 'ivoox' | 'rss';
+  href: string;
+  episodioId?: string;
+  grande?: boolean;
+}
+
+const NOMBRES = { youtube: 'YouTube', spotify: 'Spotify', apple: 'Apple Podcasts', ivoox: 'Ivoox', rss: 'RSS' } as const;
+const { id, href, episodioId, grande = false } = Astro.props;
+const badge = path.resolve(`public/badges/${id}.svg`);
+const hayBadge = fs.existsSync(badge);
+const esExterno = /^https?:/.test(href);
+---
+
+<a
+  href={href}
+  class={`badge ${grande ? 'badge--grande' : ''} ${hayBadge ? 'badge--oficial' : ''}`}
+  rel={esExterno ? 'noopener' : undefined}
+  data-plataforma={id}
+  data-episodio-id={episodioId}
+  aria-label={id === 'rss' ? 'Feed RSS del podcast' : `Escuchar en ${NOMBRES[id]}`}
+>
+  {
+    hayBadge ? (
+      <img src={`/badges/${id}.svg`} alt={NOMBRES[id]} height={grande ? 48 : 36} loading="lazy" />
+    ) : (
+      <>
+        {id === 'rss' ? <Icono nombre="rss" tamano={18} /> : <Icono nombre="externo" tamano={16} />}
+        <span>{NOMBRES[id]}</span>
+      </>
+    )
+  }
+</a>
+
+<style>
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--color-linea-2);
+    border-radius: var(--radius-ui);
+    color: var(--color-tinta);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .badge:hover {
+    border-color: var(--color-acento);
+    color: var(--color-acento);
+  }
+  .badge--grande {
+    min-height: 3.25rem;
+    padding-inline: 1.25rem;
+    font-size: var(--text-lg);
+  }
+  .badge--oficial {
+    padding: 0;
+    border: 0;
+  }
+  .badge img {
+    display: block;
+    width: auto;
+  }
+</style>

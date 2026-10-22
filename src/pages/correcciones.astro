@@ -1,0 +1,98 @@
+---
+import Base from '@/layouts/Base.astro';
+import { SITIO } from '@/config/sitio';
+import { getEpisodios, correccionesDe, fechaLarga, fechaISO } from '@/lib/contenido';
+
+const episodios = await getEpisodios();
+const correcciones = correccionesDe(episodios);
+const seguimientos = episodios
+  .flatMap((ep) => ep.data.seguimiento.map((s) => ({ ep, fecha: s.fecha, texto: s.texto })))
+  .sort((a, b) => b.fecha.getTime() - a.fecha.getTime());
+---
+
+<Base titulo={`Correcciones · ${SITIO.nombre}`} descripcion={`Fe de erratas pública de ${SITIO.nombre}: cada corrección con fecha, episodio y qué cambió.`} ruta="/correcciones">
+  <div class="cuaderno">
+    <div class="margen">
+      <dl>
+        <div><dt>Correcciones</dt><dd>{correcciones.length}</dd></div>
+        <div><dt>Episodios</dt><dd>{episodios.length}</dd></div>
+      </dl>
+      <p class="mt-3">Si encontrás un error, escribinos a <a href={`mailto:${SITIO.emailCorrecciones}`}>{SITIO.emailCorrecciones}</a> con episodio, minuto y fuente.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Correcciones</h1>
+      <p class="prosa text-lg mt-4">
+        Los errores se corrigen en público, con fecha. No borramos lo que decía: dejamos constancia de qué cambió y por qué.
+      </p>
+
+      <section class="seccion" aria-labelledby="lista">
+        <h2 id="lista" class="mb-4">Fe de erratas</h2>
+        {
+          correcciones.length ? (
+            <ol class="lista-editorial">
+              {correcciones.map((c) => (
+                <li class="corr">
+                  <time datetime={fechaISO(c.fecha)} class="meta">{fechaLarga(c.fecha)}</time>
+                  <div>
+                    <p class="meta">
+                      <a href={`/episodios/${c.ep.id}#correcciones`}>Episodio {c.ep.data.numero}: {c.ep.data.titulo}</a>
+                    </p>
+                    <p class="prosa mt-1">{c.texto}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p class="prosa">Todavía no hay correcciones publicadas.</p>
+          )
+        }
+      </section>
+
+      {
+        seguimientos.length > 0 && (
+          <section class="seccion" aria-labelledby="seg">
+            <h2 id="seg" class="mb-2">Qué pasó después</h2>
+            <p class="prosa meta mb-4">No son errores: son actualizaciones de los casos que seguimos.</p>
+            <ol class="lista-editorial">
+              {seguimientos.map((s) => (
+                <li class="corr">
+                  <time datetime={fechaISO(s.fecha)} class="meta">{fechaLarga(s.fecha)}</time>
+                  <div>
+                    <p class="meta">
+                      <a href={`/episodios/${s.ep.id}#despues`}>Episodio {s.ep.data.numero}: {s.ep.data.titulo}</a>
+                    </p>
+                    <p class="prosa mt-1">{s.texto}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )
+      }
+
+      <section class="seccion prosa" aria-labelledby="como">
+        <h2 id="como">Cómo funciona</h2>
+        <ol class="mt-3">
+          <li>Recibimos el pedido por correo, con episodio, minuto y la fuente que contradice lo dicho.</li>
+          <li>Verificamos contra la fuente primaria. Si el error es nuestro, lo corregimos en la página del episodio con fecha.</li>
+          <li>Si el error está en el audio, lo aclaramos al inicio del episodio siguiente y en las notas.</li>
+          <li>Respondemos a quien lo reportó, aunque no haya error.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .corr {
+    display: grid;
+    grid-template-columns: 11rem minmax(0, 1fr);
+    gap: 1rem;
+  }
+  @media (max-width: 40rem) {
+    .corr {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+  }
+</style>

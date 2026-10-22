@@ -1,0 +1,222 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import { SITIO } from '@/config/sitio';
+import { iniciales } from '@/lib/contenido';
+
+const conductores = (await getCollection('conductores')).sort((a, b) => a.data.orden - b.data.orden);
+const bios = await Promise.all(conductores.map(async (c) => ({ c, Content: (await render(c)).Content })));
+
+const SECCIONES = [
+  { id: 'que-es', titulo: 'Qué es' },
+  { id: 'quienes', titulo: 'Quiénes conducen' },
+  { id: 'linea', titulo: 'Línea editorial' },
+  { id: 'metodo', titulo: 'Cómo verificamos' },
+  { id: 'ia', titulo: 'Cómo usamos IA' },
+  { id: 'conflictos', titulo: 'Conflictos de interés' },
+  { id: 'correcciones', titulo: 'Cómo pedir una corrección' },
+  { id: 'contacto', titulo: 'Contacto' },
+  { id: 'prensa', titulo: 'Kit de prensa' },
+];
+---
+
+<Base titulo={`Acerca · ${SITIO.nombre}`} descripcion={`Qué es ${SITIO.nombre}, quién lo conduce, cómo verificamos, cómo usamos IA, política de conflictos de interés, correcciones, contacto y kit de prensa.`} ruta="/acerca">
+  <div class="cuaderno">
+    <nav class="margen indice-fijo" aria-label="Secciones">
+      <ol>{SECCIONES.map((s) => <li><a href={`#${s.id}`}>{s.titulo}</a></li>)}</ol>
+    </nav>
+    <div class="cuerpo">
+      <h1>Acerca de {SITIO.nombre}</h1>
+
+      <section class="seccion prosa" id="que-es" aria-labelledby="h-que-es">
+        <h2 id="h-que-es">Qué es</h2>
+        <p class="mt-3">{SITIO.descripcion50}</p>
+        <p class="mt-3">
+          No es un podcast de novedades tecnológicas. No reseñamos productos ni hablamos del futuro. Cada episodio parte de un problema que
+          ya existe, una ley en discusión, un trámite, un servicio público, y pregunta qué cambia y qué no cambia cuando entra un sistema de
+          inteligencia artificial.
+        </p>
+      </section>
+
+      <section class="seccion" id="quienes" aria-labelledby="h-quienes">
+        <h2 id="h-quienes">Quiénes conducen</h2>
+        <ul class="conductores mt-4">
+          {
+            bios.map(({ c, Content }) => (
+              <li class="conductor">
+                {c.data.foto ? (
+                  <img src={c.data.foto.src} width="96" height="96" alt={`Foto de ${c.data.nombre}`} class="conductor__foto" loading="lazy" />
+                ) : (
+                  <span class="persona-sin-foto" aria-hidden="true">{iniciales(c.data.nombre)}</span>
+                )}
+                <div class="prosa">
+                  <h3>{c.data.nombre}</h3>
+                  <p class="meta">{c.data.rol}</p>
+                  <div class="mt-2 bio">
+                    <Content />
+                  </div>
+                  <p class="meta mt-2">
+                    {c.data.conflictos.length ? <>Conflictos declarados: {c.data.conflictos.join(' ')}</> : 'Sin conflictos declarados.'}
+                  </p>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="seccion prosa" id="linea" aria-labelledby="h-linea">
+        <h2 id="h-linea">Línea editorial</h2>
+        <ul class="mt-3">
+          <li><strong>Evidencia primero.</strong> Una afirmación sin fuente primaria no sale al aire. Si no la encontramos, decimos que no la encontramos.</li>
+          <li><strong>Un problema por episodio.</strong> Preferimos un caso concreto, con nombre y fecha, antes que una tendencia.</li>
+          <li><strong>Qué cambia y qué no.</strong> Cada episodio termina con esa sección. El "no cambia" suele ser lo más útil.</li>
+          <li><strong>Sin pánico ni publicidad.</strong> No usamos la palabra "revolución". No aceptamos episodios pagos ni contenido de proveedores.</li>
+          <li><strong>Para gente que decide.</strong> Escribimos para funcionarios, legisladores, periodistas, investigadores y organizaciones, en lenguaje llano.</li>
+        </ul>
+      </section>
+
+      <section class="seccion prosa" id="metodo" aria-labelledby="h-metodo">
+        <h2 id="h-metodo">Cómo verificamos</h2>
+        <ol class="mt-3">
+          <li>Antes de grabar, listamos cada dato o afirmación verificable que va a aparecer en el episodio.</li>
+          <li>Para cada uno buscamos la fuente primaria: Boletín Oficial, InfoLEG, el organismo que produce el dato, el paper, el dataset. No citamos notas periodísticas como fuente de un dato si existe la fuente original.</li>
+          <li>Una persona del equipo abre el documento y confirma el dato. Recién entonces la fuente se marca como <span class="estado estado--ok">Verificada</span> en la página del episodio.</li>
+          <li>Si no pudimos confirmar algo antes de publicar, queda marcado como <span class="estado estado--pendiente">Pendiente de verificación</span>, a la vista.</li>
+          <li>Cuando un episodio cita una cifra, la página dice de dónde sale y qué mide. Si la cifra la aportó un invitado y no la auditamos, lo decimos.</li>
+        </ol>
+        <p class="mt-4">La <a href="/fuentes">biblioteca de fuentes</a> reúne todo lo citado en todos los episodios.</p>
+      </section>
+
+      <section class="seccion prosa" id="ia" aria-labelledby="h-ia">
+        <h2 id="h-ia">Cómo usamos IA en la producción</h2>
+        <p class="mt-3">Usamos sistemas de IA para tareas de forma y los mantenemos fuera de las tareas de hecho. En cada episodio, la sección "Cómo usamos IA en este episodio" lo detalla.</p>
+        <h3 class="mt-5">Lo que hace la IA</h3>
+        <ul class="mt-2">
+          <li>Transcripción automática del audio, que después revisa una persona (nombres, cifras y siglas son lo que más falla).</li>
+          <li>Borrador del resumen y de los capítulos, que corregimos y firmamos.</li>
+          <li>En los episodios de laboratorio e investigación, los sistemas de IA son el objeto de la prueba.</li>
+        </ul>
+        <h3 class="mt-5">Lo que no hace</h3>
+        <ul class="mt-2">
+          <li>Elegir fuentes ni verificar citas. Eso lo hace una persona, documento en mano.</li>
+          <li>Sacar conclusiones ni escribir el guion.</li>
+          <li>Generar imágenes. La identidad visual del sitio es la waveform real de cada episodio.</li>
+          <li>Clonar voces ni generar audio.</li>
+        </ul>
+        <p class="mt-4">Cada resumen lleva al pie quién lo revisó. Si en algún momento cambiamos esta política, lo anunciamos en un episodio y acá.</p>
+      </section>
+
+      <section class="seccion prosa" id="conflictos" aria-labelledby="h-conflictos">
+        <h2 id="h-conflictos">Conflictos de interés</h2>
+        <p class="mt-3">Pedimos a cada persona invitada que declare, antes de grabar, vínculos laborales, económicos o institucionales con el tema del episodio. La declaración se publica en su perfil y en la página del episodio, o se indica "Sin conflictos declarados".</p>
+        <p class="mt-3">Los conductores declaran los suyos en esta página y los actualizan cuando cambian. El podcast no recibe dinero de proveedores de tecnología ni de organismos cuyos sistemas analiza. Si eso cambiara, se declararía episodio por episodio.</p>
+        <p class="mt-3">Que alguien tenga un conflicto no lo excluye: lo que importa es que quien escucha lo sepa.</p>
+      </section>
+
+      <section class="seccion prosa" id="correcciones" aria-labelledby="h-correcciones">
+        <h2 id="h-correcciones">Cómo pedir una corrección</h2>
+        <p class="mt-3">Si encontrás un error, un dato mal citado, un nombre equivocado, una fuente que no dice lo que decimos que dice, escribinos a <a href={`mailto:${SITIO.emailCorrecciones}`}>{SITIO.emailCorrecciones}</a> con el episodio, el minuto y la fuente que lo contradice.</p>
+        <p class="mt-3">Las correcciones se publican con fecha en la página del episodio y en la <a href="/correcciones">fe de erratas pública</a>. No borramos el error: dejamos constancia de qué decía y qué dice ahora. Si el error está en el audio, lo aclaramos al inicio del episodio siguiente.</p>
+      </section>
+
+      <section class="seccion prosa" id="contacto" aria-labelledby="h-contacto">
+        <h2 id="h-contacto">Contacto</h2>
+        <ul class="mt-3">
+          <li>General: <a href={`mailto:${SITIO.email}`}>{SITIO.email}</a></li>
+          <li>Correcciones: <a href={`mailto:${SITIO.emailCorrecciones}`}>{SITIO.emailCorrecciones}</a></li>
+          <li>Casos para analizar: <a href="/proponer-un-caso">el formulario</a></li>
+          {SITIO.redes.linkedin && <li><a href={SITIO.redes.linkedin} rel="noopener me">LinkedIn</a></li>}
+          {SITIO.redes.instagram && <li><a href={SITIO.redes.instagram} rel="noopener me">Instagram</a></li>}
+        </ul>
+      </section>
+
+      <section class="seccion prosa" id="prensa" aria-labelledby="h-prensa">
+        <h2 id="h-prensa">Kit de prensa</h2>
+        <p class="mt-3">Podés usar este material para hablar del podcast sin pedir permiso. Para entrevistas o apariciones, escribinos.</p>
+        <h3 class="mt-5">Logo y portada</h3>
+        <ul class="mt-2 descargas">
+          <li><a href="/favicon.svg" download="senal-publica-logo.svg">Isotipo (SVG)</a></li>
+          <li><a href="/img/portada-512.png" download="senal-publica-portada-512.png">Portada 512×512 (PNG)</a></li>
+          <li>Fotos de los conductores: <span class="text-pendiente">TODO: pendientes de producción.</span></li>
+        </ul>
+        <h3 class="mt-5">Descripción en 50 palabras</h3>
+        <p class="mt-2 cita-prensa" id="desc-50">{SITIO.descripcion50}</p>
+        <button type="button" class="boton boton--secundario mt-2" data-copiar="#desc-50" style="min-height:2.25rem">Copiar</button>
+        <h3 class="mt-5">Descripción en 150 palabras</h3>
+        <p class="mt-2 cita-prensa" id="desc-150">{SITIO.descripcion150}</p>
+        <button type="button" class="boton boton--secundario mt-2" data-copiar="#desc-150" style="min-height:2.25rem">Copiar</button>
+        <h3 class="mt-5">Datos</h3>
+        <table class="tabla mt-2">
+          <tbody>
+            <tr><th>Nombre</th><td>{SITIO.nombre}</td></tr>
+            <tr><th>Desde</th><td>{SITIO.anioInicio}</td></tr>
+            <tr><th>Idioma</th><td>Español (Argentina)</td></tr>
+            <tr><th>Frecuencia</th><td>Quincenal <span class="text-pendiente">(TODO: confirmar)</span></td></tr>
+            <tr><th>Web</th><td><a href={SITIO.url}>{SITIO.dominio}</a></td></tr>
+            <tr><th>RSS</th><td><a href={SITIO.hosting.rss}>{SITIO.hosting.rss}</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</Base>
+
+<script>
+  function init() {
+    document.querySelectorAll<HTMLButtonElement>('[data-copiar]').forEach((b) => {
+      if (b.dataset.listo) return;
+      b.dataset.listo = '1';
+      b.addEventListener('click', async () => {
+        const el = document.querySelector(b.dataset.copiar!);
+        if (!el) return;
+        try {
+          await navigator.clipboard.writeText(el.textContent?.trim() ?? '');
+          const original = b.textContent;
+          b.textContent = 'Copiado';
+          setTimeout(() => (b.textContent = original), 1500);
+        } catch {
+          b.textContent = 'No se pudo copiar';
+        }
+      });
+    });
+  }
+  init();
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style>
+  .conductores {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .conductor {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--color-linea);
+  }
+  .conductor__foto {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: var(--radius-ui);
+  }
+  .bio :global(em) {
+    color: var(--color-tinta-2);
+  }
+  .descargas {
+    list-style: none;
+    padding: 0;
+  }
+  .cita-prensa {
+    padding: 0.8rem 1rem;
+    background: var(--color-papel-2);
+    border-radius: var(--radius-ui);
+  }
+  .text-pendiente {
+    color: var(--color-pendiente);
+  }
+</style>

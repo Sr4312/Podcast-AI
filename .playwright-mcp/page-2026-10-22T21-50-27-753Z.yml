@@ -1,0 +1,312 @@
+- generic [active] [ref=f20e1]:
+  - link "Saltar al contenido" [ref=f20e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f20e3]:
+    - generic [ref=f20e4]:
+      - link "Señal Pública, inicio" [ref=f20e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f20e15]: Señal Pública
+      - navigation "Principal" [ref=f20e16]:
+        - list [ref=f20e17]:
+          - listitem [ref=f20e18]:
+            - link "Episodios" [ref=f20e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f20e20]:
+            - link "Temas" [ref=f20e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f20e22]:
+            - link "Fuentes" [ref=f20e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f20e24]:
+            - link "Acerca" [ref=f20e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f20e26]:
+            - link "Suscribite" [ref=f20e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f20e28]:
+            - button "Cambiar a modo oscuro" [ref=f20e29] [cursor=pointer]
+  - main [ref=f20e32]:
+    - generic [ref=f20e33]:
+      - generic [ref=f20e34]:
+        - paragraph [ref=f20e35]: 14 términos. Definiciones pensadas para quien toma decisiones, no para quien programa.
+        - navigation "Letras" [ref=f20e36]:
+          - link "A" [ref=f20e37] [cursor=pointer]:
+            - /url: "#letra-A"
+          - link "B" [ref=f20e38] [cursor=pointer]:
+            - /url: "#letra-B"
+          - link "C" [ref=f20e39] [cursor=pointer]:
+            - /url: "#letra-C"
+          - link "D" [ref=f20e40] [cursor=pointer]:
+            - /url: "#letra-D"
+          - link "E" [ref=f20e41] [cursor=pointer]:
+            - /url: "#letra-E"
+          - link "M" [ref=f20e42] [cursor=pointer]:
+            - /url: "#letra-M"
+          - link "P" [ref=f20e43] [cursor=pointer]:
+            - /url: "#letra-P"
+          - link "R" [ref=f20e44] [cursor=pointer]:
+            - /url: "#letra-R"
+          - link "S" [ref=f20e45] [cursor=pointer]:
+            - /url: "#letra-S"
+          - link "T" [ref=f20e46] [cursor=pointer]:
+            - /url: "#letra-T"
+          - link "V" [ref=f20e47] [cursor=pointer]:
+            - /url: "#letra-V"
+      - generic [ref=f20e48]:
+        - heading "Glosario" [level=1] [ref=f20e49]
+        - paragraph [ref=f20e50]: Los términos que usamos en el podcast, explicados en dos o tres líneas. En cada transcripción, la primera aparición de cada uno está enlazada acá.
+        - generic [ref=f20e51]:
+          - generic [ref=f20e52]:
+            - term [ref=f20e53]:
+              - link "Agente" [ref=f20e54] [cursor=pointer]:
+                - /url: /glosario/agente
+              - text: "también: agentes, agente de IA, agentes de IA"
+            - definition [ref=f20e55]:
+              - paragraph [ref=f20e56]: "Sistema de IA que no solo responde sino que ejecuta acciones encadenadas: busca en una base, completa un formulario, envía un correo, consulta otro sistema. Más útil y más riesgoso que un chatbot que solo habla."
+          - generic [ref=f20e57]:
+            - term [ref=f20e58]:
+              - link "Ajuste fino" [ref=f20e59] [cursor=pointer]:
+                - /url: /glosario/ajuste-fino
+              - text: "también: fine-tuning, fine tuning, ajustado"
+            - definition [ref=f20e60]:
+              - paragraph [ref=f20e61]: Volver a entrenar un modelo ya existente con un conjunto de datos más chico y específico, por ejemplo expedientes de un organismo, para que responda mejor en ese dominio.
+          - generic [ref=f20e62]:
+            - term [ref=f20e63]:
+              - link "Alucinación" [ref=f20e64] [cursor=pointer]:
+                - /url: /glosario/alucinacion
+              - text: "también: alucinaciones, alucina, alucinó"
+            - definition [ref=f20e65]:
+              - paragraph [ref=f20e66]: "Respuesta de un sistema de IA que suena correcta y segura pero es falsa: una ley que no existe, un artículo con otro número, una cifra inventada. No es un error raro, es parte de cómo funcionan estos modelos."
+              - paragraph [ref=f20e67]:
+                - text: Aparece en
+                - link "episodio 3" [ref=f20e68] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+                - text: ","
+                - link "episodio 2" [ref=f20e69] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+                - text: ","
+                - link "episodio 1" [ref=f20e70] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+          - generic [ref=f20e71]:
+            - term [ref=f20e72]:
+              - link "Benchmark" [ref=f20e73] [cursor=pointer]:
+                - /url: /glosario/benchmark
+              - text: "también: benchmarks, prueba de referencia, batería de pruebas"
+            - definition [ref=f20e74]:
+              - paragraph [ref=f20e75]: Conjunto fijo de preguntas o tareas con respuesta conocida que se usa para medir y comparar sistemas de IA. Un buen benchmark público para el Estado tendría que estar hecho con normativa local y revisado por especialistas.
+              - paragraph [ref=f20e76]:
+                - text: Aparece en
+                - link "episodio 3" [ref=f20e77] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+          - generic [ref=f20e78]:
+            - term [ref=f20e79]:
+              - link "Chatbot" [ref=f20e80] [cursor=pointer]:
+                - /url: /glosario/chatbot
+              - text: "también: chatbots, asistente conversacional, asistente virtual"
+            - definition [ref=f20e81]:
+              - paragraph [ref=f20e82]: Programa que conversa por texto o voz. Los de la generación anterior seguían guiones fijos; los actuales usan modelos de lenguaje y responden cualquier cosa, lo que los hace más útiles y más propensos a inventar.
+              - paragraph [ref=f20e83]:
+                - text: Aparece en
+                - link "episodio 3" [ref=f20e84] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+                - text: ","
+                - link "episodio 2" [ref=f20e85] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+          - generic [ref=f20e86]:
+            - term [ref=f20e87]:
+              - link "Datos abiertos" [ref=f20e88] [cursor=pointer]:
+                - /url: /glosario/datos-abiertos
+              - text: "también: dataset, datasets, portal de datos abiertos"
+            - definition [ref=f20e89]:
+              - paragraph [ref=f20e90]: Datos que un organismo publica en formatos reutilizables (tablas, archivos descargables) y con licencia libre, para que cualquiera pueda analizarlos. En Argentina el portal nacional es datos.gob.ar.
+              - paragraph [ref=f20e91]:
+                - text: Aparece en
+                - link "episodio 3" [ref=f20e92] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+                - text: ","
+                - link "episodio 2" [ref=f20e93] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+          - generic [ref=f20e94]:
+            - term [ref=f20e95]:
+              - link "Entrenamiento" [ref=f20e96] [cursor=pointer]:
+                - /url: /glosario/entrenamiento
+              - text: "también: datos de entrenamiento, entrenado, entrenar"
+            - definition [ref=f20e97]:
+              - paragraph [ref=f20e98]: Proceso por el cual un modelo aprende patrones a partir de una gran cantidad de ejemplos. Lo que no estaba en esos datos, o estaba mal, el modelo no lo sabe o lo sabe mal.
+              - paragraph [ref=f20e99]:
+                - text: Aparece en
+                - link "episodio 3" [ref=f20e100] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+                - text: ","
+                - link "episodio 2" [ref=f20e101] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+                - text: ","
+                - link "episodio 1" [ref=f20e102] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+          - generic [ref=f20e103]:
+            - term [ref=f20e104]:
+              - link "Modelo de lenguaje" [ref=f20e105] [cursor=pointer]:
+                - /url: /glosario/modelo-de-lenguaje
+              - text: "también: modelos de lenguaje, LLM, large language model"
+            - definition [ref=f20e106]:
+              - paragraph [ref=f20e107]: Programa entrenado con enormes cantidades de texto para predecir qué palabra sigue. Con eso redacta, resume y responde preguntas con fluidez, pero no verifica si lo que dice es cierto.
+              - paragraph [ref=f20e108]:
+                - text: Aparece en
+                - link "episodio 3" [ref=f20e109] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+                - text: ","
+                - link "episodio 2" [ref=f20e110] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+                - text: ","
+                - link "episodio 1" [ref=f20e111] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+          - generic [ref=f20e112]:
+            - term [ref=f20e113]:
+              - link "Prompt" [ref=f20e114] [cursor=pointer]:
+                - /url: /glosario/prompt
+              - text: "también: prompts, instrucción al modelo, consigna"
+            - definition [ref=f20e115]:
+              - paragraph [ref=f20e116]: "El texto que se le da a un modelo de lenguaje para pedirle algo: una pregunta, una consigna, un documento con instrucciones. Cambiar el prompt cambia la respuesta, a veces de manera drástica."
+              - paragraph [ref=f20e117]:
+                - text: Aparece en
+                - link "episodio 2" [ref=f20e118] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+                - text: ","
+                - link "episodio 1" [ref=f20e119] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+          - generic [ref=f20e120]:
+            - term [ref=f20e121]:
+              - link "Recuperación aumentada" [ref=f20e122] [cursor=pointer]:
+                - /url: /glosario/recuperacion-aumentada
+              - text: "también: RAG, generación aumentada por recuperación, retrieval augmented generation"
+            - definition [ref=f20e123]:
+              - paragraph [ref=f20e124]: Técnica en la que, antes de responder, el sistema busca los documentos relevantes (una ley, un manual, un expediente) y se los pasa al modelo para que responda a partir de ellos y no de memoria.
+              - paragraph [ref=f20e125]:
+                - text: Aparece en
+                - link "episodio 3" [ref=f20e126] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+                - text: ","
+                - link "episodio 2" [ref=f20e127] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+                - text: ","
+                - link "episodio 1" [ref=f20e128] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+          - generic [ref=f20e129]:
+            - term [ref=f20e130]:
+              - link "Sesgo algorítmico" [ref=f20e131] [cursor=pointer]:
+                - /url: /glosario/sesgo-algoritmico
+              - text: "también: sesgo, sesgos, sesgada"
+            - definition [ref=f20e132]:
+              - paragraph [ref=f20e133]: Tendencia sistemática de un sistema a tratar peor a ciertos grupos o a favorecer ciertas respuestas, heredada de los datos con que fue entrenado o de cómo fue diseñado.
+              - paragraph [ref=f20e134]:
+                - text: Aparece en
+                - link "episodio 3" [ref=f20e135] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+                - text: ","
+                - link "episodio 1" [ref=f20e136] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+          - generic [ref=f20e137]:
+            - term [ref=f20e138]:
+              - link "Token" [ref=f20e139] [cursor=pointer]:
+                - /url: /glosario/token
+              - text: "también: tokens"
+            - definition [ref=f20e140]:
+              - paragraph [ref=f20e141]: "Unidad mínima en que un modelo de lenguaje divide el texto: una palabra corta, un pedazo de palabra o un signo. Los proveedores cobran por token procesado, así que es la unidad de costo de estos sistemas."
+              - paragraph [ref=f20e142]:
+                - text: Aparece en
+                - link "episodio 2" [ref=f20e143] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+          - generic [ref=f20e144]:
+            - term [ref=f20e145]:
+              - link "Transcripción automática" [ref=f20e146] [cursor=pointer]:
+                - /url: /glosario/transcripcion-automatica
+              - text: "también: reconocimiento de voz, speech to text, transcripción con IA"
+            - definition [ref=f20e147]:
+              - paragraph [ref=f20e148]: Conversión de audio a texto hecha por un sistema de IA. Es lo que usamos para producir las transcripciones de este podcast; después una persona las revisa y corrige nombres, cifras y siglas.
+              - paragraph [ref=f20e149]:
+                - text: Aparece en
+                - link "episodio 1" [ref=f20e150] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+          - generic [ref=f20e151]:
+            - term [ref=f20e152]:
+              - link "Ventana de contexto" [ref=f20e153] [cursor=pointer]:
+                - /url: /glosario/ventana-de-contexto
+              - text: "también: contexto del modelo, ventana de contexto del modelo"
+            - definition [ref=f20e154]:
+              - paragraph [ref=f20e155]: "Cantidad máxima de texto que un modelo puede tener presente a la vez: la pregunta, los documentos que se le pasan y la conversación previa. Lo que no entra en la ventana, el modelo no lo ve."
+              - paragraph [ref=f20e156]:
+                - text: Aparece en
+                - link "episodio 1" [ref=f20e157] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador
+  - contentinfo [ref=f20e158]:
+    - generic [ref=f20e159]:
+      - generic [ref=f20e160]:
+        - paragraph [ref=f20e161]: Señal Pública
+        - paragraph [ref=f20e162]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f20e163]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f20e164] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f20e165]:
+        - heading "Escuchalo en" [level=2] [ref=f20e166]
+        - list [ref=f20e167]:
+          - listitem [ref=f20e168]:
+            - link "YouTube" [ref=f20e169] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f20e170]:
+            - link "Spotify" [ref=f20e171] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f20e172]:
+            - link "Apple Podcasts" [ref=f20e173] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f20e174]:
+            - link "RSS del podcast" [ref=f20e175] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f20e180]:
+            - link "Todas las opciones" [ref=f20e181] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f20e182]:
+        - heading "El sitio" [level=2] [ref=f20e183]
+        - list [ref=f20e184]:
+          - listitem [ref=f20e185]:
+            - link "Empezá por acá" [ref=f20e186] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f20e187]:
+            - link "Todos los episodios" [ref=f20e188] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f20e189]:
+            - link "Glosario" [ref=f20e190] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f20e191]:
+            - link "Biblioteca de fuentes" [ref=f20e192] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f20e193]:
+            - link "Proponé un caso" [ref=f20e194] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f20e195]:
+        - heading "Cómo trabajamos" [level=2] [ref=f20e196]
+        - list [ref=f20e197]:
+          - listitem [ref=f20e198]:
+            - link "Método y uso de IA" [ref=f20e199] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f20e200]:
+            - link "Correcciones" [ref=f20e201] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f20e202]:
+            - link "Kit de prensa" [ref=f20e203] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f20e204]:
+            - link "hola@senalpublica.ar" [ref=f20e205] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f20e206]:
+            - link "LinkedIn" [ref=f20e207] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f20e208]:
+            - link "Instagram" [ref=f20e209] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f20e211]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f20e212] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

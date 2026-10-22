@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import { SITIO, EJES } from '@/config/sitio';
+import { getEpisodios } from '@/lib/contenido';
+
+const episodios = await getEpisodios();
+const temas = await getCollection('temas');
+const porEje = Object.entries(EJES).map(([id, eje]) => ({
+  id,
+  ...eje,
+  episodios: episodios.filter((e) => e.data.ejes.includes(id as never)).length,
+  temas: temas
+    .filter((t) => t.data.eje === id)
+    .map((t) => ({ ...t, n: episodios.filter((e) => e.data.temas.some((x) => x.id === t.id)).length }))
+    .sort((a, b) => b.n - a.n || a.data.nombre.localeCompare(b.data.nombre, 'es')),
+}));
+---
+
+<Base titulo={`Temas · ${SITIO.nombre}`} descripcion="Los tres ejes del podcast (política pública, sociedad, economía) y los temas concretos que tratamos en cada uno." ruta="/temas">
+  <div class="cuaderno">
+    <div class="margen">
+      <p class="mt-1">Tres ejes, {temas.length} temas. Cada tema tiene su página con episodios y términos del glosario relacionados.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Temas</h1>
+      {
+        porEje.map((eje) => (
+          <section class="seccion" id={eje.id} aria-labelledby={`h-${eje.id}`}>
+            <h2 id={`h-${eje.id}`}>{eje.nombre}</h2>
+            <p class="prosa mt-2">{eje.descripcion}</p>
+            <p class="meta mt-1">
+              {eje.episodios} {eje.episodios === 1 ? 'episodio' : 'episodios'}
+            </p>
+            <ul class="lista-editorial mt-5">
+              {eje.temas.map((t) => (
+                <li class="tema">
+                  <div>
+                    <a href={`/temas/${t.id}`} class="tema__nombre">{t.data.nombre}</a>
+                    <p class="prosa mt-1">{t.data.descripcion}</p>
+                  </div>
+                  <span class="meta mono tema__n">{t.n} {t.n === 1 ? 'ep.' : 'eps.'}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</Base>
+
+<style>
+  .tema {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: start;
+  }
+  .tema__nombre {
+    font-family: var(--font-titulo);
+    font-size: var(--text-xl);
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .tema__nombre:hover {
+    color: var(--color-acento);
+  }
+  .tema__n {
+    padding-top: 0.5rem;
+    white-space: nowrap;
+  }
+</style>

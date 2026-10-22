@@ -1,0 +1,143 @@
+- generic [active] [ref=f24e1]:
+  - link "Saltar al contenido" [ref=f24e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f24e3]:
+    - generic [ref=f24e4]:
+      - link "Señal Pública, inicio" [ref=f24e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f24e15]: Señal Pública
+      - navigation "Principal" [ref=f24e16]:
+        - list [ref=f24e17]:
+          - listitem [ref=f24e18]:
+            - link "Episodios" [ref=f24e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f24e20]:
+            - link "Temas" [ref=f24e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f24e22]:
+            - link "Fuentes" [ref=f24e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f24e24]:
+            - link "Acerca" [ref=f24e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f24e26]:
+            - link "Suscribite" [ref=f24e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f24e28]:
+            - button "Cambiar a modo oscuro" [ref=f24e29] [cursor=pointer]
+  - main [ref=f24e32]:
+    - generic [ref=f24e33]:
+      - generic [ref=f24e34]:
+        - paragraph [ref=f24e35]: Leemos todo. Respondemos cuando un caso avanza a investigación, y lo acreditamos en el episodio si querés.
+        - paragraph [ref=f24e36]: "Lo que más nos sirve: un organismo o lugar concreto, un documento o dato público, y una persona con quien hablar."
+      - generic [ref=f24e37]:
+        - heading "Proponé un caso" [level=1] [ref=f24e38]
+        - paragraph [ref=f24e39]: Un trámite que cambió, un sistema que se contrató, una ley que se discute, un servicio que se automatizó. Si pasó cerca tuyo y creés que merece una mirada con fuentes, contanos.
+        - generic [ref=f24e40]:
+          - generic [ref=f24e41]:
+            - generic [ref=f24e42]: Nombre
+            - textbox "Nombre" [ref=f24e43]
+          - generic [ref=f24e44]:
+            - generic [ref=f24e45]: Correo
+            - textbox "Correo" [ref=f24e46]
+            - paragraph [ref=f24e47]: Solo para responderte. No lo compartimos ni lo sumamos a la newsletter.
+          - generic [ref=f24e48]:
+            - generic [ref=f24e49]: Organización (opcional)
+            - textbox "Organización (opcional)" [ref=f24e50]
+          - generic [ref=f24e51]:
+            - generic [ref=f24e52]: El problema, en hasta 500 caracteres
+            - textbox "El problema, en hasta 500 caracteres" [ref=f24e53]
+            - paragraph [ref=f24e54]: 500 caracteres disponibles
+          - generic [ref=f24e55]:
+            - generic [ref=f24e56]: Link a datos, documentos o notas (opcional)
+            - textbox "Link a datos, documentos o notas (opcional)" [ref=f24e57]:
+              - /placeholder: https://
+          - generic [aria-hidden] [ref=f24e58]:
+            - text: No completar
+            - textbox [ref=f24e59]
+          - generic [ref=f24e61]:
+            - checkbox "Si el caso se convierte en episodio, quiero que me acrediten por nombre." [ref=f24e62]
+            - generic [ref=f24e63]: Si el caso se convierte en episodio, quiero que me acrediten por nombre.
+          - generic [ref=f24e64]:
+            - button "Enviar el caso" [ref=f24e65] [cursor=pointer]
+            - status
+          - paragraph [ref=f24e66]: "Modo demo: el formulario todavía no tiene destino configurado (TODO en sitio.ts). Se valida pero no envía."
+        - region [ref=f24e67]:
+          - heading "Si preferís el correo" [level=2] [ref=f24e68]
+          - paragraph [ref=f24e69]:
+            - text: Escribí a
+            - link "hola@senalpublica.ar" [ref=f24e70] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar?subject=Caso%20para%20Se%C3%B1al%20P%C3%BAblica
+            - text: con el asunto "Caso". Mismos datos, mismo tratamiento.
+  - contentinfo [ref=f24e71]:
+    - generic [ref=f24e72]:
+      - generic [ref=f24e73]:
+        - paragraph [ref=f24e74]: Señal Pública
+        - paragraph [ref=f24e75]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f24e76]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f24e77] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f24e78]:
+        - heading "Escuchalo en" [level=2] [ref=f24e79]
+        - list [ref=f24e80]:
+          - listitem [ref=f24e81]:
+            - link "YouTube" [ref=f24e82] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f24e83]:
+            - link "Spotify" [ref=f24e84] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f24e85]:
+            - link "Apple Podcasts" [ref=f24e86] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f24e87]:
+            - link "RSS del podcast" [ref=f24e88] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f24e93]:
+            - link "Todas las opciones" [ref=f24e94] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f24e95]:
+        - heading "El sitio" [level=2] [ref=f24e96]
+        - list [ref=f24e97]:
+          - listitem [ref=f24e98]:
+            - link "Empezá por acá" [ref=f24e99] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f24e100]:
+            - link "Todos los episodios" [ref=f24e101] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f24e102]:
+            - link "Glosario" [ref=f24e103] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f24e104]:
+            - link "Biblioteca de fuentes" [ref=f24e105] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f24e106]:
+            - link "Proponé un caso" [ref=f24e107] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f24e108]:
+        - heading "Cómo trabajamos" [level=2] [ref=f24e109]
+        - list [ref=f24e110]:
+          - listitem [ref=f24e111]:
+            - link "Método y uso de IA" [ref=f24e112] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f24e113]:
+            - link "Correcciones" [ref=f24e114] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f24e115]:
+            - link "Kit de prensa" [ref=f24e116] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f24e117]:
+            - link "hola@senalpublica.ar" [ref=f24e118] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f24e119]:
+            - link "LinkedIn" [ref=f24e120] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f24e121]:
+            - link "Instagram" [ref=f24e122] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f24e124]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f24e125] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

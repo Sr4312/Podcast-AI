@@ -1,0 +1,98 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import FilaEpisodio from '@/components/FilaEpisodio.astro';
+import { SITIO } from '@/config/sitio';
+import { getEpisodios, iniciales } from '@/lib/contenido';
+
+export async function getStaticPaths() {
+  const invitados = await getCollection('invitados');
+  return invitados.map((i) => ({ params: { slug: i.id }, props: { inv: i } }));
+}
+
+const { inv } = Astro.props;
+const { Content } = await render(inv);
+const episodios = (await getEpisodios()).filter((e) => e.data.invitados.some((x) => x.id === inv.id));
+const links = Object.entries(inv.data.links).filter(([, v]) => v) as [string, string][];
+const NOMBRES: Record<string, string> = { web: 'Sitio web', linkedin: 'LinkedIn', x: 'X', bluesky: 'Bluesky', scholar: 'Google Scholar' };
+---
+
+<Base titulo={`${inv.data.nombre} · ${SITIO.nombre}`} descripcion={`${inv.data.nombre}, ${inv.data.rol}. Episodios en los que participó y conflictos de interés declarados.`} ruta={`/invitados/${inv.id}`}>
+  <div class="cuaderno">
+    <div class="margen">
+      {inv.data.ejemplo && <p class="aviso-ejemplo mb-5">Perfil ficticio, creado para la demo del sitio.</p>}
+      <nav aria-label="Migas" class="mb-4"><a href="/invitados">Invitados</a></nav>
+      <dl>
+        <div><dt>Rol</dt><dd>{inv.data.rol}</dd></div>
+        {inv.data.organizacion && <div><dt>Organización</dt><dd>{inv.data.organizacion}</dd></div>}
+        <div><dt>Episodios</dt><dd>{episodios.length}</dd></div>
+        {
+          links.length > 0 && (
+            <div>
+              <dt>Links</dt>
+              <dd>
+                {links.map(([k, v], i) => (
+                  <>
+                    <a href={v} rel="noopener me">{NOMBRES[k] ?? k}</a>
+                    {i < links.length - 1 ? ' · ' : ''}
+                  </>
+                ))}
+              </dd>
+            </div>
+          )
+        }
+      </dl>
+    </div>
+    <article class="cuerpo">
+      <div class="flex items-start gap-5">
+        {
+          inv.data.foto ? (
+            <img src={inv.data.foto.src} width="96" height="96" alt={`Foto de ${inv.data.nombre}`} class="foto" />
+          ) : (
+            <span class="persona-sin-foto" aria-hidden="true">{iniciales(inv.data.nombre)}</span>
+          )
+        }
+        <div>
+          <h1>{inv.data.nombre}</h1>
+          <p class="text-lg mt-2">{inv.data.rol}{inv.data.organizacion && <>, {inv.data.organizacion}</>}</p>
+        </div>
+      </div>
+
+      <div class="prosa mt-8 bio">
+        <Content />
+      </div>
+
+      <section class="seccion prosa" aria-labelledby="conflictos">
+        <h2 id="conflictos">Conflictos de interés</h2>
+        {
+          inv.data.conflictos.length ? (
+            <ul class="mt-3">{inv.data.conflictos.map((c) => <li>{c}</li>)}</ul>
+          ) : (
+            <p class="mt-3">Sin conflictos declarados.</p>
+          )
+        }
+        <p class="meta mt-3">Pedimos a cada persona invitada que declare vínculos laborales, económicos o institucionales con el tema del episodio. <a href="/acerca#conflictos">Nuestra política</a>.</p>
+      </section>
+
+      <section class="seccion" aria-labelledby="eps">
+        <h2 id="eps" class="mb-4">Episodios</h2>
+        <ol class="lista-editorial">{episodios.map((ep) => <FilaEpisodio ep={ep} conFecha />)}</ol>
+      </section>
+    </article>
+  </div>
+</Base>
+
+<style>
+  .foto {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: var(--radius-ui);
+  }
+  .bio :global(p + p) {
+    margin-top: 1em;
+  }
+  .bio :global(em) {
+    color: var(--color-tinta-2);
+  }
+</style>

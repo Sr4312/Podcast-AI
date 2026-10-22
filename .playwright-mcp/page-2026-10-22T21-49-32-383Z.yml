@@ -1,0 +1,154 @@
+- generic [active] [ref=f16e1]:
+  - link "Saltar al contenido" [ref=f16e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f16e3]:
+    - generic [ref=f16e4]:
+      - link "Señal Pública, inicio" [ref=f16e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f16e15]: Señal Pública
+      - navigation "Principal" [ref=f16e16]:
+        - list [ref=f16e17]:
+          - listitem [ref=f16e18]:
+            - link "Episodios" [ref=f16e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f16e20]:
+            - link "Temas" [ref=f16e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f16e22]:
+            - link "Fuentes" [ref=f16e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f16e24]:
+            - link "Acerca" [ref=f16e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f16e26]:
+            - link "Suscribite" [ref=f16e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f16e28]:
+            - button "Cambiar a modo oscuro" [ref=f16e29] [cursor=pointer]
+  - main [ref=f16e32]:
+    - generic [ref=f16e33]:
+      - generic [ref=f16e34]:
+        - navigation "Migas" [ref=f16e35]:
+          - link "Temas" [ref=f16e36] [cursor=pointer]:
+            - /url: /temas
+          - text: /
+          - link "Sociedad" [ref=f16e37] [cursor=pointer]:
+            - /url: /temas#sociedad
+        - generic [ref=f16e38]:
+          - generic [ref=f16e39]:
+            - term [ref=f16e40]: Eje
+            - definition [ref=f16e41]: Sociedad
+          - generic [ref=f16e42]:
+            - term [ref=f16e43]: Episodios
+            - definition [ref=f16e44]: "1"
+      - generic [ref=f16e45]:
+        - heading "Chatbots" [level=1] [ref=f16e46]
+        - paragraph [ref=f16e47]: "Sistemas conversacionales que responden preguntas del público: qué tan bien lo hacen cuando la pregunta es sobre una norma, un plazo o un derecho."
+        - region [ref=f16e48]:
+          - heading "Episodios" [level=2] [ref=f16e49]
+          - list [ref=f16e50]:
+            - listitem [ref=f16e51]:
+              - generic [ref=f16e52]: "03"
+              - generic [ref=f16e53]:
+                - link "Chatbots contra el Boletín Oficial" [ref=f16e54] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial
+                - paragraph [ref=f16e55]: Le hicimos sesenta preguntas sobre normativa argentina a cuatro chatbots y contrastamos cada respuesta con la fuente oficial. Acertaron mucho, inventaron en lo que más importa.
+                - paragraph [ref=f16e56]:
+                  - time [ref=f16e57]: 01 de oct de 2026
+                  - text: · Investigación · 47 min · con Ana Paula Sosa y Julián Ortiz · ejemplo
+              - 'button "Reproducir episodio 3: Chatbots contra el Boletín Oficial" [ref=f16e58] [cursor=pointer]'
+        - region [ref=f16e61]:
+          - heading "Términos relacionados" [level=2] [ref=f16e62]
+          - generic [ref=f16e63]:
+            - generic [ref=f16e64]:
+              - term [ref=f16e65]:
+                - link "Chatbot" [ref=f16e66] [cursor=pointer]:
+                  - /url: /glosario/chatbot
+              - definition [ref=f16e67]: Programa que conversa por texto o voz. Los de la generación anterior seguían guiones fijos; los actuales usan modelos de lenguaje y responden cualquier cosa, lo que los hace más útiles y más propensos a inventar.
+            - generic [ref=f16e68]:
+              - term [ref=f16e69]:
+                - link "Modelo de lenguaje" [ref=f16e70] [cursor=pointer]:
+                  - /url: /glosario/modelo-de-lenguaje
+              - definition [ref=f16e71]: Programa entrenado con enormes cantidades de texto para predecir qué palabra sigue. Con eso redacta, resume y responde preguntas con fluidez, pero no verifica si lo que dice es cierto.
+            - generic [ref=f16e72]:
+              - term [ref=f16e73]:
+                - link "Alucinación" [ref=f16e74] [cursor=pointer]:
+                  - /url: /glosario/alucinacion
+              - definition [ref=f16e75]: "Respuesta de un sistema de IA que suena correcta y segura pero es falsa: una ley que no existe, un artículo con otro número, una cifra inventada. No es un error raro, es parte de cómo funcionan estos modelos."
+            - generic [ref=f16e76]:
+              - term [ref=f16e77]:
+                - link "Recuperación aumentada" [ref=f16e78] [cursor=pointer]:
+                  - /url: /glosario/recuperacion-aumentada
+              - definition [ref=f16e79]: Técnica en la que, antes de responder, el sistema busca los documentos relevantes (una ley, un manual, un expediente) y se los pasa al modelo para que responda a partir de ellos y no de memoria.
+  - contentinfo [ref=f16e80]:
+    - generic [ref=f16e81]:
+      - generic [ref=f16e82]:
+        - paragraph [ref=f16e83]: Señal Pública
+        - paragraph [ref=f16e84]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f16e85]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f16e86] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f16e87]:
+        - heading "Escuchalo en" [level=2] [ref=f16e88]
+        - list [ref=f16e89]:
+          - listitem [ref=f16e90]:
+            - link "YouTube" [ref=f16e91] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f16e92]:
+            - link "Spotify" [ref=f16e93] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f16e94]:
+            - link "Apple Podcasts" [ref=f16e95] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f16e96]:
+            - link "RSS del podcast" [ref=f16e97] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f16e102]:
+            - link "Todas las opciones" [ref=f16e103] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f16e104]:
+        - heading "El sitio" [level=2] [ref=f16e105]
+        - list [ref=f16e106]:
+          - listitem [ref=f16e107]:
+            - link "Empezá por acá" [ref=f16e108] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f16e109]:
+            - link "Todos los episodios" [ref=f16e110] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f16e111]:
+            - link "Glosario" [ref=f16e112] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f16e113]:
+            - link "Biblioteca de fuentes" [ref=f16e114] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f16e115]:
+            - link "Proponé un caso" [ref=f16e116] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f16e117]:
+        - heading "Cómo trabajamos" [level=2] [ref=f16e118]
+        - list [ref=f16e119]:
+          - listitem [ref=f16e120]:
+            - link "Método y uso de IA" [ref=f16e121] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f16e122]:
+            - link "Correcciones" [ref=f16e123] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f16e124]:
+            - link "Kit de prensa" [ref=f16e125] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f16e126]:
+            - link "hola@senalpublica.ar" [ref=f16e127] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f16e128]:
+            - link "LinkedIn" [ref=f16e129] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f16e130]:
+            - link "Instagram" [ref=f16e131] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f16e133]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f16e134] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

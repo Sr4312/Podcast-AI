@@ -1,0 +1,302 @@
+- generic [active] [ref=f19e1]:
+  - link "Saltar al contenido" [ref=f19e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f19e3]:
+    - generic [ref=f19e4]:
+      - link "Señal Pública, inicio" [ref=f19e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f19e15]: Señal Pública
+      - navigation "Principal" [ref=f19e16]:
+        - list [ref=f19e17]:
+          - listitem [ref=f19e18]:
+            - link "Episodios" [ref=f19e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f19e20]:
+            - link "Temas" [ref=f19e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f19e22]:
+            - link "Fuentes" [ref=f19e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f19e24]:
+            - link "Acerca" [ref=f19e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f19e26]:
+            - link "Suscribite" [ref=f19e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f19e28]:
+            - button "Cambiar a modo oscuro" [ref=f19e29] [cursor=pointer]
+  - main [ref=f19e32]:
+    - generic [ref=f19e33]:
+      - generic [ref=f19e34]:
+        - generic [ref=f19e35]:
+          - generic [ref=f19e36]:
+            - term [ref=f19e37]: Fuentes
+            - definition [ref=f19e38]: "10"
+          - generic [ref=f19e39]:
+            - term [ref=f19e40]: Verificadas
+            - definition [ref=f19e41]: 8 de 10
+          - generic [ref=f19e42]:
+            - term [ref=f19e43]: Episodios
+            - definition [ref=f19e44]: "3"
+        - paragraph [ref=f19e45]: Deduplicadas por URL. "Verificada" significa que alguien del equipo abrió el documento y confirmó el dato citado.
+      - generic [ref=f19e46]:
+        - heading "Fuentes y datos citados" [level=1] [ref=f19e47]
+        - paragraph [ref=f19e48]: Todo lo que afirmamos en el podcast sale de un documento que podés abrir. Esta es la lista completa.
+        - generic [ref=f19e49]:
+          - generic [ref=f19e50]:
+            - generic [ref=f19e51]: Tipo
+            - combobox "Tipo" [ref=f19e52]:
+              - option "Todos" [selected]
+              - option "Ley o norma"
+              - option "Dataset"
+              - option "Paper"
+              - option "Documento oficial"
+          - generic [ref=f19e53]:
+            - generic [ref=f19e54]: Organismo
+            - combobox "Organismo" [ref=f19e55]:
+              - option "Todos" [selected]
+              - option "Honorable Senado de la Nación"
+              - option "InfoLEG, Ministerio de Justicia"
+              - option "Jefatura de Gabinete de Ministros"
+              - option "Ministerio de Justicia"
+              - option "Open Government Partnership, Ada Lovelace Institute, AI Now Institute"
+              - option "Stanford RegLab / Universidad de Yale"
+              - option "UNESCO"
+          - generic [ref=f19e56]:
+            - generic [ref=f19e57]: Año
+            - combobox "Año" [ref=f19e58]:
+              - option "Todos" [selected]
+              - option "2024"
+              - option "2021"
+              - option "2016"
+              - option "2014"
+              - option "2000"
+              - option "1993"
+          - generic [ref=f19e59]:
+            - generic [ref=f19e60]: Episodio
+            - combobox "Episodio" [ref=f19e61]:
+              - option "Todos" [selected]
+              - option "N.º 3 · Chatbots contra el Boletín Oficial"
+              - option "N.º 2 · El chatbot de un municipio, seis meses después"
+              - option "N.º 1 · ¿Puede una IA asesorar a un senador?"
+          - status [ref=f19e63]: 10 fuentes
+        - list [ref=f19e64]:
+          - listitem [ref=f19e65]:
+            - generic [ref=f19e66]:
+              - link "Algorithmic Accountability for the Public Sector" [ref=f19e67] [cursor=pointer]:
+                - /url: https://www.opengovpartnership.org/documents/algorithmic-accountability-public-sector/
+              - generic [ref=f19e68]: Pendiente de verificación
+            - paragraph [ref=f19e69]:
+              - text: Documento oficial · Open Government Partnership, Ada Lovelace Institute, AI Now Institute ·
+              - time [ref=f19e70]: "2021"
+              - text: · www.opengovpartnership.org/documents/algorithmic-accountability-public-sector/
+            - list [ref=f19e71]:
+              - listitem [ref=f19e72]:
+                - link "Episodio 2" [ref=f19e73] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio#fuentes
+                - text: ": Informe sobre mecanismos de rendición de cuentas para sistemas automatizados en el Estado. Falta confirmar la URL del documento completo."
+          - listitem [ref=f19e74]:
+            - generic [ref=f19e75]:
+              - link "Código Civil y Comercial de la Nación (Ley 26.994)" [ref=f19e76] [cursor=pointer]:
+                - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/235975/norma.htm
+              - generic [ref=f19e77]: Verificada
+            - paragraph [ref=f19e78]:
+              - text: Ley o norma · InfoLEG, Ministerio de Justicia ·
+              - time [ref=f19e79]: "2014"
+              - text: · servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/235975/norma.htm
+            - list [ref=f19e80]:
+              - listitem [ref=f19e81]:
+                - link "Episodio 3" [ref=f19e82] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial#fuentes
+                - text: ": Fuente de las preguntas sobre normas estables (plazos de prescripción, capacidad, contratos). Fue el grupo con más aciertos."
+          - listitem [ref=f19e83]:
+            - generic [ref=f19e84]:
+              - link "InfoLEG, Información Legislativa y Documental" [ref=f19e85] [cursor=pointer]:
+                - /url: https://www.infoleg.gob.ar
+              - generic [ref=f19e86]: Verificada
+            - paragraph [ref=f19e87]: Dataset · Ministerio de Justicia · www.infoleg.gob.ar
+            - list [ref=f19e88]:
+              - listitem [ref=f19e89]:
+                - link "Episodio 3" [ref=f19e90] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial#fuentes
+                - text: ": Base oficial contra la que se verificó cada respuesta. Todas las preguntas tienen su respuesta correcta linkeada a InfoLEG o al Boletín Oficial."
+          - listitem [ref=f19e91]:
+            - generic [ref=f19e92]:
+              - 'link "Large Legal Fictions: Profiling Legal Hallucinations in Large Language Models" [ref=f19e93] [cursor=pointer]':
+                - /url: https://arxiv.org/abs/2401.01301
+              - generic [ref=f19e94]: Verificada
+            - paragraph [ref=f19e95]:
+              - text: Paper · Stanford RegLab / Universidad de Yale ·
+              - time [ref=f19e96]: "2024"
+              - text: · arxiv.org/abs/2401.01301
+            - list [ref=f19e97]:
+              - listitem [ref=f19e98]:
+                - link "Episodio 3" [ref=f19e99] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial#fuentes
+                - text: ": Metodología de referencia para clasificar errores de cita. Nuestra prueba adapta su tipología a normativa argentina, en escala mucho menor."
+              - listitem [ref=f19e100]:
+                - link "Episodio 1" [ref=f19e101] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador#fuentes
+                - text: ": Estudio que mide la tasa de citas legales inventadas por modelos de lenguaje. Base de la discusión sobre la norma inexistente que citó el modelo."
+          - listitem [ref=f19e102]:
+            - generic [ref=f19e103]:
+              - link "Ley 24.240 de Defensa del Consumidor" [ref=f19e104] [cursor=pointer]:
+                - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/638/texact.htm
+              - generic [ref=f19e105]: Verificada
+            - paragraph [ref=f19e106]:
+              - text: Ley o norma · InfoLEG, Ministerio de Justicia ·
+              - time [ref=f19e107]: "1993"
+              - text: · servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/638/texact.htm
+            - list [ref=f19e108]:
+              - listitem [ref=f19e109]:
+                - link "Episodio 3" [ref=f19e110] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial#fuentes
+                - text: ": Fuente de las preguntas sobre derecho de arrepentimiento y garantías (arts. 11 y 34), con muchas modificaciones posteriores que confundieron a los sistemas."
+          - listitem [ref=f19e111]:
+            - generic [ref=f19e112]:
+              - link "Ley 25.326 de Protección de los Datos Personales" [ref=f19e113] [cursor=pointer]:
+                - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/norma.htm
+              - generic [ref=f19e114]: Verificada
+            - paragraph [ref=f19e115]:
+              - text: Ley o norma · InfoLEG, Ministerio de Justicia ·
+              - time [ref=f19e116]: "2000"
+              - text: · servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/norma.htm
+            - list [ref=f19e117]:
+              - listitem [ref=f19e118]:
+                - link "Episodio 2" [ref=f19e119] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio#fuentes
+                - text: ": Obligaciones del responsable del tratamiento (arts. 9 y 10) que discutimos al hablar de las conversaciones almacenadas por el proveedor."
+              - listitem [ref=f19e120]:
+                - link "Episodio 1" [ref=f19e121] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador#fuentes
+                - text: ": Texto vigente de la ley que el proyecto analizado propone modificar. Definiciones de dato personal y dato sensible (art. 2) y consentimiento (art. 5)."
+          - listitem [ref=f19e122]:
+            - generic [ref=f19e123]:
+              - link "Ley 27.275 de Derecho de Acceso a la Información Pública" [ref=f19e124] [cursor=pointer]:
+                - /url: http://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/norma.htm
+              - generic [ref=f19e125]: Verificada
+            - paragraph [ref=f19e126]:
+              - text: Ley o norma · InfoLEG, Ministerio de Justicia ·
+              - time [ref=f19e127]: "2016"
+              - text: · servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/norma.htm
+            - list [ref=f19e128]:
+              - listitem [ref=f19e129]:
+                - link "Episodio 3" [ref=f19e130] [cursor=pointer]:
+                  - /url: /episodios/003-chatbots-contra-el-boletin-oficial#fuentes
+                - text: ": Fuente de las preguntas sobre plazos de respuesta a pedidos de información (arts. 11 y 15), donde varios sistemas dieron plazos incorrectos."
+              - listitem [ref=f19e131]:
+                - link "Episodio 1" [ref=f19e132] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador#fuentes
+                - text: ": La asesora detectó que un artículo del proyecto entra en tensión con las obligaciones de transparencia activa de esta ley."
+          - listitem [ref=f19e133]:
+            - generic [ref=f19e134]:
+              - link "Portal Nacional de Datos Abiertos" [ref=f19e135] [cursor=pointer]:
+                - /url: https://datos.gob.ar
+              - generic [ref=f19e136]: Verificada
+            - paragraph [ref=f19e137]: Dataset · Jefatura de Gabinete de Ministros · datos.gob.ar
+            - list [ref=f19e138]:
+              - listitem [ref=f19e139]:
+                - link "Episodio 2" [ref=f19e140] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio#fuentes
+                - text: ": Referencia al hablar de publicar el inventario de trámites y las métricas del asistente como datos abiertos."
+          - listitem [ref=f19e141]:
+            - generic [ref=f19e142]:
+              - link "Recomendación sobre la ética de la inteligencia artificial" [ref=f19e143] [cursor=pointer]:
+                - /url: https://unesdoc.unesco.org/ark:/48223/pf0000381137
+              - generic [ref=f19e144]: Verificada
+            - paragraph [ref=f19e145]:
+              - text: Documento oficial · UNESCO ·
+              - time [ref=f19e146]: "2021"
+              - text: · unesdoc.unesco.org/ark:/48223/pf0000381137
+            - list [ref=f19e147]:
+              - listitem [ref=f19e148]:
+                - link "Episodio 2" [ref=f19e149] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio#fuentes
+                - text: ": Principio de supervisión y determinación humanas, citado al discutir quién responde por una respuesta errónea del asistente."
+              - listitem [ref=f19e150]:
+                - link "Episodio 1" [ref=f19e151] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador#fuentes
+                - text: ": Marco de referencia sobre supervisión humana que citamos al discutir si un dictamen puede apoyarse en un modelo."
+          - listitem [ref=f19e152]:
+            - generic [ref=f19e153]:
+              - link "Reglamento de la Cámara de Senadores de la Nación" [ref=f19e154] [cursor=pointer]:
+                - /url: https://www.senado.gob.ar/parlamentario/reglamento
+              - generic [ref=f19e155]: Pendiente de verificación
+            - paragraph [ref=f19e156]: Documento oficial · Honorable Senado de la Nación · www.senado.gob.ar/parlamentario/reglamento
+            - list [ref=f19e157]:
+              - listitem [ref=f19e158]:
+                - link "Episodio 1" [ref=f19e159] [cursor=pointer]:
+                  - /url: /episodios/001-puede-una-ia-asesorar-a-un-senador#fuentes
+                - text: ": Circuito de un proyecto desde la mesa de entradas hasta el dictamen de comisión. Falta confirmar la URL del texto completo actualizado."
+  - contentinfo [ref=f19e160]:
+    - generic [ref=f19e161]:
+      - generic [ref=f19e162]:
+        - paragraph [ref=f19e163]: Señal Pública
+        - paragraph [ref=f19e164]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f19e165]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f19e166] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f19e167]:
+        - heading "Escuchalo en" [level=2] [ref=f19e168]
+        - list [ref=f19e169]:
+          - listitem [ref=f19e170]:
+            - link "YouTube" [ref=f19e171] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f19e172]:
+            - link "Spotify" [ref=f19e173] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f19e174]:
+            - link "Apple Podcasts" [ref=f19e175] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f19e176]:
+            - link "RSS del podcast" [ref=f19e177] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f19e182]:
+            - link "Todas las opciones" [ref=f19e183] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f19e184]:
+        - heading "El sitio" [level=2] [ref=f19e185]
+        - list [ref=f19e186]:
+          - listitem [ref=f19e187]:
+            - link "Empezá por acá" [ref=f19e188] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f19e189]:
+            - link "Todos los episodios" [ref=f19e190] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f19e191]:
+            - link "Glosario" [ref=f19e192] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f19e193]:
+            - link "Biblioteca de fuentes" [ref=f19e194] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f19e195]:
+            - link "Proponé un caso" [ref=f19e196] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f19e197]:
+        - heading "Cómo trabajamos" [level=2] [ref=f19e198]
+        - list [ref=f19e199]:
+          - listitem [ref=f19e200]:
+            - link "Método y uso de IA" [ref=f19e201] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f19e202]:
+            - link "Correcciones" [ref=f19e203] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f19e204]:
+            - link "Kit de prensa" [ref=f19e205] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f19e206]:
+            - link "hola@senalpublica.ar" [ref=f19e207] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f19e208]:
+            - link "LinkedIn" [ref=f19e209] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f19e210]:
+            - link "Instagram" [ref=f19e211] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f19e213]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f19e214] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

@@ -1,0 +1,99 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import { SITIO } from '@/config/sitio';
+import { getEpisodios, episodiosConTermino } from '@/lib/contenido';
+
+const episodios = await getEpisodios();
+const terminos = (await getCollection('glosario'))
+  .map((t) => ({ ...t, episodios: episodiosConTermino(t, episodios) }))
+  .sort((a, b) => a.data.termino.localeCompare(b.data.termino, 'es'));
+const letras = Array.from(new Set(terminos.map((t) => t.data.termino[0]!.toUpperCase())));
+---
+
+<Base titulo={`Glosario · ${SITIO.nombre}`} descripcion="Glosario de inteligencia artificial para no técnicos: definiciones de dos o tres líneas y los episodios donde aparece cada término." ruta="/glosario">
+  <div class="cuaderno">
+    <div class="margen">
+      <p class="mt-1">{terminos.length} términos. Definiciones pensadas para quien toma decisiones, no para quien programa.</p>
+      <nav aria-label="Letras" class="mt-4 letras">
+        {letras.map((l) => <a href={`#letra-${l}`}>{l}</a>)}
+      </nav>
+    </div>
+    <div class="cuerpo">
+      <h1>Glosario</h1>
+      <p class="prosa text-lg mt-4">
+        Los términos que usamos en el podcast, explicados en dos o tres líneas. En cada transcripción, la primera aparición de cada uno
+        está enlazada acá.
+      </p>
+      <dl class="glosario mt-8">
+        {
+          terminos.map((t, i) => {
+            const letra = t.data.termino[0]!.toUpperCase();
+            const primera = i === 0 || terminos[i - 1].data.termino[0]!.toUpperCase() !== letra;
+            return (
+              <div class="termino" id={primera ? `letra-${letra}` : undefined}>
+                <dt>
+                  <a href={`/glosario/${t.id}`}>{t.data.termino}</a>
+                  {t.data.sinonimos.length > 0 && <span class="meta"> también: {t.data.sinonimos.slice(0, 3).join(', ')}</span>}
+                </dt>
+                <dd>
+                  <p class="prosa">{t.data.definicion}</p>
+                  {t.episodios.length > 0 && (
+                    <p class="meta mt-1">
+                      Aparece en{' '}
+                      {t.episodios.map((e, k) => (
+                        <>
+                          <a href={`/episodios/${e.id}`}>episodio {e.data.numero}</a>
+                          {k < t.episodios.length - 1 ? ', ' : ''}
+                        </>
+                      ))}
+                    </p>
+                  )}
+                </dd>
+              </div>
+            );
+          })
+        }
+      </dl>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .letras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .letras a {
+    font-family: var(--font-titulo);
+    text-decoration: none;
+    min-width: 1.5rem;
+  }
+  .glosario {
+    margin: 0;
+  }
+  .termino {
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-linea);
+  }
+  .termino dt {
+    font-family: var(--font-titulo);
+    font-size: var(--text-xl);
+  }
+  .termino dt a {
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .termino dt a:hover {
+    color: var(--color-acento);
+  }
+  .termino dt .meta {
+    font-family: var(--font-texto);
+    font-size: var(--text-meta);
+    margin-left: 0.5rem;
+  }
+  .termino dd {
+    margin: 0.3rem 0 0;
+  }
+</style>

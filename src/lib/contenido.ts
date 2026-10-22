@@ -62,6 +62,65 @@ export function relacionados(ep: Episodio, todos: Episodio[], n = 3): Episodio[]
     .map((x) => x.e);
 }
 
+/* ---------- Agregados para las páginas de biblioteca ---------- */
+
+export interface FuenteAgregada {
+  titulo: string;
+  url: string;
+  tipo: Episodio['data']['fuentes'][number]['tipo'];
+  organismo: string;
+  fecha?: Date;
+  verificada: boolean;
+  /** Episodios que la citan, con la nota de cada uno. */
+  citas: { ep: Episodio; nota: string }[];
+}
+
+/** Todas las fuentes de todos los episodios, deduplicadas por URL. */
+export function fuentesAgregadas(episodios: Episodio[]): FuenteAgregada[] {
+  const mapa = new Map<string, FuenteAgregada>();
+  for (const ep of episodios) {
+    for (const f of ep.data.fuentes) {
+      const clave = f.url.replace(/\/$/, '').toLowerCase();
+      const existente = mapa.get(clave);
+      if (existente) {
+        existente.citas.push({ ep, nota: f.nota });
+        // Verificada si al menos un episodio la verificó.
+        existente.verificada = existente.verificada || f.verificada;
+      } else {
+        mapa.set(clave, { titulo: f.titulo, url: f.url, tipo: f.tipo, organismo: f.organismo, fecha: f.fecha, verificada: f.verificada, citas: [{ ep, nota: f.nota }] });
+      }
+    }
+  }
+  return Array.from(mapa.values()).sort((a, b) => a.titulo.localeCompare(b.titulo, 'es'));
+}
+
+function escapeRegex(s: string) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/** Episodios en cuya transcripción aparece un término del glosario (o sus sinónimos). */
+export function episodiosConTermino(termino: CollectionEntry<'glosario'>, episodios: Episodio[]): Episodio[] {
+  const variantes = [termino.data.termino, ...termino.data.sinonimos].map(escapeRegex);
+  const re = new RegExp(`(?<![\\p{L}\\p{N}-])(?:${variantes.join('|')})(?![\\p{L}\\p{N}-])`, 'iu');
+  return episodios.filter((ep) => re.test(ep.body ?? ''));
+}
+
+/** Todas las correcciones y seguimientos del sitio, más recientes primero. */
+export function correccionesDe(episodios: Episodio[]) {
+  return episodios
+    .flatMap((ep) => ep.data.correcciones.map((c) => ({ ep, fecha: c.fecha, texto: c.texto })))
+    .sort((a, b) => b.fecha.getTime() - a.fecha.getTime());
+}
+
+export function iniciales(nombre: string): string {
+  return nombre
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((p) => p[0]!.toUpperCase())
+    .join('');
+}
+
 export function fechaLarga(d: Date): string {
   return new Intl.DateTimeFormat('es-AR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(d);
 }

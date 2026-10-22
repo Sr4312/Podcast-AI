@@ -109,6 +109,8 @@ export function remarkTranscripcion() {
 
       if (nodo.type === 'heading' && nodo.depth === 2) {
         const titulo = textoDe(nodo);
+        // En la página, la transcripción vive bajo un h2 ("Transcripción completa"): los capítulos son h3.
+        nodo.depth = 3;
         nodo.data = nodo.data || {};
         nodo.data.hProperties = {
           ...(nodo.data.hProperties || {}),

@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import { SITIO } from '@/config/sitio';
+import { getEpisodios, iniciales } from '@/lib/contenido';
+
+const episodios = await getEpisodios();
+const invitados = (await getCollection('invitados'))
+  .map((i) => ({ ...i, episodios: episodios.filter((e) => e.data.invitados.some((x) => x.id === i.id)) }))
+  .filter((i) => i.episodios.length > 0)
+  .sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
+---
+
+<Base titulo={`Invitados · ${SITIO.nombre}`} descripcion={`Las personas que participaron en ${SITIO.nombre}, con su rol, sus episodios y sus conflictos de interés declarados.`} ruta="/invitados">
+  <div class="cuaderno">
+    <div class="margen">
+      <p class="mt-1">{invitados.length} personas. Cada una declara sus conflictos de interés antes de grabar; están en su perfil.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Invitados</h1>
+      <ul class="lista-editorial mt-6">
+        {
+          invitados.map((i) => (
+            <li class="inv">
+              {i.data.foto ? (
+                <img src={i.data.foto.src} width="72" height="72" alt="" class="inv__foto" loading="lazy" />
+              ) : (
+                <span class="persona-sin-foto" aria-hidden="true">{iniciales(i.data.nombre)}</span>
+              )}
+              <div>
+                <a href={`/invitados/${i.id}`} class="inv__nombre">{i.data.nombre}</a>
+                <p class="meta">{i.data.rol}{i.data.organizacion && <>, {i.data.organizacion}</>}</p>
+                <p class="meta mt-1">
+                  {i.episodios.map((e, k) => (
+                    <>
+                      <a href={`/episodios/${e.id}`}>Episodio {e.data.numero}</a>
+                      {k < i.episodios.length - 1 ? ' · ' : ''}
+                    </>
+                  ))}
+                </p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .inv {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+  .inv__foto {
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: cover;
+    border-radius: var(--radius-ui);
+  }
+  .inv__nombre {
+    font-family: var(--font-titulo);
+    font-size: var(--text-xl);
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .inv__nombre:hover {
+    color: var(--color-acento);
+  }
+</style>

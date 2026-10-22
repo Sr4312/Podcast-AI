@@ -1,0 +1,149 @@
+---
+import Base from '@/layouts/Base.astro';
+import { SITIO, TIPOS_FUENTE } from '@/config/sitio';
+import { getEpisodios, fuentesAgregadas, fechaISO } from '@/lib/contenido';
+
+const episodios = await getEpisodios();
+const fuentes = fuentesAgregadas(episodios);
+const organismos = Array.from(new Set(fuentes.map((f) => f.organismo))).sort((a, b) => a.localeCompare(b, 'es'));
+const anios = Array.from(new Set(fuentes.map((f) => f.fecha?.getUTCFullYear()).filter(Boolean) as number[])).sort((a, b) => b - a);
+const tiposUsados = Object.entries(TIPOS_FUENTE).filter(([id]) => fuentes.some((f) => f.tipo === id));
+const verificadas = fuentes.filter((f) => f.verificada).length;
+const slugOrg = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-');
+---
+
+<Base titulo={`Fuentes · ${SITIO.nombre}`} descripcion={`Biblioteca de todas las fuentes citadas en ${SITIO.nombre}: leyes, datasets, papers y documentos oficiales, con el episodio y el dato que sale de cada una.`} ruta="/fuentes">
+  <div class="cuaderno">
+    <div class="margen">
+      <dl>
+        <div><dt>Fuentes</dt><dd>{fuentes.length}</dd></div>
+        <div><dt>Verificadas</dt><dd>{verificadas} de {fuentes.length}</dd></div>
+        <div><dt>Episodios</dt><dd>{episodios.length}</dd></div>
+      </dl>
+      <p class="mt-3">Deduplicadas por URL. "Verificada" significa que alguien del equipo abrió el documento y confirmó el dato citado.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Fuentes y datos citados</h1>
+      <p class="prosa text-lg mt-4">Todo lo que afirmamos en el podcast sale de un documento que podés abrir. Esta es la lista completa.</p>
+
+      <div class="filtros mt-8" data-filtros="#lista-fuentes">
+        <div>
+          <label for="f-tipo" class="etiqueta">Tipo</label>
+          <select id="f-tipo" class="campo" data-filtro="tipo">
+            <option value="">Todos</option>
+            {tiposUsados.map(([id, n]) => <option value={id}>{n}</option>)}
+          </select>
+        </div>
+        <div>
+          <label for="f-org" class="etiqueta">Organismo</label>
+          <select id="f-org" class="campo" data-filtro="organismo">
+            <option value="">Todos</option>
+            {organismos.map((o) => <option value={slugOrg(o)}>{o}</option>)}
+          </select>
+        </div>
+        <div>
+          <label for="f-anio" class="etiqueta">Año</label>
+          <select id="f-anio" class="campo" data-filtro="anio">
+            <option value="">Todos</option>
+            {anios.map((a) => <option value={String(a)}>{a}</option>)}
+          </select>
+        </div>
+        <div>
+          <label for="f-ep" class="etiqueta">Episodio</label>
+          <select id="f-ep" class="campo" data-filtro="episodio">
+            <option value="">Todos</option>
+            {episodios.map((e) => <option value={e.id}>N.º {e.data.numero} · {e.data.titulo}</option>)}
+          </select>
+        </div>
+        <div class="filtros__estado">
+          <output class="meta" data-conteo data-plural="fuentes">{fuentes.length} fuentes</output>
+          <button type="button" class="boton boton--secundario" data-limpiar hidden>Quitar filtros</button>
+        </div>
+      </div>
+
+      <ul id="lista-fuentes" class="lista-editorial mt-6">
+        {
+          fuentes.map((f) => (
+            <li
+              class="fuente"
+              data-tipo={f.tipo}
+              data-organismo={slugOrg(f.organismo)}
+              data-anio={f.fecha ? String(f.fecha.getUTCFullYear()) : ''}
+              data-episodio={f.citas.map((c) => c.ep.id).join(' ')}
+            >
+              <div class="fuente__cab">
+                <a href={f.url} rel="noopener" class="fuente__titulo">{f.titulo}</a>
+                {f.verificada ? <span class="estado estado--ok">Verificada</span> : <span class="estado estado--pendiente">Pendiente de verificación</span>}
+              </div>
+              <p class="meta mt-1">
+                {TIPOS_FUENTE[f.tipo]} · {f.organismo}
+                {f.fecha && <> · <time datetime={fechaISO(f.fecha)}>{f.fecha.getUTCFullYear()}</time></>}
+                {' · '}<span class="url">{f.url.replace(/^https?:\/\//, '')}</span>
+              </p>
+              <ul class="citas mt-2">
+                {f.citas.map((c) => (
+                  <li>
+                    <a href={`/episodios/${c.ep.id}#fuentes`}>Episodio {c.ep.data.numero}</a>: {c.nota}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-6" data-vacio hidden>Ninguna fuente coincide con esos filtros.</p>
+    </div>
+  </div>
+</Base>
+
+<script src="@/scripts/filtros.ts"></script>
+
+<style>
+  .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    align-items: end;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-linea);
+  }
+  .filtros__estado {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+    min-height: 2.75rem;
+  }
+  .filtros select {
+    max-width: 16rem;
+    text-overflow: ellipsis;
+  }
+  .fuente__cab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    align-items: baseline;
+  }
+  .fuente__titulo {
+    font-family: var(--font-titulo);
+    font-size: var(--text-lg);
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .fuente__titulo:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+  }
+  .url {
+    word-break: break-all;
+  }
+  .citas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: var(--medida);
+  }
+  .citas li + li {
+    margin-top: 0.3rem;
+  }
+</style>

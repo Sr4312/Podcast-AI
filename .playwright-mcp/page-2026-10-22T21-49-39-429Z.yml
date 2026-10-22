@@ -1,0 +1,148 @@
+- generic [active] [ref=f17e1]:
+  - link "Saltar al contenido" [ref=f17e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f17e3]:
+    - generic [ref=f17e4]:
+      - link "Señal Pública, inicio" [ref=f17e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f17e15]: Señal Pública
+      - navigation "Principal" [ref=f17e16]:
+        - list [ref=f17e17]:
+          - listitem [ref=f17e18]:
+            - link "Episodios" [ref=f17e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f17e20]:
+            - link "Temas" [ref=f17e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f17e22]:
+            - link "Fuentes" [ref=f17e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f17e24]:
+            - link "Acerca" [ref=f17e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f17e26]:
+            - link "Suscribite" [ref=f17e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f17e28]:
+            - button "Cambiar a modo oscuro" [ref=f17e29] [cursor=pointer]
+  - main [ref=f17e32]:
+    - generic [ref=f17e33]:
+      - generic [ref=f17e34]:
+        - paragraph [ref=f17e35]: Perfil ficticio, creado para la demo del sitio.
+        - navigation "Migas" [ref=f17e36]:
+          - link "Invitados" [ref=f17e37] [cursor=pointer]:
+            - /url: /invitados
+        - generic [ref=f17e38]:
+          - generic [ref=f17e39]:
+            - term [ref=f17e40]: Rol
+            - definition [ref=f17e41]: Secretario de Modernización
+          - generic [ref=f17e42]:
+            - term [ref=f17e43]: Organización
+            - definition [ref=f17e44]: Municipio de San Jerónimo del Valle
+          - generic [ref=f17e45]:
+            - term [ref=f17e46]: Episodios
+            - definition [ref=f17e47]: "1"
+      - article [ref=f17e48]:
+        - generic [ref=f17e49]:
+          - generic [aria-hidden] [ref=f17e50]: DL
+          - generic [ref=f17e51]:
+            - heading "Diego Lamarque" [level=1] [ref=f17e52]
+            - paragraph [ref=f17e53]: Secretario de Modernización, Municipio de San Jerónimo del Valle
+        - generic [ref=f17e54]:
+          - paragraph [ref=f17e55]: Ingeniero en sistemas. Desde 2023 está a cargo de la modernización administrativa de un municipio de tamaño medio. Lideró la implementación del asistente de atención al vecino que se analiza en el episodio 2 y aceptó discutir en público tanto lo que funcionó como lo que no.
+          - paragraph [ref=f17e56]:
+            - emphasis [ref=f17e57]: Perfil ficticio, creado para la demo. El municipio también es ficticio.
+        - region [ref=f17e58]:
+          - heading "Conflictos de interés" [level=2] [ref=f17e59]
+          - list [ref=f17e60]:
+            - listitem [ref=f17e61]: Es funcionario del municipio cuyo caso se analiza. El municipio contrató al proveedor del sistema que se discute en el episodio.
+          - paragraph [ref=f17e62]:
+            - text: Pedimos a cada persona invitada que declare vínculos laborales, económicos o institucionales con el tema del episodio.
+            - link "Nuestra política" [ref=f17e63] [cursor=pointer]:
+              - /url: /acerca#conflictos
+            - text: .
+        - region [ref=f17e64]:
+          - heading "Episodios" [level=2] [ref=f17e65]
+          - list [ref=f17e66]:
+            - listitem [ref=f17e67]:
+              - generic [ref=f17e68]: "02"
+              - generic [ref=f17e69]:
+                - link "El chatbot de un municipio, seis meses después" [ref=f17e70] [cursor=pointer]:
+                  - /url: /episodios/002-el-chatbot-de-un-municipio
+                - paragraph [ref=f17e71]: Un municipio mediano puso un asistente de IA a responder consultas de vecinos. Su secretario de Modernización cuenta qué funcionó, qué salió mal y cuánto costó.
+                - paragraph [ref=f17e72]:
+                  - time [ref=f17e73]: 17 de sept de 2026
+                  - text: · Caso · 41 min · ejemplo
+              - 'button "Reproducir episodio 2: El chatbot de un municipio, seis meses después" [ref=f17e74] [cursor=pointer]'
+  - contentinfo [ref=f17e77]:
+    - generic [ref=f17e78]:
+      - generic [ref=f17e79]:
+        - paragraph [ref=f17e80]: Señal Pública
+        - paragraph [ref=f17e81]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f17e82]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f17e83] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f17e84]:
+        - heading "Escuchalo en" [level=2] [ref=f17e85]
+        - list [ref=f17e86]:
+          - listitem [ref=f17e87]:
+            - link "YouTube" [ref=f17e88] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f17e89]:
+            - link "Spotify" [ref=f17e90] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f17e91]:
+            - link "Apple Podcasts" [ref=f17e92] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f17e93]:
+            - link "RSS del podcast" [ref=f17e94] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f17e99]:
+            - link "Todas las opciones" [ref=f17e100] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f17e101]:
+        - heading "El sitio" [level=2] [ref=f17e102]
+        - list [ref=f17e103]:
+          - listitem [ref=f17e104]:
+            - link "Empezá por acá" [ref=f17e105] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f17e106]:
+            - link "Todos los episodios" [ref=f17e107] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f17e108]:
+            - link "Glosario" [ref=f17e109] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f17e110]:
+            - link "Biblioteca de fuentes" [ref=f17e111] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f17e112]:
+            - link "Proponé un caso" [ref=f17e113] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f17e114]:
+        - heading "Cómo trabajamos" [level=2] [ref=f17e115]
+        - list [ref=f17e116]:
+          - listitem [ref=f17e117]:
+            - link "Método y uso de IA" [ref=f17e118] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f17e119]:
+            - link "Correcciones" [ref=f17e120] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f17e121]:
+            - link "Kit de prensa" [ref=f17e122] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f17e123]:
+            - link "hola@senalpublica.ar" [ref=f17e124] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f17e125]:
+            - link "LinkedIn" [ref=f17e126] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f17e127]:
+            - link "Instagram" [ref=f17e128] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f17e130]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f17e131] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

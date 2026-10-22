@@ -1,10 +1,11 @@
 {
   "meta": {
     "version": 1,
-    "nodeCount": 49,
-    "edgeCount": 92,
+    "nodeCount": 98,
+    "edgeCount": 184,
     "languages": [
       "javascript",
+      "tsx",
       "typescript"
     ],
     "scopes": [
@@ -219,6 +220,287 @@
       "crux": null
     },
     {
+      "id": "src/components/reproductor/Reproductor.tsx",
+      "name": "Reproductor.tsx",
+      "kind": "file",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L1-L512",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4801c8518ce7fe753bf28afcfd46475fb78c830344e5de362b33d4b9fac31f34",
+      "chars": 18519,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Icono",
+      "name": "Icono",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L49-L71",
+      "signature": "function Icono({ nombre }: { nombre: 'play' | 'pausa' | 'atras' | 'adelante' })",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "bc52170e82937a6e185f23ddbc4c49a919a19dcc26fb4eb70b8e4d8a6e502d78",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#remuestrear",
+      "name": "remuestrear",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L29-L47",
+      "signature": "function remuestrear(src: number[], n: number): number[]",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "28a73df8dd475d0fe69da2376caf0fbb704a9fdae6478c8dc894adf1da8ffb48",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "name": "Reproductor",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L73-L511",
+      "signature": "function Reproductor()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b10a0a569cffd29003bfe0102c1d4296f8c7c4633f6d677a3f3ca3ab37235ab9",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.aplicar",
+      "name": "aplicar",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L345-L345",
+      "signature": "aplicar = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9cc111a6623686043cf803e10d9e6735f8fbab31bfce30ba12699e65d41c1142",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.capituloEn",
+      "name": "capituloEn",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L365-L373",
+      "signature": "capituloEn = (t: number)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "63a0de95389a22506e3b185c03c61e6f8dd889eef7f44ebc94266c1f3ecc4b6b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.intentarPlay",
+      "name": "intentarPlay",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L110-L114",
+      "signature": "intentarPlay = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "04ab8725a84ad2d306a3a398c4f07fa37e35ba936b18d4d59646866b534979fd",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onCanPlay",
+      "name": "onCanPlay",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L205-L205",
+      "signature": "onCanPlay = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "ee702471782390de65346d23c40548710b51b65e95d69bfaa06ed300f149bdcf",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onEnded",
+      "name": "onEnded",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L206-L210",
+      "signature": "onEnded = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7731e9ea6a310fa2a5648af6374520113c439df325142b1433b39dfa3c5f834c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onError",
+      "name": "onError",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L211-L214",
+      "signature": "onError = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "43f6540d1ca18e3a01c6eeb27a6b982710640e1d7be343f1ff0246c06014d551",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onKey",
+      "name": "onKey",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L301-L332",
+      "signature": "onKey = (e: KeyboardEvent)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "af1622e1ee717bb91d9c60d33452f19e007c53766e21d9a34ca6c131f49eada1",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onKeyBarra",
+      "name": "onKeyBarra",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L391-L403",
+      "signature": "onKeyBarra = (e: React.KeyboardEvent)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3e411b4c7e7cde95e01b9ac2b362094e49cd3723f0877c25d5ddd1a5d9603b01",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onMeta",
+      "name": "onMeta",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L178-L185",
+      "signature": "onMeta = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "abd6cac3f4bbdb91495fa34fb219a5f0d2ce0cb3cdd93fee9cd215b34ce3dacd",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onPause",
+      "name": "onPause",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L199-L203",
+      "signature": "onPause = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "aa1525071777a1997e8984ef457a87a7da19392c32dea0d38a2ff9b0a0370c10",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onPlay",
+      "name": "onPlay",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L198-L198",
+      "signature": "onPlay = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "16092291c4fdf01d8275665dc24c4f3127c80efaba358b4f951e2c94af1f5c61",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onPointerDown",
+      "name": "onPointerDown",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L374-L379",
+      "signature": "onPointerDown = (e: React.PointerEvent)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e512ba5fb2a657028f657ea8c7dae965401d809090867a0c06839cc4c8d425d1",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onPointerMove",
+      "name": "onPointerMove",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L380-L385",
+      "signature": "onPointerMove = (e: React.PointerEvent)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "6630acb68de45cf8b02b06ac0f51407ad89bd95298450f9928a1df401dea0ab0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onPointerUp",
+      "name": "onPointerUp",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L386-L390",
+      "signature": "onPointerUp = (e: React.PointerEvent)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "adc7df352a14daf46f793f402ef6f2ed4a73e11048dd26928d0c3fbb550c0de5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onTime",
+      "name": "onTime",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L186-L197",
+      "signature": "onTime = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0794bc709103f6c9154d55e0a8365390dcc5ee156a7896ac76fc31c3e833217d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/components/reproductor/Reproductor.tsx#Reproductor.onWaiting",
+      "name": "onWaiting",
+      "kind": "function",
+      "path": "src/components/reproductor/Reproductor.tsx",
+      "span": "L204-L204",
+      "signature": "onWaiting = ()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0339e27cc4fd0abd2ebd4d9a1c7fe7bf11c2183daf154dfcb2da03634f5b32f0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
       "id": "src/config/sitio.ts",
       "name": "sitio.ts",
       "kind": "file",
@@ -305,16 +587,73 @@
       "crux": null
     },
     {
+      "id": "src/lib/analytics.ts",
+      "name": "analytics.ts",
+      "kind": "file",
+      "path": "src/lib/analytics.ts",
+      "span": "L1-L22",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e2bbb2696215873e3c35b7d3053add05c741f18ac415f59298610e1f5be8826c",
+      "chars": 723,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/analytics.ts#evento",
+      "name": "evento",
+      "kind": "function",
+      "path": "src/lib/analytics.ts",
+      "span": "L14-L21",
+      "signature": "function evento(nombre: string, props: Props = {})",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c92d612f3f374ad19d34eede10473d8799580c408babb064bb176a86bfeec80d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/analytics.ts#Props",
+      "name": "Props",
+      "kind": "type",
+      "path": "src/lib/analytics.ts",
+      "span": "L5-L5",
+      "signature": "type Props = Record<string, string | number | boolean>;",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d12a80cfa4911a8de3b1d5bc1f339b156114d5ab5ae5a16f8a1b7145ebc2a52e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/lib/analytics.ts#Window",
+      "name": "Window",
+      "kind": "interface",
+      "path": "src/lib/analytics.ts",
+      "span": "L8-L11",
+      "signature": "interface Window",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d014ec49eaaa363952c10b34bfe3fe48a9412a5a935564abdb25bcd5f6037bca",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
       "id": "src/lib/contenido.ts",
       "name": "contenido.ts",
       "kind": "file",
       "path": "src/lib/contenido.ts",
-      "span": "L1-L62",
+      "span": "L1-L78",
       "signature": null,
       "exported": true,
       "origin": "ast",
-      "body_hash": "4845064b1842516f1cb91e826005419369f533bb5074afdb653e9b690e0db116",
-      "chars": 2327,
+      "body_hash": "b629770c5c4f5e4ed7779452cf0b0fa9895a7cf7bc59b6687f6e2ba38f876e11",
+      "chars": 2900,
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -324,7 +663,7 @@
       "name": "capitulosDe",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L23-L25",
+      "span": "L39-L41",
       "signature": "function capitulosDe(ep: Episodio)",
       "exported": true,
       "origin": "ast",
@@ -334,11 +673,25 @@
       "crux": null
     },
     {
+      "id": "src/lib/contenido.ts#cargaReproductor",
+      "name": "cargaReproductor",
+      "kind": "function",
+      "path": "src/lib/contenido.ts",
+      "span": "L7-L18",
+      "signature": "function cargaReproductor(ep: CollectionEntry<'episodios'>): EpisodioCarga",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "aadf570a2f84e280253c5e0bc4a41b51813f4386982687620d6a9ece796215f8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
       "id": "src/lib/contenido.ts#duracionSegundos",
       "name": "duracionSegundos",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L18-L20",
+      "span": "L34-L36",
       "signature": "function duracionSegundos(ep: Episodio): number",
       "exported": true,
       "origin": "ast",
@@ -352,7 +705,7 @@
       "name": "Episodio",
       "kind": "type",
       "path": "src/lib/contenido.ts",
-      "span": "L4-L4",
+      "span": "L20-L20",
       "signature": "type Episodio = CollectionEntry<'episodios'>;",
       "exported": true,
       "origin": "ast",
@@ -366,7 +719,7 @@
       "name": "fechaCorta",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L53-L57",
+      "span": "L69-L73",
       "signature": "function fechaCorta(d: Date): string",
       "exported": true,
       "origin": "ast",
@@ -380,7 +733,7 @@
       "name": "fechaISO",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L59-L61",
+      "span": "L75-L77",
       "signature": "function fechaISO(d: Date): string",
       "exported": true,
       "origin": "ast",
@@ -394,7 +747,7 @@
       "name": "fechaLarga",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L49-L51",
+      "span": "L65-L67",
       "signature": "function fechaLarga(d: Date): string",
       "exported": true,
       "origin": "ast",
@@ -408,7 +761,7 @@
       "name": "getEpisodio",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L14-L16",
+      "span": "L30-L32",
       "signature": "async function getEpisodio(slug: string): Promise<Episodio | undefined>",
       "exported": true,
       "origin": "ast",
@@ -422,7 +775,7 @@
       "name": "getEpisodios",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L7-L12",
+      "span": "L23-L28",
       "signature": "async function getEpisodios(): Promise<Episodio[]>",
       "exported": true,
       "origin": "ast",
@@ -436,7 +789,7 @@
       "name": "picosDe",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L30-L36",
+      "span": "L46-L52",
       "signature": "async function picosDe(slug: string): Promise<number[] | null>",
       "exported": true,
       "origin": "ast",
@@ -450,7 +803,7 @@
       "name": "relacionados",
       "kind": "function",
       "path": "src/lib/contenido.ts",
-      "span": "L39-L47",
+      "span": "L55-L63",
       "signature": "function relacionados(ep: Episodio, todos: Episodio[], n = 3): Episodio[]",
       "exported": true,
       "origin": "ast",
@@ -713,6 +1066,345 @@
       "summary_state": "pending",
       "summary": null,
       "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/picos.json.ts",
+      "name": "picos.json.ts",
+      "kind": "file",
+      "path": "src/pages/episodios/[slug]/picos.json.ts",
+      "span": "L1-L16",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0222b3eb841dff417830a3eb323eecabe3069029c52931f53966a095b31b4f74",
+      "chars": 610,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/picos.json.ts#GET",
+      "name": "GET",
+      "kind": "function",
+      "path": "src/pages/episodios/[slug]/picos.json.ts",
+      "span": "L10-L15",
+      "signature": "GET: APIRoute = async ({ params })",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "3f3ec13a828cad14af55f4dfe907f0d28710d00a3df48fb3da1d9711f8742694",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/pages/episodios/[slug]/picos.json.ts#getStaticPaths",
+      "name": "getStaticPaths",
+      "kind": "function",
+      "path": "src/pages/episodios/[slug]/picos.json.ts",
+      "span": "L5-L8",
+      "signature": "async function getStaticPaths()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c20a6306a7017c3c75f2219c9290c8b89051e967addf20b9a7b63abde0d1c0f8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/reproducir.ts",
+      "name": "reproducir.ts",
+      "kind": "file",
+      "path": "src/scripts/reproducir.ts",
+      "span": "L1-L118",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e5321cf228e133bd925107e8e22125bc6a4c1fbe8cee66298fad749d3a45d4a9",
+      "chars": 3995,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/reproducir.ts#actualizarBotones",
+      "name": "actualizarBotones",
+      "kind": "function",
+      "path": "src/scripts/reproducir.ts",
+      "span": "L101-L114",
+      "signature": "function actualizarBotones()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "88edeeaaf17ff220a5de57e380ae3efeb690a6ec455b5a3cd18ef01cc5cfb3f2",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/reproducir.ts#avisar",
+      "name": "avisar",
+      "kind": "function",
+      "path": "src/scripts/reproducir.ts",
+      "span": "L31-L43",
+      "signature": "function avisar(texto: string)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "bfbd68a42fc855639b01bace0c8d5167176285fd41f1f6cf1d0fa33304c91430",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/reproducir.ts#cargaDePagina",
+      "name": "cargaDePagina",
+      "kind": "function",
+      "path": "src/scripts/reproducir.ts",
+      "span": "L20-L28",
+      "signature": "function cargaDePagina(): EpisodioCarga | null",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "1fd9006cef02a73bb5b6ba5ffacd987f6fce1b26739f1cc33571ad5fd65dbedd",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/scripts/reproducir.ts#datosDe",
+      "name": "datosDe",
+      "kind": "function",
+      "path": "src/scripts/reproducir.ts",
+      "span": "L12-L18",
+      "signature": "function datosDe(boton: HTMLElement): EpisodioCarga | null",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "50a679ca7dc7253ff0e9d740967fc53ad1eee8156ab4ef42406c1219164a61c8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts",
+      "name": "reproductor.ts",
+      "kind": "file",
+      "path": "src/stores/reproductor.ts",
+      "span": "L1-L151",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "8e6d9777ff35b0f41c2147dbc8701a2641f123675ac356cf07b426b2f55e340c",
+      "chars": 4648,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#CapituloCarga",
+      "name": "CapituloCarga",
+      "kind": "interface",
+      "path": "src/stores/reproductor.ts",
+      "span": "L10-L13",
+      "signature": "interface CapituloCarga",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f572cf5d3539888592431e3c75b00ea891e734c46c5484c9c6d319ecc271e8a0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#cargarEpisodio",
+      "name": "cargarEpisodio",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L74-L92",
+      "signature": "function cargarEpisodio(ep: EpisodioCarga, opts: { t?: number; autoplay?: boolean } = {})",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "64667b845a5568495fc13c0369096e07d6cf3df3b03bde16ae42f81879b41001",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#CLAVE",
+      "name": "CLAVE",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L122-L122",
+      "signature": "CLAVE = (id: string)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "ae783bf3228f2e771d16dbc24296594b6e5407491a843ee25b95587d0f89dcf4",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#EpisodioCarga",
+      "name": "EpisodioCarga",
+      "kind": "interface",
+      "path": "src/stores/reproductor.ts",
+      "span": "L16-L26",
+      "signature": "interface EpisodioCarga",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b22a0a7e9166207682088e6527abb0b9887fe1246ae140c5f06daaeb471f7252",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#guardarPosicion",
+      "name": "guardarPosicion",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L135-L141",
+      "signature": "function guardarPosicion(id: string, segundos: number, duracion: number)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "a4b033444148590ce6a6df41bb475a4c561541a86a0636c55ed9f85aa92294d8",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#irA",
+      "name": "irA",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L103-L105",
+      "signature": "function irA(segundos: number, autoplay = true)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e11d8a1c7d91e3e12fbd8eedde0955bd4c77f48a1c9f6d52d1a87182a89b121f",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#leerPosicion",
+      "name": "leerPosicion",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L124-L133",
+      "signature": "function leerPosicion(id: string): number | null",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "74b2a003c2a36e63fe002a780301402ddcf41955b8bcb60c2b55d1b8afae8e7d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#ordenar",
+      "name": "ordenar",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L47-L50",
+      "signature": "function ordenar(tipo: typeof $orden.value.tipo, extra: { valor?: number; autoplay?: boolean } = {})",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "64097254b93f2824ae1cdddfe2ddbcf77196229639ddb57327b4530fbf52c098",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#pausa",
+      "name": "pausa",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L100-L102",
+      "signature": "function pausa()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "da78cab5eec6342feecf2a2257cca3df99041241f772ca1e06eff4d6923de19f",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#play",
+      "name": "play",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L97-L99",
+      "signature": "function play()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "71b27adbc4f24ea182c7e8d04c9e0c26ec712f5ce18a0bb0a0cf641fd5223ea3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#saltar",
+      "name": "saltar",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L106-L108",
+      "signature": "function saltar(delta: number)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "42865b6b7c3ca978089b4dd0ba400a83e8b88bed626794a778c83cec97ab8148",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#setVelocidad",
+      "name": "setVelocidad",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L109-L114",
+      "signature": "function setVelocidad(v: number)",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0f6db8497877f706ed01dfbd5ef429b3423b84e62e0fe9e2e9d8ebdad19a8361",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#siguienteVelocidad",
+      "name": "siguienteVelocidad",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L115-L118",
+      "signature": "function siguienteVelocidad()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "94f6960cbf83b5075149e6cc3a560070ed1e52bb814450e46a45945a8d1eb33b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#togglePlay",
+      "name": "togglePlay",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L94-L96",
+      "signature": "function togglePlay()",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0dd692cae9efb5469fb73365cc334a26d6f4daba6cf8dd463d034d7e9e395a0c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/stores/reproductor.ts#velocidadGuardada",
+      "name": "velocidadGuardada",
+      "kind": "function",
+      "path": "src/stores/reproductor.ts",
+      "span": "L143-L150",
+      "signature": "function velocidadGuardada(): number",
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e1b473985b1a956982b021d9b453321976223702129bde8f78c5b8972bab14ba",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
     }
   ],
   "edges": [
@@ -969,6 +1661,276 @@
       "confidence": "extracted"
     },
     {
+      "source": "src/components/reproductor/Reproductor.tsx",
+      "target": "src/components/reproductor/Reproductor.tsx#Icono",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx",
+      "target": "src/components/reproductor/Reproductor.tsx#remuestrear",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx",
+      "target": "@/lib/analytics",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx",
+      "target": "@/lib/tiempo",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx",
+      "target": "@/stores/reproductor",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx",
+      "target": "@nanostores/react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx",
+      "target": "react",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#remuestrear",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.aplicar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.intentarPlay",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/lib/analytics.ts#evento",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/lib/tiempo.ts#duracionAccesible",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/lib/tiempo.ts#formatoCorto",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/stores/reproductor.ts#guardarPosicion",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/stores/reproductor.ts#irA",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/stores/reproductor.ts#saltar",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/stores/reproductor.ts#setVelocidad",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/stores/reproductor.ts#siguienteVelocidad",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/stores/reproductor.ts#togglePlay",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/stores/reproductor.ts#velocidadGuardada",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.aplicar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.capituloEn",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.intentarPlay",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onCanPlay",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onEnded",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onError",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onKey",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onKeyBarra",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onMeta",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onPause",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onPlay",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onPointerDown",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onPointerMove",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onPointerUp",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onTime",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.onWaiting",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor.onEnded",
+      "target": "src/stores/reproductor.ts#guardarPosicion",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor.onKey",
+      "target": "src/stores/reproductor.ts#saltar",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor.onKey",
+      "target": "src/stores/reproductor.ts#togglePlay",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor.onKeyBarra",
+      "target": "src/stores/reproductor.ts#irA",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor.onPause",
+      "target": "src/stores/reproductor.ts#guardarPosicion",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor.onPointerMove",
+      "target": "src/components/reproductor/Reproductor.tsx#Reproductor.capituloEn",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor.onPointerUp",
+      "target": "src/stores/reproductor.ts#irA",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/components/reproductor/Reproductor.tsx#Reproductor.onTime",
+      "target": "src/lib/analytics.ts#evento",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
       "source": "src/config/sitio.ts",
       "target": "src/config/sitio.ts#EjeId",
       "relation": "contains",
@@ -1017,8 +1979,32 @@
       "confidence": "extracted"
     },
     {
+      "source": "src/lib/analytics.ts",
+      "target": "src/lib/analytics.ts#evento",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/analytics.ts",
+      "target": "src/lib/analytics.ts#Props",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/analytics.ts",
+      "target": "src/lib/analytics.ts#Window",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
       "source": "src/lib/contenido.ts",
       "target": "src/lib/contenido.ts#capitulosDe",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "src/lib/contenido.ts#cargaReproductor",
       "relation": "contains",
       "confidence": "extracted"
     },
@@ -1078,6 +2064,18 @@
     },
     {
       "source": "src/lib/contenido.ts",
+      "target": "@/config/sitio",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
+      "target": "@/stores/reproductor",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/lib/contenido.ts",
       "target": "astro:content",
       "relation": "imports",
       "confidence": "extracted"
@@ -1086,18 +2084,6 @@
       "source": "src/lib/contenido.ts",
       "target": "src/lib/tiempo.ts",
       "relation": "imports",
-      "confidence": "extracted"
-    },
-    {
-      "source": "src/lib/contenido.ts#capitulosDe",
-      "target": "src/lib/tiempo.ts#aSegundos",
-      "relation": "references",
-      "confidence": "extracted"
-    },
-    {
-      "source": "src/lib/contenido.ts#duracionSegundos",
-      "target": "src/lib/tiempo.ts#aSegundos",
-      "relation": "references",
       "confidence": "extracted"
     },
     {
@@ -1266,6 +2252,264 @@
       "source": "src/lib/tiempo.ts",
       "target": "src/lib/tiempo.ts#formatoHMS",
       "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/picos.json.ts",
+      "target": "src/pages/episodios/[slug]/picos.json.ts#GET",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/picos.json.ts",
+      "target": "src/pages/episodios/[slug]/picos.json.ts#getStaticPaths",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/picos.json.ts",
+      "target": "@/lib/contenido",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/picos.json.ts",
+      "target": "astro",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/picos.json.ts#GET",
+      "target": "src/lib/contenido.ts#picosDe",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/pages/episodios/[slug]/picos.json.ts#getStaticPaths",
+      "target": "src/lib/contenido.ts#getEpisodios",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/lib/analytics.ts#evento",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/scripts/reproducir.ts#avisar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/scripts/reproducir.ts#cargaDePagina",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/scripts/reproducir.ts#datosDe",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/stores/reproductor.ts#cargarEpisodio",
+      "relation": "calls",
+      "confidence": "inferred"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/scripts/reproducir.ts#actualizarBotones",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/scripts/reproducir.ts#avisar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/scripts/reproducir.ts#cargaDePagina",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "src/scripts/reproducir.ts#datosDe",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "@/lib/analytics",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/scripts/reproducir.ts",
+      "target": "@/stores/reproductor",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#CapituloCarga",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#cargarEpisodio",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#CLAVE",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#EpisodioCarga",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#guardarPosicion",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#irA",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#leerPosicion",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#ordenar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#pausa",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#play",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#saltar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#setVelocidad",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#siguienteVelocidad",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#togglePlay",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "src/stores/reproductor.ts#velocidadGuardada",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts",
+      "target": "nanostores",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#cargarEpisodio",
+      "target": "src/stores/reproductor.ts#leerPosicion",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#cargarEpisodio",
+      "target": "src/stores/reproductor.ts#ordenar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#guardarPosicion",
+      "target": "src/stores/reproductor.ts#CLAVE",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#irA",
+      "target": "src/stores/reproductor.ts#ordenar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#leerPosicion",
+      "target": "src/stores/reproductor.ts#CLAVE",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#pausa",
+      "target": "src/stores/reproductor.ts#ordenar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#play",
+      "target": "src/stores/reproductor.ts#ordenar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#saltar",
+      "target": "src/stores/reproductor.ts#ordenar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#siguienteVelocidad",
+      "target": "src/stores/reproductor.ts#setVelocidad",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/stores/reproductor.ts#togglePlay",
+      "target": "src/stores/reproductor.ts#ordenar",
+      "relation": "calls",
       "confidence": "extracted"
     }
   ]

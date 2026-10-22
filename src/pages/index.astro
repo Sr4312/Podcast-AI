@@ -2,6 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import Waveform from '@/components/Waveform.astro';
 import BotonReproducir from '@/components/BotonReproducir.astro';
+import Newsletter from '@/components/Newsletter.astro';
 import { SITIO, FORMATOS, EJES } from '@/config/sitio';
 import { getEpisodios, duracionSegundos, fechaLarga, fechaISO, picosDe } from '@/lib/contenido';
 import { duracionLegible } from '@/lib/tiempo';
@@ -141,11 +142,7 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
     <h2 id="news" class="margen titulo-margen">{SITIO.newsletter.nombreLista}</h2>
     <div class="cuerpo">
       <p class="prosa">Un correo por episodio, con el resumen, las fuentes y lo que pasó después. Nada más.</p>
-      <form class="mt-4 flex max-w-md flex-wrap gap-2" action={SITIO.newsletter.endpoint} method="post" target="_blank">
-        <label for="email-home" class="sr-only">Tu correo</label>
-        <input id="email-home" name="email" type="email" required placeholder="tu@correo.ar" class="campo grow" autocomplete="email" />
-        <button type="submit" class="boton">Suscribirme</button>
-      </form>
+      <div class="mt-4"><Newsletter id="news-home" compacto /></div>
     </div>
   </section>
 </Base>
@@ -196,17 +193,5 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
   .fila__n-derecha {
     padding-top: 0.5rem;
     white-space: nowrap;
-  }
-  .campo {
-    min-height: 2.75rem;
-    padding: 0.4rem 0.8rem;
-    border: 1px solid var(--color-linea-2);
-    border-radius: var(--radius-ui);
-    background: var(--color-papel-2);
-    color: var(--color-tinta);
-    font: inherit;
-  }
-  .campo::placeholder {
-    color: var(--color-tinta-2);
   }
 </style>

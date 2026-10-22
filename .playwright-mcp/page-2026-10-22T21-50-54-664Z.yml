@@ -1,0 +1,150 @@
+- generic [active] [ref=f23e1]:
+  - link "Saltar al contenido" [ref=f23e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f23e3]:
+    - generic [ref=f23e4]:
+      - link "Señal Pública, inicio" [ref=f23e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f23e15]: Señal Pública
+      - navigation "Principal" [ref=f23e16]:
+        - list [ref=f23e17]:
+          - listitem [ref=f23e18]:
+            - link "Episodios" [ref=f23e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f23e20]:
+            - link "Temas" [ref=f23e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f23e22]:
+            - link "Fuentes" [ref=f23e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f23e24]:
+            - link "Acerca" [ref=f23e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f23e26]:
+            - link "Suscribite" [ref=f23e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f23e28]:
+            - button "Cambiar a modo oscuro" [ref=f23e29] [cursor=pointer]
+  - main [ref=f23e32]:
+    - generic [ref=f23e33]:
+      - paragraph [ref=f23e35]: Elegí tu app. Si usás otra, el RSS funciona en todas.
+      - generic [ref=f23e36]:
+        - heading "Suscribite" [level=1] [ref=f23e37]
+        - paragraph [ref=f23e38]: Un episodio cada dos semanas. Gratis, sin publicidad y con todas las fuentes en la web.
+        - region [ref=f23e39]:
+          - heading "En tu app de podcasts" [level=2] [ref=f23e40]
+          - generic [ref=f23e41]:
+            - link "Escuchar en Spotify" [ref=f23e42] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+              - generic [ref=f23e47]: Spotify
+            - link "Escuchar en Apple Podcasts" [ref=f23e48] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+              - generic [ref=f23e53]: Apple Podcasts
+            - link "Escuchar en YouTube" [ref=f23e54] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+              - generic [ref=f23e59]: YouTube
+        - region [ref=f23e60]:
+          - heading "Con RSS, en cualquier app" [level=2] [ref=f23e61]
+          - paragraph [ref=f23e62]: Copiá esta dirección y pegala en "Agregar por URL" o "Añadir feed" de tu aplicación. Funciona en Pocket Casts, Overcast, AntennaPod, Castro y las demás.
+          - generic [ref=f23e63]:
+            - code [ref=f23e64]: https://feeds.transistor.fm/senal-publica
+            - button "Copiar" [ref=f23e65] [cursor=pointer]
+            - link "Abrir" [ref=f23e69] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - paragraph [ref=f23e74]:
+            - text: El feed lo sirve Transistor.
+            - link "senalpublica.ar/feed" [ref=f23e75] [cursor=pointer]:
+              - /url: /feed
+            - text: redirige siempre a la dirección vigente.
+        - region [ref=f23e76]:
+          - 'heading "Por correo: La señal de la semana" [level=2] [ref=f23e77]'
+          - paragraph [ref=f23e78]: Un correo por episodio, con el resumen en dos minutos, las fuentes y lo que pasó después. Nada más, y te das de baja con un clic.
+          - generic [ref=f23e79]:
+            - generic [ref=f23e80]: Tu correo
+            - generic [ref=f23e81]:
+              - textbox "Tu correo" [ref=f23e82]:
+                - /placeholder: tu@correo.ar
+              - button "Suscribirme" [ref=f23e83] [cursor=pointer]
+            - paragraph [ref=f23e84]: Un correo por episodio. Te das de baja con un clic.
+        - region [ref=f23e85]:
+          - heading "En redes" [level=2] [ref=f23e86]
+          - paragraph [ref=f23e87]:
+            - text: Publicamos la frase destacada y el resumen de cada episodio en
+            - link "LinkedIn" [ref=f23e88] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+            - text: e
+            - link "Instagram" [ref=f23e89] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+            - text: . Las piezas para compartir están en el kit de cada episodio.
+  - contentinfo [ref=f23e90]:
+    - generic [ref=f23e91]:
+      - generic [ref=f23e92]:
+        - paragraph [ref=f23e93]: Señal Pública
+        - paragraph [ref=f23e94]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f23e95]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f23e96] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f23e97]:
+        - heading "Escuchalo en" [level=2] [ref=f23e98]
+        - list [ref=f23e99]:
+          - listitem [ref=f23e100]:
+            - link "YouTube" [ref=f23e101] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f23e102]:
+            - link "Spotify" [ref=f23e103] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f23e104]:
+            - link "Apple Podcasts" [ref=f23e105] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f23e106]:
+            - link "RSS del podcast" [ref=f23e107] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f23e112]:
+            - link "Todas las opciones" [ref=f23e113] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f23e114]:
+        - heading "El sitio" [level=2] [ref=f23e115]
+        - list [ref=f23e116]:
+          - listitem [ref=f23e117]:
+            - link "Empezá por acá" [ref=f23e118] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f23e119]:
+            - link "Todos los episodios" [ref=f23e120] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f23e121]:
+            - link "Glosario" [ref=f23e122] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f23e123]:
+            - link "Biblioteca de fuentes" [ref=f23e124] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f23e125]:
+            - link "Proponé un caso" [ref=f23e126] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f23e127]:
+        - heading "Cómo trabajamos" [level=2] [ref=f23e128]
+        - list [ref=f23e129]:
+          - listitem [ref=f23e130]:
+            - link "Método y uso de IA" [ref=f23e131] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f23e132]:
+            - link "Correcciones" [ref=f23e133] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f23e134]:
+            - link "Kit de prensa" [ref=f23e135] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f23e136]:
+            - link "hola@senalpublica.ar" [ref=f23e137] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f23e138]:
+            - link "LinkedIn" [ref=f23e139] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f23e140]:
+            - link "Instagram" [ref=f23e141] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f23e143]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f23e144] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

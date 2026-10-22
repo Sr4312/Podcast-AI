@@ -1,0 +1,110 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import FilaEpisodio from '@/components/FilaEpisodio.astro';
+import { SITIO, EJES, FORMATOS } from '@/config/sitio';
+import { getEpisodios } from '@/lib/contenido';
+
+const episodios = await getEpisodios();
+const temas = (await getCollection('temas')).sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
+const invitados = (await getCollection('invitados')).sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
+const usados = {
+  temas: new Set(episodios.flatMap((e) => e.data.temas.map((t) => t.id))),
+  invitados: new Set(episodios.flatMap((e) => e.data.invitados.map((i) => i.id))),
+  formatos: new Set(episodios.map((e) => e.data.formato)),
+  anios: Array.from(new Set(episodios.map((e) => e.data.fecha.getUTCFullYear()))).sort((a, b) => b - a),
+};
+---
+
+<Base titulo={`Episodios · ${SITIO.nombre}`} descripcion={`Todos los episodios de ${SITIO.nombre}, con filtros por eje, formato, tema, invitado y año, y búsqueda dentro de las transcripciones.`} ruta="/episodios">
+  <div class="cuaderno">
+    <div class="margen">
+      <p class="mt-1">{episodios.length} {episodios.length === 1 ? 'episodio' : 'episodios'} publicados. Orden: el más reciente primero.</p>
+    </div>
+    <div class="cuerpo">
+      <h1>Episodios</h1>
+
+      <div class="buscador mt-6" data-buscador>
+        <label for="q" class="etiqueta">Buscar en títulos, resúmenes y transcripciones</label>
+        <div class="buscador__fila">
+          <input id="q" type="search" class="campo" placeholder="p. ej. Ley 27.275, alucinación, municipio" autocomplete="off" />
+        </div>
+        <div id="resultados-busqueda" class="mt-3" aria-live="polite"></div>
+      </div>
+
+      <div class="filtros mt-6" data-filtros="#lista-episodios">
+        <div class="filtros__grupo">
+          <label for="f-eje" class="etiqueta">Eje</label>
+          <select id="f-eje" class="campo" data-filtro="eje">
+            <option value="">Todos</option>
+            {Object.entries(EJES).map(([id, e]) => <option value={id}>{e.nombre}</option>)}
+          </select>
+        </div>
+        <div class="filtros__grupo">
+          <label for="f-formato" class="etiqueta">Formato</label>
+          <select id="f-formato" class="campo" data-filtro="formato">
+            <option value="">Todos</option>
+            {Object.entries(FORMATOS).filter(([id]) => usados.formatos.has(id as never)).map(([id, f]) => <option value={id}>{f.nombre}</option>)}
+          </select>
+        </div>
+        <div class="filtros__grupo">
+          <label for="f-tema" class="etiqueta">Tema</label>
+          <select id="f-tema" class="campo" data-filtro="tema">
+            <option value="">Todos</option>
+            {temas.filter((t) => usados.temas.has(t.id)).map((t) => <option value={t.id}>{t.data.nombre}</option>)}
+          </select>
+        </div>
+        <div class="filtros__grupo">
+          <label for="f-invitado" class="etiqueta">Invitado</label>
+          <select id="f-invitado" class="campo" data-filtro="invitado">
+            <option value="">Todos</option>
+            {invitados.filter((i) => usados.invitados.has(i.id)).map((i) => <option value={i.id}>{i.data.nombre}</option>)}
+          </select>
+        </div>
+        <div class="filtros__grupo">
+          <label for="f-anio" class="etiqueta">Año</label>
+          <select id="f-anio" class="campo" data-filtro="anio">
+            <option value="">Todos</option>
+            {usados.anios.map((a) => <option value={String(a)}>{a}</option>)}
+          </select>
+        </div>
+        <div class="filtros__grupo filtros__estado">
+          <output class="meta" data-conteo data-plural="episodios">{episodios.length} episodios</output>
+          <button type="button" class="boton boton--secundario" data-limpiar hidden>Quitar filtros</button>
+        </div>
+      </div>
+
+      <ol id="lista-episodios" class="lista-editorial mt-6">
+        {episodios.map((ep) => <FilaEpisodio ep={ep} conWaveform conInvitados conFecha />)}
+      </ol>
+      <p class="mt-6" data-vacio hidden>Ningún episodio coincide con esos filtros. Probá quitando alguno.</p>
+    </div>
+  </div>
+</Base>
+
+<script src="@/scripts/filtros.ts"></script>
+
+<style>
+  .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    align-items: end;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-linea);
+  }
+  .filtros__estado {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+    min-height: 2.75rem;
+  }
+  .buscador__fila .campo {
+    max-width: 34rem;
+  }
+  .filtros select {
+    max-width: 16rem;
+    text-overflow: ellipsis;
+  }
+</style>

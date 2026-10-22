@@ -1,0 +1,53 @@
+---
+/**
+ * Formulario de newsletter aislado: cambiar de proveedor = tocar este archivo.
+ * Buttondown y Beehiiv aceptan POST con `email`; Substack se maneja con un link.
+ */
+import { SITIO } from '@/config/sitio';
+
+interface Props {
+  id?: string;
+  compacto?: boolean;
+}
+const { id = 'newsletter', compacto = false } = Astro.props;
+const { proveedor, endpoint, nombreLista } = SITIO.newsletter;
+const campoEmail = proveedor === 'beehiiv' ? 'email' : 'email';
+---
+
+{
+  proveedor === 'ninguno' ? null : proveedor === 'substack' ? (
+    <p>
+      <a href={endpoint} class="boton" rel="noopener">Suscribirme a {nombreLista}</a>
+    </p>
+  ) : (
+    <form class="news" action={endpoint} method="post" target="_blank" data-newsletter>
+      <label for={`${id}-email`} class={compacto ? 'sr-only' : 'news__label'}>Tu correo</label>
+      <div class="news__fila">
+        <input id={`${id}-email`} name={campoEmail} type="email" required placeholder="tu@correo.ar" class="campo" autocomplete="email" inputmode="email" />
+        <button type="submit" class="boton">Suscribirme</button>
+      </div>
+      {!compacto && <p class="meta mt-2">Un correo por episodio. Te das de baja con un clic.</p>}
+      <input type="hidden" name="tag" value="web" />
+    </form>
+  )
+}
+
+<style>
+  .news {
+    max-width: 30rem;
+  }
+  .news__label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: var(--text-meta);
+    color: var(--color-tinta-2);
+  }
+  .news__fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .news__fila .campo {
+    flex: 1 1 14rem;
+  }
+</style>

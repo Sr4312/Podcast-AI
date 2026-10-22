@@ -1,0 +1,162 @@
+- generic [active] [ref=f13e1]:
+  - link "Saltar al contenido" [ref=f13e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=f13e3]:
+    - generic [ref=f13e4]:
+      - link "Señal Pública, inicio" [ref=f13e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f13e15]: Señal Pública
+      - navigation "Principal" [ref=f13e16]:
+        - list [ref=f13e17]:
+          - listitem [ref=f13e18]:
+            - link "Episodios" [ref=f13e19] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f13e20]:
+            - link "Temas" [ref=f13e21] [cursor=pointer]:
+              - /url: /temas
+          - listitem [ref=f13e22]:
+            - link "Fuentes" [ref=f13e23] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f13e24]:
+            - link "Acerca" [ref=f13e25] [cursor=pointer]:
+              - /url: /acerca
+          - listitem [ref=f13e26]:
+            - link "Suscribite" [ref=f13e27] [cursor=pointer]:
+              - /url: /suscribirse
+          - listitem [ref=f13e28]:
+            - button "Cambiar a modo oscuro" [ref=f13e29] [cursor=pointer]
+  - main [ref=f13e32]:
+    - generic [ref=f13e33]:
+      - paragraph [ref=f13e35]: "3 episodios publicados. Orden: el más reciente primero."
+      - generic [ref=f13e36]:
+        - heading "Episodios" [level=1] [ref=f13e37]
+        - generic [ref=f13e38]:
+          - generic [ref=f13e39]: Buscar en títulos, resúmenes y transcripciones
+          - searchbox "Buscar en títulos, resúmenes y transcripciones" [ref=f13e41]
+        - generic [ref=f13e42]:
+          - generic [ref=f13e43]:
+            - generic [ref=f13e44]: Eje
+            - combobox "Eje" [ref=f13e45]:
+              - option "Todos"
+              - option "Política pública" [selected]
+              - option "Sociedad"
+              - option "Economía"
+          - generic [ref=f13e46]:
+            - generic [ref=f13e47]: Formato
+            - combobox "Formato" [ref=f13e48]:
+              - option "Todos"
+              - option "Laboratorio"
+              - option "Caso" [selected]
+              - option "Investigación"
+          - generic [ref=f13e49]:
+            - generic [ref=f13e50]: Tema
+            - combobox "Tema" [ref=f13e51]:
+              - option "Todos" [selected]
+              - option "Asesoramiento legislativo"
+              - option "Atención ciudadana"
+              - option "Chatbots"
+              - option "Costos del Estado"
+              - option "Datos personales"
+              - option "Gobierno digital"
+              - option "Información pública"
+              - option "Legislación"
+              - option "Municipios"
+          - generic [ref=f13e52]:
+            - generic [ref=f13e53]: Invitado
+            - combobox "Invitado" [ref=f13e54]:
+              - option "Todos" [selected]
+              - option "Ana Paula Sosa"
+              - option "Carolina Bustos"
+              - option "Diego Lamarque"
+              - option "Julián Ortiz"
+          - generic [ref=f13e55]:
+            - generic [ref=f13e56]: Año
+            - combobox "Año" [ref=f13e57]:
+              - option "Todos" [selected]
+              - option "2026"
+          - generic [ref=f13e58]:
+            - status [ref=f13e59]: 1 episodio
+            - button "Quitar filtros" [ref=f13e60] [cursor=pointer]
+        - list [ref=f13e61]:
+          - listitem [ref=f13e62]:
+            - generic [ref=f13e63]: "02"
+            - generic [ref=f13e64]:
+              - link "El chatbot de un municipio, seis meses después" [ref=f13e65] [cursor=pointer]:
+                - /url: /episodios/002-el-chatbot-de-un-municipio
+              - paragraph [ref=f13e66]: Un municipio mediano puso un asistente de IA a responder consultas de vecinos. Su secretario de Modernización cuenta qué funcionó, qué salió mal y cuánto costó.
+              - paragraph [ref=f13e67]:
+                - time [ref=f13e68]: 17 de sept de 2026
+                - text: · Caso · 41 min · con Diego Lamarque · ejemplo
+            - 'button "Reproducir episodio 2: El chatbot de un municipio, seis meses después" [ref=f13e135] [cursor=pointer]'
+  - contentinfo [ref=f13e138]:
+    - generic [ref=f13e139]:
+      - generic [ref=f13e140]:
+        - paragraph [ref=f13e141]: Señal Pública
+        - paragraph [ref=f13e142]: Un podcast sobre inteligencia artificial aplicada a problemas públicos concretos en Argentina y América Latina.
+        - paragraph [ref=f13e143]:
+          - text: Conducen
+          - link "Lucía Ferreyra y Martín Albarracín" [ref=f13e144] [cursor=pointer]:
+            - /url: /acerca
+          - text: . Cada afirmación tiene su fuente; los errores se corrigen en público.
+      - navigation [ref=f13e145]:
+        - heading "Escuchalo en" [level=2] [ref=f13e146]
+        - list [ref=f13e147]:
+          - listitem [ref=f13e148]:
+            - link "YouTube" [ref=f13e149] [cursor=pointer]:
+              - /url: https://www.youtube.com/@senalpublica
+          - listitem [ref=f13e150]:
+            - link "Spotify" [ref=f13e151] [cursor=pointer]:
+              - /url: https://open.spotify.com/show/ejemplo-senal-publica
+          - listitem [ref=f13e152]:
+            - link "Apple Podcasts" [ref=f13e153] [cursor=pointer]:
+              - /url: https://podcasts.apple.com/ar/podcast/ejemplo-senal-publica
+          - listitem [ref=f13e154]:
+            - link "RSS del podcast" [ref=f13e155] [cursor=pointer]:
+              - /url: https://feeds.transistor.fm/senal-publica
+          - listitem [ref=f13e160]:
+            - link "Todas las opciones" [ref=f13e161] [cursor=pointer]:
+              - /url: /suscribirse
+      - navigation [ref=f13e162]:
+        - heading "El sitio" [level=2] [ref=f13e163]
+        - list [ref=f13e164]:
+          - listitem [ref=f13e165]:
+            - link "Empezá por acá" [ref=f13e166] [cursor=pointer]:
+              - /url: /empezar
+          - listitem [ref=f13e167]:
+            - link "Todos los episodios" [ref=f13e168] [cursor=pointer]:
+              - /url: /episodios
+          - listitem [ref=f13e169]:
+            - link "Glosario" [ref=f13e170] [cursor=pointer]:
+              - /url: /glosario
+          - listitem [ref=f13e171]:
+            - link "Biblioteca de fuentes" [ref=f13e172] [cursor=pointer]:
+              - /url: /fuentes
+          - listitem [ref=f13e173]:
+            - link "Proponé un caso" [ref=f13e174] [cursor=pointer]:
+              - /url: /proponer-un-caso
+      - navigation [ref=f13e175]:
+        - heading "Cómo trabajamos" [level=2] [ref=f13e176]
+        - list [ref=f13e177]:
+          - listitem [ref=f13e178]:
+            - link "Método y uso de IA" [ref=f13e179] [cursor=pointer]:
+              - /url: /acerca#metodo
+          - listitem [ref=f13e180]:
+            - link "Correcciones" [ref=f13e181] [cursor=pointer]:
+              - /url: /correcciones
+          - listitem [ref=f13e182]:
+            - link "Kit de prensa" [ref=f13e183] [cursor=pointer]:
+              - /url: /acerca#prensa
+          - listitem [ref=f13e184]:
+            - link "hola@senalpublica.ar" [ref=f13e185] [cursor=pointer]:
+              - /url: mailto:hola@senalpublica.ar
+          - listitem [ref=f13e186]:
+            - link "LinkedIn" [ref=f13e187] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ejemplo-senal-publica
+          - listitem [ref=f13e188]:
+            - link "Instagram" [ref=f13e189] [cursor=pointer]:
+              - /url: https://www.instagram.com/ejemplo.senalpublica
+    - paragraph [ref=f13e191]:
+      - text: 2026 Señal Pública. Los contenidos se publican con licencia Creative Commons BY 4.0, salvo indicación en contrario.
+      - link "Feed de novedades de la web" [ref=f13e192] [cursor=pointer]:
+        - /url: /rss.xml
+      - text: .

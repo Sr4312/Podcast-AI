@@ -1,0 +1,82 @@
+---
+/**
+ * Fila de una lista editorial de episodios: número, título, bajada, metadatos,
+ * invitados y botón play que carga el reproductor sin navegar.
+ * Lleva data-* con los valores filtrables para el archivo.
+ */
+import { getEntries } from 'astro:content';
+import BotonReproducir from './BotonReproducir.astro';
+import Waveform from './Waveform.astro';
+import { FORMATOS } from '@/config/sitio';
+import { duracionSegundos, fechaCorta, fechaISO, picosDe, type Episodio } from '@/lib/contenido';
+import { duracionLegible } from '@/lib/tiempo';
+
+interface Props {
+  ep: Episodio;
+  /** Mostrar bajada completa (archivo) o solo metadatos (listas cortas). */
+  conBajada?: boolean;
+  conWaveform?: boolean;
+  conInvitados?: boolean;
+  conFecha?: boolean;
+}
+
+const { ep, conBajada = true, conWaveform = false, conInvitados = false, conFecha = false } = Astro.props;
+const invitados = conInvitados ? await getEntries(ep.data.invitados) : [];
+const picos = conWaveform ? await picosDe(ep.id) : null;
+---
+
+<li
+  class="fila-ep"
+  data-eje={ep.data.ejes.join(' ')}
+  data-formato={ep.data.formato}
+  data-tema={ep.data.temas.map((t) => t.id).join(' ')}
+  data-invitado={ep.data.invitados.map((i) => i.id).join(' ')}
+  data-anio={ep.data.fecha.getUTCFullYear()}
+>
+  <span class="fila-ep__n mono meta">{String(ep.data.numero).padStart(2, '0')}</span>
+  <div class="fila-ep__cuerpo">
+    <a href={`/episodios/${ep.id}`} class="fila-ep__titulo" transition:name={`titulo-${ep.id}`}>{ep.data.titulo}</a>
+    {conBajada && <p class="mt-1">{ep.data.bajada}</p>}
+    <p class="meta mt-1">
+      {conFecha && <><time datetime={fechaISO(ep.data.fecha)}>{fechaCorta(ep.data.fecha)}</time> · </>}
+      {FORMATOS[ep.data.formato].nombre} · <span class="mono">{duracionLegible(duracionSegundos(ep))}</span>
+      {invitados.length > 0 && <> · con {invitados.map((i) => i.data.nombre).join(' y ')}</>}
+      {ep.data.ejemplo && <> · <span class="text-pendiente">ejemplo</span></>}
+    </p>
+    {conWaveform && <div class="fila-ep__onda"><Waveform picos={picos} barras={64} barrasMobile={0} alto={22} /></div>}
+  </div>
+  <BotonReproducir ep={ep} variante="icono" class="fila-ep__play" />
+</li>
+
+<style>
+  .fila-ep {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 0.25rem 1rem;
+    align-items: start;
+  }
+  .fila-ep__n {
+    padding-top: 0.45rem;
+    min-width: 1.6rem;
+  }
+  .fila-ep__titulo {
+    font-family: var(--font-titulo);
+    font-size: var(--text-xl);
+    line-height: 1.2;
+    color: var(--color-tinta);
+    text-decoration: none;
+  }
+  .fila-ep__titulo:hover {
+    color: var(--color-acento);
+  }
+  .fila-ep__play {
+    margin-top: 0.15rem;
+  }
+  .fila-ep__onda {
+    max-width: 16rem;
+    margin-top: 0.6rem;
+  }
+  .text-pendiente {
+    color: var(--color-pendiente);
+  }
+</style>
