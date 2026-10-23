@@ -4,8 +4,9 @@ import Waveform from '@/components/Waveform.astro';
 import BotonReproducir from '@/components/BotonReproducir.astro';
 import Newsletter from '@/components/Newsletter.astro';
 import JsonLd from '@/components/JsonLd.astro';
+import Vineta from '@/components/Vineta.astro';
 import { getCollection } from 'astro:content';
-import { SITIO, FORMATOS, EJES } from '@/config/sitio';
+import { SITIO, FORMATOS, EJES, type EjeId } from '@/config/sitio';
 
 const conductores = (await getCollection('conductores')).sort((a, b) => a.data.orden - b.data.orden);
 const jsonLdSerie = {
@@ -33,6 +34,12 @@ const conteoEjes = Object.keys(EJES).map((id) => ({
   n: episodios.filter((e) => e.data.ejes.includes(id as never)).length,
 }));
 const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
+// Dibujo de cada eje en la lista "Tres ejes".
+const VINETA_EJE: Record<EjeId, 'estado' | 'sociedad' | 'economia'> = {
+  'politica-publica': 'estado',
+  sociedad: 'sociedad',
+  economia: 'economia',
+};
 ---
 
 <Base titulo={`${SITIO.nombre} · podcast de IA y problemas públicos`} descripcion={SITIO.descripcionCorta} ruta="/">
@@ -88,7 +95,7 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
   }
 
   <section class="cuaderno seccion" aria-label="Qué es el podcast">
-    <div class="margen"></div>
+    <div class="margen margen--vineta margen--vineta-sola"><Vineta nombre="antena" /></div>
     <p class="cuerpo prosa manifiesto">
       {SITIO.nombre} toma un problema público concreto por episodio, una ley, un trámite, un servicio municipal, y analiza con fuentes a la
       vista qué cambia y qué no cambia con inteligencia artificial.
@@ -96,7 +103,10 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
   </section>
 
   <section class="cuaderno seccion" aria-labelledby="recientes">
-    <h2 id="recientes" class="margen titulo-margen">Episodios recientes</h2>
+    <div class="margen margen--vineta">
+      <Vineta nombre="cinta" />
+      <h2 id="recientes" class="titulo-margen">Episodios recientes</h2>
+    </div>
     <ol class="cuerpo lista-editorial">
       {
         recientes.map((ep) => (
@@ -117,11 +127,15 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
   </section>
 
   <section class="cuaderno seccion" aria-labelledby="ejes">
-    <h2 id="ejes" class="margen titulo-margen">Tres ejes</h2>
+    <div class="margen margen--vineta">
+      <Vineta nombre="ejes" />
+      <h2 id="ejes" class="titulo-margen">Tres ejes</h2>
+    </div>
     <ul class="cuerpo lista-editorial">
       {
         conteoEjes.map((e) => (
-          <li class="fila fila--sin-n">
+          <li class="fila fila--eje">
+            <Vineta nombre={VINETA_EJE[e.id as EjeId]} tamano={48} />
             <div class="fila__cuerpo">
               <a href={`/temas#${e.id}`} class="fila__titulo">{e.nombre}</a>
               <p class="mt-1 prosa">{e.descripcion}</p>
@@ -136,7 +150,8 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
   {
     destacados.length > 0 && (
       <section class="cuaderno seccion" aria-labelledby="empezar">
-        <div class="margen">
+        <div class="margen margen--vineta">
+          <Vineta nombre="inicio" />
           <h2 id="empezar" class="titulo-margen">Empezá por acá</h2>
           <p class="mt-2">Si es tu primera vez, estos episodios muestran cómo trabajamos.</p>
         </div>
@@ -158,7 +173,10 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
   }
 
   <section class="cuaderno seccion" aria-labelledby="news">
-    <h2 id="news" class="margen titulo-margen">{SITIO.newsletter.nombreLista}</h2>
+    <div class="margen margen--vineta">
+      <Vineta nombre="sobre" />
+      <h2 id="news" class="titulo-margen">{SITIO.newsletter.nombreLista}</h2>
+    </div>
     <div class="cuerpo news-panel">
       <p class="prosa">Un correo por episodio, con el resumen, las fuentes y lo que pasó después. Nada más.</p>
       <div class="mt-4"><Newsletter id="news-home" compacto /></div>
@@ -185,6 +203,42 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
     color: var(--color-tinta);
     letter-spacing: 0.01em;
     padding-top: 1.2rem;
+  }
+  /* Margen con viñeta: el dibujo arriba del rótulo en escritorio; a su izquierda en pantallas angostas. */
+  .margen--vineta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    align-self: start;
+  }
+  .margen--vineta .titulo-margen {
+    padding-top: 0;
+  }
+  .margen--vineta > p {
+    margin-top: 0.5rem;
+  }
+  .margen--vineta-sola {
+    padding-top: 0.25rem;
+  }
+  @media (max-width: 63.99rem) {
+    .margen--vineta {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.25rem 0.9rem;
+    }
+    .margen--vineta :global(.vineta) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    .margen--vineta > p {
+      flex-basis: 100%;
+      margin-top: 0;
+    }
+    .margen--vineta-sola {
+      display: none;
+    }
   }
   .titulo-margen::before {
     content: '';
@@ -318,8 +372,20 @@ const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
     gap: 0.25rem 1rem;
     align-items: start;
   }
-  .fila--sin-n {
-    grid-template-columns: minmax(0, 1fr) auto;
+  .fila--eje {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 1.25rem;
+  }
+  /* El dibujo vive en un componente hijo: se estila con :global, el scope del padre no lo alcanza. */
+  .fila--eje :global(.vineta) {
+    margin-top: -0.15rem;
+  }
+  @media (max-width: 40rem) {
+    .fila--eje :global(.vineta) {
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-top: 0.1rem;
+    }
   }
   .fila__n {
     padding-top: 0.3rem;

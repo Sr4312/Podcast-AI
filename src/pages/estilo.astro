@@ -2,6 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import Waveform from '@/components/Waveform.astro';
 import Icono from '@/components/Icono.astro';
+import Vineta from '@/components/Vineta.astro';
 import { SITIO } from '@/config/sitio';
 import { getEpisodios, picosDe } from '@/lib/contenido';
 
@@ -164,6 +165,34 @@ const escala = [
           </li>
         </ol>
 
+        <h3 class="mt-8">Viñetas de margen</h3>
+        <p class="prosa meta">
+          Dibujos de línea que acompañan los títulos de sección para que la página no sea solo texto. Trazo 1,5 en tinta secundaria, un
+          toque de marca, 64×64. Decorativas: el rótulo sigue siendo el que nombra la sección. Nada de robots ni ilustraciones genéricas.
+        </p>
+        <ul class="vinetas mt-4">
+          {
+            (
+              [
+                ['antena', 'Manifiesto'],
+                ['cinta', 'Episodios recientes'],
+                ['ejes', 'Tres ejes'],
+                ['estado', 'Eje: política pública'],
+                ['sociedad', 'Eje: sociedad'],
+                ['economia', 'Eje: economía'],
+                ['inicio', 'Empezá por acá'],
+                ['sobre', 'Newsletter'],
+              ] as const
+            ).map(([nombre, uso]) => (
+              <li>
+                <Vineta nombre={nombre} tamano={56} />
+                <span class="mono meta">{nombre}</span>
+                <span class="meta">{uso}</span>
+              </li>
+            ))
+          }
+        </ul>
+
         <h3 class="mt-8">Transcripción</h3>
         <div class="prosa mt-3">
           <p class="parrafo" id="t-ejemplo" data-t="754">
@@ -200,6 +229,19 @@ const escala = [
 </Base>
 
 <style>
+  .vinetas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  }
+  .vinetas li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
   .muestras {
     list-style: none;
     margin: 0;

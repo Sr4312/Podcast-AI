@@ -1,8 +1,8 @@
 {
   "meta": {
     "version": 1,
-    "nodeCount": 169,
-    "edgeCount": 357,
+    "nodeCount": 182,
+    "edgeCount": 387,
     "languages": [
       "javascript",
       "tsx",
@@ -187,6 +187,190 @@
       "exported": false,
       "origin": "ast",
       "body_hash": "3f3c1f3c88f929a57efd4584fe6b59c0a4ee8ed6d02a8b102cece4a6a32652e9",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/importar-transcripcion.mjs",
+      "name": "importar-transcripcion.mjs",
+      "kind": "file",
+      "path": "scripts/importar-transcripcion.mjs",
+      "span": "L1-L193",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "ce6559ed88fa78bc3d0972fe7b2734504b360112589a8fcf43f4a072fcb87370",
+      "chars": 7920,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/importar-transcripcion.mjs#aSeg",
+      "name": "aSeg",
+      "kind": "function",
+      "path": "scripts/importar-transcripcion.mjs",
+      "span": "L46-L53",
+      "signature": "function aSeg(t)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "9300c7d9123225cc13abc986d2e7e5996f728f3d6918c91e0906d189572b3c19",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/importar-transcripcion.mjs#hms",
+      "name": "hms",
+      "kind": "function",
+      "path": "scripts/importar-transcripcion.mjs",
+      "span": "L161-L164",
+      "signature": "function hms(seg)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "f4c0dcb2826b3b16ff37d70eeff1aa462197e8bb1bb0f1d4533e37ae31c6eb89",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/importar-transcripcion.mjs#leerJson",
+      "name": "leerJson",
+      "kind": "function",
+      "path": "scripts/importar-transcripcion.mjs",
+      "span": "L84-L95",
+      "signature": "function leerJson(src)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "00342bc2cde8509cdf790927cb532961c67fe7d2a54ab71d4e81d2e8bebe14f7",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/importar-transcripcion.mjs#leerVttSrt",
+      "name": "leerVttSrt",
+      "kind": "function",
+      "path": "scripts/importar-transcripcion.mjs",
+      "span": "L56-L82",
+      "signature": "function leerVttSrt(src)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "0ff8e59d83ff417815b017d92adeacd2e5ced648c6dab8b8e3f387e574c08092",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/importar-transcripcion.mjs#limpiar",
+      "name": "limpiar",
+      "kind": "function",
+      "path": "scripts/importar-transcripcion.mjs",
+      "span": "L110-L119",
+      "signature": "function limpiar(texto)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "57fa0fc237a16fc25015d1dd5479cbe625e86d75cb0eb78b316789fb9b6c0119",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/importar-transcripcion.mjs#nombreOrador",
+      "name": "nombreOrador",
+      "kind": "function",
+      "path": "scripts/importar-transcripcion.mjs",
+      "span": "L121-L128",
+      "signature": "function nombreOrador(crudo)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "11b3e7edaa36c79f4e91af8cf871652ef04672717ee58be5eedf33276d430bc4",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/nuevo-episodio.mjs",
+      "name": "nuevo-episodio.mjs",
+      "kind": "file",
+      "path": "scripts/nuevo-episodio.mjs",
+      "span": "L1-L98",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b23a587462a85a32b208a267a2fa19af6b5aadff4681d007cb59730c07cedff1",
+      "chars": 3613,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/nuevo-episodio.mjs#leerArg",
+      "name": "leerArg",
+      "kind": "function",
+      "path": "scripts/nuevo-episodio.mjs",
+      "span": "L31-L34",
+      "signature": "function leerArg(nombre)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "b1ae8307c2f93ae6ee61647bd33eb315f2836d7014d6a63f9b39e3295ef998a3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/nuevo-episodio.mjs#main",
+      "name": "main",
+      "kind": "function",
+      "path": "scripts/nuevo-episodio.mjs",
+      "span": "L51-L92",
+      "signature": "async function main()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d6d3d4612a714c97dd74e6f553b8ae0e69ec096738475f82f09c6d7af9a8fe8d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/nuevo-episodio.mjs#preguntar",
+      "name": "preguntar",
+      "kind": "function",
+      "path": "scripts/nuevo-episodio.mjs",
+      "span": "L46-L49",
+      "signature": "async function preguntar(rl, texto, porDefecto)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "ba73d1d4271ac0753d88ddcc870f9b8f285db7aeee3ee44e6f744d70669cdd67",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/nuevo-episodio.mjs#proximoNumero",
+      "name": "proximoNumero",
+      "kind": "function",
+      "path": "scripts/nuevo-episodio.mjs",
+      "span": "L36-L44",
+      "signature": "function proximoNumero()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d41e98437ccc4afb6c684bdfaaccd0c14a48bfec37de2c6adf58e28ec95ad095",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "scripts/nuevo-episodio.mjs#slugify",
+      "name": "slugify",
+      "kind": "function",
+      "path": "scripts/nuevo-episodio.mjs",
+      "span": "L18-L29",
+      "signature": "function slugify(texto, maxPalabras = 6)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d34c001159dc2111f1c175df90653e3783568abe0dff1d16253ea6c7e1b8c1c2",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -987,12 +1171,12 @@
       "name": "imagenes.ts",
       "kind": "file",
       "path": "src/lib/imagenes.ts",
-      "span": "L1-L256",
+      "span": "L1-L257",
       "signature": null,
       "exported": true,
       "origin": "ast",
-      "body_hash": "9180f8d1fafc83b0ccc8bd3399606dc09c06db005beb5766f07e8dbc371849c2",
-      "chars": 10024,
+      "body_hash": "24dadb5e3cad28d021de4ab97a1def86114fcdf04be762e63229424ee69d0d83",
+      "chars": 10082,
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -1002,7 +1186,7 @@
       "name": "cargarFuentes",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L23-L33",
+      "span": "L24-L34",
       "signature": "function cargarFuentes(): SatoriOptions['fonts']",
       "exported": false,
       "origin": "ast",
@@ -1016,7 +1200,7 @@
       "name": "leer",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L25-L25",
+      "span": "L26-L26",
       "signature": "leer = (pkg: string, archivo: string)",
       "exported": false,
       "origin": "ast",
@@ -1030,7 +1214,7 @@
       "name": "DatosImagen",
       "kind": "interface",
       "path": "src/lib/imagenes.ts",
-      "span": "L136-L139",
+      "span": "L137-L140",
       "signature": "interface DatosImagen",
       "exported": true,
       "origin": "ast",
@@ -1044,7 +1228,7 @@
       "name": "fila",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L106-L114",
+      "span": "L107-L115",
       "signature": "function fila(izquierda: Nodo, derecha: Nodo): Nodo",
       "exported": false,
       "origin": "ast",
@@ -1058,7 +1242,7 @@
       "name": "lienzo",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L120-L134",
+      "span": "L121-L135",
       "signature": "function lienzo(ancho: number, alto: number, margen: string, children: Nodo[]): Nodo",
       "exported": false,
       "origin": "ast",
@@ -1072,11 +1256,11 @@
       "name": "marca",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L80-L100",
+      "span": "L81-L101",
       "signature": "function marca(tamano = 22): Nodo",
       "exported": false,
       "origin": "ast",
-      "body_hash": "c773c11ba19b55d42a7a28f89f1b75acb112fa4e3e5cadbe3d69afe932b5eed8",
+      "body_hash": "85a7da7da2fce5b56a9e9234c7ed0c1e6696dee2c1d447ef6cf3ba100cc7649a",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -1086,7 +1270,7 @@
       "name": "Nodo",
       "kind": "type",
       "path": "src/lib/imagenes.ts",
-      "span": "L54-L54",
+      "span": "L55-L55",
       "signature": "type Nodo = { type: string; props: Record<string, unknown> };",
       "exported": false,
       "origin": "ast",
@@ -1100,7 +1284,7 @@
       "name": "onda",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L57-L78",
+      "span": "L58-L79",
       "signature": "function onda(picos: number[] | null, barras: number, alto: number, color = ONDA, acento?: { hasta: number; color: string }): Nodo",
       "exported": false,
       "origin": "ast",
@@ -1114,11 +1298,11 @@
       "name": "plantillaHorizontal",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L158-L183",
+      "span": "L159-L184",
       "signature": "function plantillaHorizontal({ ep, picos }: DatosImagen)",
       "exported": true,
       "origin": "ast",
-      "body_hash": "2253d5049c37b2f1993d39786f2d887c4ff7bdcad7c771248bf4756d54a6a3a6",
+      "body_hash": "67b82170e144479e3f23c8cea514f5373b40b00eb0787c1c96e50963e7f2de42",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -1128,7 +1312,7 @@
       "name": "plantillaOG",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L142-L155",
+      "span": "L143-L156",
       "signature": "function plantillaOG({ ep, picos }: DatosImagen)",
       "exported": true,
       "origin": "ast",
@@ -1142,7 +1326,7 @@
       "name": "plantillaPortada",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L226-L247",
+      "span": "L227-L248",
       "signature": "function plantillaPortada(picos: number[] | null)",
       "exported": true,
       "origin": "ast",
@@ -1156,11 +1340,11 @@
       "name": "plantillaVertical",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L186-L223",
+      "span": "L187-L224",
       "signature": "function plantillaVertical({ ep, picos }: DatosImagen)",
       "exported": true,
       "origin": "ast",
-      "body_hash": "4d46aae86c6f578e7668d80e716a9a86dd99e27b2f6b76500f272086d9d60c4c",
+      "body_hash": "ad76c8e05cadb6870c7a6812014b50f8e629ad0b2b9a919047c1a0c9fb04e964",
       "summary_state": "pending",
       "summary": null,
       "crux": null
@@ -1170,7 +1354,7 @@
       "name": "remuestrear",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L35-L52",
+      "span": "L36-L53",
       "signature": "function remuestrear(src: number[], n: number): number[]",
       "exported": false,
       "origin": "ast",
@@ -1184,7 +1368,7 @@
       "name": "renderizarPNG",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L249-L252",
+      "span": "L250-L253",
       "signature": "async function renderizarPNG(arbol: unknown, ancho: number, alto: number): Promise<Uint8Array>",
       "exported": true,
       "origin": "ast",
@@ -1198,7 +1382,7 @@
       "name": "respuestaPNG",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L254-L255",
+      "span": "L255-L256",
       "signature": "respuestaPNG = (png: Uint8Array)",
       "exported": true,
       "origin": "ast",
@@ -1212,7 +1396,7 @@
       "name": "texto",
       "kind": "function",
       "path": "src/lib/imagenes.ts",
-      "span": "L102-L104",
+      "span": "L103-L105",
       "signature": "function texto(contenido: string, estilo: Record<string, unknown>): Nodo",
       "exported": false,
       "origin": "ast",
@@ -2635,6 +2819,186 @@
     {
       "source": "scripts/check-links.mjs#archivos",
       "target": "scripts/check-links.mjs#archivos",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#aSeg",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#hms",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#leerJson",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#leerVttSrt",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#limpiar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#nombreOrador",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#aSeg",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#hms",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#leerJson",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#leerVttSrt",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#limpiar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "scripts/importar-transcripcion.mjs#nombreOrador",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "node:path",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs",
+      "target": "yaml",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/importar-transcripcion.mjs#leerVttSrt",
+      "target": "scripts/importar-transcripcion.mjs#aSeg",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "scripts/nuevo-episodio.mjs#main",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "scripts/nuevo-episodio.mjs#leerArg",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "scripts/nuevo-episodio.mjs#main",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "scripts/nuevo-episodio.mjs#preguntar",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "scripts/nuevo-episodio.mjs#proximoNumero",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "scripts/nuevo-episodio.mjs#slugify",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "node:fs",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "node:path",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "node:process",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs",
+      "target": "node:readline/promises",
+      "relation": "imports",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs#main",
+      "target": "scripts/nuevo-episodio.mjs#leerArg",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs#main",
+      "target": "scripts/nuevo-episodio.mjs#preguntar",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs#main",
+      "target": "scripts/nuevo-episodio.mjs#proximoNumero",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "scripts/nuevo-episodio.mjs#main",
+      "target": "scripts/nuevo-episodio.mjs#slugify",
       "relation": "calls",
       "confidence": "extracted"
     },
