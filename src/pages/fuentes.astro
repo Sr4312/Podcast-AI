@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import { SITIO, TIPOS_FUENTE } from '@/config/sitio';
 import { getEpisodios, fuentesAgregadas, fechaISO } from '@/lib/contenido';
 
@@ -15,6 +16,7 @@ const slugOrg = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]
 <Base titulo={`Fuentes · ${SITIO.nombre}`} descripcion={`Biblioteca de todas las fuentes citadas en ${SITIO.nombre}: leyes, datasets, papers y documentos oficiales, con el episodio y el dato que sale de cada una.`} ruta="/fuentes">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="sello" class="vineta--pagina" />
       <dl>
         <div><dt>Fuentes</dt><dd>{fuentes.length}</dd></div>
         <div><dt>Verificadas</dt><dd>{verificadas} de {fuentes.length}</dd></div>

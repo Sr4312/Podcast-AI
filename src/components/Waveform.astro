@@ -8,6 +8,7 @@
  * el ancho del contenedor y mantiene el alto fijo: no produce layout shift.
  *
  * `progreso` (0–1) pinta las barras ya escuchadas con el acento: lo usa el reproductor.
+ * `degradado` pinta las barras con el degradado de marca (naranja señal → azul): lo usa el hero.
  */
 interface Props {
   picos: number[] | null;
@@ -20,6 +21,7 @@ interface Props {
   decorativa?: boolean;
   titulo?: string;
   id?: string;
+  degradado?: boolean;
 }
 
 const {
@@ -32,7 +34,9 @@ const {
   decorativa = true,
   titulo,
   id,
+  degradado = false,
 } = Astro.props;
+const idDegradado = `onda-grad-${Math.random().toString(36).slice(2, 8)}`;
 
 function remuestrear(src: number[], n: number): number[] {
   if (src.length <= n) return src;
@@ -79,7 +83,7 @@ const variantes = picos
     variantes.map((v, k) => (
       <svg
         id={k === 0 ? id : undefined}
-        class={`waveform ${v.clase} ${clase}`}
+        class={`waveform ${degradado ? 'waveform--degradado' : ''} ${v.clase} ${clase}`}
         viewBox={`0 0 ${ANCHO} 100`}
         preserveAspectRatio="none"
         style={`height:${alto}px`}
@@ -88,9 +92,20 @@ const variantes = picos
         data-barras={v.n}
       >
         {!decorativa && k === 0 && titulo && <title>{titulo}</title>}
-        {v.rects.map((r, i) => (
-          <rect x={r.x} y={r.y} width={r.w} height={r.h} class={r.hecha ? 'barra barra--hecha' : 'barra'} style={`--i:${i}`} />
-        ))}
+        {degradado && (
+          <defs>
+            <linearGradient id={`${idDegradado}-${k}`} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2={ANCHO} y2="0">
+              <stop offset="0" class="onda-grad__a" />
+              <stop offset="0.45" class="onda-grad__b" />
+              <stop offset="1" class="onda-grad__c" />
+            </linearGradient>
+          </defs>
+        )}
+        <g fill={degradado ? `url(#${idDegradado}-${k})` : undefined}>
+          {v.rects.map((r, i) => (
+            <rect x={r.x} y={r.y} width={r.w} height={r.h} class={r.hecha ? 'barra barra--hecha' : 'barra'} style={`--i:${i}`} />
+          ))}
+        </g>
       </svg>
     ))
   ) : (
@@ -109,6 +124,21 @@ const variantes = picos
   }
   .waveform .barra--hecha {
     fill: var(--color-acento);
+  }
+  .waveform--degradado .barra {
+    fill: inherit;
+  }
+  .onda-grad__a {
+    stop-color: var(--color-marca);
+  }
+  .onda-grad__b {
+    stop-color: #ffa36b;
+  }
+  .onda-grad__c {
+    stop-color: var(--color-acento);
+  }
+  .consola .onda-grad__c {
+    stop-color: var(--color-estudio-acento);
   }
   .waveform--vacia {
     background: repeating-linear-gradient(90deg, var(--color-linea) 0 2px, transparent 2px 6px);

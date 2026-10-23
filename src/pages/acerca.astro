@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import { SITIO } from '@/config/sitio';
 import { iniciales } from '@/lib/contenido';
 
@@ -23,6 +24,7 @@ const SECCIONES = [
 <Base titulo={`Acerca · ${SITIO.nombre}`} descripcion={`Qué es ${SITIO.nombre}, quién lo conduce, cómo verificamos, cómo usamos IA, política de conflictos de interés, correcciones, contacto y kit de prensa.`} ruta="/acerca">
   <div class="cuaderno">
     <nav class="margen indice-fijo" aria-label="Secciones">
+      <Vineta nombre="micro" class="vineta--pagina" />
       <ol>{SECCIONES.map((s) => <li><a href={`#${s.id}`}>{s.titulo}</a></li>)}</ol>
     </nav>
     <div class="cuerpo">

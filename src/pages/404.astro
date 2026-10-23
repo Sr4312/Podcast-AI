@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import FilaEpisodio from '@/components/FilaEpisodio.astro';
 import { SITIO } from '@/config/sitio';
 import { getEpisodios } from '@/lib/contenido';
@@ -10,6 +11,7 @@ const ultimos = (await getEpisodios()).slice(0, 3);
 <Base titulo={`Página no encontrada · ${SITIO.nombre}`} descripcion="Esa dirección no existe. Buscá en el sitio o empezá por los últimos episodios." ruta="/404" noindex>
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="sinsenal" class="vineta--pagina" />
       <p class="mt-1 mono">Error 404</p>
     </div>
     <div class="cuerpo">

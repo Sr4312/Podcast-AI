@@ -1,7 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '@/layouts/Base.astro';
-import { SITIO, EJES } from '@/config/sitio';
+import Vineta from '@/components/Vineta.astro';
+import { SITIO, EJES, VINETA_EJE, type EjeId } from '@/config/sitio';
 import { getEpisodios } from '@/lib/contenido';
 
 const episodios = await getEpisodios();
@@ -20,6 +21,7 @@ const porEje = Object.entries(EJES).map(([id, eje]) => ({
 <Base titulo={`Temas · ${SITIO.nombre}`} descripcion="Los tres ejes del podcast (política pública, sociedad, economía) y los temas concretos que tratamos en cada uno." ruta="/temas">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="ejes" class="vineta--pagina" />
       <p class="mt-1">Tres ejes, {temas.length} temas. Cada tema tiene su página con episodios y términos del glosario relacionados.</p>
     </div>
     <div class="cuerpo">
@@ -27,7 +29,10 @@ const porEje = Object.entries(EJES).map(([id, eje]) => ({
       {
         porEje.map((eje) => (
           <section class="seccion" id={eje.id} aria-labelledby={`h-${eje.id}`}>
-            <h2 id={`h-${eje.id}`}>{eje.nombre}</h2>
+            <h2 id={`h-${eje.id}`} class="titulo-vineta">
+              <Vineta nombre={VINETA_EJE[eje.id as EjeId]} />
+              {eje.nombre}
+            </h2>
             <p class="prosa mt-2">{eje.descripcion}</p>
             <p class="meta mt-1">
               {eje.episodios} {eje.episodios === 1 ? 'episodio' : 'episodios'}

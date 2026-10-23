@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import { SITIO } from '@/config/sitio';
 import { getEpisodios, correccionesDe, fechaLarga, fechaISO } from '@/lib/contenido';
 
@@ -13,6 +14,7 @@ const seguimientos = episodios
 <Base titulo={`Correcciones · ${SITIO.nombre}`} descripcion={`Fe de erratas pública de ${SITIO.nombre}: cada corrección con fecha, episodio y qué cambió.`} ruta="/correcciones">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="lapiz" class="vineta--pagina" />
       <dl>
         <div><dt>Correcciones</dt><dd>{correcciones.length}</dd></div>
         <div><dt>Episodios</dt><dd>{episodios.length}</dd></div>

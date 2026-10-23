@@ -1,7 +1,7 @@
 /**
  * Imágenes generadas en build con satori + resvg: OG (1200×630), kit de redes
  * (1080×608 y 1080×1350) y portada. Misma identidad que el sitio: papel, tinta,
- * azul tinta y la waveform real del episodio. Sin ilustraciones.
+ * naranja señal (marca), azul (acento) y la waveform real del episodio. Sin ilustraciones.
  */
 import fs from 'node:fs';
 import { createRequire } from 'node:module';
@@ -13,11 +13,12 @@ import { aSegundos, duracionLegible } from './tiempo';
 
 const require = createRequire(import.meta.url);
 
-const PAPEL = '#f2f0eb';
-const TINTA = '#1b1b1b';
-const TINTA2 = '#4f4d48';
-const ACENTO = '#1f4b8f';
-const ONDA = '#8a867d';
+const PAPEL = '#f4f3ef';
+const TINTA = '#14161c';
+const TINTA2 = '#4d505a';
+const MARCA = '#ff5f2e';
+const ACENTO = '#2343b0';
+const ONDA = '#9a9aa2';
 
 let fuentes: SatoriOptions['fonts'] | null = null;
 function cargarFuentes(): SatoriOptions['fonts'] {
@@ -86,10 +87,10 @@ function marca(tamano = 22): Nodo {
         {
           type: 'div',
           props: {
-            style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: tamano * 1.3, height: tamano * 1.3, backgroundColor: TINTA, borderRadius: 3, padding: 4 },
+            style: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: tamano * 1.3, height: tamano * 1.3, backgroundColor: MARCA, borderRadius: tamano * 0.3, padding: 4 },
             children: [0.35, 0.65, 1, 0.5, 0.8, 0.4].map((h) => ({
               type: 'div',
-              props: { style: { width: 2, height: `${h * 100}%`, backgroundColor: PAPEL } },
+              props: { style: { width: 2, height: `${h * 100}%`, backgroundColor: TINTA } },
             })),
           },
         },
@@ -164,7 +165,7 @@ export function plantillaHorizontal({ ep, picos }: DatosImagen) {
       ? {
           type: 'div',
           props: {
-            style: { display: 'flex', flexDirection: 'column', gap: 16, borderLeft: `5px solid ${ACENTO}`, paddingLeft: 28 },
+            style: { display: 'flex', flexDirection: 'column', gap: 16, borderLeft: `5px solid ${MARCA}`, paddingLeft: 28 },
             children: [
               texto(`“${frase.texto}”`, { fontFamily: 'Newsreader', fontSize: frase.texto.length > 120 ? 36 : 44, lineHeight: 1.18, letterSpacing: -0.5 }),
               texto(`${frase.autor} · ${frase.t}`, { fontSize: 22, color: TINTA2 }),
@@ -176,7 +177,7 @@ export function plantillaHorizontal({ ep, picos }: DatosImagen) {
       type: 'div',
       props: {
         style: { display: 'flex', flexDirection: 'column', gap: 14 },
-        children: [onda(picos, 110, 70, ONDA, { hasta, color: ACENTO }), texto(ep.data.titulo, { fontSize: 22, fontWeight: 600 })],
+        children: [onda(picos, 110, 70, ONDA, { hasta, color: MARCA }), texto(ep.data.titulo, { fontSize: 22, fontWeight: 600 })],
       },
     },
   ]);
@@ -198,7 +199,7 @@ export function plantillaVertical({ ep, picos }: DatosImagen) {
             ? {
                 type: 'div',
                 props: {
-                  style: { display: 'flex', flexDirection: 'column', gap: 18, borderLeft: `6px solid ${ACENTO}`, paddingLeft: 32 },
+                  style: { display: 'flex', flexDirection: 'column', gap: 18, borderLeft: `6px solid ${MARCA}`, paddingLeft: 32 },
                   children: [
                     texto(`“${frase.texto}”`, { fontFamily: 'Newsreader', fontSize: frase.texto.length > 120 ? 40 : 48, lineHeight: 1.2 }),
                     texto(`${frase.autor} · ${frase.t}`, { fontSize: 26, color: TINTA2 }),
@@ -214,7 +215,7 @@ export function plantillaVertical({ ep, picos }: DatosImagen) {
       props: {
         style: { display: 'flex', flexDirection: 'column', gap: 20 },
         children: [
-          onda(picos, 90, 160, ONDA, { hasta, color: ACENTO }),
+          onda(picos, 90, 160, ONDA, { hasta, color: MARCA }),
           texto(`${SITIO.dominio} · ${FORMATOS[ep.data.formato].nombre} · ${duracionLegible(aSegundos(ep.data.duracion))}`, { fontSize: 26, color: ACENTO, fontWeight: 600 }),
         ],
       },

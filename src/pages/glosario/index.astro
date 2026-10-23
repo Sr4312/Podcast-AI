@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import { SITIO } from '@/config/sitio';
 import { getEpisodios, episodiosConTermino } from '@/lib/contenido';
 
@@ -14,6 +15,7 @@ const letras = Array.from(new Set(terminos.map((t) => t.data.termino[0]!.toUpper
 <Base titulo={`Glosario · ${SITIO.nombre}`} descripcion="Glosario de inteligencia artificial para no técnicos: definiciones de dos o tres líneas y los episodios donde aparece cada término." ruta="/glosario">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="libro" class="vineta--pagina" />
       <p class="mt-1">{terminos.length} términos. Definiciones pensadas para quien toma decisiones, no para quien programa.</p>
       <nav aria-label="Letras" class="mt-4 letras">
         {letras.map((l) => <a href={`#letra-${l}`}>{l}</a>)}

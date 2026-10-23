@@ -2,6 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import Waveform from '@/components/Waveform.astro';
 import Icono from '@/components/Icono.astro';
+import Vineta from '@/components/Vineta.astro';
 import { SITIO } from '@/config/sitio';
 import { getEpisodios, picosDe } from '@/lib/contenido';
 
@@ -14,11 +15,15 @@ const colores = [
   { nombre: 'Tinta', token: '--color-tinta', uso: 'Texto principal, botón primario.' },
   { nombre: 'Tinta 2', token: '--color-tinta-2', uso: 'Metadatos y texto secundario. Nunca por debajo de 4,5:1.' },
   { nombre: 'Línea', token: '--color-linea', uso: 'Separadores de listas y bordes.' },
-  { nombre: 'Acento', token: '--color-acento', uso: 'Links, estado de reproducción, capítulo en curso. Es el único acento.' },
+  { nombre: 'Marca', token: '--color-marca', uso: 'Naranja señal: logo, botón principal, waveform, rótulos. Sobre ella el texto va en tinta oscura.' },
+  { nombre: 'Marca texto', token: '--color-marca-texto', uso: 'La marca cuando es texto (números de episodio): pasa 4,5:1 sobre papel.' },
+  { nombre: 'Marca suave', token: '--color-marca-suave', uso: 'Hover de filas, selección de texto, panel de newsletter.' },
+  { nombre: 'Acento', token: '--color-acento', uso: 'Links, estado de reproducción, capítulo en curso.' },
   { nombre: 'Acento suave', token: '--color-acento-suave', uso: 'Fondo del párrafo en curso y hover de timestamps.' },
   { nombre: 'Verificada', token: '--color-ok', uso: 'Solo para el estado de una fuente verificada.' },
   { nombre: 'Pendiente', token: '--color-pendiente', uso: 'Fuente pendiente de verificación y avisos de contenido de ejemplo.' },
   { nombre: 'Onda', token: '--color-onda', uso: 'Barras de la waveform sin reproducir.' },
+  { nombre: 'Estudio', token: '--color-estudio', uso: 'Superficie oscura de la consola del hero y del pie, en ambos modos.' },
 ];
 
 const escala = [
@@ -53,14 +58,14 @@ const escala = [
     <div class="cuerpo">
       <h1>Guía de estilo</h1>
       <p class="prosa text-lg mt-4">
-        Papel y tinta, un solo acento, una waveform real por episodio. Nada que no esté en esta página debería aparecer en el sitio.
+        Papel y tinta, naranja señal como marca, azul como acento, una waveform real por episodio. Nada que no esté en esta página debería aparecer en el sitio.
       </p>
 
       <section class="seccion" aria-labelledby="e-color">
         <h2 id="e-color">Color</h2>
         <p class="prosa">
-          Base casi monocromática. El acento es semántico: estado de reproducción, capítulo en curso y links. Verde y ámbar existen solo
-          para el estado de las fuentes.
+          Base de papel y tinta con dos colores: el naranja señal es la marca (identidad, acción principal, waveform) y el azul es el acento
+          semántico (links, estado de reproducción, capítulo en curso). Verde y ámbar existen solo para el estado de las fuentes.
         </p>
         <ul class="muestras mt-6">
           {
@@ -160,6 +165,45 @@ const escala = [
           </li>
         </ol>
 
+        <h3 class="mt-8">Viñetas de margen</h3>
+        <p class="prosa meta">
+          Dibujos de línea que acompañan los títulos de sección para que la página no sea solo texto. Trazo 1,5 en tinta secundaria, un
+          toque de marca, 64×64. Decorativas: el rótulo sigue siendo el que nombra la sección. Nada de robots ni ilustraciones genéricas.
+        </p>
+        <ul class="vinetas mt-4">
+          {
+            (
+              [
+                ['antena', 'Manifiesto'],
+                ['cinta', 'Episodios recientes'],
+                ['ejes', 'Tres ejes'],
+                ['estado', 'Eje: política pública'],
+                ['sociedad', 'Eje: sociedad'],
+                ['economia', 'Eje: economía'],
+                ['inicio', 'Empezá por acá'],
+                ['sobre', 'Newsletter'],
+                ['libro', 'Glosario'],
+                ['sello', 'Fuentes'],
+                ['micro', 'Acerca'],
+                ['auricular', 'Suscribite'],
+                ['telefono', 'Suscribite: apps'],
+                ['rss', 'Suscribite: RSS'],
+                ['red', 'Suscribite: redes'],
+                ['charla', 'Invitados'],
+                ['lapiz', 'Correcciones'],
+                ['nota', 'Proponé un caso'],
+                ['sinsenal', '404'],
+              ] as const
+            ).map(([nombre, uso]) => (
+              <li>
+                <Vineta nombre={nombre} tamano={56} />
+                <span class="mono meta">{nombre}</span>
+                <span class="meta">{uso}</span>
+              </li>
+            ))
+          }
+        </ul>
+
         <h3 class="mt-8">Transcripción</h3>
         <div class="prosa mt-3">
           <p class="parrafo" id="t-ejemplo" data-t="754">
@@ -196,6 +240,19 @@ const escala = [
 </Base>
 
 <style>
+  .vinetas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  }
+  .vinetas li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
   .muestras {
     list-style: none;
     margin: 0;

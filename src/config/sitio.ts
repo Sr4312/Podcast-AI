@@ -84,6 +84,13 @@ export const EJES = {
 
 export type EjeId = keyof typeof EJES;
 
+/** Viñeta (src/components/Vineta.astro) que acompaña a cada eje en la home y en /temas. */
+export const VINETA_EJE: Record<EjeId, 'estado' | 'sociedad' | 'economia'> = {
+  'politica-publica': 'estado',
+  sociedad: 'sociedad',
+  economia: 'economia',
+};
+
 export const FORMATOS = {
   laboratorio: {
     nombre: 'Laboratorio',

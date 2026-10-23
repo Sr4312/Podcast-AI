@@ -1,0 +1,214 @@
+---
+/**
+ * Viñetas de margen: dibujos de línea, chicos, que acompañan los títulos de sección
+ * para que la página no sea solo texto. Se dibujan como marginalia de cuaderno:
+ * trazo fino en tinta secundaria y un toque de color de marca.
+ * Decorativas siempre (aria-hidden); el título sigue siendo el que nombra la sección.
+ * ViewBox 64×64, stroke 1.5, puntas redondeadas.
+ */
+interface Props {
+  nombre: keyof typeof VINETAS;
+  tamano?: number;
+  class?: string;
+}
+
+const VINETAS = {
+  // Mástil con ondas de señal: lo que emite el podcast.
+  antena: `
+    <path d="M32 54V26" />
+    <path d="M24 54h16" />
+    <path d="M26 30l6-4 6 4" />
+    <path d="M22 22a14 14 0 0 1 20 0" />
+    <path d="M16 15.5a22 22 0 0 1 32 0" />
+    <circle cx="32" cy="22" r="3" class="vineta__marca" stroke="none" />
+    <path d="M10 54h44" stroke-dasharray="1.5 3.5" />`,
+
+  // Cinta de bobina abierta: los episodios recientes.
+  cinta: `
+    <circle cx="20" cy="26" r="10" />
+    <circle cx="44" cy="26" r="10" />
+    <circle cx="20" cy="26" r="2.5" class="vineta__marca" stroke="none" />
+    <circle cx="44" cy="26" r="2.5" class="vineta__marca" stroke="none" />
+    <path d="M12 33.5 18 52h28l6-18.5" />
+    <path d="M26 44h12" stroke-dasharray="1.5 3" />
+    <path d="M20 16l24 0" stroke-dasharray="2 3" />
+    <path d="M30 36h4" class="vineta__marca-trazo" />`,
+
+  // Tres ejes que salen de un mismo punto, con una marca en cada extremo.
+  ejes: `
+    <path d="M32 34V12" />
+    <path d="M32 34 13 46" />
+    <path d="M32 34l19 12" />
+    <circle cx="32" cy="34" r="2.5" class="vineta__marca" stroke="none" />
+    <circle cx="32" cy="12" r="2" />
+    <circle cx="13" cy="46" r="2" />
+    <circle cx="51" cy="46" r="2" />
+    <path d="M20 22a14 14 0 0 1 24 0" stroke-dasharray="1.5 3" />`,
+
+  // Estado: un frontis con columnas y un sello.
+  estado: `
+    <path d="M12 26h40" />
+    <path d="M32 10 12 22h40z" />
+    <path d="M18 30v16M26 30v16M38 30v16M46 30v16" />
+    <path d="M10 50h44" />
+    <circle cx="32" cy="38" r="3.5" class="vineta__marca" stroke="none" />`,
+
+  // Sociedad: tres personas y un vínculo entre ellas.
+  sociedad: `
+    <circle cx="20" cy="22" r="5" />
+    <circle cx="44" cy="22" r="5" />
+    <circle cx="32" cy="32" r="5" class="vineta__marca-trazo" />
+    <path d="M10 44a10 10 0 0 1 20 0" />
+    <path d="M34 44a10 10 0 0 1 20 0" />
+    <path d="M22 54a10 10 0 0 1 20 0" class="vineta__marca-trazo" />
+    <path d="M24 26l5 3M40 26l-5 3" stroke-dasharray="1.5 2.5" />`,
+
+  // Economía: barras y una línea de tendencia con escalones.
+  economia: `
+    <path d="M12 52h40" />
+    <path d="M12 52V14" />
+    <rect x="18" y="38" width="6" height="14" />
+    <rect x="29" y="30" width="6" height="22" />
+    <rect x="40" y="22" width="6" height="30" />
+    <path d="M18 28l11-6 11-3 10-7" class="vineta__marca-trazo" />
+    <circle cx="50" cy="12" r="2.5" class="vineta__marca" stroke="none" />`,
+
+  // Empezá por acá: un recorrido punteado que arranca en un play y llega a una bandera.
+  inicio: `
+    <path d="M12 18l10 6-10 6z" class="vineta__marca" stroke="none" />
+    <path d="M24 24c10 0 10 14 20 14" stroke-dasharray="2 3.5" />
+    <path d="M44 38V20" />
+    <path d="M44 20h12l-3 4 3 4H44" />
+    <path d="M10 54h44" stroke-dasharray="1.5 3.5" />`,
+
+  // Sobre con una onda adentro: el correo de cada episodio.
+  sobre: `
+    <rect x="10" y="18" width="44" height="30" rx="3" />
+    <path d="m10 22 22 15 22-15" />
+    <path d="M20 42h2l2-4 2 8 2-6 2 2h2" class="vineta__marca-trazo" />
+    <path d="M36 42h8" stroke-dasharray="1.5 3" />`,
+
+  // Glosario: libro abierto con una pestaña de marca.
+  libro: `
+    <path d="M32 20c-5-3-11-4-18-4v32c7 0 13 1 18 4 5-3 11-4 18-4V16c-7 0-13 1-18 4z" />
+    <path d="M32 20v32" />
+    <path d="M20 24h7M20 30h7M20 36h5" stroke-dasharray="1.5 2.5" />
+    <path d="M37 24h7M37 30h7" stroke-dasharray="1.5 2.5" />
+    <rect x="46" y="26" width="6" height="5" rx="1" class="vineta__marca" stroke="none" />`,
+
+  // Fuentes: documento con un sello de verificación.
+  sello: `
+    <path d="M16 10h24l8 8v36H16z" />
+    <path d="M40 10v8h8" />
+    <path d="M22 24h20M22 31h20M22 38h10" stroke-dasharray="2 3" />
+    <circle cx="40" cy="44" r="7" class="vineta__marca-trazo" />
+    <path d="m36.5 44 2.5 2.5 5-5" class="vineta__marca-trazo" />`,
+
+  // Acerca: micrófono de estudio.
+  micro: `
+    <rect x="26" y="10" width="12" height="22" rx="6" />
+    <path d="M29 18h6M29 23h6" class="vineta__marca-trazo" />
+    <path d="M20 28a12 12 0 0 0 24 0" />
+    <path d="M32 40v10" />
+    <path d="M24 50h16" />
+    <path d="M10 54h44" stroke-dasharray="1.5 3.5" />`,
+
+  // Suscribirse: auriculares.
+  auricular: `
+    <path d="M14 38v-6a18 18 0 0 1 36 0v6" />
+    <rect x="12" y="34" width="8" height="14" rx="3" />
+    <rect x="44" y="34" width="8" height="14" rx="3" />
+    <circle cx="16" cy="41" r="1.5" class="vineta__marca" stroke="none" />
+    <circle cx="48" cy="41" r="1.5" class="vineta__marca" stroke="none" />
+    <path d="M26 50h12" stroke-dasharray="1.5 3" />`,
+
+  // Invitados: dos globos de conversación.
+  charla: `
+    <path d="M10 14h24v14H20l-6 5v-5h-4z" />
+    <path d="M30 32h24v14h-4v5l-6-5H30z" />
+    <path d="M16 21h12" stroke-dasharray="1.5 2.5" />
+    <path d="M36 39h12" stroke-dasharray="1.5 2.5" />
+    <circle cx="48" cy="22" r="2.5" class="vineta__marca" stroke="none" />`,
+
+  // Correcciones: una línea tachada y un lápiz.
+  lapiz: `
+    <path d="M12 20h40" stroke-dasharray="2 3" />
+    <path d="M12 30h18" />
+    <path d="M10 30.5h22" class="vineta__marca-trazo" />
+    <path d="M36 30h16" stroke-dasharray="2 3" />
+    <path d="m30 52 16-16 5 5-16 16-6 1z" />
+    <path d="m44 38 5 5" />
+    <path d="M12 40h12" stroke-dasharray="2 3" />`,
+
+  // Proponé un caso: una ficha con un pin de marca.
+  nota: `
+    <rect x="14" y="18" width="36" height="32" rx="2" />
+    <path d="M22 30h20M22 37h14" stroke-dasharray="2 3" />
+    <circle cx="32" cy="14" r="3" class="vineta__marca" stroke="none" />
+    <path d="M32 17v7" class="vineta__marca-trazo" />`,
+
+  // 404: la antena, pero sin señal.
+  sinsenal: `
+    <path d="M32 54V26" />
+    <path d="M24 54h16" />
+    <path d="M26 30l6-4 6 4" />
+    <path d="M22 22a14 14 0 0 1 20 0" stroke-dasharray="2 4" />
+    <path d="M16 15.5a22 22 0 0 1 32 0" stroke-dasharray="2 4" />
+    <circle cx="32" cy="22" r="3" />
+    <path d="m46 10 8 8M54 10l-8 8" class="vineta__marca-trazo" />`,
+
+  // En tu app: un teléfono con el play.
+  telefono: `
+    <rect x="22" y="8" width="20" height="48" rx="4" />
+    <path d="M29 14h6" />
+    <path d="M29 27l9 5-9 5z" class="vineta__marca" stroke="none" />
+    <path d="M30 50h4" />`,
+
+  // RSS: las ondas del feed.
+  rss: `
+    <path d="M18 32a14 14 0 0 1 14 14" />
+    <path d="M18 22a24 24 0 0 1 24 24" />
+    <path d="M18 12a34 34 0 0 1 34 34" stroke-dasharray="2 3.5" />
+    <circle cx="20" cy="44" r="3" class="vineta__marca" stroke="none" />`,
+
+  // Redes: nodos unidos.
+  red: `
+    <path d="M16 20 32 36 48 16M32 36 20 50M32 36l18 10" />
+    <circle cx="16" cy="20" r="3" />
+    <circle cx="48" cy="16" r="3" />
+    <circle cx="20" cy="50" r="3" />
+    <circle cx="50" cy="46" r="3" />
+    <circle cx="32" cy="36" r="3.5" class="vineta__marca" stroke="none" />`,
+} as const;
+
+const { nombre, tamano = 80, class: clase = '' } = Astro.props;
+const svg = VINETAS[nombre];
+---
+
+<svg
+  width={tamano}
+  height={tamano}
+  viewBox="0 0 64 64"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  class:list={['vineta', clase]}
+  set:html={svg}
+/>
+
+<style>
+  .vineta {
+    display: block;
+    flex: none;
+    color: var(--color-tinta-2);
+  }
+  .vineta :global(.vineta__marca) {
+    fill: var(--color-marca);
+  }
+  .vineta :global(.vineta__marca-trazo) {
+    stroke: var(--color-marca);
+  }
+</style>

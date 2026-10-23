@@ -4,7 +4,7 @@
   inset: auto 0 0 0;
   z-index: 40;
   background: var(--color-papel);
-  border-top: 1px solid var(--color-linea);
+  border-top: 2px solid var(--color-marca);
   padding-bottom: env(safe-area-inset-bottom, 0px);
   font-size: var(--text-meta);
 }
@@ -44,12 +44,12 @@
   color: var(--color-tinta);
 }
 .repro__play {
-  background: var(--color-tinta);
-  color: var(--color-papel);
+  background: var(--color-marca);
+  color: var(--color-marca-contraste);
 }
 .repro__play[aria-pressed='true'] {
-  background: var(--color-acento);
-  color: var(--color-acento-contraste);
+  background: var(--color-tinta);
+  color: var(--color-papel);
 }
 .repro__play[data-cargando] {
   opacity: 0.7;

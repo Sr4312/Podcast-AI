@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import FilaEpisodio from '@/components/FilaEpisodio.astro';
 import { SITIO, EJES, FORMATOS } from '@/config/sitio';
 import { getEpisodios } from '@/lib/contenido';
@@ -19,6 +20,7 @@ const usados = {
 <Base titulo={`Episodios · ${SITIO.nombre}`} descripcion={`Todos los episodios de ${SITIO.nombre}, con filtros por eje, formato, tema, invitado y año, y búsqueda dentro de las transcripciones.`} ruta="/episodios">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="cinta" class="vineta--pagina" />
       <p class="mt-1">{episodios.length} {episodios.length === 1 ? 'episodio' : 'episodios'} publicados. Orden: el más reciente primero.</p>
     </div>
     <div class="cuerpo">

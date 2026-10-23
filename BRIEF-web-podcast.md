@@ -299,7 +299,7 @@ Dónde la animación suma y dónde no:
 
 **Tipografía:** proponé 3 combinaciones (titulares + texto + monoespaciada para tiempos) y justificá cada una. Evitá los defaults de IA (Inter, Poppins, Montserrat, Space Grotesk). Candidatas: titulares serif con carácter (Newsreader, Literata, Source Serif 4); texto (Public Sans, Atkinson Hyperlegible Next, IBM Plex Sans); mono (IBM Plex Mono, JetBrains Mono). Números tabulares en duraciones, timestamps y tablas.
 
-**Color:** base casi monocromática (papel y tinta) y **un solo acento** con uso semántico: estado de reproducción, capítulo en curso, links. Modo oscuro con `prefers-color-scheme` + toggle que se recuerda.
+**Color:** base de papel y tinta + **color de marca naranja señal** (`#ff5f2e`: logo, botón principal, waveform, detalles) + **acento azul** semántico: estado de reproducción, capítulo en curso, links. Toques técnicos sobrios: retícula de puntos tenue, rótulos en mono, hero tipo consola de estudio. Modo oscuro con `prefers-color-scheme` + toggle que se recuerda.
 
 **Identidad:** la **waveform real de cada episodio** (picos calculados del audio, sección 11) es la firma visual: hero de la home, mini-waveform en el archivo, barra del reproductor, imágenes OG y kit de redes. Nada de robots, cerebros, circuitos, redes neuronales brillantes ni ilustraciones genéricas generadas con IA.
 

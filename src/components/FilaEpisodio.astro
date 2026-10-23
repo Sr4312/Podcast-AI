@@ -33,7 +33,7 @@ const picos = conWaveform ? await picosDe(ep.id) : null;
   data-invitado={ep.data.invitados.map((i) => i.id).join(' ')}
   data-anio={ep.data.fecha.getUTCFullYear()}
 >
-  <span class="fila-ep__n mono meta" transition:name={`n-${ep.id}`}>{String(ep.data.numero).padStart(2, '0')}</span>
+  <span class="fila-ep__n meta" transition:name={`n-${ep.id}`}><span class="num-ep">{String(ep.data.numero).padStart(2, '0')}</span></span>
   <div class="fila-ep__cuerpo">
     <a href={`/episodios/${ep.id}`} class="fila-ep__titulo" transition:name={`titulo-${ep.id}`}>{ep.data.titulo}</a>
     {conBajada && <p class="mt-1">{ep.data.bajada}</p>}
@@ -56,8 +56,8 @@ const picos = conWaveform ? await picosDe(ep.id) : null;
     align-items: start;
   }
   .fila-ep__n {
-    padding-top: 0.45rem;
-    min-width: 1.6rem;
+    padding-top: 0.3rem;
+    min-width: 2rem;
   }
   .fila-ep__titulo {
     font-family: var(--font-titulo);
