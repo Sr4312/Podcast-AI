@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import BadgePlataforma from '@/components/BadgePlataforma.astro';
 import Newsletter from '@/components/Newsletter.astro';
 import Icono from '@/components/Icono.astro';
@@ -11,6 +12,7 @@ const plataformas = (['spotify', 'apple', 'youtube', 'ivoox'] as const).filter((
 <Base titulo={`Suscribite · ${SITIO.nombre}`} descripcion={`Todas las formas de seguir ${SITIO.nombre}: Spotify, Apple Podcasts, YouTube, RSS y el correo de cada episodio.`} ruta="/suscribirse">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="auricular" class="vineta--pagina" />
       <p class="mt-1">Elegí tu app. Si usás otra, el RSS funciona en todas.</p>
     </div>
     <div class="cuerpo">
@@ -18,14 +20,14 @@ const plataformas = (['spotify', 'apple', 'youtube', 'ivoox'] as const).filter((
       <p class="prosa text-lg mt-4">Un episodio cada dos semanas. Gratis, sin publicidad y con todas las fuentes en la web.</p>
 
       <section class="seccion" aria-labelledby="apps">
-        <h2 id="apps" class="mb-4">En tu app de podcasts</h2>
+        <h2 id="apps" class="titulo-vineta mb-4"><Vineta nombre="telefono" />En tu app de podcasts</h2>
         <div class="flex flex-wrap gap-3">
           {plataformas.map((p) => <BadgePlataforma id={p} href={SITIO.plataformas[p]} grande />)}
         </div>
       </section>
 
       <section class="seccion prosa" aria-labelledby="rss">
-        <h2 id="rss">Con RSS, en cualquier app</h2>
+        <h2 id="rss" class="titulo-vineta"><Vineta nombre="rss" />Con RSS, en cualquier app</h2>
         <p class="mt-3">Copiá esta dirección y pegala en "Agregar por URL" o "Añadir feed" de tu aplicación. Funciona en Pocket Casts, Overcast, AntennaPod, Castro y las demás.</p>
         <div class="rss mt-3">
           <code class="mono" id="rss-url">{SITIO.hosting.rss}</code>
@@ -36,13 +38,13 @@ const plataformas = (['spotify', 'apple', 'youtube', 'ivoox'] as const).filter((
       </section>
 
       <section class="seccion" aria-labelledby="correo">
-        <h2 id="correo" class="mb-2">Por correo: {SITIO.newsletter.nombreLista}</h2>
+        <h2 id="correo" class="titulo-vineta mb-2"><Vineta nombre="sobre" />Por correo: {SITIO.newsletter.nombreLista}</h2>
         <p class="prosa mb-4">Un correo por episodio, con el resumen en dos minutos, las fuentes y lo que pasó después. Nada más, y te das de baja con un clic.</p>
         <Newsletter id="news-sus" />
       </section>
 
       <section class="seccion prosa" aria-labelledby="redes">
-        <h2 id="redes">En redes</h2>
+        <h2 id="redes" class="titulo-vineta"><Vineta nombre="red" />En redes</h2>
         <p class="mt-3">Publicamos la frase destacada y el resumen de cada episodio en
           {SITIO.redes.linkedin && <> <a href={SITIO.redes.linkedin} rel="noopener me">LinkedIn</a></>}
           {SITIO.redes.instagram && <> e <a href={SITIO.redes.instagram} rel="noopener me">Instagram</a></>}. Las piezas para compartir están en el kit de cada episodio.</p>

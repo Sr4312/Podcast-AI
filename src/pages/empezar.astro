@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import BotonReproducir from '@/components/BotonReproducir.astro';
 import Newsletter from '@/components/Newsletter.astro';
 import { SITIO, FORMATOS } from '@/config/sitio';
@@ -13,6 +14,7 @@ const destacados = episodios.filter((e) => e.data.destacado).sort((a, b) => a.da
 <Base titulo={`Empezá por acá · ${SITIO.nombre}`} descripcion={`Si es tu primera vez en ${SITIO.nombre}: un recorrido corto de episodios elegidos a mano para entender cómo trabajamos.`} ruta="/empezar">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="inicio" class="vineta--pagina" />
       <p class="mt-1">Un recorrido de {destacados.length} episodios, en el orden que recomendamos. Cada uno se puede escuchar suelto.</p>
     </div>
     <div class="cuerpo">

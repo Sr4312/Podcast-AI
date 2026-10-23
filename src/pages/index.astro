@@ -6,7 +6,7 @@ import Newsletter from '@/components/Newsletter.astro';
 import JsonLd from '@/components/JsonLd.astro';
 import Vineta from '@/components/Vineta.astro';
 import { getCollection } from 'astro:content';
-import { SITIO, FORMATOS, EJES, type EjeId } from '@/config/sitio';
+import { SITIO, FORMATOS, EJES, VINETA_EJE, type EjeId } from '@/config/sitio';
 
 const conductores = (await getCollection('conductores')).sort((a, b) => a.data.orden - b.data.orden);
 const jsonLdSerie = {
@@ -34,12 +34,6 @@ const conteoEjes = Object.keys(EJES).map((id) => ({
   n: episodios.filter((e) => e.data.ejes.includes(id as never)).length,
 }));
 const destacados = episodios.filter((e) => e.data.destacado).slice(0, 5);
-// Dibujo de cada eje en la lista "Tres ejes".
-const VINETA_EJE: Record<EjeId, 'estado' | 'sociedad' | 'economia'> = {
-  'politica-publica': 'estado',
-  sociedad: 'sociedad',
-  economia: 'economia',
-};
 ---
 
 <Base titulo={`${SITIO.nombre} · podcast de IA y problemas públicos`} descripcion={SITIO.descripcionCorta} ruta="/">

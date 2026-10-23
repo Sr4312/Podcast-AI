@@ -260,6 +260,34 @@
     margin: 0 0 0.6rem;
     color: var(--color-tinta);
   }
+  /* Viñeta de página: el dibujo arriba del margen en escritorio, flotado a la izquierda del texto en angosto. */
+  .margen > .vineta--pagina {
+    margin-bottom: 0.9rem;
+  }
+  @media (max-width: 63.99rem) {
+    .margen > .vineta--pagina {
+      float: left;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 0 0.9rem 0.25rem 0;
+    }
+    .margen::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  /* Título de sección con viñeta a la izquierda. */
+  .titulo-vineta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .titulo-vineta > .vineta {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
   /* En pantallas angostas, los metadatos van en una franja compacta, no en columna. */
   @media (max-width: 63.99rem) {
     .margen dl {

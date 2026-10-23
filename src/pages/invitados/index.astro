@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import { SITIO } from '@/config/sitio';
 import { getEpisodios, iniciales } from '@/lib/contenido';
 
@@ -14,6 +15,7 @@ const invitados = (await getCollection('invitados'))
 <Base titulo={`Invitados · ${SITIO.nombre}`} descripcion={`Las personas que participaron en ${SITIO.nombre}, con su rol, sus episodios y sus conflictos de interés declarados.`} ruta="/invitados">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="charla" class="vineta--pagina" />
       <p class="mt-1">{invitados.length} personas. Cada una declara sus conflictos de interés antes de grabar; están en su perfil.</p>
     </div>
     <div class="cuerpo">

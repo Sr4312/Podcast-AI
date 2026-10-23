@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import Vineta from '@/components/Vineta.astro';
 import { SITIO } from '@/config/sitio';
 
 const endpoint = SITIO.formularios.proponerCaso;
@@ -8,6 +9,7 @@ const endpoint = SITIO.formularios.proponerCaso;
 <Base titulo={`Proponé un caso · ${SITIO.nombre}`} descripcion="Contanos un problema público concreto donde la IA ya está (o está por entrar) y lo evaluamos para un episodio." ruta="/proponer-un-caso">
   <div class="cuaderno">
     <div class="margen">
+      <Vineta nombre="nota" class="vineta--pagina" />
       <p class="mt-1">Leemos todo. Respondemos cuando un caso avanza a investigación, y lo acreditamos en el episodio si querés.</p>
       <p class="mt-3">Lo que más nos sirve: un organismo o lugar concreto, un documento o dato público, y una persona con quien hablar.</p>
     </div>
